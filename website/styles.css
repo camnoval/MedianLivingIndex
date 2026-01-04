@@ -1263,13 +1263,36 @@ select:focus-visible {
    RANKINGS WRAPPER - FULL WIDTH SECTION
    ============================================================================ */
 .rankings-wrapper {
-    background: var(--gray-50);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     padding: var(--space-2xl) 0;
     margin: var(--space-2xl) 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.rankings-wrapper .container {
+    max-width: 1400px;
 }
 
 .rankings-wrapper .rankings-section {
     margin: 0;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.rankings-wrapper h2 {
+    color: white;
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.rankings-wrapper .tab-controls {
+    justify-content: center;
+}
+
+.rankings-wrapper .table-container {
+    background: white;
+    box-shadow: var(--shadow-xl);
 }
 
 /* ============================================================================

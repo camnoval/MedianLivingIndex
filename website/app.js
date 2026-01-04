@@ -402,7 +402,9 @@ class MLIApp {
         const yearData = stateData.timeseries[this.currentYear];
         const latestData = stateData.latest;
         
-        document.getElementById('detailPanel').style.display = 'block';
+        const panel = document.getElementById('detailPanel');
+        panel.style.display = 'block';
+        setTimeout(() => panel.classList.add('active'), 10);
         document.getElementById('stateName').textContent = stateName;
         
         const ranking = this.getStateRanking(stateName);
@@ -441,7 +443,9 @@ class MLIApp {
     }
     
     closeDetailPanel() {
-        document.getElementById('detailPanel').style.display = 'none';
+        const panel = document.getElementById('detailPanel');
+        panel.classList.remove('active');
+        setTimeout(() => panel.style.display = 'none', 300);
         this.selectedState = null;
         this.map.classed('selected', false);
     }
