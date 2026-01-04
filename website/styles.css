@@ -10,23 +10,23 @@
 }
 
 :root {
-    /* Modern color palette */
-    --primary: #0f172a;
-    --primary-light: #1e293b;
-    --secondary: #06b6d4;
-    --accent: #8b5cf6;
+    /* Modern color palette - Deep Blues & Emerald */
+    --primary: #1e3a8a;
+    --primary-light: #3b82f6;
+    --secondary: #10b981;
+    --accent: #f59e0b;
     --success: #10b981;
     --warning: #f59e0b;
     --danger: #ef4444;
     
     /* Neutrals */
-    --gray-50: #f8fafc;
-    --gray-100: #f1f5f9;
-    --gray-200: #e2e8f0;
-    --gray-300: #cbd5e1;
-    --gray-600: #475569;
-    --gray-700: #334155;
-    --gray-900: #0f172a;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-900: #111827;
     
     /* Semantic colors */
     --bg-main: #ffffff;
@@ -60,7 +60,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
     line-height: 1.5;
     color: var(--text-primary);
     background: var(--bg-secondary);
@@ -89,7 +89,7 @@ body {
    HEADER - COMPACT
    ============================================================================ */
 header {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: white;
     padding: var(--space-xl) 0;
     box-shadow: var(--shadow-md);
@@ -148,7 +148,7 @@ header .tagline {
 .stat-number {
     font-size: clamp(1.25rem, 3vw, 1.75rem);
     font-weight: 700;
-    color: var(--secondary);
+    color: var(--primary);
     font-variant-numeric: tabular-nums;
     line-height: 1;
     margin-bottom: var(--space-xs);
@@ -233,7 +233,7 @@ section h3 {
 }
 
 .explainer-card:hover {
-    border-color: var(--secondary);
+    border-color: var(--primary-light);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -307,7 +307,7 @@ section h3 {
 
 #yearDisplay {
     font-weight: 700;
-    color: var(--secondary);
+    color: var(--primary-light);
 }
 
 input[type="range"] {
@@ -325,7 +325,7 @@ input[type="range"]::-webkit-slider-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: var(--secondary);
+    background: var(--primary);
     cursor: pointer;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
@@ -340,7 +340,7 @@ input[type="range"]::-moz-range-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: var(--secondary);
+    background: var(--primary);
     cursor: pointer;
     border: none;
     box-shadow: var(--shadow-sm);
@@ -360,7 +360,7 @@ select {
 
 select:hover,
 select:focus {
-    border-color: var(--secondary);
+    border-color: var(--primary-light);
     outline: none;
 }
 
@@ -427,7 +427,7 @@ select:focus {
 .tooltip-value {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--secondary);
+    color: var(--primary-light);
     margin-bottom: var(--space-xs);
 }
 
@@ -439,40 +439,31 @@ select:focus {
 /* Legend - COMPACT */
 .legend {
     background: var(--gray-50);
-    padding: var(--space-md);
+    padding: var(--space-lg);
     border-radius: var(--radius-md);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-}
-
-@media (min-width: 768px) {
-    .legend {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
+    border: 1px solid var(--border);
 }
 
 .legend-title {
-    font-weight: 600;
-    font-size: 0.75rem;
+    font-weight: 700;
+    font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--text-primary);
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+    text-align: center;
 }
 
 .legend-gradient {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
-    flex: 1;
-    max-width: 400px;
+    margin-bottom: var(--space-md);
 }
 
 .gradient-bar {
     flex: 1;
-    height: 10px;
+    height: 24px;
     border-radius: var(--radius-sm);
     background: linear-gradient(to right, 
         #dc2626 0%, 
@@ -482,20 +473,45 @@ select:focus {
         #22c55e 80%, 
         #059669 100%
     );
+    box-shadow: var(--shadow-sm);
 }
 
 .legend-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    min-width: 2rem;
+    text-align: center;
 }
 
 .legend-labels {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.7rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    text-align: center;
+    font-size: 0.8rem;
     color: var(--text-secondary);
-    gap: var(--space-sm);
+    font-weight: 500;
+}
+
+.legend-labels span {
+    padding: var(--space-xs);
+}
+
+@media (max-width: 640px) {
+    .legend-gradient {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .gradient-bar {
+        width: 100%;
+        height: 24px;
+    }
+    
+    .legend-labels {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ============================================================================
@@ -533,7 +549,7 @@ select:focus {
 
 .state-select:hover,
 .state-select:focus {
-    border-color: var(--secondary);
+    border-color: var(--primary-light);
     outline: none;
 }
 
@@ -546,7 +562,7 @@ select:focus {
 
 .compare-btn {
     padding: var(--space-md) var(--space-xl);
-    background: var(--secondary);
+    background: var(--primary);
     color: white;
     border: none;
     border-radius: var(--radius-sm);
@@ -710,11 +726,11 @@ select:focus {
 }
 
 .stat-card:hover {
-    border-color: var(--secondary);
+    border-color: var(--primary-light);
 }
 
 .highlight-card {
-    background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     color: white;
     border: none;
 }
@@ -820,7 +836,7 @@ select:focus {
 
 .cost-bar-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--secondary), var(--accent));
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -865,12 +881,12 @@ select:focus {
 }
 
 .tab-btn:hover {
-    border-color: var(--secondary);
+    border-color: var(--primary-light);
 }
 
 .tab-btn.active {
     background: var(--secondary);
-    border-color: var(--secondary);
+    border-color: var(--primary-light);
     color: white;
 }
 
@@ -899,7 +915,7 @@ select:focus {
 
 .search-box:focus,
 .sort-select:focus {
-    border-color: var(--secondary);
+    border-color: var(--primary-light);
     outline: none;
 }
 
@@ -949,7 +965,7 @@ td {
 
 .rank-cell {
     font-weight: 700;
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .state-cell {
@@ -1001,7 +1017,7 @@ td {
 }
 
 .insight-card:hover {
-    border-color: var(--secondary);
+    border-color: var(--primary-light);
     box-shadow: var(--shadow-md);
 }
 
@@ -1106,11 +1122,11 @@ details {
 }
 
 details:hover {
-    border-color: var(--secondary);
+    border-color: var(--primary-light);
 }
 
 details[open] {
-    border-color: var(--secondary);
+    border-color: var(--primary-light);
 }
 
 summary {
@@ -1162,7 +1178,7 @@ footer p {
 }
 
 footer a {
-    color: var(--secondary);
+    color: var(--primary-light);
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
@@ -1221,7 +1237,7 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 select:focus-visible {
-    outline: 2px solid var(--secondary);
+    outline: 2px solid var(--primary-light);
     outline-offset: 2px;
 }
 
@@ -1233,7 +1249,7 @@ select:focus-visible {
     width: 18px;
     height: 18px;
     border: 2px solid var(--border);
-    border-top-color: var(--secondary);
+    border-top-color: var(--primary-light);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
 }
@@ -1263,7 +1279,7 @@ select:focus-visible {
    RANKINGS WRAPPER - FULL WIDTH SECTION
    ============================================================================ */
 .rankings-wrapper {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
     padding: var(--space-2xl) 0;
     margin: var(--space-2xl) 0;
     box-shadow: var(--shadow-lg);
