@@ -49,21 +49,25 @@
                     <div class="explainer-icon">📊</div>
                     <h3>The Formula</h3>
                     <p class="formula">MLI = Median Income ÷ Cost of Living</p>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Simple ratio showing purchasing power</p>
                 </div>
                 <div class="explainer-card">
                     <div class="explainer-icon">⚖️</div>
-                    <h3>Break Even Point</h3>
-                    <p><strong>1.0 = Paycheck to Paycheck</strong><br>Income exactly covers annual expenses</p>
+                    <h3>Break Even (1.0)</h3>
+                    <p><strong>Income = Expenses</strong><br>Paycheck to paycheck living<br>
+                    <span style="font-size: 0.8rem; color: var(--text-secondary);">Ex: New Mexico (~1.00)</span></p>
                 </div>
                 <div class="explainer-card">
                     <div class="explainer-icon">💰</div>
-                    <h3>Above 1.0 = Surplus</h3>
-                    <p><strong>1.3 = 30% Surplus</strong><br>Can save/invest 30% of income</p>
+                    <h3>Surplus (&gt;1.0)</h3>
+                    <p><strong>1.35 = 35% Surplus</strong><br>Room for savings & investment<br>
+                    <span style="font-size: 0.8rem; color: var(--text-secondary);">Ex: Utah (1.35), Maryland (1.30)</span></p>
                 </div>
                 <div class="explainer-card">
                     <div class="explainer-icon">⚠️</div>
-                    <h3>Below 1.0 = Deficit</h3>
-                    <p><strong>0.9 = 10% Deficit</strong><br>Spending 10% more than earning</p>
+                    <h3>Deficit (&lt;1.0)</h3>
+                    <p><strong>0.93 = 7% Deficit</strong><br>Expenses exceed income<br>
+                    <span style="font-size: 0.8rem; color: var(--text-secondary);">Ex: Mississippi (0.93), W. Virginia (0.95)</span></p>
                 </div>
             </div>
         </section>
@@ -263,17 +267,71 @@
 
             <div class="faq">
                 <h3>Common Questions</h3>
+                
                 <details>
-                    <summary>Why is this different from GDP or cost of living indices?</summary>
-                    <p>GDP measures economic output, not what median households can actually afford. Traditional cost of living indices don't account for income. MLI shows the ratio between what people earn and what things cost—the actual purchasing power of middle-class households.</p>
+                    <summary>Why is this different from other cost of living indices?</summary>
+                    <p>Traditional cost of living indices only show how expensive places are, not whether people can afford them. The MLI combines income data with cost data to show actual purchasing power. A state can be expensive but still have high MLI if incomes are even higher (like Massachusetts), or cheap but have low MLI if incomes are even lower (like Mississippi).</p>
                 </details>
+                
                 <details>
-                    <summary>Can a state have high income but low MLI?</summary>
-                    <p>Yes! California has median income of ~$85k but costs of ~$90k, resulting in MLI < 1.0. High income doesn't help if costs are even higher.</p>
+                    <summary>What does an MLI score actually mean?</summary>
+                    <p><strong>MLI = 1.0:</strong> Income exactly covers expenses (paycheck to paycheck). No room for savings, emergencies, or unexpected costs.<br>
+                    <strong>MLI > 1.0:</strong> Surplus available. For example, MLI of 1.20 means 20% of income is available for savings, investment, or discretionary spending.<br>
+                    <strong>MLI < 1.0:</strong> Deficit. The median household is spending more than they earn, likely through debt, savings drawdown, or multiple jobs.</p>
                 </details>
+                
                 <details>
-                    <summary>What does "paycheck to paycheck" mean exactly?</summary>
-                    <p>MLI = 1.0 means annual income equals annual expenses. No surplus for emergencies, savings, or investment. One unexpected expense creates debt.</p>
+                    <summary>Can high-income states have low MLI?</summary>
+                    <p>Yes, but it's rare. High-income states usually have high MLI because earnings outpace costs. For example, Massachusetts has a median income of ~$100k and costs of ~$79k, giving an MLI of 1.26. However, historically some high-income states like Hawaii have struggled with MLI near 1.0 because housing costs are extreme relative to even high incomes.</p>
+                </details>
+                
+                <details>
+                    <summary>Why do some states have MLI below 1.0?</summary>
+                    <p>States like Mississippi (MLI ~0.93) have median incomes around $54k but estimated costs of $58k. This doesn't mean every household is in debt—it means the median household faces financial stress. Many cope through: multiple income earners, reducing spending below the baseline estimate, debt accumulation, or government assistance programs.</p>
+                </details>
+                
+                <details>
+                    <summary>How accurate are the cost estimates?</summary>
+                    <p>The methodology uses official BLS Consumer Expenditure Survey data for middle-income households, adjusted by BEA Regional Price Parities to reflect state-specific costs. However, actual costs vary by: household size, lifestyle choices, urban vs. rural location, homeownership vs. renting, and personal circumstances. The MLI represents a median household—50% spend less, 50% spend more.</p>
+                </details>
+                
+                <details>
+                    <summary>Does this account for taxes?</summary>
+                    <p>The income data is pre-tax (gross income), and the cost estimates include some tax-like expenses (FICA, property taxes via housing costs), but not comprehensive state income taxes. States with no income tax (like Texas or Florida) may have a practical advantage not fully reflected in the MLI. This is a known limitation of the current methodology.</p>
+                </details>
+                
+                <details>
+                    <summary>Why don't cheaper states always have higher MLI?</summary>
+                    <p>Because income matters too! West Virginia has low costs ($59k) but also low income ($56k), giving MLI of 0.95. Utah has moderate costs ($69k) but high income ($93k), giving MLI of 1.35. The ratio is what matters, not absolute values. This is why some expensive states (like Massachusetts or Maryland) have excellent MLI—incomes are even higher than costs.</p>
+                </details>
+                
+                <details>
+                    <summary>How has MLI changed over time?</summary>
+                    <p>National average MLI has improved from 1.08 in 2008 to 1.14 in 2023. However, this masks regional variation: some states (like Utah) have seen dramatic improvements, while others have declined. The 2008-2012 period showed significant financial stress across many states due to the Great Recession.</p>
+                </details>
+                
+                <details>
+                    <summary>What are the limitations of this index?</summary>
+                    <p><strong>What's missing:</strong><br>
+                    • Comprehensive state/local tax differences<br>
+                    • Quality of life factors (weather, amenities, culture)<br>
+                    • Wealth and assets (only measures income)<br>
+                    • Healthcare quality and access<br>
+                    • Education quality<br>
+                    • Within-state variation (urban vs. rural)<br>
+                    • Non-monetary benefits (family support, community)<br>
+                    <br>
+                    <strong>Why it still matters:</strong> The MLI focuses specifically on economic purchasing power—can the median household afford their basic expenses? It's one important lens, not the complete picture of quality of life.</p>
+                </details>
+                
+                <details>
+                    <summary>Should I move based on MLI alone?</summary>
+                    <p>No! MLI is one factor among many. Consider: job opportunities in your field, family/social connections, climate preferences, political/cultural fit, quality of schools, healthcare access, commute times, and lifestyle preferences. A high MLI state isn't necessarily better for you if there are no jobs in your industry or you'd be miserable in the climate. Use MLI as one data point in a holistic decision.</p>
+                </details>
+                
+                <details>
+                    <summary>Why do Florida and California have similar MLI despite different reputations?</summary>
+                    <p>Both have MLI around 0.97-1.10 despite different cost structures. Florida has no state income tax but high housing costs (especially post-2020). California has high taxes and high housing costs, but also significantly higher median incomes (~$95k vs ~$73k). The ratios end up similar despite different absolute numbers. This shows why looking at just "cost of living" or just "taxes" is misleading.</p>
                 </details>
             </div>
         </section>
