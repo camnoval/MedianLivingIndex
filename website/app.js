@@ -10,6 +10,8 @@ class MLIApp {
         this.map = null;
         this.chart = null;
         this.availableYears = [];
+        this.currentSort = 'mli';
+        this.sortDirection = 'desc';
         
         this.init();
     }
@@ -49,7 +51,52 @@ class MLIApp {
         }
     }
     
+    setupDraggablePanel() {
+        const panel = document.getElementById('detailPanel');
+        const header = panel.querySelector('.detail-header');
+        let isDragging = false;
+        let currentX, currentY, initialX, initialY;
+        
+        header.style.cursor = 'move';
+        
+        header.addEventListener('mousedown', (e) => {
+            if (e.target.classList.contains('close-btn') || e.target.closest('.close-btn')) return;
+            
+            isDragging = true;
+            initialX = e.clientX - (parseInt(panel.style.left) || 0);
+            initialY = e.clientY - (parseInt(panel.style.top) || 0);
+            
+            panel.style.right = 'auto';
+            panel.style.transition = 'none';
+        });
+        
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            
+            e.preventDefault();
+            currentX = e.clientX - initialX;
+            currentY = e.clientY - initialY;
+            
+            // Constrain to viewport
+            const maxX = window.innerWidth - panel.offsetWidth;
+            const maxY = window.innerHeight - panel.offsetHeight;
+            
+            currentX = Math.max(0, Math.min(currentX, maxX));
+            currentY = Math.max(0, Math.min(currentY, maxY));
+            
+            panel.style.left = currentX + 'px';
+            panel.style.top = currentY + 'px';
+        });
+        
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            panel.style.transition = '';
+        });
+    }
+    
     setupEventListeners() {
+        this.setupDraggablePanel();
+        
         document.getElementById('yearSlider').addEventListener('input', (e) => {
             const index = parseInt(e.target.value);
             this.currentYear = this.availableYears[index];
@@ -80,8 +127,27 @@ class MLIApp {
             this.filterTable(e.target.value);
         });
         
-        document.getElementById('sortSelect').addEventListener('change', () => {
-            this.updateRankingsTable();
+        // Sortable table headers
+        document.querySelectorAll('#rankingsTable th[data-sort]').forEach(th => {
+            th.addEventListener('click', () => {
+                const sortKey = th.dataset.sort;
+                
+                // Toggle sort direction
+                if (this.currentSort === sortKey) {
+                    this.sortDirection = this.sortDirection === 'desc' ? 'asc' : 'desc';
+                } else {
+                    this.currentSort = sortKey;
+                    this.sortDirection = 'desc';
+                }
+                
+                // Update arrow indicators
+                document.querySelectorAll('#rankingsTable th').forEach(h => {
+                    h.classList.remove('sort-asc', 'sort-desc');
+                });
+                th.classList.add(`sort-${this.sortDirection}`);
+                
+                this.updateRankingsTable();
+            });
         });
         
         document.getElementById('compareBtn').addEventListener('click', () => {
@@ -403,6 +469,12 @@ class MLIApp {
         const latestData = stateData.latest;
         
         const panel = document.getElementById('detailPanel');
+        
+        // Reset position when opening
+        panel.style.left = '';
+        panel.style.top = '';
+        panel.style.right = '-100%';
+        
         panel.style.display = 'block';
         setTimeout(() => panel.classList.add('active'), 10);
         document.getElementById('stateName').textContent = stateName;
@@ -599,8 +671,7 @@ class MLIApp {
             };
         });
         
-        const sortValue = document.getElementById('sortSelect').value;
-        this.sortStates(statesData, sortValue);
+        this.sortStates(statesData);
         
         let displayData = statesData;
         if (filter === 'top10') {
@@ -629,27 +700,41 @@ class MLIApp {
         }).join('');
     }
     
-    sortStates(states, sortValue) {
-        switch (sortValue) {
-            case 'mli-desc':
-                states.sort((a, b) => b.mli - a.mli);
-                break;
-            case 'mli-asc':
-                states.sort((a, b) => a.mli - b.mli);
-                break;
-            case 'name':
-                states.sort((a, b) => a.name.localeCompare(b.name));
-                break;
-            case 'surplus-desc':
-                states.sort((a, b) => b.surplus - a.surplus);
-                break;
-            case 'income-desc':
-                states.sort((a, b) => b.income - a.income);
-                break;
-            case 'col-asc':
-                states.sort((a, b) => a.col - b.col);
-                break;
-        }
+    sortStates(states) {
+        const direction = this.sortDirection === 'asc' ? 1 : -1;
+        
+        states.sort((a, b) => {
+            let aVal, bVal;
+            
+            switch (this.currentSort) {
+                case 'name':
+                    return direction * a.name.localeCompare(b.name);
+                case 'mli':
+                    aVal = a.mli;
+                    bVal = b.mli;
+                    break;
+                case 'surplus':
+                    aVal = a.surplus;
+                    bVal = b.surplus;
+                    break;
+                case 'income':
+                    aVal = a.income;
+                    bVal = b.income;
+                    break;
+                case 'col':
+                    aVal = a.col;
+                    bVal = b.col;
+                    break;
+                case 'change':
+                    aVal = a.change;
+                    bVal = b.change;
+                    break;
+                default:
+                    return 0;
+            }
+            
+            return direction * (bVal - aVal);
+        });
     }
     
     selectStateFromTable(stateName) {

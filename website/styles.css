@@ -1315,3 +1315,75 @@ select:focus-visible {
     cursor: pointer !important;
     pointer-events: all !important;
 }
+
+/* ============================================================================
+   DRAGGABLE PANEL & SORTABLE TABLE STYLES
+   ============================================================================ */
+
+/* Draggable panel header */
+.detail-header {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.detail-header h2 {
+    pointer-events: none;
+}
+
+/* Sortable table headers */
+.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 1.5rem !important;
+}
+
+.sortable:hover {
+    background: var(--gray-200);
+}
+
+.sort-arrow {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.3;
+    font-size: 0.7rem;
+}
+
+.sort-arrow::before {
+    content: '⇅';
+}
+
+.sort-desc .sort-arrow::before {
+    content: '▼';
+    opacity: 1;
+}
+
+.sort-asc .sort-arrow::before {
+    content: '▲';
+    opacity: 1;
+}
+
+.sort-hint {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    padding: var(--space-sm);
+    text-align: center;
+}
+
+/* Panel dragging state */
+.detail-panel.dragging {
+    transition: none !important;
+}
+
+/* Desktop-specific styles for draggable panel */
+@media (min-width: 768px) {
+    .detail-panel {
+        resize: horizontal;
+        overflow: auto;
+        min-width: 400px;
+        max-width: 800px;
+    }
+}
