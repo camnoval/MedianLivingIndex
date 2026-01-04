@@ -464,19 +464,34 @@ class MLIApp {
     }
     
     showDetailPanel(stateName) {
+        console.log('showDetailPanel called for:', stateName);
         const stateData = this.data.states[stateName];
+        
+        if (!stateData) {
+            console.error('No data found for state:', stateName);
+            return;
+        }
+        
         const yearData = stateData.timeseries[this.currentYear];
         const latestData = stateData.latest;
         
         const panel = document.getElementById('detailPanel');
+        console.log('Panel element:', panel);
         
-        // Reset position when opening
+        // Reset any drag positioning
         panel.style.left = '';
         panel.style.top = '';
-        panel.style.right = '-100%';
+        panel.style.right = '';
         
+        // Show panel
         panel.style.display = 'block';
-        setTimeout(() => panel.classList.add('active'), 10);
+        
+        // Add active class after a brief delay for transition
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                panel.classList.add('active');
+            });
+        });
         document.getElementById('stateName').textContent = stateName;
         
         const ranking = this.getStateRanking(stateName);
@@ -517,9 +532,16 @@ class MLIApp {
     closeDetailPanel() {
         const panel = document.getElementById('detailPanel');
         panel.classList.remove('active');
-        setTimeout(() => panel.style.display = 'none', 300);
+        
+        // Wait for transition to finish before hiding
+        setTimeout(() => {
+            panel.style.display = 'none';
+        }, 300);
+        
         this.selectedState = null;
-        this.map.classed('selected', false);
+        if (this.map) {
+            this.map.classed('selected', false);
+        }
     }
     
     getStateRanking(stateName) {

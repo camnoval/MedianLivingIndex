@@ -631,7 +631,7 @@ select:focus {
     box-shadow: var(--shadow-xl);
     z-index: 1000;
     overflow-y: auto;
-    transition: right 0.3s ease;
+    transition: right 0.3s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -642,7 +642,7 @@ select:focus {
 }
 
 .detail-panel.active {
-    right: 0;
+    right: 0 !important;
 }
 
 .detail-header {
