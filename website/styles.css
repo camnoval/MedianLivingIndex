@@ -467,10 +467,14 @@ select:focus {
     border-radius: var(--radius-sm);
     background: linear-gradient(to right, 
         #dc2626 0%, 
-        #f97316 20%, 
-        #eab308 40%, 
-        #84cc16 60%, 
+        #ef4444 20%,
+        #f97316 30%,
+        #fb923c 40%,
+        #eab308 50%,
+        #84cc16 60%,
+        #4ade80 70%,
         #22c55e 80%, 
+        #10b981 90%,
         #059669 100%
     );
     box-shadow: var(--shadow-sm);
@@ -837,14 +841,8 @@ select:focus {
 .cost-bar-fill {
     height: 100%;
     background: linear-gradient(90deg, var(--primary), var(--primary-light));
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 var(--space-sm);
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: white;
     transition: width 0.3s ease;
+    position: relative;
 }
 
 .cost-value {
@@ -1402,4 +1400,25 @@ select:focus-visible {
         min-width: 400px;
         max-width: 800px;
     }
+}
+
+
+/* Cost bar percentage outside */
+.cost-bar-container {
+    position: relative;
+}
+
+.cost-percentage {
+    position: absolute;
+    right: -3.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Red deficit card */
+.highlight-card.deficit {
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
 }

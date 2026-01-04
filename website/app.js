@@ -25,6 +25,7 @@ class MLIApp {
             this.updateRankingsTable();
             this.updateInsights();
             this.populateStateSelectors();
+            this.updateLegend();
             
             console.log('MLI App initialized successfully');
         } catch (error) {
@@ -109,6 +110,7 @@ class MLIApp {
         document.getElementById('metricSelect').addEventListener('change', (e) => {
             this.currentMetric = e.target.value;
             this.updateMap();
+            this.updateLegend();
         });
         
         document.getElementById('closeDetail').addEventListener('click', () => {
@@ -280,6 +282,46 @@ class MLIApp {
                 
                 this.updateMap();
             });
+    }
+    
+    updateLegend() {
+        const title = document.querySelector('.legend-title');
+        const labels = document.querySelector('.legend-labels');
+        
+        switch (this.currentMetric) {
+            case 'mli':
+                title.textContent = 'MLI Scale';
+                labels.innerHTML = `
+                    <span>Deficit (Debt)</span>
+                    <span>Break Even</span>
+                    <span>Surplus (Savings)</span>
+                `;
+                break;
+            case 'surplus':
+                title.textContent = 'Annual Surplus/Deficit';
+                labels.innerHTML = `
+                    <span>Large Deficit</span>
+                    <span>Break Even</span>
+                    <span>Large Surplus</span>
+                `;
+                break;
+            case 'income':
+                title.textContent = 'Median Income';
+                labels.innerHTML = `
+                    <span>Lower Income</span>
+                    <span>Middle Income</span>
+                    <span>Higher Income</span>
+                `;
+                break;
+            case 'col':
+                title.textContent = 'Cost of Living';
+                labels.innerHTML = `
+                    <span>Lower Cost</span>
+                    <span>Moderate Cost</span>
+                    <span>Higher Cost</span>
+                `;
+                break;
+        }
     }
     
     updateMap() {
@@ -520,6 +562,14 @@ class MLIApp {
         const surplusLabel = document.getElementById('surplusLabel');
         surplusLabel.textContent = yearData.surplus >= 0 ? 'Available for savings' : 'Annual shortfall';
         
+        // Update highlight card color based on surplus/deficit
+        const highlightCard = document.querySelector('.stat-card.highlight-card');
+        if (yearData.surplus < 0) {
+            highlightCard.classList.add('deficit');
+        } else {
+            highlightCard.classList.remove('deficit');
+        }
+        
         this.createTrendChart(stateData);
         this.createCostBreakdown(latestData.categories);
         this.createTrendInsight(stateData);
@@ -666,9 +716,8 @@ class MLIApp {
                 <div class="cost-bar">
                     <div class="cost-label">${category}</div>
                     <div class="cost-bar-container">
-                        <div class="cost-bar-fill" style="width: ${pct}%">
-                            ${pct}%
-                        </div>
+                        <div class="cost-bar-fill" style="width: ${pct}%"></div>
+                        <span class="cost-percentage">${pct}%</span>
                     </div>
                     <div class="cost-value">${this.formatCurrency(data.cost)}</div>
                 </div>
