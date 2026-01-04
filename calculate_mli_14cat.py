@@ -1,48 +1,42 @@
 """
-Calculate Median Living Index (MLI) - Simplified Model with 2019 Base Year
-===========================================================================
+Calculate Median Living Index (MLI) - SIMPLIFIED RATIO
+=======================================================
 
-Pure purchasing power calculation:
-- COL = Sum of all category costs (no weights)
-- Purchasing Power = Median Income / COL
-- MLI = (PP / US_2019_Reference_PP) × 100
+The simplest, most intuitive approach:
 
-Where US_2019_Reference_PP = US average purchasing power in 2019 (pre-pandemic)
+MLI = Median Income / Cost of Living
 
-This means:
-- MLI = 100: Same purchasing power as US average in 2019
-- MLI > 100: Better than pre-pandemic baseline
-- MLI < 100: Below pre-pandemic baseline
+Interpretation:
+- MLI = 1.0: Income exactly covers annual expenses (paycheck to paycheck)
+- MLI = 1.3: Income is 30% higher than expenses (can save/invest 30%)
+- MLI = 0.9: Income is 10% lower than expenses (going into debt)
 
-Formula:
-    State_Category_Cost = BLS_Baseline × (State_BEA_RPP / 100)
-    State_COL = sum(Category_Costs)  # No weights!
-    State_PP = Median Income / COL
-    MLI = (State_PP / US_2019_PP) × 100
+Examples:
+- Mississippi: $54,200 / $58,000 = 0.93 (spending 107% of income)
+- Utah: $93,400 / $69,000 = 1.35 (35% surplus for savings/investment)
 
-Output: mli_results_14cat_{quintile}.csv
+This is the purchasing power ratio - pure and simple.
+
+Output: mli_results_simple.csv
 """
 
 import pandas as pd
 import numpy as np
-from pathlib import Path
 
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
 
-# File paths
 INCOME_FILE = 'census_income_data_20260103.csv'
 BEA_RPPS_FILE = 'bea_component_rpps.csv'
 BLS_BASELINE_FILE = 'BLS_baseline_spending.csv'
 
-# Which quintile to calculate (Q2, Q3, or Q4)
 QUINTILE = 'Q3'  # Middle class (50th percentile)
 
-OUTPUT_FILE = f'mli_results_14cat_{QUINTILE.lower()}.csv'
+OUTPUT_FILE = 'mli_results_simple.csv'
 
 # ============================================================================
-# LOAD DATA
+# LOAD DATA (same as before)
 # ============================================================================
 
 def load_all_data():
@@ -71,8 +65,6 @@ def load_all_data():
     
     income_df['year'] = income_df['year'].astype(int)
     income_df['state'] = income_df['state'].astype(str).str.strip()
-    
-    # Remove DC if present
     income_df = income_df[income_df['state'] != 'District of Columbia']
     income_df = income_df[['state', 'year', 'median_income']]
     
@@ -89,7 +81,6 @@ def load_all_data():
     print("\n[3/3] Loading BLS baseline spending...")
     baseline_df = pd.read_csv(BLS_BASELINE_FILE)
     
-    # Select quintile-specific baseline
     baseline_col = f'{QUINTILE.lower()}_baseline'
     baseline_df = baseline_df[['category', baseline_col, 'bea_adjuster']].copy()
     baseline_df = baseline_df.rename(columns={baseline_col: 'baseline_spending'})
@@ -100,23 +91,13 @@ def load_all_data():
     return income_df, bea_df, baseline_df
 
 
-# ============================================================================
-# CALCULATE STATE-ADJUSTED COSTS
-# ============================================================================
-
 def calculate_state_costs(bea_df, baseline_df):
-    """
-    Calculate state-year-specific costs for each category by applying
-    BEA RPP adjustments to BLS baseline spending.
-    
-    NO WEIGHTS - just pure costs.
-    """
+    """Calculate state-year-specific costs for each category"""
     
     print("\n" + "="*70)
     print("CALCULATING STATE-ADJUSTED COSTS")
     print("="*70)
     
-    # Create state-year-category costs
     all_costs = []
     
     for _, cat in baseline_df.iterrows():
@@ -127,10 +108,7 @@ def calculate_state_costs(bea_df, baseline_df):
         print(f"\n{category:20s} (baseline: ${baseline:>6,.0f})")
         
         if adjuster == 'none':
-            # Cash contributions - no adjustment
-            print(f"  → No adjustment (transfers, not consumption)")
-            
-            # Apply baseline to all states
+            print(f"  → No adjustment")
             for state in bea_df['state'].unique():
                 for year in bea_df['year'].unique():
                     all_costs.append({
@@ -140,7 +118,6 @@ def calculate_state_costs(bea_df, baseline_df):
                         'cost': baseline
                     })
         else:
-            # Apply BEA RPP adjustment
             rpp_col = adjuster
             print(f"  → Adjusted by {rpp_col}")
             
@@ -156,121 +133,111 @@ def calculate_state_costs(bea_df, baseline_df):
                 })
     
     costs_df = pd.DataFrame(all_costs)
-    
     print(f"\n✓ Calculated {len(costs_df)} state-year-category costs")
     
     return costs_df
 
 
 # ============================================================================
-# CALCULATE MLI WITH 2019 BASE YEAR
+# SIMPLIFIED MLI CALCULATION
 # ============================================================================
 
-def calculate_mli(income_df, costs_df):
+def calculate_mli_simple(income_df, costs_df):
     """
-    Calculate MLI by:
-    1. Sum costs to get state COL (NO WEIGHTS)
-    2. Calculate state purchasing power (income/COL)
-    3. Normalize to 2019 US average = 100
+    Calculate MLI as simple ratio:
+    MLI = Median Income / Cost of Living
+    
+    No normalization, no base years - just the raw purchasing power ratio.
     """
     
     print("\n" + "="*70)
-    print("CALCULATING MLI SCORES (2019 BASE YEAR)")
+    print("CALCULATING MLI (SIMPLE RATIO)")
     print("="*70)
     
-    # Calculate total COL for each state-year (simple sum, no weights)
+    # Sum costs to get total COL
     col_df = costs_df.groupby(['state', 'year'])['cost'].sum().reset_index()
-    col_df = col_df.rename(columns={'cost': 'col_index'})
+    col_df = col_df.rename(columns={'cost': 'col'})
     
     print(f"\n✓ Calculated COL for {len(col_df)} state-years")
-    print(f"  COL range: ${col_df['col_index'].min():,.0f} - ${col_df['col_index'].max():,.0f}")
+    print(f"  COL range: ${col_df['col'].min():,.0f} - ${col_df['col'].max():,.0f}")
     
     # Merge with income
     df = income_df.merge(col_df, on=['state', 'year'], how='inner')
     
-    # Calculate state purchasing power
-    df['purchasing_power'] = df['median_income'] / df['col_index']
-    
-    # Get 2019 US average purchasing power as reference
-    df_2019 = df[df['year'] == 2019].copy()
-    us_2019_reference_pp = df_2019['purchasing_power'].mean()
-    
-    print(f"\n2019 US Average Purchasing Power: {us_2019_reference_pp:.4f}")
-    print(f"  (This becomes MLI = 100 baseline)")
-    
-    # Calculate MLI using 2019 base
-    df['mli'] = (df['purchasing_power'] / us_2019_reference_pp) * 100
+    # Calculate MLI as simple ratio
+    df['mli'] = df['median_income'] / df['col']
     
     # Round for readability
-    df['mli'] = df['mli'].round(2)
-    df['col_index'] = df['col_index'].round(2)
+    df['mli'] = df['mli'].round(3)
+    df['col'] = df['col'].round(2)
     
     print(f"\n✓ Calculated MLI for {len(df)} observations")
-    print(f"  MLI range: {df['mli'].min():.2f} - {df['mli'].max():.2f}")
-    print(f"\n  Interpretation:")
-    print(f"    MLI = 100: Same purchasing power as US average in 2019")
-    print(f"    MLI > 100: Better than pre-pandemic baseline")
-    print(f"    MLI < 100: Below pre-pandemic baseline")
+    print(f"  MLI range: {df['mli'].min():.3f} - {df['mli'].max():.3f}")
     
-    return df, us_2019_reference_pp
+    print(f"\n  Interpretation:")
+    print(f"    MLI = 1.0: Income exactly covers expenses (paycheck to paycheck)")
+    print(f"    MLI > 1.0: Income exceeds expenses (surplus for savings)")
+    print(f"    MLI < 1.0: Income below expenses (deficit/debt)")
+    
+    # Calculate surplus/deficit
+    df['annual_surplus'] = df['median_income'] - df['col']
+    df['surplus_pct'] = ((df['mli'] - 1.0) * 100).round(1)
+    
+    return df
 
 
 # ============================================================================
 # SUMMARY STATISTICS
 # ============================================================================
 
-def print_summary(mli_df, costs_df):
+def print_summary(mli_df):
     """Print comprehensive summary statistics"""
     
     print("\n" + "="*70)
-    print(f"MLI SUMMARY STATISTICS ({QUINTILE})")
+    print(f"MLI SUMMARY STATISTICS (SIMPLE RATIO)")
     print("="*70)
     
-    # Top 10 states (2023)
     latest_year = mli_df['year'].max()
     latest_data = mli_df[mli_df['year'] == latest_year].sort_values('mli', ascending=False)
     
-    print(f"\n\nTop 10 States - Best Affordability ({latest_year}):")
+    print(f"\n\nTop 10 States - Best Purchasing Power ({latest_year}):")
+    print(f"{'State':<20s} {'MLI':>6s} {'Income':>11s} {'COL':>11s} {'Surplus':>11s}")
+    print("-"*65)
     for i, (_, row) in enumerate(latest_data.head(10).iterrows(), 1):
-        print(f"  {i:2d}. {row['state']:20s} MLI: {row['mli']:6.2f}  Income: ${row['median_income']:>7,.0f}  COL: ${row['col_index']:>7,.0f}")
+        print(f"{i:2d}. {row['state']:20s} {row['mli']:6.3f} ${row['median_income']:>10,.0f} "
+              f"${row['col']:>10,.0f} ${row['annual_surplus']:>10,.0f}")
     
-    # Bottom 10 states
-    print(f"\n\nBottom 10 States - Worst Affordability ({latest_year}):")
+    print(f"\n\nBottom 10 States - Worst Purchasing Power ({latest_year}):")
+    print(f"{'State':<20s} {'MLI':>6s} {'Income':>11s} {'COL':>11s} {'Deficit':>11s}")
+    print("-"*65)
     for i, (_, row) in enumerate(latest_data.tail(10).iloc[::-1].iterrows(), 1):
-        print(f"  {i:2d}. {row['state']:20s} MLI: {row['mli']:6.2f}  Income: ${row['median_income']:>7,.0f}  COL: ${row['col_index']:>7,.0f}")
+        deficit_label = "Surplus" if row['annual_surplus'] > 0 else "Deficit"
+        print(f"{i:2d}. {row['state']:20s} {row['mli']:6.3f} ${row['median_income']:>10,.0f} "
+              f"${row['col']:>10,.0f} ${row['annual_surplus']:>10,.0f}")
     
-    # Changes over time (2008 to 2023)
-    if 2008 in mli_df['year'].values and latest_year in mli_df['year'].values:
-        print("\n\nBiggest MLI Changes (2008 → {latest_year}):")
-        
-        mli_2008 = mli_df[mli_df['year'] == 2008].set_index('state')['mli']
-        mli_latest = mli_df[mli_df['year'] == latest_year].set_index('state')['mli']
-        
-        changes = (mli_latest - mli_2008).sort_values()
-        
-        print("\n  Largest Declines:")
-        for state, change in changes.head(5).items():
-            print(f"    {state:20s} {change:+6.2f} points")
-        
-        print("\n  Largest Improvements:")
-        for state, change in changes.tail(5).iloc[::-1].items():
-            print(f"    {state:20s} {change:+6.2f} points")
+    # Key insights
+    print("\n\nKEY INSIGHTS:")
+    print("-"*70)
     
-    # Cost breakdown for select states (latest year)
-    print(f"\n\nCost Breakdown Examples ({latest_year}):")
+    # States at paycheck-to-paycheck (MLI ≈ 1.0)
+    paycheck = latest_data[(latest_data['mli'] >= 0.95) & (latest_data['mli'] <= 1.05)]
+    print(f"\n📊 Paycheck-to-Paycheck States (MLI 0.95-1.05): {len(paycheck)}")
+    for state in paycheck['state'].head(5):
+        print(f"   - {state}")
     
-    for example_state in ['California', 'Texas', 'Mississippi']:
-        state_costs = costs_df[
-            (costs_df['state'] == example_state) & 
-            (costs_df['year'] == latest_year)
-        ].sort_values('cost', ascending=False)
-        
-        print(f"\n  {example_state}:")
-        total = state_costs['cost'].sum()
-        for _, row in state_costs.head(5).iterrows():
-            pct = (row['cost'] / total) * 100
-            print(f"    {row['category']:20s} ${row['cost']:>7,.0f} ({pct:4.1f}%)")
-        print(f"    {'TOTAL':20s} ${total:>7,.0f}")
+    # States with surplus (MLI > 1.2)
+    surplus = latest_data[latest_data['mli'] > 1.2]
+    print(f"\n💰 States with >20% Surplus (MLI > 1.2): {len(surplus)}")
+    for state in surplus['state'].head(5):
+        row = latest_data[latest_data['state'] == state].iloc[0]
+        print(f"   - {state}: {row['surplus_pct']:.0f}% surplus (${row['annual_surplus']:,.0f}/year)")
+    
+    # States in deficit (MLI < 1.0)
+    deficit = latest_data[latest_data['mli'] < 1.0]
+    print(f"\n⚠️  States in Deficit (MLI < 1.0): {len(deficit)}")
+    for state in deficit['state'].head(5):
+        row = latest_data[latest_data['state'] == state].iloc[0]
+        print(f"   - {state}: {row['surplus_pct']:.0f}% deficit (${row['annual_surplus']:,.0f}/year)")
 
 
 # ============================================================================
@@ -281,18 +248,18 @@ def main():
     """Execute complete MLI calculation pipeline"""
     
     print("\n" + "="*70)
-    print(f"MEDIAN LIVING INDEX - SIMPLIFIED MODEL ({QUINTILE})")
-    print("Using 2019 pre-pandemic baseline")
+    print(f"MEDIAN LIVING INDEX - SIMPLE RATIO ({QUINTILE})")
+    print("Pure purchasing power: Income / Cost of Living")
     print("="*70)
     
     # Load all data
     income_df, bea_df, baseline_df = load_all_data()
     
-    # Calculate state-adjusted costs (no weights)
+    # Calculate state-adjusted costs
     costs_df = calculate_state_costs(bea_df, baseline_df)
     
-    # Calculate MLI with 2019 base
-    mli_df, reference_pp_2019 = calculate_mli(income_df, costs_df)
+    # Calculate MLI (simple ratio)
+    mli_df = calculate_mli_simple(income_df, costs_df)
     
     # Save results
     print("\n" + "="*70)
@@ -303,38 +270,21 @@ def main():
     print(f"\n✓ Saved MLI results to: {OUTPUT_FILE}")
     
     # Save detailed costs breakdown
-    costs_detail_file = f'costs_breakdown_14cat_{QUINTILE.lower()}.csv'
+    costs_detail_file = 'costs_breakdown_simple.csv'
     costs_df.to_csv(costs_detail_file, index=False)
     print(f"✓ Saved cost breakdown to: {costs_detail_file}")
     
-    # Save metadata
-    metadata = {
-        'base_year': 2019,
-        'reference_pp': reference_pp_2019,
-        'quintile': QUINTILE,
-        'formula': 'MLI = (Income / COL) / US_2019_PP × 100',
-        'interpretation': 'MLI = 100 means same purchasing power as US average in 2019'
-    }
-    
-    import json
-    with open(f'mli_metadata_{QUINTILE.lower()}.json', 'w') as f:
-        json.dump(metadata, f, indent=2)
-    print(f"✓ Saved metadata to: mli_metadata_{QUINTILE.lower()}.json")
-    
     # Print summary
-    print_summary(mli_df, costs_df)
+    print_summary(mli_df)
     
     print("\n" + "="*70)
     print("CALCULATION COMPLETE!")
     print("="*70)
-    print(f"\nKey Changes from Old Method:")
-    print(f"  1. COL is now TOTAL annual expenses (not weighted)")
-    print(f"  2. MLI uses 2019 as fixed baseline (not yearly average)")
-    print(f"  3. Easier to understand and individualize")
-    print(f"\nOutput files:")
-    print(f"  1. {OUTPUT_FILE} - MLI scores by state-year")
-    print(f"  2. {costs_detail_file} - Detailed cost breakdown")
-    print(f"  3. mli_metadata_{QUINTILE.lower()}.json - Calculation metadata")
+    print(f"\nFormula: MLI = Median Income / Cost of Living")
+    print(f"\nInterpretation:")
+    print(f"  1.0 = Paycheck to paycheck (income = expenses)")
+    print(f"  1.3 = 30% surplus for savings/investment")
+    print(f"  0.9 = 10% deficit (going into debt)")
     
     return mli_df, costs_df
 

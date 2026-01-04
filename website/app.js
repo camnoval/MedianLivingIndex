@@ -256,38 +256,69 @@ class MLIApp {
             }
         });
     }
-    
     getMLIColor(mli) {
-        if (mli < 0.9) return '#dc2626';
-        if (mli < 0.95) return '#f97316';
-        if (mli < 1.0) return '#eab308';
-        if (mli < 1.1) return '#84cc16';
-        if (mli < 1.2) return '#22c55e';
-        return '#059669';
+        // MLI thresholds are conceptual and fixed - 1.0 = break even
+        if (mli < 0.9) return '#dc2626';   // Deep deficit (>10%)
+        if (mli < 0.95) return '#f97316';  // Deficit (5-10%)
+        if (mli < 1.0) return '#eab308';   // Near break-even (0-5% deficit)
+        if (mli < 1.1) return '#84cc16';   // Small surplus (0-10%)
+        if (mli < 1.2) return '#22c55e';   // Good surplus (10-20%)
+        return '#059669';                   // Large surplus (>20%)
     }
     
     getSurplusColor(surplus) {
-        if (surplus < -5000) return '#dc2626';
-        if (surplus < 0) return '#f97316';
-        if (surplus < 5000) return '#eab308';
-        if (surplus < 10000) return '#84cc16';
-        if (surplus < 15000) return '#22c55e';
+        // Dynamic scale based on current year data
+        const yearValues = Object.values(this.data.states)
+            .map(s => s.timeseries[this.currentYear]?.surplus)
+            .filter(v => v !== undefined);
+        
+        const min = Math.min(...yearValues);
+        const max = Math.max(...yearValues);
+        const range = max - min;
+        const bin = range / 6;
+        
+        if (surplus < min + bin) return '#dc2626';
+        if (surplus < min + bin * 2) return '#f97316';
+        if (surplus < min + bin * 3) return '#eab308';
+        if (surplus < min + bin * 4) return '#84cc16';
+        if (surplus < min + bin * 5) return '#22c55e';
         return '#059669';
     }
     
     getIncomeColor(income) {
-        if (income < 60000) return '#fef2f2';
-        if (income < 70000) return '#fef9c3';
-        if (income < 80000) return '#d1fae5';
-        if (income < 90000) return '#a7f3d0';
+        // Dynamic scale based on current year data
+        const yearValues = Object.values(this.data.states)
+            .map(s => s.timeseries[this.currentYear]?.income)
+            .filter(v => v !== undefined);
+        
+        const min = Math.min(...yearValues);
+        const max = Math.max(...yearValues);
+        const range = max - min;
+        const bin = range / 5;
+        
+        if (income < min + bin) return '#fef2f2';
+        if (income < min + bin * 2) return '#fef9c3';
+        if (income < min + bin * 3) return '#d1fae5';
+        if (income < min + bin * 4) return '#a7f3d0';
         return '#6ee7b7';
     }
     
     getCOLColor(col) {
-        if (col > 80000) return '#dc2626';
-        if (col > 75000) return '#f97316';
-        if (col > 70000) return '#eab308';
-        if (col > 65000) return '#84cc16';
+        // Dynamic scale - inverted: lower COL = better (green)
+        const yearValues = Object.values(this.data.states)
+            .map(s => s.timeseries[this.currentYear]?.col)
+            .filter(v => v !== undefined);
+        
+        const min = Math.min(...yearValues);
+        const max = Math.max(...yearValues);
+        const range = max - min;
+        const bin = range / 5;
+        
+        // High COL = red, low COL = green
+        if (col > max - bin) return '#dc2626';
+        if (col > max - bin * 2) return '#f97316';
+        if (col > max - bin * 3) return '#eab308';
+        if (col > max - bin * 4) return '#84cc16';
         return '#059669';
     }
     
