@@ -178,12 +178,18 @@ class MLIApp {
     }
     
     createMap() {
-        const svg = d3.select('#map');
-        const width = 960;
-        const height = 600;
+        const container = document.querySelector('.map-container');
+        const width = container.clientWidth;
+        const height = Math.max(500, width * 0.6); // Aspect ratio
+        
+        const svg = d3.select('#map')
+            .attr('width', '100%')
+            .attr('height', height)
+            .attr('viewBox', `0 0 ${width} ${height}`)
+            .attr('preserveAspectRatio', 'xMidYMid meet');
         
         const projection = d3.geoAlbersUsa()
-            .scale(1200)
+            .scale(width * 1.25)
             .translate([width / 2, height / 2]);
         
         const path = d3.geoPath().projection(projection);
@@ -197,9 +203,14 @@ class MLIApp {
                     .join('path')
                     .attr('class', 'state-path')
                     .attr('d', path)
+                    .style('cursor', 'pointer')
+                    .style('pointer-events', 'all')
                     .on('mouseover', (event, d) => this.showTooltip(event, d))
                     .on('mouseout', () => this.hideTooltip())
-                    .on('click', (event, d) => this.selectState(d));
+                    .on('click', (event, d) => {
+                        console.log('State clicked:', d.properties.name);
+                        this.selectState(d);
+                    });
                 
                 this.updateMap();
             });

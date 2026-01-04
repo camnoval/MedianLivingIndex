@@ -1258,3 +1258,37 @@ select:focus-visible {
         box-shadow: none;
     }
 }
+
+/* ============================================================================
+   RANKINGS WRAPPER - FULL WIDTH SECTION
+   ============================================================================ */
+.rankings-wrapper {
+    background: var(--gray-50);
+    padding: var(--space-2xl) 0;
+    margin: var(--space-2xl) 0;
+}
+
+.rankings-wrapper .rankings-section {
+    margin: 0;
+}
+
+/* ============================================================================
+   MAP CENTERING FIX
+   ============================================================================ */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure SVG paths are clickable */
+.state-path {
+    cursor: pointer !important;
+    pointer-events: all !important;
+}
