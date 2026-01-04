@@ -467,14 +467,13 @@ select:focus {
     border-radius: var(--radius-sm);
     background: linear-gradient(to right, 
         #dc2626 0%,
-        #ef4444 15%,
+        #ef4444 12.5%,
         #f97316 25%,
-        #fb923c 35%,
-        #fbbf24 45%,
+        #fb923c 37.5%,
         #eab308 50%,
-        #bef264 55%,
-        #84cc16 65%,
-        #22c55e 80%, 
+        #bef264 62.5%,
+        #84cc16 75%,
+        #22c55e 87.5%, 
         #059669 100%
     );
     box-shadow: var(--shadow-sm);
@@ -1421,4 +1420,20 @@ select:focus-visible {
 /* Red deficit card */
 .highlight-card.deficit {
     background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+}
+
+
+/* Inverted gradient for Cost of Living (lower is better) */
+.gradient-bar.inverted {
+    background: linear-gradient(to right, 
+        #059669 0%,
+        #10b981 10%,
+        #22c55e 20%,
+        #84cc16 40%,
+        #facc15 50%,
+        #fbbf24 60%,
+        #f97316 80%,
+        #dc2626 90%,
+        #dc2626 100%
+    );
 }

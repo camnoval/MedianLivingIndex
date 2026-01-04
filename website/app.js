@@ -289,6 +289,7 @@ class MLIApp {
         const title = document.querySelector('.legend-title');
         const labels = document.querySelector('.legend-labels');
         const legendLabels = document.querySelectorAll('.legend-label');
+        const gradientBar = document.querySelector('.gradient-bar');
         
         // Get current year data for all states
         const stateValues = Object.values(this.data.states)
@@ -296,20 +297,21 @@ class MLIApp {
             .filter(v => v !== undefined);
         
         let minVal, maxVal, midVal;
-        let minLabel, maxLabel;
         
         switch (this.currentMetric) {
             case 'mli':
                 title.textContent = 'MLI Scale';
                 
+                // Remove inverted class
+                gradientBar.classList.remove('inverted');
+                
                 // For MLI, use fixed conceptual values
                 legendLabels[0].textContent = '0.8';
-                legendLabels[1].textContent = '1.0';
-                legendLabels[2].textContent = '1.5';
+                legendLabels[1].textContent = '1.5';
                 
                 labels.innerHTML = `
                     <span>Deficit (Debt)</span>
-                    <span>Break Even</span>
+                    <span>Break Even (1.0)</span>
                     <span>Surplus (Savings)</span>
                 `;
                 break;
@@ -318,16 +320,17 @@ class MLIApp {
                 const surplusVals = stateValues.map(v => v.surplus);
                 minVal = Math.min(...surplusVals);
                 maxVal = Math.max(...surplusVals);
-                midVal = 0; // Break-even
+                
+                // Remove inverted class
+                gradientBar.classList.remove('inverted');
                 
                 title.textContent = 'Annual Surplus/Deficit';
                 legendLabels[0].textContent = this.formatCurrency(minVal);
-                legendLabels[1].textContent = '$0';
-                legendLabels[2].textContent = this.formatCurrency(maxVal);
+                legendLabels[1].textContent = this.formatCurrency(maxVal);
                 
                 labels.innerHTML = `
                     <span>Large Deficit</span>
-                    <span>Break Even</span>
+                    <span>Break Even ($0)</span>
                     <span>Large Surplus</span>
                 `;
                 break;
@@ -338,14 +341,16 @@ class MLIApp {
                 maxVal = Math.max(...incomeVals);
                 midVal = (minVal + maxVal) / 2;
                 
+                // Remove inverted class
+                gradientBar.classList.remove('inverted');
+                
                 title.textContent = 'Median Income';
                 legendLabels[0].textContent = this.formatCurrency(minVal);
-                legendLabels[1].textContent = this.formatCurrency(midVal);
-                legendLabels[2].textContent = this.formatCurrency(maxVal);
+                legendLabels[1].textContent = this.formatCurrency(maxVal);
                 
                 labels.innerHTML = `
                     <span>Lowest</span>
-                    <span>Middle</span>
+                    <span>Middle (${this.formatCurrency(midVal)})</span>
                     <span>Highest</span>
                 `;
                 break;
@@ -358,13 +363,15 @@ class MLIApp {
                 
                 title.textContent = 'Cost of Living';
                 legendLabels[0].textContent = this.formatCurrency(minVal);
-                legendLabels[1].textContent = this.formatCurrency(midVal);
-                legendLabels[2].textContent = this.formatCurrency(maxVal);
+                legendLabels[1].textContent = this.formatCurrency(maxVal);
+                
+                // Invert gradient for COL (lower is better)
+                gradientBar.classList.add('inverted');
                 
                 labels.innerHTML = `
-                    <span>Lowest</span>
-                    <span>Middle</span>
-                    <span>Highest</span>
+                    <span>Lowest (Best)</span>
+                    <span>Middle (${this.formatCurrency(midVal)})</span>
+                    <span>Highest (Worst)</span>
                 `;
                 break;
         }

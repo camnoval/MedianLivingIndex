@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Median Living Index - Real Purchasing Power Across America</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="See which states let you save vs. spend more than you earn. Interactive map showing purchasing power across America.">
 </head>
@@ -101,8 +98,6 @@
                 <div class="legend-gradient">
                     <span class="legend-label">0.8</span>
                     <div class="gradient-bar"></div>
-                    <span class="legend-label">1.0</span>
-                    <div class="gradient-bar"></div>
                     <span class="legend-label">1.5</span>
                 </div>
                 <div class="legend-labels">
@@ -175,12 +170,9 @@
                 </div>
             </div>
         </section>
-    </main>
 
-    <!-- Rankings Table - Separate Full Width Section -->
-    <div class="rankings-wrapper">
-        <div class="container">
-            <section class="rankings-section">
+        <!-- Rankings Table -->
+        <section class="rankings-section">
             <h2>State Rankings</h2>
             
             <div class="tab-controls">
@@ -191,7 +183,14 @@
 
             <div class="table-controls">
                 <input type="text" id="searchBox" placeholder="Search states..." class="search-box">
-                <div class="sort-hint">💡 Click column headers to sort</div>
+                <select id="sortSelect" class="sort-select">
+                    <option value="mli-desc" selected>Highest MLI</option>
+                    <option value="mli-asc">Lowest MLI</option>
+                    <option value="name">Alphabetical</option>
+                    <option value="surplus-desc">Highest Surplus</option>
+                    <option value="income-desc">Highest Income</option>
+                    <option value="col-asc">Lowest Cost</option>
+                </select>
             </div>
 
             <div class="table-container">
@@ -199,12 +198,12 @@
                     <thead>
                         <tr>
                             <th>Rank</th>
-                            <th data-sort="name" class="sortable">State <span class="sort-arrow"></span></th>
-                            <th data-sort="mli" class="sortable sort-desc">MLI <span class="sort-arrow"></span></th>
-                            <th data-sort="surplus" class="sortable">Surplus/Deficit <span class="sort-arrow"></span></th>
-                            <th data-sort="income" class="sortable">Median Income <span class="sort-arrow"></span></th>
-                            <th data-sort="col" class="sortable">Cost of Living <span class="sort-arrow"></span></th>
-                            <th data-sort="change" class="sortable">15yr Change <span class="sort-arrow"></span></th>
+                            <th>State</th>
+                            <th>MLI</th>
+                            <th>Surplus/Deficit</th>
+                            <th>Median Income</th>
+                            <th>Cost of Living</th>
+                            <th>15yr Change</th>
                         </tr>
                     </thead>
                     <tbody id="rankingsBody">
@@ -212,12 +211,8 @@
                     </tbody>
                 </table>
             </div>
-            </section>
-        </div>
-    </div>
+        </section>
 
-    <!-- Main Content Continued -->
-    <main class="container">
         <!-- Insights Section -->
         <section class="insights-section">
             <h2>Key Insights</h2>
