@@ -466,15 +466,15 @@ select:focus {
     height: 24px;
     border-radius: var(--radius-sm);
     background: linear-gradient(to right, 
-        #dc2626 0%, 
-        #ef4444 20%,
-        #f97316 30%,
-        #fb923c 40%,
+        #dc2626 0%,
+        #ef4444 15%,
+        #f97316 25%,
+        #fb923c 35%,
+        #fbbf24 45%,
         #eab308 50%,
-        #84cc16 60%,
-        #4ade80 70%,
+        #bef264 55%,
+        #84cc16 65%,
         #22c55e 80%, 
-        #10b981 90%,
         #059669 100%
     );
     box-shadow: var(--shadow-sm);

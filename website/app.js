@@ -105,6 +105,7 @@ class MLIApp {
             this.updateMap();
             this.updateRankingsTable();
             this.updateStatsBanner();
+            this.updateLegend();
         });
         
         document.getElementById('metricSelect').addEventListener('change', (e) => {
@@ -287,38 +288,83 @@ class MLIApp {
     updateLegend() {
         const title = document.querySelector('.legend-title');
         const labels = document.querySelector('.legend-labels');
+        const legendLabels = document.querySelectorAll('.legend-label');
+        
+        // Get current year data for all states
+        const stateValues = Object.values(this.data.states)
+            .map(s => s.timeseries[this.currentYear])
+            .filter(v => v !== undefined);
+        
+        let minVal, maxVal, midVal;
+        let minLabel, maxLabel;
         
         switch (this.currentMetric) {
             case 'mli':
                 title.textContent = 'MLI Scale';
+                
+                // For MLI, use fixed conceptual values
+                legendLabels[0].textContent = '0.8';
+                legendLabels[1].textContent = '1.0';
+                legendLabels[2].textContent = '1.5';
+                
                 labels.innerHTML = `
                     <span>Deficit (Debt)</span>
                     <span>Break Even</span>
                     <span>Surplus (Savings)</span>
                 `;
                 break;
+                
             case 'surplus':
+                const surplusVals = stateValues.map(v => v.surplus);
+                minVal = Math.min(...surplusVals);
+                maxVal = Math.max(...surplusVals);
+                midVal = 0; // Break-even
+                
                 title.textContent = 'Annual Surplus/Deficit';
+                legendLabels[0].textContent = this.formatCurrency(minVal);
+                legendLabels[1].textContent = '$0';
+                legendLabels[2].textContent = this.formatCurrency(maxVal);
+                
                 labels.innerHTML = `
                     <span>Large Deficit</span>
                     <span>Break Even</span>
                     <span>Large Surplus</span>
                 `;
                 break;
+                
             case 'income':
+                const incomeVals = stateValues.map(v => v.income);
+                minVal = Math.min(...incomeVals);
+                maxVal = Math.max(...incomeVals);
+                midVal = (minVal + maxVal) / 2;
+                
                 title.textContent = 'Median Income';
+                legendLabels[0].textContent = this.formatCurrency(minVal);
+                legendLabels[1].textContent = this.formatCurrency(midVal);
+                legendLabels[2].textContent = this.formatCurrency(maxVal);
+                
                 labels.innerHTML = `
-                    <span>Lower Income</span>
-                    <span>Middle Income</span>
-                    <span>Higher Income</span>
+                    <span>Lowest</span>
+                    <span>Middle</span>
+                    <span>Highest</span>
                 `;
                 break;
+                
             case 'col':
+                const colVals = stateValues.map(v => v.col);
+                minVal = Math.min(...colVals);
+                maxVal = Math.max(...colVals);
+                midVal = (minVal + maxVal) / 2;
+                
                 title.textContent = 'Cost of Living';
+                legendLabels[0].textContent = this.formatCurrency(minVal);
+                legendLabels[1].textContent = this.formatCurrency(midVal);
+                legendLabels[2].textContent = this.formatCurrency(maxVal);
+                
                 labels.innerHTML = `
-                    <span>Lower Cost</span>
-                    <span>Moderate Cost</span>
-                    <span>Higher Cost</span>
+                    <span>Lowest</span>
+                    <span>Middle</span>
+                    <span>Highest</span>
                 `;
                 break;
         }
@@ -413,13 +459,15 @@ class MLIApp {
         const min = Math.min(...yearValues);
         const max = Math.max(...yearValues);
         const range = max - min;
-        const bin = range / 5;
+        const bin = range / 6;
         
-        if (income < min + bin) return '#fef2f2';
-        if (income < min + bin * 2) return '#fef9c3';
-        if (income < min + bin * 3) return '#d1fae5';
-        if (income < min + bin * 4) return '#a7f3d0';
-        return '#6ee7b7';
+        // Use same red-yellow-green gradient as legend
+        if (income < min + bin) return '#dc2626';
+        if (income < min + bin * 2) return '#f97316';
+        if (income < min + bin * 3) return '#eab308';
+        if (income < min + bin * 4) return '#84cc16';
+        if (income < min + bin * 5) return '#22c55e';
+        return '#059669';
     }
     
     getCOLColor(col) {
@@ -431,13 +479,14 @@ class MLIApp {
         const min = Math.min(...yearValues);
         const max = Math.max(...yearValues);
         const range = max - min;
-        const bin = range / 5;
+        const bin = range / 6;
         
-        // High COL = red, low COL = green
+        // Inverted: High COL = red, low COL = green
         if (col > max - bin) return '#dc2626';
         if (col > max - bin * 2) return '#f97316';
         if (col > max - bin * 3) return '#eab308';
         if (col > max - bin * 4) return '#84cc16';
+        if (col > max - bin * 5) return '#22c55e';
         return '#059669';
     }
     
