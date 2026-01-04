@@ -1,0 +1,7427 @@
+{
+  "metadata": {
+    "generated": "2026-01-03T20:03:34.538980",
+    "version": "2.0",
+    "base_year": 2019,
+    "base_year_reference_pp": 0.9512,
+    "description": "MLI = 100 represents the purchasing power of the average US household in 2019 (pre-pandemic baseline)",
+    "formula": "MLI = (Median Income / Total Cost of Living) / 5.2755 \u00d7 100",
+    "col_interpretation": "Cost of Living represents total estimated annual expenses for a median household",
+    "changes_from_v1": [
+      "COL is now total annual expenses (not weighted basket)",
+      "MLI uses fixed 2019 baseline (not yearly floating average)",
+      "Removed confusing weight multipliers"
+    ]
+  },
+  "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023
+  ],
+  "states": {
+    "Alabama": {
+      "name": "Alabama",
+      "timeseries": {
+        "2008": {
+          "mli": 75.34,
+          "income": 42666,
+          "col": 59535.23,
+          "purchasing_power": 0.7167
+        },
+        "2009": {
+          "mli": 72.28,
+          "income": 40489,
+          "col": 58894.03,
+          "purchasing_power": 0.6875
+        },
+        "2010": {
+          "mli": 70.76,
+          "income": 40474,
+          "col": 60129.58,
+          "purchasing_power": 0.6731
+        },
+        "2011": {
+          "mli": 72.36,
+          "income": 41415,
+          "col": 60167.75,
+          "purchasing_power": 0.6883
+        },
+        "2012": {
+          "mli": 72.18,
+          "income": 41574,
+          "col": 60555.28,
+          "purchasing_power": 0.6865
+        },
+        "2013": {
+          "mli": 74.57,
+          "income": 42849,
+          "col": 60407.44,
+          "purchasing_power": 0.7093
+        },
+        "2014": {
+          "mli": 74.96,
+          "income": 42830,
+          "col": 60064.56,
+          "purchasing_power": 0.7131
+        },
+        "2015": {
+          "mli": 78.86,
+          "income": 44765,
+          "col": 59678.72,
+          "purchasing_power": 0.7501
+        },
+        "2016": {
+          "mli": 80.66,
+          "income": 46257,
+          "col": 60293.27,
+          "purchasing_power": 0.7672
+        },
+        "2017": {
+          "mli": 84.3,
+          "income": 48123,
+          "col": 60011.18,
+          "purchasing_power": 0.8019
+        },
+        "2018": {
+          "mli": 89.92,
+          "income": 49861,
+          "col": 58296.71,
+          "purchasing_power": 0.8553
+        },
+        "2019": {
+          "mli": 91.97,
+          "income": 51734,
+          "col": 59139.42,
+          "purchasing_power": 0.8748
+        },
+        "2021": {
+          "mli": 96.21,
+          "income": 53913,
+          "col": 58910.06,
+          "purchasing_power": 0.9152
+        },
+        "2022": {
+          "mli": 107.15,
+          "income": 59674,
+          "col": 58550.54,
+          "purchasing_power": 1.0192
+        },
+        "2023": {
+          "mli": 109.12,
+          "income": 62212,
+          "col": 59936.34,
+          "purchasing_power": 1.038
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 109.12,
+        "income": 62212,
+        "col": 59936.34,
+        "purchasing_power": 1.038,
+        "categories": {
+          "food": {
+            "cost": 8650.82
+          },
+          "housing": {
+            "cost": 14559.65
+          },
+          "transportation": {
+            "cost": 11645.34
+          },
+          "healthcare": {
+            "cost": 5526.47
+          },
+          "personal_insurance": {
+            "cost": 8289.71
+          },
+          "entertainment": {
+            "cost": 3256.67
+          },
+          "apparel": {
+            "cost": 1663.62
+          },
+          "personal_care": {
+            "cost": 828.97
+          },
+          "reading": {
+            "cost": 133.09
+          },
+          "education": {
+            "cost": 1450.7
+          },
+          "tobacco": {
+            "cost": 332.72
+          },
+          "miscellaneous": {
+            "cost": 1036.21
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 532.36
+          }
+        }
+      }
+    },
+    "Alaska": {
+      "name": "Alaska",
+      "timeseries": {
+        "2008": {
+          "mli": 97.34,
+          "income": 68460,
+          "col": 73936.21,
+          "purchasing_power": 0.9259
+        },
+        "2009": {
+          "mli": 91.11,
+          "income": 66953,
+          "col": 77257.91,
+          "purchasing_power": 0.8666
+        },
+        "2010": {
+          "mli": 90.86,
+          "income": 64576,
+          "col": 74720.01,
+          "purchasing_power": 0.8642
+        },
+        "2011": {
+          "mli": 96.39,
+          "income": 67825,
+          "col": 73974.27,
+          "purchasing_power": 0.9169
+        },
+        "2012": {
+          "mli": 95.32,
+          "income": 67712,
+          "col": 74681.65,
+          "purchasing_power": 0.9067
+        },
+        "2013": {
+          "mli": 102.69,
+          "income": 72237,
+          "col": 73955.12,
+          "purchasing_power": 0.9768
+        },
+        "2014": {
+          "mli": 101.07,
+          "income": 71583,
+          "col": 74457.19,
+          "purchasing_power": 0.9614
+        },
+        "2015": {
+          "mli": 102.84,
+          "income": 73355,
+          "col": 74988.63,
+          "purchasing_power": 0.9782
+        },
+        "2016": {
+          "mli": 107.87,
+          "income": 76440,
+          "col": 74500.29,
+          "purchasing_power": 1.026
+        },
+        "2017": {
+          "mli": 102.65,
+          "income": 73181,
+          "col": 74948.36,
+          "purchasing_power": 0.9764
+        },
+        "2018": {
+          "mli": 106.64,
+          "income": 74346,
+          "col": 73292.63,
+          "purchasing_power": 1.0144
+        },
+        "2019": {
+          "mli": 110.6,
+          "income": 75463,
+          "col": 71727.7,
+          "purchasing_power": 1.0521
+        },
+        "2021": {
+          "mli": 110.59,
+          "income": 77845,
+          "col": 73998.53,
+          "purchasing_power": 1.052
+        },
+        "2022": {
+          "mli": 129.95,
+          "income": 88121,
+          "col": 71291.46,
+          "purchasing_power": 1.2361
+        },
+        "2023": {
+          "mli": 129.24,
+          "income": 86631,
+          "col": 70470.37,
+          "purchasing_power": 1.2293
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 129.24,
+        "income": 86631,
+        "col": 70470.37,
+        "purchasing_power": 1.2293,
+        "categories": {
+          "food": {
+            "cost": 9133.85
+          },
+          "housing": {
+            "cost": 22856.07
+          },
+          "transportation": {
+            "cost": 12295.57
+          },
+          "healthcare": {
+            "cost": 5785.53
+          },
+          "personal_insurance": {
+            "cost": 8678.29
+          },
+          "entertainment": {
+            "cost": 3409.33
+          },
+          "apparel": {
+            "cost": 1756.51
+          },
+          "personal_care": {
+            "cost": 867.83
+          },
+          "reading": {
+            "cost": 140.52
+          },
+          "education": {
+            "cost": 1518.7
+          },
+          "tobacco": {
+            "cost": 351.3
+          },
+          "miscellaneous": {
+            "cost": 1084.79
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 562.08
+          }
+        }
+      }
+    },
+    "Arizona": {
+      "name": "Arizona",
+      "timeseries": {
+        "2008": {
+          "mli": 73.93,
+          "income": 50958,
+          "col": 72459.44,
+          "purchasing_power": 0.7033
+        },
+        "2009": {
+          "mli": 70.75,
+          "income": 48745,
+          "col": 72430.11,
+          "purchasing_power": 0.673
+        },
+        "2010": {
+          "mli": 70.06,
+          "income": 46789,
+          "col": 70210.42,
+          "purchasing_power": 0.6664
+        },
+        "2011": {
+          "mli": 71.05,
+          "income": 46709,
+          "col": 69111.98,
+          "purchasing_power": 0.6758
+        },
+        "2012": {
+          "mli": 73.2,
+          "income": 47826,
+          "col": 68683.63,
+          "purchasing_power": 0.6963
+        },
+        "2013": {
+          "mli": 74.36,
+          "income": 48510,
+          "col": 68581.86,
+          "purchasing_power": 0.7073
+        },
+        "2014": {
+          "mli": 77.18,
+          "income": 50068,
+          "col": 68197.55,
+          "purchasing_power": 0.7342
+        },
+        "2015": {
+          "mli": 79.15,
+          "income": 51492,
+          "col": 68391.9,
+          "purchasing_power": 0.7529
+        },
+        "2016": {
+          "mli": 82.21,
+          "income": 53558,
+          "col": 68487.54,
+          "purchasing_power": 0.782
+        },
+        "2017": {
+          "mli": 87.16,
+          "income": 56581,
+          "col": 68243.02,
+          "purchasing_power": 0.8291
+        },
+        "2018": {
+          "mli": 91.61,
+          "income": 59246,
+          "col": 67988.41,
+          "purchasing_power": 0.8714
+        },
+        "2019": {
+          "mli": 95.69,
+          "income": 62055,
+          "col": 68179.38,
+          "purchasing_power": 0.9102
+        },
+        "2021": {
+          "mli": 105.04,
+          "income": 69056,
+          "col": 69111.8,
+          "purchasing_power": 0.9992
+        },
+        "2022": {
+          "mli": 109.62,
+          "income": 74568,
+          "col": 71513.81,
+          "purchasing_power": 1.0427
+        },
+        "2023": {
+          "mli": 112.3,
+          "income": 77315,
+          "col": 72376.19,
+          "purchasing_power": 1.0682
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 112.3,
+        "income": 77315,
+        "col": 72376.19,
+        "purchasing_power": 1.0682,
+        "categories": {
+          "food": {
+            "cost": 8869.95
+          },
+          "housing": {
+            "cost": 25679.17
+          },
+          "transportation": {
+            "cost": 11940.32
+          },
+          "healthcare": {
+            "cost": 5726.73
+          },
+          "personal_insurance": {
+            "cost": 8590.09
+          },
+          "entertainment": {
+            "cost": 3374.68
+          },
+          "apparel": {
+            "cost": 1705.76
+          },
+          "personal_care": {
+            "cost": 859.01
+          },
+          "reading": {
+            "cost": 136.46
+          },
+          "education": {
+            "cost": 1503.27
+          },
+          "tobacco": {
+            "cost": 341.15
+          },
+          "miscellaneous": {
+            "cost": 1073.76
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 545.84
+          }
+        }
+      }
+    },
+    "Arkansas": {
+      "name": "Arkansas",
+      "timeseries": {
+        "2008": {
+          "mli": 69.02,
+          "income": 38815,
+          "col": 59124.12,
+          "purchasing_power": 0.6565
+        },
+        "2009": {
+          "mli": 68.51,
+          "income": 37823,
+          "col": 58038.93,
+          "purchasing_power": 0.6517
+        },
+        "2010": {
+          "mli": 67.58,
+          "income": 38307,
+          "col": 59588.6,
+          "purchasing_power": 0.6429
+        },
+        "2011": {
+          "mli": 67.86,
+          "income": 38758,
+          "col": 60043.68,
+          "purchasing_power": 0.6455
+        },
+        "2012": {
+          "mli": 70.57,
+          "income": 40112,
+          "col": 59757.7,
+          "purchasing_power": 0.6712
+        },
+        "2013": {
+          "mli": 71.19,
+          "income": 40511,
+          "col": 59821.92,
+          "purchasing_power": 0.6772
+        },
+        "2014": {
+          "mli": 72.58,
+          "income": 41262,
+          "col": 59766.59,
+          "purchasing_power": 0.6904
+        },
+        "2015": {
+          "mli": 74.44,
+          "income": 41995,
+          "col": 59305.93,
+          "purchasing_power": 0.7081
+        },
+        "2016": {
+          "mli": 78.3,
+          "income": 44334,
+          "col": 59524.96,
+          "purchasing_power": 0.7448
+        },
+        "2017": {
+          "mli": 82.03,
+          "income": 45869,
+          "col": 58788.88,
+          "purchasing_power": 0.7802
+        },
+        "2018": {
+          "mli": 85.28,
+          "income": 47062,
+          "col": 58016.95,
+          "purchasing_power": 0.8112
+        },
+        "2019": {
+          "mli": 88.06,
+          "income": 48952,
+          "col": 58442.15,
+          "purchasing_power": 0.8376
+        },
+        "2021": {
+          "mli": 93.19,
+          "income": 52528,
+          "col": 59260.26,
+          "purchasing_power": 0.8864
+        },
+        "2022": {
+          "mli": 101.35,
+          "income": 55432,
+          "col": 57499.67,
+          "purchasing_power": 0.964
+        },
+        "2023": {
+          "mli": 107.58,
+          "income": 58700,
+          "col": 57363.54,
+          "purchasing_power": 1.0233
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 107.58,
+        "income": 58700,
+        "col": 57363.54,
+        "purchasing_power": 1.0233,
+        "categories": {
+          "food": {
+            "cost": 8384.28
+          },
+          "housing": {
+            "cost": 13402.22
+          },
+          "transportation": {
+            "cost": 11286.54
+          },
+          "healthcare": {
+            "cost": 5334.56
+          },
+          "personal_insurance": {
+            "cost": 8001.84
+          },
+          "entertainment": {
+            "cost": 3143.58
+          },
+          "apparel": {
+            "cost": 1612.36
+          },
+          "personal_care": {
+            "cost": 800.18
+          },
+          "reading": {
+            "cost": 128.99
+          },
+          "education": {
+            "cost": 1400.32
+          },
+          "tobacco": {
+            "cost": 322.47
+          },
+          "miscellaneous": {
+            "cost": 1000.23
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 515.96
+          }
+        }
+      }
+    },
+    "California": {
+      "name": "California",
+      "timeseries": {
+        "2008": {
+          "mli": 73.59,
+          "income": 61021,
+          "col": 87177.96,
+          "purchasing_power": 0.7
+        },
+        "2009": {
+          "mli": 71.79,
+          "income": 58931,
+          "col": 86295.58,
+          "purchasing_power": 0.6829
+        },
+        "2010": {
+          "mli": 71.14,
+          "income": 57708,
+          "col": 85276.83,
+          "purchasing_power": 0.6767
+        },
+        "2011": {
+          "mli": 70.69,
+          "income": 57287,
+          "col": 85191.85,
+          "purchasing_power": 0.6724
+        },
+        "2012": {
+          "mli": 72.0,
+          "income": 58328,
+          "col": 85164.16,
+          "purchasing_power": 0.6849
+        },
+        "2013": {
+          "mli": 74.39,
+          "income": 60190,
+          "col": 85062.81,
+          "purchasing_power": 0.7076
+        },
+        "2014": {
+          "mli": 76.05,
+          "income": 61933,
+          "col": 85618.48,
+          "purchasing_power": 0.7234
+        },
+        "2015": {
+          "mli": 78.74,
+          "income": 64500,
+          "col": 86112.37,
+          "purchasing_power": 0.749
+        },
+        "2016": {
+          "mli": 82.69,
+          "income": 67739,
+          "col": 86125.48,
+          "purchasing_power": 0.7865
+        },
+        "2017": {
+          "mli": 86.77,
+          "income": 71805,
+          "col": 87001.86,
+          "purchasing_power": 0.8253
+        },
+        "2018": {
+          "mli": 90.11,
+          "income": 75277,
+          "col": 87826.43,
+          "purchasing_power": 0.8571
+        },
+        "2019": {
+          "mli": 96.35,
+          "income": 80440,
+          "col": 87772.98,
+          "purchasing_power": 0.9165
+        },
+        "2021": {
+          "mli": 101.15,
+          "income": 84907,
+          "col": 88249.71,
+          "purchasing_power": 0.9621
+        },
+        "2022": {
+          "mli": 109.95,
+          "income": 91551,
+          "col": 87536.25,
+          "purchasing_power": 1.0459
+        },
+        "2023": {
+          "mli": 115.45,
+          "income": 95521,
+          "col": 86984.47,
+          "purchasing_power": 1.0981
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 115.45,
+        "income": 95521,
+        "col": 86984.47,
+        "purchasing_power": 1.0981,
+        "categories": {
+          "food": {
+            "cost": 9785.23
+          },
+          "housing": {
+            "cost": 37328.92
+          },
+          "transportation": {
+            "cost": 13172.42
+          },
+          "healthcare": {
+            "cost": 5870.26
+          },
+          "personal_insurance": {
+            "cost": 8805.38
+          },
+          "entertainment": {
+            "cost": 3459.26
+          },
+          "apparel": {
+            "cost": 1881.78
+          },
+          "personal_care": {
+            "cost": 880.54
+          },
+          "reading": {
+            "cost": 150.54
+          },
+          "education": {
+            "cost": 1540.94
+          },
+          "tobacco": {
+            "cost": 376.36
+          },
+          "miscellaneous": {
+            "cost": 1100.67
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 602.17
+          }
+        }
+      }
+    },
+    "Colorado": {
+      "name": "Colorado",
+      "timeseries": {
+        "2008": {
+          "mli": 79.87,
+          "income": 56993,
+          "col": 75021.31,
+          "purchasing_power": 0.7597
+        },
+        "2009": {
+          "mli": 78.53,
+          "income": 55430,
+          "col": 74202.68,
+          "purchasing_power": 0.747
+        },
+        "2010": {
+          "mli": 77.65,
+          "income": 54046,
+          "col": 73167.99,
+          "purchasing_power": 0.7387
+        },
+        "2011": {
+          "mli": 77.23,
+          "income": 55387,
+          "col": 75398.78,
+          "purchasing_power": 0.7346
+        },
+        "2012": {
+          "mli": 79.76,
+          "income": 56765,
+          "col": 74817.5,
+          "purchasing_power": 0.7587
+        },
+        "2013": {
+          "mli": 82.21,
+          "income": 58823,
+          "col": 75223.68,
+          "purchasing_power": 0.782
+        },
+        "2014": {
+          "mli": 85.41,
+          "income": 61303,
+          "col": 75461.04,
+          "purchasing_power": 0.8124
+        },
+        "2015": {
+          "mli": 88.33,
+          "income": 63909,
+          "col": 76066.23,
+          "purchasing_power": 0.8402
+        },
+        "2016": {
+          "mli": 90.46,
+          "income": 65685,
+          "col": 76335.66,
+          "purchasing_power": 0.8605
+        },
+        "2017": {
+          "mli": 94.41,
+          "income": 69117,
+          "col": 76965.85,
+          "purchasing_power": 0.898
+        },
+        "2018": {
+          "mli": 100.0,
+          "income": 71953,
+          "col": 75641.76,
+          "purchasing_power": 0.9512
+        },
+        "2019": {
+          "mli": 104.8,
+          "income": 77127,
+          "col": 77370.53,
+          "purchasing_power": 0.9969
+        },
+        "2021": {
+          "mli": 111.98,
+          "income": 82254,
+          "col": 77221.56,
+          "purchasing_power": 1.0652
+        },
+        "2022": {
+          "mli": 122.0,
+          "income": 89302,
+          "col": 76953.1,
+          "purchasing_power": 1.1605
+        },
+        "2023": {
+          "mli": 127.72,
+          "income": 92911,
+          "col": 76479.71,
+          "purchasing_power": 1.2148
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 127.72,
+        "income": 92911,
+        "col": 76479.71,
+        "purchasing_power": 1.2148,
+        "categories": {
+          "food": {
+            "cost": 8928.74
+          },
+          "housing": {
+            "cost": 30870.82
+          },
+          "transportation": {
+            "cost": 12019.45
+          },
+          "healthcare": {
+            "cost": 5389.5
+          },
+          "personal_insurance": {
+            "cost": 8084.24
+          },
+          "entertainment": {
+            "cost": 3175.95
+          },
+          "apparel": {
+            "cost": 1717.06
+          },
+          "personal_care": {
+            "cost": 808.42
+          },
+          "reading": {
+            "cost": 137.37
+          },
+          "education": {
+            "cost": 1414.74
+          },
+          "tobacco": {
+            "cost": 343.41
+          },
+          "miscellaneous": {
+            "cost": 1010.53
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 549.46
+          }
+        }
+      }
+    },
+    "Connecticut": {
+      "name": "Connecticut",
+      "timeseries": {
+        "2008": {
+          "mli": 88.85,
+          "income": 68595,
+          "col": 81166.11,
+          "purchasing_power": 0.8451
+        },
+        "2009": {
+          "mli": 85.8,
+          "income": 67034,
+          "col": 82131.53,
+          "purchasing_power": 0.8162
+        },
+        "2010": {
+          "mli": 85.63,
+          "income": 64032,
+          "col": 78609.38,
+          "purchasing_power": 0.8146
+        },
+        "2011": {
+          "mli": 87.19,
+          "income": 65753,
+          "col": 79285.68,
+          "purchasing_power": 0.8293
+        },
+        "2012": {
+          "mli": 88.92,
+          "income": 67276,
+          "col": 79541.44,
+          "purchasing_power": 0.8458
+        },
+        "2013": {
+          "mli": 89.09,
+          "income": 67098,
+          "col": 79177.43,
+          "purchasing_power": 0.8474
+        },
+        "2014": {
+          "mli": 93.8,
+          "income": 70048,
+          "col": 78506.13,
+          "purchasing_power": 0.8923
+        },
+        "2015": {
+          "mli": 94.18,
+          "income": 71346,
+          "col": 79641.88,
+          "purchasing_power": 0.8958
+        },
+        "2016": {
+          "mli": 98.19,
+          "income": 73433,
+          "col": 78624.95,
+          "purchasing_power": 0.934
+        },
+        "2017": {
+          "mli": 100.63,
+          "income": 74168,
+          "col": 77481.41,
+          "purchasing_power": 0.9572
+        },
+        "2018": {
+          "mli": 105.45,
+          "income": 76348,
+          "col": 76119.02,
+          "purchasing_power": 1.003
+        },
+        "2019": {
+          "mli": 110.61,
+          "income": 78833,
+          "col": 74926.92,
+          "purchasing_power": 1.0521
+        },
+        "2021": {
+          "mli": 117.66,
+          "income": 83771,
+          "col": 74849.89,
+          "purchasing_power": 1.1192
+        },
+        "2022": {
+          "mli": 121.82,
+          "income": 88429,
+          "col": 76312.35,
+          "purchasing_power": 1.1588
+        },
+        "2023": {
+          "mli": 129.57,
+          "income": 91665,
+          "col": 74377.3,
+          "purchasing_power": 1.2324
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 129.57,
+        "income": 91665,
+        "col": 74377.3,
+        "purchasing_power": 1.2324,
+        "categories": {
+          "food": {
+            "cost": 8860.85
+          },
+          "housing": {
+            "cost": 27626.75
+          },
+          "transportation": {
+            "cost": 11928.07
+          },
+          "healthcare": {
+            "cost": 5747.78
+          },
+          "personal_insurance": {
+            "cost": 8621.68
+          },
+          "entertainment": {
+            "cost": 3387.09
+          },
+          "apparel": {
+            "cost": 1704.01
+          },
+          "personal_care": {
+            "cost": 862.17
+          },
+          "reading": {
+            "cost": 136.32
+          },
+          "education": {
+            "cost": 1508.79
+          },
+          "tobacco": {
+            "cost": 340.8
+          },
+          "miscellaneous": {
+            "cost": 1077.71
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 545.28
+          }
+        }
+      }
+    },
+    "Delaware": {
+      "name": "Delaware",
+      "timeseries": {
+        "2008": {
+          "mli": 87.08,
+          "income": 57989,
+          "col": 70010.49,
+          "purchasing_power": 0.8283
+        },
+        "2009": {
+          "mli": 82.83,
+          "income": 56860,
+          "col": 72164.91,
+          "purchasing_power": 0.7879
+        },
+        "2010": {
+          "mli": 82.67,
+          "income": 55847,
+          "col": 71015.41,
+          "purchasing_power": 0.7864
+        },
+        "2011": {
+          "mli": 87.78,
+          "income": 58814,
+          "col": 70437.96,
+          "purchasing_power": 0.835
+        },
+        "2012": {
+          "mli": 88.05,
+          "income": 58415,
+          "col": 69748.99,
+          "purchasing_power": 0.8375
+        },
+        "2013": {
+          "mli": 87.75,
+          "income": 57846,
+          "col": 69300.02,
+          "purchasing_power": 0.8347
+        },
+        "2014": {
+          "mli": 88.98,
+          "income": 59716,
+          "col": 70554.87,
+          "purchasing_power": 0.8464
+        },
+        "2015": {
+          "mli": 94.07,
+          "income": 61255,
+          "col": 68456.59,
+          "purchasing_power": 0.8948
+        },
+        "2016": {
+          "mli": 94.46,
+          "income": 61757,
+          "col": 68730.11,
+          "purchasing_power": 0.8985
+        },
+        "2017": {
+          "mli": 96.35,
+          "income": 62852,
+          "col": 68581.9,
+          "purchasing_power": 0.9165
+        },
+        "2018": {
+          "mli": 97.7,
+          "income": 64805,
+          "col": 69733.77,
+          "purchasing_power": 0.9293
+        },
+        "2019": {
+          "mli": 107.13,
+          "income": 70176,
+          "col": 68864.91,
+          "purchasing_power": 1.019
+        },
+        "2021": {
+          "mli": 109.22,
+          "income": 71091,
+          "col": 68425.81,
+          "purchasing_power": 1.039
+        },
+        "2022": {
+          "mli": 125.21,
+          "income": 82174,
+          "col": 68996.27,
+          "purchasing_power": 1.191
+        },
+        "2023": {
+          "mli": 122.58,
+          "income": 81361,
+          "col": 69778.75,
+          "purchasing_power": 1.166
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 122.58,
+        "income": 81361,
+        "col": 69778.75,
+        "purchasing_power": 1.166,
+        "categories": {
+          "food": {
+            "cost": 8951.03
+          },
+          "housing": {
+            "cost": 23399.78
+          },
+          "transportation": {
+            "cost": 12049.47
+          },
+          "healthcare": {
+            "cost": 5582.19
+          },
+          "personal_insurance": {
+            "cost": 8373.29
+          },
+          "entertainment": {
+            "cost": 3289.51
+          },
+          "apparel": {
+            "cost": 1721.35
+          },
+          "personal_care": {
+            "cost": 837.33
+          },
+          "reading": {
+            "cost": 137.71
+          },
+          "education": {
+            "cost": 1465.33
+          },
+          "tobacco": {
+            "cost": 344.27
+          },
+          "miscellaneous": {
+            "cost": 1046.66
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 550.83
+          }
+        }
+      }
+    },
+    "Florida": {
+      "name": "Florida",
+      "timeseries": {
+        "2008": {
+          "mli": 68.27,
+          "income": 47778,
+          "col": 73576.99,
+          "purchasing_power": 0.6494
+        },
+        "2009": {
+          "mli": 65.19,
+          "income": 44736,
+          "col": 72144.83,
+          "purchasing_power": 0.6201
+        },
+        "2010": {
+          "mli": 65.02,
+          "income": 44409,
+          "col": 71799.47,
+          "purchasing_power": 0.6185
+        },
+        "2011": {
+          "mli": 64.7,
+          "income": 44299,
+          "col": 71976.87,
+          "purchasing_power": 0.6155
+        },
+        "2012": {
+          "mli": 65.52,
+          "income": 45040,
+          "col": 72266.91,
+          "purchasing_power": 0.6232
+        },
+        "2013": {
+          "mli": 67.27,
+          "income": 46036,
+          "col": 71950.2,
+          "purchasing_power": 0.6398
+        },
+        "2014": {
+          "mli": 69.2,
+          "income": 47463,
+          "col": 72104.44,
+          "purchasing_power": 0.6583
+        },
+        "2015": {
+          "mli": 71.77,
+          "income": 49426,
+          "col": 72403.08,
+          "purchasing_power": 0.6827
+        },
+        "2016": {
+          "mli": 73.88,
+          "income": 50860,
+          "col": 72368.89,
+          "purchasing_power": 0.7028
+        },
+        "2017": {
+          "mli": 76.16,
+          "income": 52594,
+          "col": 72599.33,
+          "purchasing_power": 0.7244
+        },
+        "2018": {
+          "mli": 80.64,
+          "income": 55462,
+          "col": 72307.68,
+          "purchasing_power": 0.767
+        },
+        "2019": {
+          "mli": 86.43,
+          "income": 59227,
+          "col": 72043.15,
+          "purchasing_power": 0.8221
+        },
+        "2021": {
+          "mli": 90.52,
+          "income": 63062,
+          "col": 73240.59,
+          "purchasing_power": 0.861
+        },
+        "2022": {
+          "mli": 98.33,
+          "income": 69303,
+          "col": 74096.66,
+          "purchasing_power": 0.9353
+        },
+        "2023": {
+          "mli": 101.66,
+          "income": 73311,
+          "col": 75811.47,
+          "purchasing_power": 0.967
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 101.66,
+        "income": 73311,
+        "col": 75811.47,
+        "purchasing_power": 0.967,
+        "categories": {
+          "food": {
+            "cost": 8955.95
+          },
+          "housing": {
+            "cost": 29104.4
+          },
+          "transportation": {
+            "cost": 12056.08
+          },
+          "healthcare": {
+            "cost": 5667.59
+          },
+          "personal_insurance": {
+            "cost": 8501.39
+          },
+          "entertainment": {
+            "cost": 3339.83
+          },
+          "apparel": {
+            "cost": 1722.3
+          },
+          "personal_care": {
+            "cost": 850.14
+          },
+          "reading": {
+            "cost": 137.78
+          },
+          "education": {
+            "cost": 1487.74
+          },
+          "tobacco": {
+            "cost": 344.46
+          },
+          "miscellaneous": {
+            "cost": 1062.67
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 551.14
+          }
+        }
+      }
+    },
+    "Georgia": {
+      "name": "Georgia",
+      "timeseries": {
+        "2008": {
+          "mli": 82.45,
+          "income": 50861,
+          "col": 64849.81,
+          "purchasing_power": 0.7843
+        },
+        "2009": {
+          "mli": 78.23,
+          "income": 47590,
+          "col": 63956.2,
+          "purchasing_power": 0.7441
+        },
+        "2010": {
+          "mli": 75.19,
+          "income": 46430,
+          "col": 64915.48,
+          "purchasing_power": 0.7152
+        },
+        "2011": {
+          "mli": 75.17,
+          "income": 46007,
+          "col": 64342.07,
+          "purchasing_power": 0.715
+        },
+        "2012": {
+          "mli": 76.25,
+          "income": 47209,
+          "col": 65085.88,
+          "purchasing_power": 0.7253
+        },
+        "2013": {
+          "mli": 77.65,
+          "income": 47829,
+          "col": 64752.28,
+          "purchasing_power": 0.7386
+        },
+        "2014": {
+          "mli": 80.11,
+          "income": 49321,
+          "col": 64728.44,
+          "purchasing_power": 0.762
+        },
+        "2015": {
+          "mli": 83.26,
+          "income": 51244,
+          "col": 64700.98,
+          "purchasing_power": 0.792
+        },
+        "2016": {
+          "mli": 86.66,
+          "income": 53559,
+          "col": 64971.75,
+          "purchasing_power": 0.8243
+        },
+        "2017": {
+          "mli": 90.6,
+          "income": 56183,
+          "col": 65193.81,
+          "purchasing_power": 0.8618
+        },
+        "2018": {
+          "mli": 94.88,
+          "income": 58756,
+          "col": 65106.32,
+          "purchasing_power": 0.9025
+        },
+        "2019": {
+          "mli": 100.57,
+          "income": 61980,
+          "col": 64790.24,
+          "purchasing_power": 0.9566
+        },
+        "2021": {
+          "mli": 106.02,
+          "income": 66559,
+          "col": 65997.09,
+          "purchasing_power": 1.0085
+        },
+        "2022": {
+          "mli": 115.38,
+          "income": 72837,
+          "col": 66366.11,
+          "purchasing_power": 1.0975
+        },
+        "2023": {
+          "mli": 117.05,
+          "income": 74632,
+          "col": 67032.14,
+          "purchasing_power": 1.1134
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 117.05,
+        "income": 74632,
+        "col": 67032.14,
+        "purchasing_power": 1.1134,
+        "categories": {
+          "food": {
+            "cost": 8948.21
+          },
+          "housing": {
+            "cost": 20871.6
+          },
+          "transportation": {
+            "cost": 12045.67
+          },
+          "healthcare": {
+            "cost": 5525.02
+          },
+          "personal_insurance": {
+            "cost": 8287.52
+          },
+          "entertainment": {
+            "cost": 3255.81
+          },
+          "apparel": {
+            "cost": 1720.81
+          },
+          "personal_care": {
+            "cost": 828.75
+          },
+          "reading": {
+            "cost": 137.66
+          },
+          "education": {
+            "cost": 1450.32
+          },
+          "tobacco": {
+            "cost": 344.16
+          },
+          "miscellaneous": {
+            "cost": 1035.94
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 550.66
+          }
+        }
+      }
+    },
+    "Hawaii": {
+      "name": "Hawaii",
+      "timeseries": {
+        "2008": {
+          "mli": 85.11,
+          "income": 67214,
+          "col": 83022.87,
+          "purchasing_power": 0.8096
+        },
+        "2009": {
+          "mli": 80.07,
+          "income": 64098,
+          "col": 84158.71,
+          "purchasing_power": 0.7616
+        },
+        "2010": {
+          "mli": 80.25,
+          "income": 63030,
+          "col": 82571.18,
+          "purchasing_power": 0.7633
+        },
+        "2011": {
+          "mli": 78.71,
+          "income": 61821,
+          "col": 82569.54,
+          "purchasing_power": 0.7487
+        },
+        "2012": {
+          "mli": 86.32,
+          "income": 66259,
+          "col": 80701.94,
+          "purchasing_power": 0.821
+        },
+        "2013": {
+          "mli": 83.64,
+          "income": 68020,
+          "col": 85493.18,
+          "purchasing_power": 0.7956
+        },
+        "2014": {
+          "mli": 87.5,
+          "income": 69592,
+          "col": 83617.08,
+          "purchasing_power": 0.8323
+        },
+        "2015": {
+          "mli": 90.1,
+          "income": 73486,
+          "col": 85745.14,
+          "purchasing_power": 0.857
+        },
+        "2016": {
+          "mli": 94.85,
+          "income": 74511,
+          "col": 82589.22,
+          "purchasing_power": 0.9022
+        },
+        "2017": {
+          "mli": 96.27,
+          "income": 77765,
+          "col": 84925.94,
+          "purchasing_power": 0.9157
+        },
+        "2018": {
+          "mli": 100.04,
+          "income": 80212,
+          "col": 84297.11,
+          "purchasing_power": 0.9515
+        },
+        "2019": {
+          "mli": 103.64,
+          "income": 83102,
+          "col": 84297.84,
+          "purchasing_power": 0.9858
+        },
+        "2021": {
+          "mli": 107.02,
+          "income": 84857,
+          "col": 83356.4,
+          "purchasing_power": 1.018
+        },
+        "2022": {
+          "mli": 119.19,
+          "income": 92458,
+          "col": 81552.55,
+          "purchasing_power": 1.1337
+        },
+        "2023": {
+          "mli": 126.25,
+          "income": 95322,
+          "col": 79374.18,
+          "purchasing_power": 1.2009
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 126.25,
+        "income": 95322,
+        "col": 79374.18,
+        "purchasing_power": 1.2009,
+        "categories": {
+          "food": {
+            "cost": 9728.54
+          },
+          "housing": {
+            "cost": 30482.49
+          },
+          "transportation": {
+            "cost": 13096.11
+          },
+          "healthcare": {
+            "cost": 5703.99
+          },
+          "personal_insurance": {
+            "cost": 8555.99
+          },
+          "entertainment": {
+            "cost": 3361.28
+          },
+          "apparel": {
+            "cost": 1870.87
+          },
+          "personal_care": {
+            "cost": 855.6
+          },
+          "reading": {
+            "cost": 149.67
+          },
+          "education": {
+            "cost": 1497.3
+          },
+          "tobacco": {
+            "cost": 374.17
+          },
+          "miscellaneous": {
+            "cost": 1069.5
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 598.68
+          }
+        }
+      }
+    },
+    "Idaho": {
+      "name": "Idaho",
+      "timeseries": {
+        "2008": {
+          "mli": 75.77,
+          "income": 47576,
+          "col": 66012.51,
+          "purchasing_power": 0.7207
+        },
+        "2009": {
+          "mli": 71.88,
+          "income": 44926,
+          "col": 65703.72,
+          "purchasing_power": 0.6838
+        },
+        "2010": {
+          "mli": 71.21,
+          "income": 43490,
+          "col": 64204.66,
+          "purchasing_power": 0.6774
+        },
+        "2011": {
+          "mli": 70.59,
+          "income": 43341,
+          "col": 64548.91,
+          "purchasing_power": 0.6714
+        },
+        "2012": {
+          "mli": 74.64,
+          "income": 45489,
+          "col": 64071.44,
+          "purchasing_power": 0.71
+        },
+        "2013": {
+          "mli": 76.23,
+          "income": 46783,
+          "col": 64519.95,
+          "purchasing_power": 0.7251
+        },
+        "2014": {
+          "mli": 78.26,
+          "income": 47861,
+          "col": 64293.78,
+          "purchasing_power": 0.7444
+        },
+        "2015": {
+          "mli": 78.86,
+          "income": 48275,
+          "col": 64358.3,
+          "purchasing_power": 0.7501
+        },
+        "2016": {
+          "mli": 85.64,
+          "income": 51807,
+          "col": 63594.33,
+          "purchasing_power": 0.8146
+        },
+        "2017": {
+          "mli": 85.04,
+          "income": 52225,
+          "col": 64565.85,
+          "purchasing_power": 0.8089
+        },
+        "2018": {
+          "mli": 92.28,
+          "income": 55583,
+          "col": 63323.1,
+          "purchasing_power": 0.8778
+        },
+        "2019": {
+          "mli": 100.6,
+          "income": 60999,
+          "col": 63745.39,
+          "purchasing_power": 0.9569
+        },
+        "2021": {
+          "mli": 108.67,
+          "income": 66474,
+          "col": 64308.02,
+          "purchasing_power": 1.0337
+        },
+        "2022": {
+          "mli": 117.84,
+          "income": 72785,
+          "col": 64936.67,
+          "purchasing_power": 1.1209
+        },
+        "2023": {
+          "mli": 122.22,
+          "income": 74942,
+          "col": 64464.16,
+          "purchasing_power": 1.1625
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 122.22,
+        "income": 74942,
+        "col": 64464.16,
+        "purchasing_power": 1.1625,
+        "categories": {
+          "food": {
+            "cost": 8553.27
+          },
+          "housing": {
+            "cost": 20511.17
+          },
+          "transportation": {
+            "cost": 11514.02
+          },
+          "healthcare": {
+            "cost": 5210.74
+          },
+          "personal_insurance": {
+            "cost": 7816.12
+          },
+          "entertainment": {
+            "cost": 3070.62
+          },
+          "apparel": {
+            "cost": 1644.86
+          },
+          "personal_care": {
+            "cost": 781.61
+          },
+          "reading": {
+            "cost": 131.59
+          },
+          "education": {
+            "cost": 1367.82
+          },
+          "tobacco": {
+            "cost": 328.97
+          },
+          "miscellaneous": {
+            "cost": 977.01
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 526.36
+          }
+        }
+      }
+    },
+    "Illinois": {
+      "name": "Illinois",
+      "timeseries": {
+        "2008": {
+          "mli": 83.11,
+          "income": 56235,
+          "col": 71133.57,
+          "purchasing_power": 0.7906
+        },
+        "2009": {
+          "mli": 78.67,
+          "income": 53966,
+          "col": 72121.16,
+          "purchasing_power": 0.7483
+        },
+        "2010": {
+          "mli": 76.87,
+          "income": 52972,
+          "col": 72444.71,
+          "purchasing_power": 0.7312
+        },
+        "2011": {
+          "mli": 77.22,
+          "income": 53234,
+          "col": 72473.24,
+          "purchasing_power": 0.7345
+        },
+        "2012": {
+          "mli": 80.99,
+          "income": 55137,
+          "col": 71573.89,
+          "purchasing_power": 0.7704
+        },
+        "2013": {
+          "mli": 82.82,
+          "income": 56210,
+          "col": 71354.15,
+          "purchasing_power": 0.7878
+        },
+        "2014": {
+          "mli": 84.97,
+          "income": 57444,
+          "col": 71075.08,
+          "purchasing_power": 0.8082
+        },
+        "2015": {
+          "mli": 88.71,
+          "income": 59588,
+          "col": 70617.47,
+          "purchasing_power": 0.8438
+        },
+        "2016": {
+          "mli": 90.97,
+          "income": 60960,
+          "col": 70449.71,
+          "purchasing_power": 0.8653
+        },
+        "2017": {
+          "mli": 93.69,
+          "income": 62992,
+          "col": 70682.16,
+          "purchasing_power": 0.8912
+        },
+        "2018": {
+          "mli": 96.65,
+          "income": 65030,
+          "col": 70734.32,
+          "purchasing_power": 0.9194
+        },
+        "2019": {
+          "mli": 103.31,
+          "income": 69187,
+          "col": 70404.6,
+          "purchasing_power": 0.9827
+        },
+        "2021": {
+          "mli": 107.05,
+          "income": 72205,
+          "col": 70908.85,
+          "purchasing_power": 1.0183
+        },
+        "2022": {
+          "mli": 114.57,
+          "income": 76708,
+          "col": 70389.61,
+          "purchasing_power": 1.0898
+        },
+        "2023": {
+          "mli": 122.36,
+          "income": 80306,
+          "col": 69000.09,
+          "purchasing_power": 1.1639
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 122.36,
+        "income": 80306,
+        "col": 69000.09,
+        "purchasing_power": 1.1639,
+        "categories": {
+          "food": {
+            "cost": 9179.99
+          },
+          "housing": {
+            "cost": 21852.36
+          },
+          "transportation": {
+            "cost": 12357.68
+          },
+          "healthcare": {
+            "cost": 5625.87
+          },
+          "personal_insurance": {
+            "cost": 8438.81
+          },
+          "entertainment": {
+            "cost": 3315.25
+          },
+          "apparel": {
+            "cost": 1765.38
+          },
+          "personal_care": {
+            "cost": 843.88
+          },
+          "reading": {
+            "cost": 141.23
+          },
+          "education": {
+            "cost": 1476.79
+          },
+          "tobacco": {
+            "cost": 353.08
+          },
+          "miscellaneous": {
+            "cost": 1054.85
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 564.92
+          }
+        }
+      }
+    },
+    "Indiana": {
+      "name": "Indiana",
+      "timeseries": {
+        "2008": {
+          "mli": 80.37,
+          "income": 47966,
+          "col": 62741.53,
+          "purchasing_power": 0.7645
+        },
+        "2009": {
+          "mli": 75.8,
+          "income": 45424,
+          "col": 63003.53,
+          "purchasing_power": 0.721
+        },
+        "2010": {
+          "mli": 73.66,
+          "income": 44613,
+          "col": 63672.32,
+          "purchasing_power": 0.7007
+        },
+        "2011": {
+          "mli": 77.14,
+          "income": 46438,
+          "col": 63283.98,
+          "purchasing_power": 0.7338
+        },
+        "2012": {
+          "mli": 78.08,
+          "income": 46974,
+          "col": 63244.52,
+          "purchasing_power": 0.7427
+        },
+        "2013": {
+          "mli": 78.77,
+          "income": 47529,
+          "col": 63434.51,
+          "purchasing_power": 0.7493
+        },
+        "2014": {
+          "mli": 82.06,
+          "income": 49446,
+          "col": 63343.36,
+          "purchasing_power": 0.7806
+        },
+        "2015": {
+          "mli": 84.98,
+          "income": 50532,
+          "col": 62513.76,
+          "purchasing_power": 0.8083
+        },
+        "2016": {
+          "mli": 88.35,
+          "income": 52314,
+          "col": 62249.47,
+          "purchasing_power": 0.8404
+        },
+        "2017": {
+          "mli": 92.12,
+          "income": 54181,
+          "col": 61836.07,
+          "purchasing_power": 0.8762
+        },
+        "2018": {
+          "mli": 93.21,
+          "income": 55746,
+          "col": 62876.73,
+          "purchasing_power": 0.8866
+        },
+        "2019": {
+          "mli": 96.64,
+          "income": 57603,
+          "col": 62662.57,
+          "purchasing_power": 0.9193
+        },
+        "2021": {
+          "mli": 105.84,
+          "income": 62743,
+          "col": 62319.24,
+          "purchasing_power": 1.0068
+        },
+        "2022": {
+          "mli": 113.66,
+          "income": 66785,
+          "col": 61772.85,
+          "purchasing_power": 1.0811
+        },
+        "2023": {
+          "mli": 117.67,
+          "income": 69477,
+          "col": 62070.17,
+          "purchasing_power": 1.1193
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 117.67,
+        "income": 69477,
+        "col": 62070.17,
+        "purchasing_power": 1.1193,
+        "categories": {
+          "food": {
+            "cost": 8629.44
+          },
+          "housing": {
+            "cost": 16878.53
+          },
+          "transportation": {
+            "cost": 11616.55
+          },
+          "healthcare": {
+            "cost": 5491.7
+          },
+          "personal_insurance": {
+            "cost": 8237.54
+          },
+          "entertainment": {
+            "cost": 3236.18
+          },
+          "apparel": {
+            "cost": 1659.51
+          },
+          "personal_care": {
+            "cost": 823.75
+          },
+          "reading": {
+            "cost": 132.76
+          },
+          "education": {
+            "cost": 1441.57
+          },
+          "tobacco": {
+            "cost": 331.9
+          },
+          "miscellaneous": {
+            "cost": 1029.69
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 531.04
+          }
+        }
+      }
+    },
+    "Iowa": {
+      "name": "Iowa",
+      "timeseries": {
+        "2008": {
+          "mli": 87.73,
+          "income": 48980,
+          "col": 58697.01,
+          "purchasing_power": 0.8345
+        },
+        "2009": {
+          "mli": 83.27,
+          "income": 48044,
+          "col": 60657.52,
+          "purchasing_power": 0.7921
+        },
+        "2010": {
+          "mli": 81.9,
+          "income": 47961,
+          "col": 61568.03,
+          "purchasing_power": 0.779
+        },
+        "2011": {
+          "mli": 84.95,
+          "income": 49427,
+          "col": 61165.24,
+          "purchasing_power": 0.8081
+        },
+        "2012": {
+          "mli": 86.88,
+          "income": 50957,
+          "col": 61664.04,
+          "purchasing_power": 0.8264
+        },
+        "2013": {
+          "mli": 88.92,
+          "income": 52229,
+          "col": 61750.79,
+          "purchasing_power": 0.8458
+        },
+        "2014": {
+          "mli": 91.06,
+          "income": 53712,
+          "col": 62009.49,
+          "purchasing_power": 0.8662
+        },
+        "2015": {
+          "mli": 94.28,
+          "income": 54736,
+          "col": 61037.25,
+          "purchasing_power": 0.8968
+        },
+        "2016": {
+          "mli": 96.82,
+          "income": 56247,
+          "col": 61077.51,
+          "purchasing_power": 0.9209
+        },
+        "2017": {
+          "mli": 100.88,
+          "income": 58570,
+          "col": 61034.75,
+          "purchasing_power": 0.9596
+        },
+        "2018": {
+          "mli": 101.77,
+          "income": 59955,
+          "col": 61934.45,
+          "purchasing_power": 0.968
+        },
+        "2019": {
+          "mli": 104.88,
+          "income": 61691,
+          "col": 61839.98,
+          "purchasing_power": 0.9976
+        },
+        "2021": {
+          "mli": 114.74,
+          "income": 65600,
+          "col": 60107.15,
+          "purchasing_power": 1.0914
+        },
+        "2022": {
+          "mli": 123.08,
+          "income": 69588,
+          "col": 59440.85,
+          "purchasing_power": 1.1707
+        },
+        "2023": {
+          "mli": 125.51,
+          "income": 71433,
+          "col": 59834.57,
+          "purchasing_power": 1.1938
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 125.51,
+        "income": 71433,
+        "col": 59834.57,
+        "purchasing_power": 1.1938,
+        "categories": {
+          "food": {
+            "cost": 8651.37
+          },
+          "housing": {
+            "cost": 15607.82
+          },
+          "transportation": {
+            "cost": 11646.08
+          },
+          "healthcare": {
+            "cost": 5214.38
+          },
+          "personal_insurance": {
+            "cost": 7821.58
+          },
+          "entertainment": {
+            "cost": 3072.76
+          },
+          "apparel": {
+            "cost": 1663.72
+          },
+          "personal_care": {
+            "cost": 782.16
+          },
+          "reading": {
+            "cost": 133.1
+          },
+          "education": {
+            "cost": 1368.78
+          },
+          "tobacco": {
+            "cost": 332.74
+          },
+          "miscellaneous": {
+            "cost": 977.7
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 532.39
+          }
+        }
+      }
+    },
+    "Kansas": {
+      "name": "Kansas",
+      "timeseries": {
+        "2008": {
+          "mli": 86.72,
+          "income": 50177,
+          "col": 60826.48,
+          "purchasing_power": 0.8249
+        },
+        "2009": {
+          "mli": 80.66,
+          "income": 47817,
+          "col": 62321.87,
+          "purchasing_power": 0.7673
+        },
+        "2010": {
+          "mli": 80.43,
+          "income": 48257,
+          "col": 63078.06,
+          "purchasing_power": 0.765
+        },
+        "2011": {
+          "mli": 81.15,
+          "income": 48964,
+          "col": 63435.65,
+          "purchasing_power": 0.7719
+        },
+        "2012": {
+          "mli": 83.23,
+          "income": 50241,
+          "col": 63459.56,
+          "purchasing_power": 0.7917
+        },
+        "2013": {
+          "mli": 85.1,
+          "income": 50972,
+          "col": 62966.73,
+          "purchasing_power": 0.8095
+        },
+        "2014": {
+          "mli": 87.41,
+          "income": 52504,
+          "col": 63151.04,
+          "purchasing_power": 0.8314
+        },
+        "2015": {
+          "mli": 89.73,
+          "income": 53906,
+          "col": 63155.07,
+          "purchasing_power": 0.8535
+        },
+        "2016": {
+          "mli": 92.43,
+          "income": 54935,
+          "col": 62481.58,
+          "purchasing_power": 0.8792
+        },
+        "2017": {
+          "mli": 95.57,
+          "income": 56422,
+          "col": 62064.27,
+          "purchasing_power": 0.9091
+        },
+        "2018": {
+          "mli": 98.51,
+          "income": 58218,
+          "col": 62133.28,
+          "purchasing_power": 0.937
+        },
+        "2019": {
+          "mli": 104.38,
+          "income": 62087,
+          "col": 62531.05,
+          "purchasing_power": 0.9929
+        },
+        "2021": {
+          "mli": 110.26,
+          "income": 64124,
+          "col": 61137.63,
+          "purchasing_power": 1.0488
+        },
+        "2022": {
+          "mli": 120.0,
+          "income": 68925,
+          "col": 60383.19,
+          "purchasing_power": 1.1415
+        },
+        "2023": {
+          "mli": 122.05,
+          "income": 70333,
+          "col": 60582.58,
+          "purchasing_power": 1.1609
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 122.05,
+        "income": 70333,
+        "col": 60582.58,
+        "purchasing_power": 1.1609,
+        "categories": {
+          "food": {
+            "cost": 8626.53
+          },
+          "housing": {
+            "cost": 16218.46
+          },
+          "transportation": {
+            "cost": 11612.63
+          },
+          "healthcare": {
+            "cost": 5269.49
+          },
+          "personal_insurance": {
+            "cost": 7904.23
+          },
+          "entertainment": {
+            "cost": 3105.23
+          },
+          "apparel": {
+            "cost": 1658.95
+          },
+          "personal_care": {
+            "cost": 790.42
+          },
+          "reading": {
+            "cost": 132.72
+          },
+          "education": {
+            "cost": 1383.24
+          },
+          "tobacco": {
+            "cost": 331.79
+          },
+          "miscellaneous": {
+            "cost": 988.03
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 530.86
+          }
+        }
+      }
+    },
+    "Kentucky": {
+      "name": "Kentucky",
+      "timeseries": {
+        "2008": {
+          "mli": 72.02,
+          "income": 41538,
+          "col": 60637.35,
+          "purchasing_power": 0.685
+        },
+        "2009": {
+          "mli": 70.39,
+          "income": 40072,
+          "col": 59852.18,
+          "purchasing_power": 0.6695
+        },
+        "2010": {
+          "mli": 68.85,
+          "income": 40062,
+          "col": 61175.15,
+          "purchasing_power": 0.6549
+        },
+        "2011": {
+          "mli": 71.24,
+          "income": 41141,
+          "col": 60713.2,
+          "purchasing_power": 0.6776
+        },
+        "2012": {
+          "mli": 72.08,
+          "income": 41724,
+          "col": 60859.06,
+          "purchasing_power": 0.6856
+        },
+        "2013": {
+          "mli": 74.71,
+          "income": 43399,
+          "col": 61069.61,
+          "purchasing_power": 0.7106
+        },
+        "2014": {
+          "mli": 74.12,
+          "income": 42958,
+          "col": 60929.31,
+          "purchasing_power": 0.705
+        },
+        "2015": {
+          "mli": 78.22,
+          "income": 45215,
+          "col": 60770.18,
+          "purchasing_power": 0.744
+        },
+        "2016": {
+          "mli": 80.99,
+          "income": 46659,
+          "col": 60567.85,
+          "purchasing_power": 0.7704
+        },
+        "2017": {
+          "mli": 84.65,
+          "income": 48375,
+          "col": 60076.65,
+          "purchasing_power": 0.8052
+        },
+        "2018": {
+          "mli": 88.38,
+          "income": 50247,
+          "col": 59767.64,
+          "purchasing_power": 0.8407
+        },
+        "2019": {
+          "mli": 91.38,
+          "income": 52295,
+          "col": 60161.49,
+          "purchasing_power": 0.8692
+        },
+        "2021": {
+          "mli": 97.93,
+          "income": 55573,
+          "col": 59656.18,
+          "purchasing_power": 0.9316
+        },
+        "2022": {
+          "mli": 104.84,
+          "income": 59341,
+          "col": 59506.54,
+          "purchasing_power": 0.9972
+        },
+        "2023": {
+          "mli": 106.76,
+          "income": 61118,
+          "col": 60182.71,
+          "purchasing_power": 1.0155
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 106.76,
+        "income": 61118,
+        "col": 60182.71,
+        "purchasing_power": 1.0155,
+        "categories": {
+          "food": {
+            "cost": 8650.37
+          },
+          "housing": {
+            "cost": 14872.3
+          },
+          "transportation": {
+            "cost": 11644.73
+          },
+          "healthcare": {
+            "cost": 5508.83
+          },
+          "personal_insurance": {
+            "cost": 8263.25
+          },
+          "entertainment": {
+            "cost": 3246.28
+          },
+          "apparel": {
+            "cost": 1663.53
+          },
+          "personal_care": {
+            "cost": 826.32
+          },
+          "reading": {
+            "cost": 133.08
+          },
+          "education": {
+            "cost": 1446.07
+          },
+          "tobacco": {
+            "cost": 332.71
+          },
+          "miscellaneous": {
+            "cost": 1032.91
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 532.33
+          }
+        }
+      }
+    },
+    "Louisiana": {
+      "name": "Louisiana",
+      "timeseries": {
+        "2008": {
+          "mli": 74.76,
+          "income": 43733,
+          "col": 61502.66,
+          "purchasing_power": 0.7111
+        },
+        "2009": {
+          "mli": 72.62,
+          "income": 42492,
+          "col": 61517.3,
+          "purchasing_power": 0.6907
+        },
+        "2010": {
+          "mli": 71.41,
+          "income": 42505,
+          "col": 62579.91,
+          "purchasing_power": 0.6792
+        },
+        "2011": {
+          "mli": 69.78,
+          "income": 41734,
+          "col": 62876.45,
+          "purchasing_power": 0.6637
+        },
+        "2012": {
+          "mli": 71.49,
+          "income": 42944,
+          "col": 63151.32,
+          "purchasing_power": 0.68
+        },
+        "2013": {
+          "mli": 73.71,
+          "income": 44164,
+          "col": 62992.59,
+          "purchasing_power": 0.7011
+        },
+        "2014": {
+          "mli": 74.02,
+          "income": 44555,
+          "col": 63279.39,
+          "purchasing_power": 0.7041
+        },
+        "2015": {
+          "mli": 76.65,
+          "income": 45727,
+          "col": 62720.02,
+          "purchasing_power": 0.7291
+        },
+        "2016": {
+          "mli": 74.92,
+          "income": 45146,
+          "col": 63348.65,
+          "purchasing_power": 0.7127
+        },
+        "2017": {
+          "mli": 77.66,
+          "income": 46145,
+          "col": 62464.45,
+          "purchasing_power": 0.7387
+        },
+        "2018": {
+          "mli": 82.18,
+          "income": 47905,
+          "col": 61285.62,
+          "purchasing_power": 0.7817
+        },
+        "2019": {
+          "mli": 86.86,
+          "income": 51073,
+          "col": 61818.91,
+          "purchasing_power": 0.8262
+        },
+        "2021": {
+          "mli": 89.44,
+          "income": 52087,
+          "col": 61222.18,
+          "purchasing_power": 0.8508
+        },
+        "2022": {
+          "mli": 96.08,
+          "income": 55416,
+          "col": 60635.75,
+          "purchasing_power": 0.9139
+        },
+        "2023": {
+          "mli": 103.14,
+          "income": 58229,
+          "col": 59352.48,
+          "purchasing_power": 0.9811
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 103.14,
+        "income": 58229,
+        "col": 59352.48,
+        "purchasing_power": 0.9811,
+        "categories": {
+          "food": {
+            "cost": 8376.28
+          },
+          "housing": {
+            "cost": 15394.02
+          },
+          "transportation": {
+            "cost": 11275.76
+          },
+          "healthcare": {
+            "cost": 5339.54
+          },
+          "personal_insurance": {
+            "cost": 8009.32
+          },
+          "entertainment": {
+            "cost": 3146.52
+          },
+          "apparel": {
+            "cost": 1610.82
+          },
+          "personal_care": {
+            "cost": 800.93
+          },
+          "reading": {
+            "cost": 128.87
+          },
+          "education": {
+            "cost": 1401.63
+          },
+          "tobacco": {
+            "cost": 322.16
+          },
+          "miscellaneous": {
+            "cost": 1001.16
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 515.46
+          }
+        }
+      }
+    },
+    "Maine": {
+      "name": "Maine",
+      "timeseries": {
+        "2008": {
+          "mli": 72.88,
+          "income": 46581,
+          "col": 67191.68,
+          "purchasing_power": 0.6933
+        },
+        "2009": {
+          "mli": 71.08,
+          "income": 45734,
+          "col": 67646.86,
+          "purchasing_power": 0.6761
+        },
+        "2010": {
+          "mli": 71.62,
+          "income": 45815,
+          "col": 67255.43,
+          "purchasing_power": 0.6812
+        },
+        "2011": {
+          "mli": 73.14,
+          "income": 46033,
+          "col": 66169.62,
+          "purchasing_power": 0.6957
+        },
+        "2012": {
+          "mli": 73.36,
+          "income": 46709,
+          "col": 66938.95,
+          "purchasing_power": 0.6978
+        },
+        "2013": {
+          "mli": 72.73,
+          "income": 46974,
+          "col": 67904.47,
+          "purchasing_power": 0.6918
+        },
+        "2014": {
+          "mli": 83.29,
+          "income": 49462,
+          "col": 62428.53,
+          "purchasing_power": 0.7923
+        },
+        "2015": {
+          "mli": 83.35,
+          "income": 51494,
+          "col": 64952.19,
+          "purchasing_power": 0.7928
+        },
+        "2016": {
+          "mli": 83.86,
+          "income": 53079,
+          "col": 66544.74,
+          "purchasing_power": 0.7976
+        },
+        "2017": {
+          "mli": 89.51,
+          "income": 56277,
+          "col": 66097.88,
+          "purchasing_power": 0.8514
+        },
+        "2018": {
+          "mli": 87.47,
+          "income": 55602,
+          "col": 66831.09,
+          "purchasing_power": 0.832
+        },
+        "2019": {
+          "mli": 96.91,
+          "income": 58924,
+          "col": 63922.2,
+          "purchasing_power": 0.9218
+        },
+        "2021": {
+          "mli": 103.04,
+          "income": 64767,
+          "col": 66080.6,
+          "purchasing_power": 0.9801
+        },
+        "2022": {
+          "mli": 107.39,
+          "income": 69543,
+          "col": 68076.92,
+          "purchasing_power": 1.0215
+        },
+        "2023": {
+          "mli": 118.06,
+          "income": 73733,
+          "col": 65659.93,
+          "purchasing_power": 1.123
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 118.06,
+        "income": 73733,
+        "col": 65659.93,
+        "purchasing_power": 1.123,
+        "categories": {
+          "food": {
+            "cost": 8787.14
+          },
+          "housing": {
+            "cost": 19025.24
+          },
+          "transportation": {
+            "cost": 11828.84
+          },
+          "healthcare": {
+            "cost": 5769.4
+          },
+          "personal_insurance": {
+            "cost": 8654.1
+          },
+          "entertainment": {
+            "cost": 3399.83
+          },
+          "apparel": {
+            "cost": 1689.83
+          },
+          "personal_care": {
+            "cost": 865.41
+          },
+          "reading": {
+            "cost": 135.19
+          },
+          "education": {
+            "cost": 1514.47
+          },
+          "tobacco": {
+            "cost": 337.97
+          },
+          "miscellaneous": {
+            "cost": 1081.76
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 540.75
+          }
+        }
+      }
+    },
+    "Maryland": {
+      "name": "Maryland",
+      "timeseries": {
+        "2008": {
+          "mli": 92.53,
+          "income": 70545,
+          "col": 80149.78,
+          "purchasing_power": 0.8802
+        },
+        "2009": {
+          "mli": 89.42,
+          "income": 69272,
+          "col": 81439.36,
+          "purchasing_power": 0.8506
+        },
+        "2010": {
+          "mli": 90.28,
+          "income": 68854,
+          "col": 80182.56,
+          "purchasing_power": 0.8587
+        },
+        "2011": {
+          "mli": 90.78,
+          "income": 70004,
+          "col": 81068.34,
+          "purchasing_power": 0.8635
+        },
+        "2012": {
+          "mli": 93.6,
+          "income": 71122,
+          "col": 79882.17,
+          "purchasing_power": 0.8903
+        },
+        "2013": {
+          "mli": 93.97,
+          "income": 72483,
+          "col": 81093.95,
+          "purchasing_power": 0.8938
+        },
+        "2014": {
+          "mli": 96.58,
+          "income": 73971,
+          "col": 80515.61,
+          "purchasing_power": 0.9187
+        },
+        "2015": {
+          "mli": 100.3,
+          "income": 75847,
+          "col": 79502.98,
+          "purchasing_power": 0.954
+        },
+        "2016": {
+          "mli": 105.46,
+          "income": 78945,
+          "col": 78697.24,
+          "purchasing_power": 1.0031
+        },
+        "2017": {
+          "mli": 108.45,
+          "income": 80776,
+          "col": 78306.08,
+          "purchasing_power": 1.0315
+        },
+        "2018": {
+          "mli": 111.65,
+          "income": 83242,
+          "col": 78381.49,
+          "purchasing_power": 1.062
+        },
+        "2019": {
+          "mli": 117.36,
+          "income": 86738,
+          "col": 77698.62,
+          "purchasing_power": 1.1163
+        },
+        "2021": {
+          "mli": 122.25,
+          "income": 90203,
+          "col": 77568.37,
+          "purchasing_power": 1.1629
+        },
+        "2022": {
+          "mli": 129.92,
+          "income": 94991,
+          "col": 76867.13,
+          "purchasing_power": 1.2358
+        },
+        "2023": {
+          "mli": 136.75,
+          "income": 98678,
+          "col": 75860.87,
+          "purchasing_power": 1.3008
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 136.75,
+        "income": 98678,
+        "col": 75860.87,
+        "purchasing_power": 1.3008,
+        "categories": {
+          "food": {
+            "cost": 9367.45
+          },
+          "housing": {
+            "cost": 28351.38
+          },
+          "transportation": {
+            "cost": 12610.03
+          },
+          "healthcare": {
+            "cost": 5589.08
+          },
+          "personal_insurance": {
+            "cost": 8383.62
+          },
+          "entertainment": {
+            "cost": 3293.57
+          },
+          "apparel": {
+            "cost": 1801.43
+          },
+          "personal_care": {
+            "cost": 838.36
+          },
+          "reading": {
+            "cost": 144.11
+          },
+          "education": {
+            "cost": 1467.13
+          },
+          "tobacco": {
+            "cost": 360.29
+          },
+          "miscellaneous": {
+            "cost": 1047.95
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 576.46
+          }
+        }
+      }
+    },
+    "Massachusetts": {
+      "name": "Massachusetts",
+      "timeseries": {
+        "2008": {
+          "mli": 88.78,
+          "income": 65401,
+          "col": 77443.59,
+          "purchasing_power": 0.8445
+        },
+        "2009": {
+          "mli": 86.6,
+          "income": 64081,
+          "col": 77796.35,
+          "purchasing_power": 0.8237
+        },
+        "2010": {
+          "mli": 83.99,
+          "income": 62072,
+          "col": 77694.26,
+          "purchasing_power": 0.7989
+        },
+        "2011": {
+          "mli": 84.95,
+          "income": 62859,
+          "col": 77792.01,
+          "purchasing_power": 0.808
+        },
+        "2012": {
+          "mli": 88.31,
+          "income": 65339,
+          "col": 77784.4,
+          "purchasing_power": 0.84
+        },
+        "2013": {
+          "mli": 90.76,
+          "income": 66768,
+          "col": 77336.59,
+          "purchasing_power": 0.8633
+        },
+        "2014": {
+          "mli": 92.74,
+          "income": 69160,
+          "col": 78402.2,
+          "purchasing_power": 0.8821
+        },
+        "2015": {
+          "mli": 94.86,
+          "income": 70628,
+          "col": 78276.81,
+          "purchasing_power": 0.9023
+        },
+        "2016": {
+          "mli": 99.37,
+          "income": 75297,
+          "col": 79658.51,
+          "purchasing_power": 0.9452
+        },
+        "2017": {
+          "mli": 102.6,
+          "income": 77385,
+          "col": 79292.17,
+          "purchasing_power": 0.9759
+        },
+        "2018": {
+          "mli": 106.72,
+          "income": 79835,
+          "col": 78648.74,
+          "purchasing_power": 1.0151
+        },
+        "2019": {
+          "mli": 114.13,
+          "income": 85843,
+          "col": 79070.17,
+          "purchasing_power": 1.0857
+        },
+        "2021": {
+          "mli": 119.45,
+          "income": 89645,
+          "col": 78899.9,
+          "purchasing_power": 1.1362
+        },
+        "2022": {
+          "mli": 124.23,
+          "income": 94488,
+          "col": 79963.54,
+          "purchasing_power": 1.1816
+        },
+        "2023": {
+          "mli": 132.6,
+          "income": 99858,
+          "col": 79169.09,
+          "purchasing_power": 1.2613
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 132.6,
+        "income": 99858,
+        "col": 79169.09,
+        "purchasing_power": 1.2613,
+        "categories": {
+          "food": {
+            "cost": 9319.58
+          },
+          "housing": {
+            "cost": 30775.74
+          },
+          "transportation": {
+            "cost": 12545.59
+          },
+          "healthcare": {
+            "cost": 5863.09
+          },
+          "personal_insurance": {
+            "cost": 8794.63
+          },
+          "entertainment": {
+            "cost": 3455.03
+          },
+          "apparel": {
+            "cost": 1792.23
+          },
+          "personal_care": {
+            "cost": 879.46
+          },
+          "reading": {
+            "cost": 143.38
+          },
+          "education": {
+            "cost": 1539.06
+          },
+          "tobacco": {
+            "cost": 358.45
+          },
+          "miscellaneous": {
+            "cost": 1099.33
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 573.51
+          }
+        }
+      }
+    },
+    "Michigan": {
+      "name": "Michigan",
+      "timeseries": {
+        "2008": {
+          "mli": 77.02,
+          "income": 48591,
+          "col": 66321.77,
+          "purchasing_power": 0.7327
+        },
+        "2009": {
+          "mli": 71.94,
+          "income": 45255,
+          "col": 66135.01,
+          "purchasing_power": 0.6843
+        },
+        "2010": {
+          "mli": 71.8,
+          "income": 45413,
+          "col": 66489.81,
+          "purchasing_power": 0.683
+        },
+        "2011": {
+          "mli": 73.69,
+          "income": 45981,
+          "col": 65596.47,
+          "purchasing_power": 0.701
+        },
+        "2012": {
+          "mli": 75.35,
+          "income": 46859,
+          "col": 65380.52,
+          "purchasing_power": 0.7167
+        },
+        "2013": {
+          "mli": 77.59,
+          "income": 48273,
+          "col": 65405.21,
+          "purchasing_power": 0.7381
+        },
+        "2014": {
+          "mli": 79.78,
+          "income": 49847,
+          "col": 65687.54,
+          "purchasing_power": 0.7589
+        },
+        "2015": {
+          "mli": 83.36,
+          "income": 51084,
+          "col": 64423.99,
+          "purchasing_power": 0.7929
+        },
+        "2016": {
+          "mli": 85.35,
+          "income": 52492,
+          "col": 64659.06,
+          "purchasing_power": 0.8118
+        },
+        "2017": {
+          "mli": 90.24,
+          "income": 54909,
+          "col": 63971.89,
+          "purchasing_power": 0.8583
+        },
+        "2018": {
+          "mli": 92.06,
+          "income": 56697,
+          "col": 64747.28,
+          "purchasing_power": 0.8757
+        },
+        "2019": {
+          "mli": 96.17,
+          "income": 59584,
+          "col": 65132.16,
+          "purchasing_power": 0.9148
+        },
+        "2021": {
+          "mli": 103.83,
+          "income": 63498,
+          "col": 64291.91,
+          "purchasing_power": 0.9877
+        },
+        "2022": {
+          "mli": 110.18,
+          "income": 66986,
+          "col": 63912.71,
+          "purchasing_power": 1.0481
+        },
+        "2023": {
+          "mli": 113.54,
+          "income": 69183,
+          "col": 64056.21,
+          "purchasing_power": 1.08
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 113.54,
+        "income": 69183,
+        "col": 64056.21,
+        "purchasing_power": 1.08,
+        "categories": {
+          "food": {
+            "cost": 8680.04
+          },
+          "housing": {
+            "cost": 18656.54
+          },
+          "transportation": {
+            "cost": 11684.66
+          },
+          "healthcare": {
+            "cost": 5511.69
+          },
+          "personal_insurance": {
+            "cost": 8267.53
+          },
+          "entertainment": {
+            "cost": 3247.96
+          },
+          "apparel": {
+            "cost": 1669.24
+          },
+          "personal_care": {
+            "cost": 826.75
+          },
+          "reading": {
+            "cost": 133.54
+          },
+          "education": {
+            "cost": 1446.82
+          },
+          "tobacco": {
+            "cost": 333.85
+          },
+          "miscellaneous": {
+            "cost": 1033.44
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 534.16
+          }
+        }
+      }
+    },
+    "Minnesota": {
+      "name": "Minnesota",
+      "timeseries": {
+        "2008": {
+          "mli": 87.9,
+          "income": 57288,
+          "col": 68514.53,
+          "purchasing_power": 0.8361
+        },
+        "2009": {
+          "mli": 84.26,
+          "income": 55616,
+          "col": 69392.47,
+          "purchasing_power": 0.8015
+        },
+        "2010": {
+          "mli": 85.38,
+          "income": 55459,
+          "col": 68287.17,
+          "purchasing_power": 0.8121
+        },
+        "2011": {
+          "mli": 87.8,
+          "income": 56954,
+          "col": 68196.74,
+          "purchasing_power": 0.8351
+        },
+        "2012": {
+          "mli": 90.24,
+          "income": 58906,
+          "col": 68626.61,
+          "purchasing_power": 0.8584
+        },
+        "2013": {
+          "mli": 93.07,
+          "income": 60702,
+          "col": 68564.71,
+          "purchasing_power": 0.8853
+        },
+        "2014": {
+          "mli": 93.82,
+          "income": 61481,
+          "col": 68888.88,
+          "purchasing_power": 0.8925
+        },
+        "2015": {
+          "mli": 96.34,
+          "income": 63488,
+          "col": 69280.3,
+          "purchasing_power": 0.9164
+        },
+        "2016": {
+          "mli": 100.67,
+          "income": 65599,
+          "col": 68502.67,
+          "purchasing_power": 0.9576
+        },
+        "2017": {
+          "mli": 104.94,
+          "income": 68388,
+          "col": 68513.43,
+          "purchasing_power": 0.9982
+        },
+        "2018": {
+          "mli": 106.1,
+          "income": 70315,
+          "col": 69674.96,
+          "purchasing_power": 1.0092
+        },
+        "2019": {
+          "mli": 112.54,
+          "income": 74593,
+          "col": 69678.55,
+          "purchasing_power": 1.0705
+        },
+        "2021": {
+          "mli": 118.9,
+          "income": 77720,
+          "col": 68720.65,
+          "purchasing_power": 1.131
+        },
+        "2022": {
+          "mli": 125.29,
+          "income": 82338,
+          "col": 69088.65,
+          "purchasing_power": 1.1918
+        },
+        "2023": {
+          "mli": 130.43,
+          "income": 85086,
+          "col": 68579.32,
+          "purchasing_power": 1.2407
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 130.43,
+        "income": 85086,
+        "col": 68579.32,
+        "purchasing_power": 1.2407,
+        "categories": {
+          "food": {
+            "cost": 9267.53
+          },
+          "housing": {
+            "cost": 21432.1
+          },
+          "transportation": {
+            "cost": 12475.52
+          },
+          "healthcare": {
+            "cost": 5562.76
+          },
+          "personal_insurance": {
+            "cost": 8344.14
+          },
+          "entertainment": {
+            "cost": 3278.05
+          },
+          "apparel": {
+            "cost": 1782.22
+          },
+          "personal_care": {
+            "cost": 834.41
+          },
+          "reading": {
+            "cost": 142.58
+          },
+          "education": {
+            "cost": 1460.22
+          },
+          "tobacco": {
+            "cost": 356.44
+          },
+          "miscellaneous": {
+            "cost": 1043.02
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 570.31
+          }
+        }
+      }
+    },
+    "Mississippi": {
+      "name": "Mississippi",
+      "timeseries": {
+        "2008": {
+          "mli": 67.13,
+          "income": 37790,
+          "col": 59181.71,
+          "purchasing_power": 0.6385
+        },
+        "2009": {
+          "mli": 66.71,
+          "income": 36646,
+          "col": 57750.04,
+          "purchasing_power": 0.6346
+        },
+        "2010": {
+          "mli": 65.17,
+          "income": 36851,
+          "col": 59449.8,
+          "purchasing_power": 0.6199
+        },
+        "2011": {
+          "mli": 65.06,
+          "income": 36919,
+          "col": 59654.99,
+          "purchasing_power": 0.6189
+        },
+        "2012": {
+          "mli": 65.87,
+          "income": 37095,
+          "col": 59200.23,
+          "purchasing_power": 0.6266
+        },
+        "2013": {
+          "mli": 67.1,
+          "income": 37963,
+          "col": 59477.51,
+          "purchasing_power": 0.6383
+        },
+        "2014": {
+          "mli": 70.35,
+          "income": 39680,
+          "col": 59293.28,
+          "purchasing_power": 0.6692
+        },
+        "2015": {
+          "mli": 72.54,
+          "income": 40593,
+          "col": 58830.99,
+          "purchasing_power": 0.69
+        },
+        "2016": {
+          "mli": 74.25,
+          "income": 41754,
+          "col": 59119.86,
+          "purchasing_power": 0.7063
+        },
+        "2017": {
+          "mli": 78.0,
+          "income": 43529,
+          "col": 58667.64,
+          "purchasing_power": 0.742
+        },
+        "2018": {
+          "mli": 81.48,
+          "income": 44717,
+          "col": 57694.78,
+          "purchasing_power": 0.7751
+        },
+        "2019": {
+          "mli": 83.13,
+          "income": 45792,
+          "col": 57913.27,
+          "purchasing_power": 0.7907
+        },
+        "2021": {
+          "mli": 88.87,
+          "income": 48716,
+          "col": 57630.89,
+          "purchasing_power": 0.8453
+        },
+        "2022": {
+          "mli": 95.13,
+          "income": 52719,
+          "col": 58259.45,
+          "purchasing_power": 0.9049
+        },
+        "2023": {
+          "mli": 97.89,
+          "income": 54203,
+          "col": 58213.77,
+          "purchasing_power": 0.9311
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 97.89,
+        "income": 54203,
+        "col": 58213.77,
+        "purchasing_power": 0.9311,
+        "categories": {
+          "food": {
+            "cost": 8633.44
+          },
+          "housing": {
+            "cost": 12983.61
+          },
+          "transportation": {
+            "cost": 11621.94
+          },
+          "healthcare": {
+            "cost": 5499.26
+          },
+          "personal_insurance": {
+            "cost": 8248.88
+          },
+          "entertainment": {
+            "cost": 3240.63
+          },
+          "apparel": {
+            "cost": 1660.28
+          },
+          "personal_care": {
+            "cost": 824.89
+          },
+          "reading": {
+            "cost": 132.82
+          },
+          "education": {
+            "cost": 1443.55
+          },
+          "tobacco": {
+            "cost": 332.06
+          },
+          "miscellaneous": {
+            "cost": 1031.11
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 531.29
+          }
+        }
+      }
+    },
+    "Missouri": {
+      "name": "Missouri",
+      "timeseries": {
+        "2008": {
+          "mli": 81.82,
+          "income": 46867,
+          "col": 60216.17,
+          "purchasing_power": 0.7783
+        },
+        "2009": {
+          "mli": 77.61,
+          "income": 45229,
+          "col": 61266.42,
+          "purchasing_power": 0.7382
+        },
+        "2010": {
+          "mli": 73.7,
+          "income": 44301,
+          "col": 63194.93,
+          "purchasing_power": 0.701
+        },
+        "2011": {
+          "mli": 75.8,
+          "income": 45247,
+          "col": 62756.2,
+          "purchasing_power": 0.721
+        },
+        "2012": {
+          "mli": 76.11,
+          "income": 45321,
+          "col": 62603.36,
+          "purchasing_power": 0.7239
+        },
+        "2013": {
+          "mli": 78.15,
+          "income": 46931,
+          "col": 63133.83,
+          "purchasing_power": 0.7434
+        },
+        "2014": {
+          "mli": 80.36,
+          "income": 48363,
+          "col": 63272.24,
+          "purchasing_power": 0.7644
+        },
+        "2015": {
+          "mli": 84.28,
+          "income": 50238,
+          "col": 62668.65,
+          "purchasing_power": 0.8016
+        },
+        "2016": {
+          "mli": 87.5,
+          "income": 51746,
+          "col": 62168.95,
+          "purchasing_power": 0.8323
+        },
+        "2017": {
+          "mli": 91.13,
+          "income": 53578,
+          "col": 61806.88,
+          "purchasing_power": 0.8669
+        },
+        "2018": {
+          "mli": 92.7,
+          "income": 54478,
+          "col": 61780.91,
+          "purchasing_power": 0.8818
+        },
+        "2019": {
+          "mli": 96.66,
+          "income": 57409,
+          "col": 62437.82,
+          "purchasing_power": 0.9195
+        },
+        "2021": {
+          "mli": 104.77,
+          "income": 61847,
+          "col": 62062.11,
+          "purchasing_power": 0.9965
+        },
+        "2022": {
+          "mli": 110.99,
+          "income": 64811,
+          "col": 61386.76,
+          "purchasing_power": 1.0558
+        },
+        "2023": {
+          "mli": 116.32,
+          "income": 68545,
+          "col": 61952.72,
+          "purchasing_power": 1.1064
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 116.32,
+        "income": 68545,
+        "col": 61952.72,
+        "purchasing_power": 1.1064,
+        "categories": {
+          "food": {
+            "cost": 8890.61
+          },
+          "housing": {
+            "cost": 16657.4
+          },
+          "transportation": {
+            "cost": 11968.13
+          },
+          "healthcare": {
+            "cost": 5331.93
+          },
+          "personal_insurance": {
+            "cost": 7997.89
+          },
+          "entertainment": {
+            "cost": 3142.03
+          },
+          "apparel": {
+            "cost": 1709.73
+          },
+          "personal_care": {
+            "cost": 799.79
+          },
+          "reading": {
+            "cost": 136.78
+          },
+          "education": {
+            "cost": 1399.63
+          },
+          "tobacco": {
+            "cost": 341.95
+          },
+          "miscellaneous": {
+            "cost": 999.74
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 547.11
+          }
+        }
+      }
+    },
+    "Montana": {
+      "name": "Montana",
+      "timeseries": {
+        "2008": {
+          "mli": 72.43,
+          "income": 43654,
+          "col": 63365.51,
+          "purchasing_power": 0.6889
+        },
+        "2009": {
+          "mli": 70.87,
+          "income": 42322,
+          "col": 62780.31,
+          "purchasing_power": 0.6741
+        },
+        "2010": {
+          "mli": 71.46,
+          "income": 42666,
+          "col": 62771.47,
+          "purchasing_power": 0.6797
+        },
+        "2011": {
+          "mli": 72.67,
+          "income": 44222,
+          "col": 63970.7,
+          "purchasing_power": 0.6913
+        },
+        "2012": {
+          "mli": 75.1,
+          "income": 45076,
+          "col": 63101.31,
+          "purchasing_power": 0.7143
+        },
+        "2013": {
+          "mli": 78.65,
+          "income": 46972,
+          "col": 62785.89,
+          "purchasing_power": 0.7481
+        },
+        "2014": {
+          "mli": 74.56,
+          "income": 46328,
+          "col": 65324.7,
+          "purchasing_power": 0.7092
+        },
+        "2015": {
+          "mli": 80.65,
+          "income": 49509,
+          "col": 64539.91,
+          "purchasing_power": 0.7671
+        },
+        "2016": {
+          "mli": 82.3,
+          "income": 50027,
+          "col": 63907.89,
+          "purchasing_power": 0.7828
+        },
+        "2017": {
+          "mli": 87.91,
+          "income": 53386,
+          "col": 63843.38,
+          "purchasing_power": 0.8362
+        },
+        "2018": {
+          "mli": 91.88,
+          "income": 55328,
+          "col": 63304.43,
+          "purchasing_power": 0.874
+        },
+        "2019": {
+          "mli": 92.67,
+          "income": 57153,
+          "col": 64836.11,
+          "purchasing_power": 0.8815
+        },
+        "2021": {
+          "mli": 105.05,
+          "income": 63249,
+          "col": 63296.76,
+          "purchasing_power": 0.9992
+        },
+        "2022": {
+          "mli": 114.63,
+          "income": 67631,
+          "col": 62023.36,
+          "purchasing_power": 1.0904
+        },
+        "2023": {
+          "mli": 119.56,
+          "income": 70804,
+          "col": 62257.73,
+          "purchasing_power": 1.1373
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 119.56,
+        "income": 70804,
+        "col": 62257.73,
+        "purchasing_power": 1.1373,
+        "categories": {
+          "food": {
+            "cost": 8580.39
+          },
+          "housing": {
+            "cost": 18149.72
+          },
+          "transportation": {
+            "cost": 11550.52
+          },
+          "healthcare": {
+            "cost": 5233.26
+          },
+          "personal_insurance": {
+            "cost": 7849.88
+          },
+          "entertainment": {
+            "cost": 3083.88
+          },
+          "apparel": {
+            "cost": 1650.08
+          },
+          "personal_care": {
+            "cost": 784.99
+          },
+          "reading": {
+            "cost": 132.01
+          },
+          "education": {
+            "cost": 1373.73
+          },
+          "tobacco": {
+            "cost": 330.02
+          },
+          "miscellaneous": {
+            "cost": 981.24
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 528.02
+          }
+        }
+      }
+    },
+    "Nebraska": {
+      "name": "Nebraska",
+      "timeseries": {
+        "2008": {
+          "mli": 86.1,
+          "income": 49693,
+          "col": 60675.44,
+          "purchasing_power": 0.819
+        },
+        "2009": {
+          "mli": 81.19,
+          "income": 47357,
+          "col": 61322.96,
+          "purchasing_power": 0.7723
+        },
+        "2010": {
+          "mli": 81.19,
+          "income": 48408,
+          "col": 62682.25,
+          "purchasing_power": 0.7723
+        },
+        "2011": {
+          "mli": 84.46,
+          "income": 50296,
+          "col": 62606.81,
+          "purchasing_power": 0.8034
+        },
+        "2012": {
+          "mli": 84.69,
+          "income": 50723,
+          "col": 62961.43,
+          "purchasing_power": 0.8056
+        },
+        "2013": {
+          "mli": 86.7,
+          "income": 51440,
+          "col": 62377.68,
+          "purchasing_power": 0.8247
+        },
+        "2014": {
+          "mli": 88.56,
+          "income": 52686,
+          "col": 62540.91,
+          "purchasing_power": 0.8424
+        },
+        "2015": {
+          "mli": 92.35,
+          "income": 54996,
+          "col": 62603.95,
+          "purchasing_power": 0.8785
+        },
+        "2016": {
+          "mli": 96.27,
+          "income": 56927,
+          "col": 62164.32,
+          "purchasing_power": 0.9158
+        },
+        "2017": {
+          "mli": 102.93,
+          "income": 59970,
+          "col": 61253.58,
+          "purchasing_power": 0.979
+        },
+        "2018": {
+          "mli": 100.75,
+          "income": 59566,
+          "col": 62152.54,
+          "purchasing_power": 0.9584
+        },
+        "2019": {
+          "mli": 106.05,
+          "income": 63229,
+          "col": 62679.82,
+          "purchasing_power": 1.0088
+        },
+        "2021": {
+          "mli": 112.29,
+          "income": 66817,
+          "col": 62555.62,
+          "purchasing_power": 1.0681
+        },
+        "2022": {
+          "mli": 119.63,
+          "income": 69597,
+          "col": 61162.04,
+          "purchasing_power": 1.1379
+        },
+        "2023": {
+          "mli": 126.97,
+          "income": 74590,
+          "col": 61758.0,
+          "purchasing_power": 1.2078
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 126.97,
+        "income": 74590,
+        "col": 61758.0,
+        "purchasing_power": 1.2078,
+        "categories": {
+          "food": {
+            "cost": 8668.66
+          },
+          "housing": {
+            "cost": 17575.02
+          },
+          "transportation": {
+            "cost": 11669.35
+          },
+          "healthcare": {
+            "cost": 5190.08
+          },
+          "personal_insurance": {
+            "cost": 7785.12
+          },
+          "entertainment": {
+            "cost": 3058.44
+          },
+          "apparel": {
+            "cost": 1667.05
+          },
+          "personal_care": {
+            "cost": 778.51
+          },
+          "reading": {
+            "cost": 133.36
+          },
+          "education": {
+            "cost": 1362.4
+          },
+          "tobacco": {
+            "cost": 333.41
+          },
+          "miscellaneous": {
+            "cost": 973.14
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 533.46
+          }
+        }
+      }
+    },
+    "Nevada": {
+      "name": "Nevada",
+      "timeseries": {
+        "2008": {
+          "mli": 80.09,
+          "income": 56361,
+          "col": 73979.76,
+          "purchasing_power": 0.7618
+        },
+        "2009": {
+          "mli": 76.04,
+          "income": 53341,
+          "col": 73746.1,
+          "purchasing_power": 0.7233
+        },
+        "2010": {
+          "mli": 74.62,
+          "income": 51001,
+          "col": 71853.54,
+          "purchasing_power": 0.7098
+        },
+        "2011": {
+          "mli": 70.95,
+          "income": 48927,
+          "col": 72492.21,
+          "purchasing_power": 0.6749
+        },
+        "2012": {
+          "mli": 72.85,
+          "income": 49760,
+          "col": 71807.27,
+          "purchasing_power": 0.693
+        },
+        "2013": {
+          "mli": 76.37,
+          "income": 51230,
+          "col": 70525.15,
+          "purchasing_power": 0.7264
+        },
+        "2014": {
+          "mli": 77.94,
+          "income": 51450,
+          "col": 69400.7,
+          "purchasing_power": 0.7413
+        },
+        "2015": {
+          "mli": 79.57,
+          "income": 52431,
+          "col": 69270.88,
+          "purchasing_power": 0.7569
+        },
+        "2016": {
+          "mli": 84.66,
+          "income": 55180,
+          "col": 68525.05,
+          "purchasing_power": 0.8053
+        },
+        "2017": {
+          "mli": 86.44,
+          "income": 58003,
+          "col": 70542.91,
+          "purchasing_power": 0.8222
+        },
+        "2018": {
+          "mli": 89.23,
+          "income": 58646,
+          "col": 69096.31,
+          "purchasing_power": 0.8488
+        },
+        "2019": {
+          "mli": 93.72,
+          "income": 63276,
+          "col": 70982.3,
+          "purchasing_power": 0.8914
+        },
+        "2021": {
+          "mli": 99.76,
+          "income": 66274,
+          "col": 69840.75,
+          "purchasing_power": 0.9489
+        },
+        "2022": {
+          "mli": 107.26,
+          "income": 72333,
+          "col": 70895.67,
+          "purchasing_power": 1.0203
+        },
+        "2023": {
+          "mli": 112.89,
+          "income": 76364,
+          "col": 71116.69,
+          "purchasing_power": 1.0738
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 112.89,
+        "income": 76364,
+        "col": 71116.69,
+        "purchasing_power": 1.0738,
+        "categories": {
+          "food": {
+            "cost": 8607.42
+          },
+          "housing": {
+            "cost": 26801.84
+          },
+          "transportation": {
+            "cost": 11586.91
+          },
+          "healthcare": {
+            "cost": 5269.88
+          },
+          "personal_insurance": {
+            "cost": 7904.82
+          },
+          "entertainment": {
+            "cost": 3105.47
+          },
+          "apparel": {
+            "cost": 1655.27
+          },
+          "personal_care": {
+            "cost": 790.48
+          },
+          "reading": {
+            "cost": 132.42
+          },
+          "education": {
+            "cost": 1383.34
+          },
+          "tobacco": {
+            "cost": 331.05
+          },
+          "miscellaneous": {
+            "cost": 988.1
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 529.69
+          }
+        }
+      }
+    },
+    "New Hampshire": {
+      "name": "New Hampshire",
+      "timeseries": {
+        "2008": {
+          "mli": 88.1,
+          "income": 63731,
+          "col": 76047.03,
+          "purchasing_power": 0.838
+        },
+        "2009": {
+          "mli": 83.48,
+          "income": 60567,
+          "col": 76278.88,
+          "purchasing_power": 0.794
+        },
+        "2010": {
+          "mli": 84.44,
+          "income": 61042,
+          "col": 75995.52,
+          "purchasing_power": 0.8032
+        },
+        "2011": {
+          "mli": 87.56,
+          "income": 62647,
+          "col": 75215.68,
+          "purchasing_power": 0.8329
+        },
+        "2012": {
+          "mli": 88.28,
+          "income": 63280,
+          "col": 75355.61,
+          "purchasing_power": 0.8398
+        },
+        "2013": {
+          "mli": 89.16,
+          "income": 64230,
+          "col": 75730.57,
+          "purchasing_power": 0.8481
+        },
+        "2014": {
+          "mli": 94.31,
+          "income": 66532,
+          "col": 74168.13,
+          "purchasing_power": 0.897
+        },
+        "2015": {
+          "mli": 97.79,
+          "income": 70303,
+          "col": 75577.58,
+          "purchasing_power": 0.9302
+        },
+        "2016": {
+          "mli": 99.72,
+          "income": 70936,
+          "col": 74783.74,
+          "purchasing_power": 0.9485
+        },
+        "2017": {
+          "mli": 101.12,
+          "income": 73381,
+          "col": 76287.63,
+          "purchasing_power": 0.9619
+        },
+        "2018": {
+          "mli": 107.51,
+          "income": 74991,
+          "col": 73327.38,
+          "purchasing_power": 1.0227
+        },
+        "2019": {
+          "mli": 110.95,
+          "income": 77933,
+          "col": 73843.94,
+          "purchasing_power": 1.0554
+        },
+        "2021": {
+          "mli": 127.76,
+          "income": 88465,
+          "col": 72794.25,
+          "purchasing_power": 1.2153
+        },
+        "2022": {
+          "mli": 121.73,
+          "income": 89992,
+          "col": 77717.13,
+          "purchasing_power": 1.1579
+        },
+        "2023": {
+          "mli": 135.81,
+          "income": 96838,
+          "col": 74962.32,
+          "purchasing_power": 1.2918
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 135.81,
+        "income": 96838,
+        "col": 74962.32,
+        "purchasing_power": 1.2918,
+        "categories": {
+          "food": {
+            "cost": 9110.28
+          },
+          "housing": {
+            "cost": 27106.45
+          },
+          "transportation": {
+            "cost": 12263.84
+          },
+          "healthcare": {
+            "cost": 5867.96
+          },
+          "personal_insurance": {
+            "cost": 8801.94
+          },
+          "entertainment": {
+            "cost": 3457.91
+          },
+          "apparel": {
+            "cost": 1751.98
+          },
+          "personal_care": {
+            "cost": 880.19
+          },
+          "reading": {
+            "cost": 140.16
+          },
+          "education": {
+            "cost": 1540.34
+          },
+          "tobacco": {
+            "cost": 350.4
+          },
+          "miscellaneous": {
+            "cost": 1100.24
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 560.63
+          }
+        }
+      }
+    },
+    "New Jersey": {
+      "name": "New Jersey",
+      "timeseries": {
+        "2008": {
+          "mli": 88.36,
+          "income": 70378,
+          "col": 83732.78,
+          "purchasing_power": 0.8405
+        },
+        "2009": {
+          "mli": 85.31,
+          "income": 68342,
+          "col": 84218.44,
+          "purchasing_power": 0.8115
+        },
+        "2010": {
+          "mli": 85.51,
+          "income": 67681,
+          "col": 83214.71,
+          "purchasing_power": 0.8133
+        },
+        "2011": {
+          "mli": 85.71,
+          "income": 67458,
+          "col": 82742.2,
+          "purchasing_power": 0.8153
+        },
+        "2012": {
+          "mli": 87.45,
+          "income": 69667,
+          "col": 83756.12,
+          "purchasing_power": 0.8318
+        },
+        "2013": {
+          "mli": 88.54,
+          "income": 70165,
+          "col": 83311.43,
+          "purchasing_power": 0.8422
+        },
+        "2014": {
+          "mli": 90.9,
+          "income": 71919,
+          "col": 83175.05,
+          "purchasing_power": 0.8647
+        },
+        "2015": {
+          "mli": 91.56,
+          "income": 72222,
+          "col": 82925.6,
+          "purchasing_power": 0.8709
+        },
+        "2016": {
+          "mli": 96.47,
+          "income": 76126,
+          "col": 82955.49,
+          "purchasing_power": 0.9177
+        },
+        "2017": {
+          "mli": 102.86,
+          "income": 80088,
+          "col": 81856.5,
+          "purchasing_power": 0.9784
+        },
+        "2018": {
+          "mli": 103.23,
+          "income": 81740,
+          "col": 83246.82,
+          "purchasing_power": 0.9819
+        },
+        "2019": {
+          "mli": 108.59,
+          "income": 85751,
+          "col": 83016.87,
+          "purchasing_power": 1.0329
+        },
+        "2021": {
+          "mli": 116.31,
+          "income": 89296,
+          "col": 80710.74,
+          "purchasing_power": 1.1064
+        },
+        "2022": {
+          "mli": 124.88,
+          "income": 96346,
+          "col": 81110.27,
+          "purchasing_power": 1.1878
+        },
+        "2023": {
+          "mli": 129.46,
+          "income": 99781,
+          "col": 81029.6,
+          "purchasing_power": 1.2314
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 129.46,
+        "income": 99781,
+        "col": 81029.6,
+        "purchasing_power": 1.2314,
+        "categories": {
+          "food": {
+            "cost": 9749.28
+          },
+          "housing": {
+            "cost": 31714.89
+          },
+          "transportation": {
+            "cost": 13124.04
+          },
+          "healthcare": {
+            "cost": 5803.73
+          },
+          "personal_insurance": {
+            "cost": 8705.59
+          },
+          "entertainment": {
+            "cost": 3420.05
+          },
+          "apparel": {
+            "cost": 1874.86
+          },
+          "personal_care": {
+            "cost": 870.56
+          },
+          "reading": {
+            "cost": 149.99
+          },
+          "education": {
+            "cost": 1523.48
+          },
+          "tobacco": {
+            "cost": 374.97
+          },
+          "miscellaneous": {
+            "cost": 1088.2
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 599.96
+          }
+        }
+      }
+    },
+    "New Mexico": {
+      "name": "New Mexico",
+      "timeseries": {
+        "2008": {
+          "mli": 69.91,
+          "income": 43508,
+          "col": 65423.28,
+          "purchasing_power": 0.665
+        },
+        "2009": {
+          "mli": 68.56,
+          "income": 43028,
+          "col": 65975.21,
+          "purchasing_power": 0.6522
+        },
+        "2010": {
+          "mli": 68.47,
+          "income": 42090,
+          "col": 64629.43,
+          "purchasing_power": 0.6513
+        },
+        "2011": {
+          "mli": 66.19,
+          "income": 41963,
+          "col": 66650.9,
+          "purchasing_power": 0.6296
+        },
+        "2012": {
+          "mli": 67.62,
+          "income": 42558,
+          "col": 66168.87,
+          "purchasing_power": 0.6432
+        },
+        "2013": {
+          "mli": 70.43,
+          "income": 43872,
+          "col": 65489.61,
+          "purchasing_power": 0.6699
+        },
+        "2014": {
+          "mli": 72.23,
+          "income": 44803,
+          "col": 65211.36,
+          "purchasing_power": 0.687
+        },
+        "2015": {
+          "mli": 73.32,
+          "income": 45382,
+          "col": 65075.33,
+          "purchasing_power": 0.6974
+        },
+        "2016": {
+          "mli": 75.96,
+          "income": 46748,
+          "col": 64696.94,
+          "purchasing_power": 0.7226
+        },
+        "2017": {
+          "mli": 75.2,
+          "income": 46744,
+          "col": 65351.1,
+          "purchasing_power": 0.7153
+        },
+        "2018": {
+          "mli": 79.02,
+          "income": 47169,
+          "col": 62751.71,
+          "purchasing_power": 0.7517
+        },
+        "2019": {
+          "mli": 85.85,
+          "income": 51945,
+          "col": 63613.44,
+          "purchasing_power": 0.8166
+        },
+        "2021": {
+          "mli": 92.05,
+          "income": 53992,
+          "col": 61662.03,
+          "purchasing_power": 0.8756
+        },
+        "2022": {
+          "mli": 100.28,
+          "income": 59726,
+          "col": 62611.84,
+          "purchasing_power": 0.9539
+        },
+        "2023": {
+          "mli": 105.2,
+          "income": 62268,
+          "col": 62227.7,
+          "purchasing_power": 1.0006
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 105.2,
+        "income": 62268,
+        "col": 62227.7,
+        "purchasing_power": 1.0006,
+        "categories": {
+          "food": {
+            "cost": 8682.58
+          },
+          "housing": {
+            "cost": 17799.94
+          },
+          "transportation": {
+            "cost": 11688.09
+          },
+          "healthcare": {
+            "cost": 5246.42
+          },
+          "personal_insurance": {
+            "cost": 7869.62
+          },
+          "entertainment": {
+            "cost": 3091.64
+          },
+          "apparel": {
+            "cost": 1669.73
+          },
+          "personal_care": {
+            "cost": 786.96
+          },
+          "reading": {
+            "cost": 133.58
+          },
+          "education": {
+            "cost": 1377.18
+          },
+          "tobacco": {
+            "cost": 333.95
+          },
+          "miscellaneous": {
+            "cost": 983.7
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 534.31
+          }
+        }
+      }
+    },
+    "New York": {
+      "name": "New York",
+      "timeseries": {
+        "2008": {
+          "mli": 72.05,
+          "income": 56033,
+          "col": 81757.73,
+          "purchasing_power": 0.6854
+        },
+        "2009": {
+          "mli": 70.33,
+          "income": 54659,
+          "col": 81706.14,
+          "purchasing_power": 0.669
+        },
+        "2010": {
+          "mli": 69.72,
+          "income": 54148,
+          "col": 81649.96,
+          "purchasing_power": 0.6632
+        },
+        "2011": {
+          "mli": 70.55,
+          "income": 55246,
+          "col": 82326.11,
+          "purchasing_power": 0.6711
+        },
+        "2012": {
+          "mli": 72.5,
+          "income": 56448,
+          "col": 81858.48,
+          "purchasing_power": 0.6896
+        },
+        "2013": {
+          "mli": 73.86,
+          "income": 57369,
+          "col": 81659.89,
+          "purchasing_power": 0.7025
+        },
+        "2014": {
+          "mli": 76.02,
+          "income": 58878,
+          "col": 81424.62,
+          "purchasing_power": 0.7231
+        },
+        "2015": {
+          "mli": 78.48,
+          "income": 60850,
+          "col": 81510.66,
+          "purchasing_power": 0.7465
+        },
+        "2016": {
+          "mli": 81.11,
+          "income": 62909,
+          "col": 81536.71,
+          "purchasing_power": 0.7715
+        },
+        "2017": {
+          "mli": 84.27,
+          "income": 64894,
+          "col": 80957.52,
+          "purchasing_power": 0.8016
+        },
+        "2018": {
+          "mli": 88.7,
+          "income": 67844,
+          "col": 80410.58,
+          "purchasing_power": 0.8437
+        },
+        "2019": {
+          "mli": 94.77,
+          "income": 72108,
+          "col": 79988.08,
+          "purchasing_power": 0.9015
+        },
+        "2021": {
+          "mli": 97.67,
+          "income": 74314,
+          "col": 79988.11,
+          "purchasing_power": 0.9291
+        },
+        "2022": {
+          "mli": 106.83,
+          "income": 79557,
+          "col": 78293.65,
+          "purchasing_power": 1.0161
+        },
+        "2023": {
+          "mli": 110.66,
+          "income": 82095,
+          "col": 77993.01,
+          "purchasing_power": 1.0526
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 110.66,
+        "income": 82095,
+        "col": 77993.01,
+        "purchasing_power": 1.0526,
+        "categories": {
+          "food": {
+            "cost": 9666.93
+          },
+          "housing": {
+            "cost": 28833.84
+          },
+          "transportation": {
+            "cost": 13013.17
+          },
+          "healthcare": {
+            "cost": 5820.81
+          },
+          "personal_insurance": {
+            "cost": 8731.21
+          },
+          "entertainment": {
+            "cost": 3430.12
+          },
+          "apparel": {
+            "cost": 1859.03
+          },
+          "personal_care": {
+            "cost": 873.12
+          },
+          "reading": {
+            "cost": 148.72
+          },
+          "education": {
+            "cost": 1527.96
+          },
+          "tobacco": {
+            "cost": 371.81
+          },
+          "miscellaneous": {
+            "cost": 1091.4
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 594.89
+          }
+        }
+      }
+    },
+    "North Carolina": {
+      "name": "North Carolina",
+      "timeseries": {
+        "2008": {
+          "mli": 77.55,
+          "income": 46549,
+          "col": 63099.85,
+          "purchasing_power": 0.7377
+        },
+        "2009": {
+          "mli": 73.44,
+          "income": 43674,
+          "col": 62522.06,
+          "purchasing_power": 0.6985
+        },
+        "2010": {
+          "mli": 71.75,
+          "income": 43326,
+          "col": 63484.23,
+          "purchasing_power": 0.6825
+        },
+        "2011": {
+          "mli": 72.27,
+          "income": 43916,
+          "col": 63884.75,
+          "purchasing_power": 0.6874
+        },
+        "2012": {
+          "mli": 74.59,
+          "income": 45150,
+          "col": 63635.4,
+          "purchasing_power": 0.7095
+        },
+        "2013": {
+          "mli": 75.63,
+          "income": 45906,
+          "col": 63813.15,
+          "purchasing_power": 0.7194
+        },
+        "2014": {
+          "mli": 76.64,
+          "income": 46556,
+          "col": 63864.41,
+          "purchasing_power": 0.729
+        },
+        "2015": {
+          "mli": 79.09,
+          "income": 47830,
+          "col": 63575.88,
+          "purchasing_power": 0.7523
+        },
+        "2016": {
+          "mli": 83.59,
+          "income": 50584,
+          "col": 63618.65,
+          "purchasing_power": 0.7951
+        },
+        "2017": {
+          "mli": 87.44,
+          "income": 52752,
+          "col": 63424.04,
+          "purchasing_power": 0.8317
+        },
+        "2018": {
+          "mli": 89.49,
+          "income": 53855,
+          "col": 63270.37,
+          "purchasing_power": 0.8512
+        },
+        "2019": {
+          "mli": 96.05,
+          "income": 57341,
+          "col": 62763.51,
+          "purchasing_power": 0.9136
+        },
+        "2021": {
+          "mli": 102.07,
+          "income": 61972,
+          "col": 63831.68,
+          "purchasing_power": 0.9709
+        },
+        "2022": {
+          "mli": 110.29,
+          "income": 67481,
+          "col": 64326.08,
+          "purchasing_power": 1.049
+        },
+        "2023": {
+          "mli": 115.02,
+          "income": 70804,
+          "col": 64717.46,
+          "purchasing_power": 1.094
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 115.02,
+        "income": 70804,
+        "col": 64717.46,
+        "purchasing_power": 1.094,
+        "categories": {
+          "food": {
+            "cost": 8777.68
+          },
+          "housing": {
+            "cost": 19117.95
+          },
+          "transportation": {
+            "cost": 11816.1
+          },
+          "healthcare": {
+            "cost": 5495.62
+          },
+          "personal_insurance": {
+            "cost": 8243.42
+          },
+          "entertainment": {
+            "cost": 3238.49
+          },
+          "apparel": {
+            "cost": 1688.02
+          },
+          "personal_care": {
+            "cost": 824.34
+          },
+          "reading": {
+            "cost": 135.04
+          },
+          "education": {
+            "cost": 1442.6
+          },
+          "tobacco": {
+            "cost": 337.6
+          },
+          "miscellaneous": {
+            "cost": 1030.43
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 540.16
+          }
+        }
+      }
+    },
+    "North Dakota": {
+      "name": "North Dakota",
+      "timeseries": {
+        "2008": {
+          "mli": 83.65,
+          "income": 45685,
+          "col": 57414.14,
+          "purchasing_power": 0.7957
+        },
+        "2009": {
+          "mli": 85.43,
+          "income": 47827,
+          "col": 58856.4,
+          "purchasing_power": 0.8126
+        },
+        "2010": {
+          "mli": 86.24,
+          "income": 48670,
+          "col": 59328.79,
+          "purchasing_power": 0.8203
+        },
+        "2011": {
+          "mli": 89.56,
+          "income": 51704,
+          "col": 60692.86,
+          "purchasing_power": 0.8519
+        },
+        "2012": {
+          "mli": 89.35,
+          "income": 53585,
+          "col": 63051.7,
+          "purchasing_power": 0.8499
+        },
+        "2013": {
+          "mli": 92.06,
+          "income": 55759,
+          "col": 63672.52,
+          "purchasing_power": 0.8757
+        },
+        "2014": {
+          "mli": 97.4,
+          "income": 59029,
+          "col": 63711.94,
+          "purchasing_power": 0.9265
+        },
+        "2015": {
+          "mli": 100.92,
+          "income": 60557,
+          "col": 63083.13,
+          "purchasing_power": 0.96
+        },
+        "2016": {
+          "mli": 98.81,
+          "income": 60656,
+          "col": 64536.71,
+          "purchasing_power": 0.9399
+        },
+        "2017": {
+          "mli": 107.17,
+          "income": 61843,
+          "col": 60663.63,
+          "purchasing_power": 1.0194
+        },
+        "2018": {
+          "mli": 108.94,
+          "income": 63837,
+          "col": 61602.27,
+          "purchasing_power": 1.0363
+        },
+        "2019": {
+          "mli": 106.91,
+          "income": 64577,
+          "col": 63502.75,
+          "purchasing_power": 1.0169
+        },
+        "2021": {
+          "mli": 114.35,
+          "income": 66519,
+          "col": 61155.23,
+          "purchasing_power": 1.0877
+        },
+        "2022": {
+          "mli": 127.32,
+          "income": 71970,
+          "col": 59425.8,
+          "purchasing_power": 1.2111
+        },
+        "2023": {
+          "mli": 133.47,
+          "income": 76525,
+          "col": 60275.63,
+          "purchasing_power": 1.2696
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 133.47,
+        "income": 76525,
+        "col": 60275.63,
+        "purchasing_power": 1.2696,
+        "categories": {
+          "food": {
+            "cost": 8728.63
+          },
+          "housing": {
+            "cost": 16404.35
+          },
+          "transportation": {
+            "cost": 11750.08
+          },
+          "healthcare": {
+            "cost": 5062.46
+          },
+          "personal_insurance": {
+            "cost": 7593.68
+          },
+          "entertainment": {
+            "cost": 2983.23
+          },
+          "apparel": {
+            "cost": 1678.58
+          },
+          "personal_care": {
+            "cost": 759.37
+          },
+          "reading": {
+            "cost": 134.29
+          },
+          "education": {
+            "cost": 1328.89
+          },
+          "tobacco": {
+            "cost": 335.72
+          },
+          "miscellaneous": {
+            "cost": 949.21
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 537.15
+          }
+        }
+      }
+    },
+    "Ohio": {
+      "name": "Ohio",
+      "timeseries": {
+        "2008": {
+          "mli": 80.38,
+          "income": 47988,
+          "col": 62760.57,
+          "purchasing_power": 0.7646
+        },
+        "2009": {
+          "mli": 75.5,
+          "income": 45395,
+          "col": 63211.22,
+          "purchasing_power": 0.7181
+        },
+        "2010": {
+          "mli": 75.04,
+          "income": 45090,
+          "col": 63171.05,
+          "purchasing_power": 0.7138
+        },
+        "2011": {
+          "mli": 76.76,
+          "income": 45749,
+          "col": 62657.63,
+          "purchasing_power": 0.7301
+        },
+        "2012": {
+          "mli": 77.83,
+          "income": 46829,
+          "col": 63252.04,
+          "purchasing_power": 0.7404
+        },
+        "2013": {
+          "mli": 79.44,
+          "income": 48081,
+          "col": 63629.78,
+          "purchasing_power": 0.7556
+        },
+        "2014": {
+          "mli": 81.95,
+          "income": 49308,
+          "col": 63251.19,
+          "purchasing_power": 0.7796
+        },
+        "2015": {
+          "mli": 85.43,
+          "income": 51075,
+          "col": 62856.07,
+          "purchasing_power": 0.8126
+        },
+        "2016": {
+          "mli": 87.55,
+          "income": 52334,
+          "col": 62843.2,
+          "purchasing_power": 0.8328
+        },
+        "2017": {
+          "mli": 90.88,
+          "income": 54021,
+          "col": 62492.21,
+          "purchasing_power": 0.8644
+        },
+        "2018": {
+          "mli": 93.71,
+          "income": 56111,
+          "col": 62947.86,
+          "purchasing_power": 0.8914
+        },
+        "2019": {
+          "mli": 98.02,
+          "income": 58642,
+          "col": 62893.49,
+          "purchasing_power": 0.9324
+        },
+        "2021": {
+          "mli": 105.24,
+          "income": 62262,
+          "col": 62196.94,
+          "purchasing_power": 1.001
+        },
+        "2022": {
+          "mli": 111.92,
+          "income": 65720,
+          "col": 61732.69,
+          "purchasing_power": 1.0646
+        },
+        "2023": {
+          "mli": 115.23,
+          "income": 67769,
+          "col": 61829.53,
+          "purchasing_power": 1.0961
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 115.23,
+        "income": 67769,
+        "col": 61829.53,
+        "purchasing_power": 1.0961,
+        "categories": {
+          "food": {
+            "cost": 8495.4
+          },
+          "housing": {
+            "cost": 17046.92
+          },
+          "transportation": {
+            "cost": 11436.11
+          },
+          "healthcare": {
+            "cost": 5477.25
+          },
+          "personal_insurance": {
+            "cost": 8215.87
+          },
+          "entertainment": {
+            "cost": 3227.66
+          },
+          "apparel": {
+            "cost": 1633.73
+          },
+          "personal_care": {
+            "cost": 821.59
+          },
+          "reading": {
+            "cost": 130.7
+          },
+          "education": {
+            "cost": 1437.78
+          },
+          "tobacco": {
+            "cost": 326.75
+          },
+          "miscellaneous": {
+            "cost": 1026.98
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 522.79
+          }
+        }
+      }
+    },
+    "Oklahoma": {
+      "name": "Oklahoma",
+      "timeseries": {
+        "2008": {
+          "mli": 74.87,
+          "income": 42822,
+          "col": 60126.08,
+          "purchasing_power": 0.7122
+        },
+        "2009": {
+          "mli": 73.24,
+          "income": 41664,
+          "col": 59806.49,
+          "purchasing_power": 0.6966
+        },
+        "2010": {
+          "mli": 72.37,
+          "income": 42072,
+          "col": 61114.48,
+          "purchasing_power": 0.6884
+        },
+        "2011": {
+          "mli": 74.14,
+          "income": 43225,
+          "col": 61289.44,
+          "purchasing_power": 0.7053
+        },
+        "2012": {
+          "mli": 76.05,
+          "income": 44312,
+          "col": 61255.73,
+          "purchasing_power": 0.7234
+        },
+        "2013": {
+          "mli": 77.89,
+          "income": 45690,
+          "col": 61665.55,
+          "purchasing_power": 0.7409
+        },
+        "2014": {
+          "mli": 80.83,
+          "income": 47529,
+          "col": 61818.83,
+          "purchasing_power": 0.7688
+        },
+        "2015": {
+          "mli": 83.34,
+          "income": 48568,
+          "col": 61263.3,
+          "purchasing_power": 0.7928
+        },
+        "2016": {
+          "mli": 84.15,
+          "income": 49176,
+          "col": 61436.95,
+          "purchasing_power": 0.8004
+        },
+        "2017": {
+          "mli": 86.13,
+          "income": 50051,
+          "col": 61090.43,
+          "purchasing_power": 0.8193
+        },
+        "2018": {
+          "mli": 90.42,
+          "income": 51924,
+          "col": 60369.63,
+          "purchasing_power": 0.8601
+        },
+        "2019": {
+          "mli": 95.17,
+          "income": 54449,
+          "col": 60150.24,
+          "purchasing_power": 0.9052
+        },
+        "2021": {
+          "mli": 97.08,
+          "income": 55826,
+          "col": 60454.6,
+          "purchasing_power": 0.9234
+        },
+        "2022": {
+          "mli": 105.48,
+          "income": 59673,
+          "col": 59476.15,
+          "purchasing_power": 1.0033
+        },
+        "2023": {
+          "mli": 110.01,
+          "income": 62138,
+          "col": 59380.1,
+          "purchasing_power": 1.0464
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 110.01,
+        "income": 62138,
+        "col": 59380.1,
+        "purchasing_power": 1.0464,
+        "categories": {
+          "food": {
+            "cost": 8389.29
+          },
+          "housing": {
+            "cost": 15373.68
+          },
+          "transportation": {
+            "cost": 11293.27
+          },
+          "healthcare": {
+            "cost": 5343.18
+          },
+          "personal_insurance": {
+            "cost": 8014.78
+          },
+          "entertainment": {
+            "cost": 3148.66
+          },
+          "apparel": {
+            "cost": 1613.32
+          },
+          "personal_care": {
+            "cost": 801.48
+          },
+          "reading": {
+            "cost": 129.07
+          },
+          "education": {
+            "cost": 1402.59
+          },
+          "tobacco": {
+            "cost": 322.67
+          },
+          "miscellaneous": {
+            "cost": 1001.85
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 516.26
+          }
+        }
+      }
+    },
+    "Oregon": {
+      "name": "Oregon",
+      "timeseries": {
+        "2008": {
+          "mli": 76.26,
+          "income": 50169,
+          "col": 69157.84,
+          "purchasing_power": 0.7254
+        },
+        "2009": {
+          "mli": 71.59,
+          "income": 48457,
+          "col": 71159.34,
+          "purchasing_power": 0.681
+        },
+        "2010": {
+          "mli": 69.37,
+          "income": 46560,
+          "col": 70564.82,
+          "purchasing_power": 0.6598
+        },
+        "2011": {
+          "mli": 69.77,
+          "income": 46816,
+          "col": 70537.78,
+          "purchasing_power": 0.6637
+        },
+        "2012": {
+          "mli": 72.16,
+          "income": 49161,
+          "col": 71618.02,
+          "purchasing_power": 0.6864
+        },
+        "2013": {
+          "mli": 74.57,
+          "income": 50251,
+          "col": 70847.05,
+          "purchasing_power": 0.7093
+        },
+        "2014": {
+          "mli": 75.77,
+          "income": 51075,
+          "col": 70864.01,
+          "purchasing_power": 0.7207
+        },
+        "2015": {
+          "mli": 79.25,
+          "income": 54148,
+          "col": 71830.89,
+          "purchasing_power": 0.7538
+        },
+        "2016": {
+          "mli": 84.55,
+          "income": 57532,
+          "col": 71533.58,
+          "purchasing_power": 0.8043
+        },
+        "2017": {
+          "mli": 86.75,
+          "income": 60212,
+          "col": 72966.32,
+          "purchasing_power": 0.8252
+        },
+        "2018": {
+          "mli": 89.0,
+          "income": 63426,
+          "col": 74920.34,
+          "purchasing_power": 0.8466
+        },
+        "2019": {
+          "mli": 94.82,
+          "income": 67058,
+          "col": 74351.52,
+          "purchasing_power": 0.9019
+        },
+        "2021": {
+          "mli": 101.6,
+          "income": 71562,
+          "col": 74048.5,
+          "purchasing_power": 0.9664
+        },
+        "2022": {
+          "mli": 104.56,
+          "income": 75657,
+          "col": 76067.27,
+          "purchasing_power": 0.9946
+        },
+        "2023": {
+          "mli": 113.0,
+          "income": 80160,
+          "col": 74576.83,
+          "purchasing_power": 1.0749
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 113.0,
+        "income": 80160,
+        "col": 74576.83,
+        "purchasing_power": 1.0749,
+        "categories": {
+          "food": {
+            "cost": 9514.6
+          },
+          "housing": {
+            "cost": 25769.04
+          },
+          "transportation": {
+            "cost": 12808.11
+          },
+          "healthcare": {
+            "cost": 5835.14
+          },
+          "personal_insurance": {
+            "cost": 8752.72
+          },
+          "entertainment": {
+            "cost": 3438.57
+          },
+          "apparel": {
+            "cost": 1829.73
+          },
+          "personal_care": {
+            "cost": 875.27
+          },
+          "reading": {
+            "cost": 146.38
+          },
+          "education": {
+            "cost": 1531.73
+          },
+          "tobacco": {
+            "cost": 365.95
+          },
+          "miscellaneous": {
+            "cost": 1094.09
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 585.51
+          }
+        }
+      }
+    },
+    "Pennsylvania": {
+      "name": "Pennsylvania",
+      "timeseries": {
+        "2008": {
+          "mli": 78.46,
+          "income": 50713,
+          "col": 67949.9,
+          "purchasing_power": 0.7463
+        },
+        "2009": {
+          "mli": 76.4,
+          "income": 49520,
+          "col": 68141.92,
+          "purchasing_power": 0.7267
+        },
+        "2010": {
+          "mli": 76.2,
+          "income": 49288,
+          "col": 68002.74,
+          "purchasing_power": 0.7248
+        },
+        "2011": {
+          "mli": 77.9,
+          "income": 50228,
+          "col": 67787.18,
+          "purchasing_power": 0.741
+        },
+        "2012": {
+          "mli": 79.81,
+          "income": 51230,
+          "col": 67480.25,
+          "purchasing_power": 0.7592
+        },
+        "2013": {
+          "mli": 81.13,
+          "income": 52007,
+          "col": 67392.65,
+          "purchasing_power": 0.7717
+        },
+        "2014": {
+          "mli": 83.31,
+          "income": 53234,
+          "col": 67176.5,
+          "purchasing_power": 0.7924
+        },
+        "2015": {
+          "mli": 86.3,
+          "income": 55702,
+          "col": 67856.26,
+          "purchasing_power": 0.8209
+        },
+        "2016": {
+          "mli": 88.65,
+          "income": 56907,
+          "col": 67483.82,
+          "purchasing_power": 0.8433
+        },
+        "2017": {
+          "mli": 91.61,
+          "income": 59195,
+          "col": 67933.33,
+          "purchasing_power": 0.8714
+        },
+        "2018": {
+          "mli": 94.95,
+          "income": 60905,
+          "col": 67436.73,
+          "purchasing_power": 0.9031
+        },
+        "2019": {
+          "mli": 99.82,
+          "income": 63463,
+          "col": 66838.82,
+          "purchasing_power": 0.9495
+        },
+        "2021": {
+          "mli": 109.78,
+          "income": 68957,
+          "col": 66038.27,
+          "purchasing_power": 1.0442
+        },
+        "2022": {
+          "mli": 114.2,
+          "income": 71798,
+          "col": 66093.09,
+          "purchasing_power": 1.0863
+        },
+        "2023": {
+          "mli": 116.24,
+          "income": 73824,
+          "col": 66767.72,
+          "purchasing_power": 1.1057
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 116.24,
+        "income": 73824,
+        "col": 66767.72,
+        "purchasing_power": 1.1057,
+        "categories": {
+          "food": {
+            "cost": 9031.11
+          },
+          "housing": {
+            "cost": 20288.63
+          },
+          "transportation": {
+            "cost": 12157.27
+          },
+          "healthcare": {
+            "cost": 5551.73
+          },
+          "personal_insurance": {
+            "cost": 8327.59
+          },
+          "entertainment": {
+            "cost": 3271.55
+          },
+          "apparel": {
+            "cost": 1736.75
+          },
+          "personal_care": {
+            "cost": 832.76
+          },
+          "reading": {
+            "cost": 138.94
+          },
+          "education": {
+            "cost": 1457.33
+          },
+          "tobacco": {
+            "cost": 347.35
+          },
+          "miscellaneous": {
+            "cost": 1040.95
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 555.76
+          }
+        }
+      }
+    },
+    "Rhode Island": {
+      "name": "Rhode Island",
+      "timeseries": {
+        "2008": {
+          "mli": 78.14,
+          "income": 55701,
+          "col": 74941.48,
+          "purchasing_power": 0.7433
+        },
+        "2009": {
+          "mli": 75.7,
+          "income": 54119,
+          "col": 75159.36,
+          "purchasing_power": 0.7201
+        },
+        "2010": {
+          "mli": 74.58,
+          "income": 52254,
+          "col": 73659.82,
+          "purchasing_power": 0.7094
+        },
+        "2011": {
+          "mli": 76.87,
+          "income": 53636,
+          "col": 73353.86,
+          "purchasing_power": 0.7312
+        },
+        "2012": {
+          "mli": 80.27,
+          "income": 54554,
+          "col": 71448.69,
+          "purchasing_power": 0.7635
+        },
+        "2013": {
+          "mli": 81.43,
+          "income": 55902,
+          "col": 72168.7,
+          "purchasing_power": 0.7746
+        },
+        "2014": {
+          "mli": 79.42,
+          "income": 54891,
+          "col": 72657.77,
+          "purchasing_power": 0.7555
+        },
+        "2015": {
+          "mli": 83.22,
+          "income": 58073,
+          "col": 73358.32,
+          "purchasing_power": 0.7916
+        },
+        "2016": {
+          "mli": 88.2,
+          "income": 60596,
+          "col": 72228.03,
+          "purchasing_power": 0.839
+        },
+        "2017": {
+          "mli": 92.79,
+          "income": 63870,
+          "col": 72365.13,
+          "purchasing_power": 0.8826
+        },
+        "2018": {
+          "mli": 92.69,
+          "income": 64340,
+          "col": 72973.63,
+          "purchasing_power": 0.8817
+        },
+        "2019": {
+          "mli": 103.07,
+          "income": 71169,
+          "col": 72593.11,
+          "purchasing_power": 0.9804
+        },
+        "2021": {
+          "mli": 107.41,
+          "income": 74008,
+          "col": 72433.5,
+          "purchasing_power": 1.0217
+        },
+        "2022": {
+          "mli": 118.15,
+          "income": 81854,
+          "col": 72835.63,
+          "purchasing_power": 1.1238
+        },
+        "2023": {
+          "mli": 126.22,
+          "income": 84972,
+          "col": 70772.59,
+          "purchasing_power": 1.2006
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 126.22,
+        "income": 84972,
+        "col": 70772.59,
+        "purchasing_power": 1.2006,
+        "categories": {
+          "food": {
+            "cost": 8805.71
+          },
+          "housing": {
+            "cost": 24205.78
+          },
+          "transportation": {
+            "cost": 11853.83
+          },
+          "healthcare": {
+            "cost": 5737.65
+          },
+          "personal_insurance": {
+            "cost": 8606.47
+          },
+          "entertainment": {
+            "cost": 3381.11
+          },
+          "apparel": {
+            "cost": 1693.41
+          },
+          "personal_care": {
+            "cost": 860.65
+          },
+          "reading": {
+            "cost": 135.47
+          },
+          "education": {
+            "cost": 1506.13
+          },
+          "tobacco": {
+            "cost": 338.68
+          },
+          "miscellaneous": {
+            "cost": 1075.81
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 541.89
+          }
+        }
+      }
+    },
+    "South Carolina": {
+      "name": "South Carolina",
+      "timeseries": {
+        "2008": {
+          "mli": 74.86,
+          "income": 44625,
+          "col": 62672.71,
+          "purchasing_power": 0.712
+        },
+        "2009": {
+          "mli": 71.61,
+          "income": 42442,
+          "col": 62307.37,
+          "purchasing_power": 0.6812
+        },
+        "2010": {
+          "mli": 69.8,
+          "income": 42018,
+          "col": 63282.84,
+          "purchasing_power": 0.664
+        },
+        "2011": {
+          "mli": 70.08,
+          "income": 42367,
+          "col": 63559.27,
+          "purchasing_power": 0.6666
+        },
+        "2012": {
+          "mli": 71.29,
+          "income": 43107,
+          "col": 63569.48,
+          "purchasing_power": 0.6781
+        },
+        "2013": {
+          "mli": 73.24,
+          "income": 44163,
+          "col": 63390.0,
+          "purchasing_power": 0.6967
+        },
+        "2014": {
+          "mli": 75.26,
+          "income": 45238,
+          "col": 63194.45,
+          "purchasing_power": 0.7159
+        },
+        "2015": {
+          "mli": 78.45,
+          "income": 47238,
+          "col": 63300.74,
+          "purchasing_power": 0.7462
+        },
+        "2016": {
+          "mli": 82.02,
+          "income": 49501,
+          "col": 63451.26,
+          "purchasing_power": 0.7801
+        },
+        "2017": {
+          "mli": 84.28,
+          "income": 50570,
+          "col": 63082.59,
+          "purchasing_power": 0.8016
+        },
+        "2018": {
+          "mli": 87.61,
+          "income": 52306,
+          "col": 62769.09,
+          "purchasing_power": 0.8333
+        },
+        "2019": {
+          "mli": 94.57,
+          "income": 56227,
+          "col": 62504.18,
+          "purchasing_power": 0.8996
+        },
+        "2021": {
+          "mli": 97.63,
+          "income": 59318,
+          "col": 63872.66,
+          "purchasing_power": 0.9287
+        },
+        "2022": {
+          "mli": 105.34,
+          "income": 64115,
+          "col": 63986.73,
+          "purchasing_power": 1.002
+        },
+        "2023": {
+          "mli": 110.93,
+          "income": 67804,
+          "col": 64260.88,
+          "purchasing_power": 1.0551
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 110.93,
+        "income": 67804,
+        "col": 64260.88,
+        "purchasing_power": 1.0551,
+        "categories": {
+          "food": {
+            "cost": 8695.41
+          },
+          "housing": {
+            "cost": 19030.92
+          },
+          "transportation": {
+            "cost": 11705.36
+          },
+          "healthcare": {
+            "cost": 5454.62
+          },
+          "personal_insurance": {
+            "cost": 8181.94
+          },
+          "entertainment": {
+            "cost": 3214.33
+          },
+          "apparel": {
+            "cost": 1672.2
+          },
+          "personal_care": {
+            "cost": 818.19
+          },
+          "reading": {
+            "cost": 133.78
+          },
+          "education": {
+            "cost": 1431.84
+          },
+          "tobacco": {
+            "cost": 334.44
+          },
+          "miscellaneous": {
+            "cost": 1022.74
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 535.1
+          }
+        }
+      }
+    },
+    "South Dakota": {
+      "name": "South Dakota",
+      "timeseries": {
+        "2008": {
+          "mli": 86.01,
+          "income": 46032,
+          "col": 56262.7,
+          "purchasing_power": 0.8182
+        },
+        "2009": {
+          "mli": 83.26,
+          "income": 45043,
+          "col": 56874.74,
+          "purchasing_power": 0.792
+        },
+        "2010": {
+          "mli": 81.2,
+          "income": 45904,
+          "col": 59429.82,
+          "purchasing_power": 0.7724
+        },
+        "2011": {
+          "mli": 87.21,
+          "income": 48321,
+          "col": 58250.16,
+          "purchasing_power": 0.8295
+        },
+        "2012": {
+          "mli": 83.29,
+          "income": 48362,
+          "col": 61039.6,
+          "purchasing_power": 0.7923
+        },
+        "2013": {
+          "mli": 84.35,
+          "income": 48947,
+          "col": 61004.73,
+          "purchasing_power": 0.8023
+        },
+        "2014": {
+          "mli": 89.34,
+          "income": 50979,
+          "col": 59986.42,
+          "purchasing_power": 0.8498
+        },
+        "2015": {
+          "mli": 94.13,
+          "income": 53017,
+          "col": 59211.34,
+          "purchasing_power": 0.8954
+        },
+        "2016": {
+          "mli": 97.32,
+          "income": 54467,
+          "col": 58840.09,
+          "purchasing_power": 0.9257
+        },
+        "2017": {
+          "mli": 100.7,
+          "income": 56521,
+          "col": 59009.69,
+          "purchasing_power": 0.9578
+        },
+        "2018": {
+          "mli": 96.97,
+          "income": 56274,
+          "col": 61006.69,
+          "purchasing_power": 0.9224
+        },
+        "2019": {
+          "mli": 101.9,
+          "income": 59533,
+          "col": 61417.64,
+          "purchasing_power": 0.9693
+        },
+        "2021": {
+          "mli": 116.16,
+          "income": 66143,
+          "col": 59862.83,
+          "purchasing_power": 1.1049
+        },
+        "2022": {
+          "mli": 124.14,
+          "income": 69728,
+          "col": 59049.82,
+          "purchasing_power": 1.1808
+        },
+        "2023": {
+          "mli": 126.79,
+          "income": 71810,
+          "col": 59540.45,
+          "purchasing_power": 1.2061
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 126.79,
+        "income": 71810,
+        "col": 59540.45,
+        "purchasing_power": 1.2061,
+        "categories": {
+          "food": {
+            "cost": 8742.28
+          },
+          "housing": {
+            "cost": 15342.46
+          },
+          "transportation": {
+            "cost": 11768.45
+          },
+          "healthcare": {
+            "cost": 5141.19
+          },
+          "personal_insurance": {
+            "cost": 7711.79
+          },
+          "entertainment": {
+            "cost": 3029.63
+          },
+          "apparel": {
+            "cost": 1681.21
+          },
+          "personal_care": {
+            "cost": 771.18
+          },
+          "reading": {
+            "cost": 134.5
+          },
+          "education": {
+            "cost": 1349.56
+          },
+          "tobacco": {
+            "cost": 336.24
+          },
+          "miscellaneous": {
+            "cost": 963.97
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 537.99
+          }
+        }
+      }
+    },
+    "Tennessee": {
+      "name": "Tennessee",
+      "timeseries": {
+        "2008": {
+          "mli": 73.27,
+          "income": 43614,
+          "col": 62580.01,
+          "purchasing_power": 0.6969
+        },
+        "2009": {
+          "mli": 70.84,
+          "income": 41725,
+          "col": 61921.72,
+          "purchasing_power": 0.6738
+        },
+        "2010": {
+          "mli": 69.18,
+          "income": 41461,
+          "col": 63006.49,
+          "purchasing_power": 0.658
+        },
+        "2011": {
+          "mli": 69.43,
+          "income": 41693,
+          "col": 63133.61,
+          "purchasing_power": 0.6604
+        },
+        "2012": {
+          "mli": 70.83,
+          "income": 42764,
+          "col": 63475.92,
+          "purchasing_power": 0.6737
+        },
+        "2013": {
+          "mli": 73.68,
+          "income": 44297,
+          "col": 63207.54,
+          "purchasing_power": 0.7008
+        },
+        "2014": {
+          "mli": 74.22,
+          "income": 44361,
+          "col": 62838.01,
+          "purchasing_power": 0.706
+        },
+        "2015": {
+          "mli": 79.08,
+          "income": 47275,
+          "col": 62848.14,
+          "purchasing_power": 0.7522
+        },
+        "2016": {
+          "mli": 80.21,
+          "income": 48547,
+          "col": 63630.47,
+          "purchasing_power": 0.763
+        },
+        "2017": {
+          "mli": 85.22,
+          "income": 51340,
+          "col": 63334.95,
+          "purchasing_power": 0.8106
+        },
+        "2018": {
+          "mli": 89.83,
+          "income": 52375,
+          "col": 61296.02,
+          "purchasing_power": 0.8545
+        },
+        "2019": {
+          "mli": 94.09,
+          "income": 56071,
+          "col": 62647.11,
+          "purchasing_power": 0.895
+        },
+        "2021": {
+          "mli": 100.78,
+          "income": 59695,
+          "col": 62273.05,
+          "purchasing_power": 0.9586
+        },
+        "2022": {
+          "mli": 108.98,
+          "income": 65254,
+          "col": 62948.79,
+          "purchasing_power": 1.0366
+        },
+        "2023": {
+          "mli": 111.97,
+          "income": 67631,
+          "col": 63498.58,
+          "purchasing_power": 1.0651
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 111.97,
+        "income": 67631,
+        "col": 63498.58,
+        "purchasing_power": 1.0651,
+        "categories": {
+          "food": {
+            "cost": 8624.53
+          },
+          "housing": {
+            "cost": 18416.26
+          },
+          "transportation": {
+            "cost": 11609.94
+          },
+          "healthcare": {
+            "cost": 5465.6
+          },
+          "personal_insurance": {
+            "cost": 8198.4
+          },
+          "entertainment": {
+            "cost": 3220.8
+          },
+          "apparel": {
+            "cost": 1658.56
+          },
+          "personal_care": {
+            "cost": 819.84
+          },
+          "reading": {
+            "cost": 132.69
+          },
+          "education": {
+            "cost": 1434.72
+          },
+          "tobacco": {
+            "cost": 331.71
+          },
+          "miscellaneous": {
+            "cost": 1024.8
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 530.74
+          }
+        }
+      }
+    },
+    "Texas": {
+      "name": "Texas",
+      "timeseries": {
+        "2008": {
+          "mli": 78.64,
+          "income": 50043,
+          "col": 66903.5,
+          "purchasing_power": 0.748
+        },
+        "2009": {
+          "mli": 75.96,
+          "income": 48259,
+          "col": 66791.56,
+          "purchasing_power": 0.7225
+        },
+        "2010": {
+          "mli": 75.69,
+          "income": 48615,
+          "col": 67520.93,
+          "purchasing_power": 0.72
+        },
+        "2011": {
+          "mli": 77.27,
+          "income": 49392,
+          "col": 67198.52,
+          "purchasing_power": 0.735
+        },
+        "2012": {
+          "mli": 78.63,
+          "income": 50740,
+          "col": 67839.72,
+          "purchasing_power": 0.7479
+        },
+        "2013": {
+          "mli": 79.88,
+          "income": 51704,
+          "col": 68043.58,
+          "purchasing_power": 0.7599
+        },
+        "2014": {
+          "mli": 81.37,
+          "income": 53035,
+          "col": 68523.67,
+          "purchasing_power": 0.774
+        },
+        "2015": {
+          "mli": 85.36,
+          "income": 55653,
+          "col": 68544.57,
+          "purchasing_power": 0.8119
+        },
+        "2016": {
+          "mli": 86.41,
+          "income": 56565,
+          "col": 68815.59,
+          "purchasing_power": 0.822
+        },
+        "2017": {
+          "mli": 90.98,
+          "income": 59206,
+          "col": 68410.37,
+          "purchasing_power": 0.8655
+        },
+        "2018": {
+          "mli": 92.93,
+          "income": 60629,
+          "col": 68588.14,
+          "purchasing_power": 0.884
+        },
+        "2019": {
+          "mli": 97.43,
+          "income": 64034,
+          "col": 69091.57,
+          "purchasing_power": 0.9268
+        },
+        "2021": {
+          "mli": 101.9,
+          "income": 66963,
+          "col": 69085.02,
+          "purchasing_power": 0.9693
+        },
+        "2022": {
+          "mli": 110.52,
+          "income": 72284,
+          "col": 68760.18,
+          "purchasing_power": 1.0512
+        },
+        "2023": {
+          "mli": 115.86,
+          "income": 75780,
+          "col": 68760.28,
+          "purchasing_power": 1.1021
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 115.86,
+        "income": 75780,
+        "col": 68760.28,
+        "purchasing_power": 1.1021,
+        "categories": {
+          "food": {
+            "cost": 8955.49
+          },
+          "housing": {
+            "cost": 23043.61
+          },
+          "transportation": {
+            "cost": 12055.47
+          },
+          "healthcare": {
+            "cost": 5399.46
+          },
+          "personal_insurance": {
+            "cost": 8099.2
+          },
+          "entertainment": {
+            "cost": 3181.83
+          },
+          "apparel": {
+            "cost": 1722.21
+          },
+          "personal_care": {
+            "cost": 809.92
+          },
+          "reading": {
+            "cost": 137.78
+          },
+          "education": {
+            "cost": 1417.36
+          },
+          "tobacco": {
+            "cost": 344.44
+          },
+          "miscellaneous": {
+            "cost": 1012.4
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 551.11
+          }
+        }
+      }
+    },
+    "Utah": {
+      "name": "Utah",
+      "timeseries": {
+        "2008": {
+          "mli": 86.36,
+          "income": 56633,
+          "col": 68938.4,
+          "purchasing_power": 0.8215
+        },
+        "2009": {
+          "mli": 81.42,
+          "income": 55117,
+          "col": 71168.39,
+          "purchasing_power": 0.7745
+        },
+        "2010": {
+          "mli": 84.27,
+          "income": 54744,
+          "col": 68291.99,
+          "purchasing_power": 0.8016
+        },
+        "2011": {
+          "mli": 83.67,
+          "income": 55869,
+          "col": 70200.23,
+          "purchasing_power": 0.7959
+        },
+        "2012": {
+          "mli": 85.88,
+          "income": 57049,
+          "col": 69833.97,
+          "purchasing_power": 0.8169
+        },
+        "2013": {
+          "mli": 90.38,
+          "income": 59770,
+          "col": 69526.1,
+          "purchasing_power": 0.8597
+        },
+        "2014": {
+          "mli": 93.33,
+          "income": 60922,
+          "col": 68623.38,
+          "purchasing_power": 0.8878
+        },
+        "2015": {
+          "mli": 96.88,
+          "income": 62912,
+          "col": 68266.77,
+          "purchasing_power": 0.9216
+        },
+        "2016": {
+          "mli": 100.86,
+          "income": 65977,
+          "col": 68772.26,
+          "purchasing_power": 0.9594
+        },
+        "2017": {
+          "mli": 103.69,
+          "income": 68358,
+          "col": 69303.95,
+          "purchasing_power": 0.9864
+        },
+        "2018": {
+          "mli": 110.11,
+          "income": 71414,
+          "col": 68185.66,
+          "purchasing_power": 1.0473
+        },
+        "2019": {
+          "mli": 115.49,
+          "income": 75780,
+          "col": 68984.65,
+          "purchasing_power": 1.0985
+        },
+        "2021": {
+          "mli": 122.99,
+          "income": 79449,
+          "col": 67909.86,
+          "purchasing_power": 1.1699
+        },
+        "2022": {
+          "mli": 136.01,
+          "income": 89168,
+          "col": 68925.12,
+          "purchasing_power": 1.2937
+        },
+        "2023": {
+          "mli": 142.1,
+          "income": 93421,
+          "col": 69113.52,
+          "purchasing_power": 1.3517
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 142.1,
+        "income": 93421,
+        "col": 69113.52,
+        "purchasing_power": 1.3517,
+        "categories": {
+          "food": {
+            "cost": 8464.64
+          },
+          "housing": {
+            "cost": 25123.87
+          },
+          "transportation": {
+            "cost": 11394.7
+          },
+          "healthcare": {
+            "cost": 5284.44
+          },
+          "personal_insurance": {
+            "cost": 7926.66
+          },
+          "entertainment": {
+            "cost": 3114.05
+          },
+          "apparel": {
+            "cost": 1627.82
+          },
+          "personal_care": {
+            "cost": 792.67
+          },
+          "reading": {
+            "cost": 130.23
+          },
+          "education": {
+            "cost": 1387.17
+          },
+          "tobacco": {
+            "cost": 325.56
+          },
+          "miscellaneous": {
+            "cost": 990.83
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 520.9
+          }
+        }
+      }
+    },
+    "Vermont": {
+      "name": "Vermont",
+      "timeseries": {
+        "2008": {
+          "mli": 77.68,
+          "income": 52104,
+          "col": 70520.12,
+          "purchasing_power": 0.7389
+        },
+        "2009": {
+          "mli": 76.02,
+          "income": 51618,
+          "col": 71385.92,
+          "purchasing_power": 0.7231
+        },
+        "2010": {
+          "mli": 74.53,
+          "income": 49406,
+          "col": 69689.45,
+          "purchasing_power": 0.7089
+        },
+        "2011": {
+          "mli": 79.22,
+          "income": 52776,
+          "col": 70034.86,
+          "purchasing_power": 0.7536
+        },
+        "2012": {
+          "mli": 78.28,
+          "income": 52977,
+          "col": 71143.58,
+          "purchasing_power": 0.7446
+        },
+        "2013": {
+          "mli": 78.89,
+          "income": 52578,
+          "col": 70067.9,
+          "purchasing_power": 0.7504
+        },
+        "2014": {
+          "mli": 82.81,
+          "income": 54166,
+          "col": 68768.65,
+          "purchasing_power": 0.7877
+        },
+        "2015": {
+          "mli": 85.48,
+          "income": 56990,
+          "col": 70090.51,
+          "purchasing_power": 0.8131
+        },
+        "2016": {
+          "mli": 90.05,
+          "income": 57677,
+          "col": 67334.59,
+          "purchasing_power": 0.8566
+        },
+        "2017": {
+          "mli": 87.28,
+          "income": 57513,
+          "col": 69275.81,
+          "purchasing_power": 0.8302
+        },
+        "2018": {
+          "mli": 91.13,
+          "income": 60782,
+          "col": 70116.85,
+          "purchasing_power": 0.8669
+        },
+        "2019": {
+          "mli": 95.91,
+          "income": 63001,
+          "col": 69059.38,
+          "purchasing_power": 0.9123
+        },
+        "2021": {
+          "mli": 111.35,
+          "income": 72431,
+          "col": 68385.54,
+          "purchasing_power": 1.0592
+        },
+        "2022": {
+          "mli": 112.71,
+          "income": 73991,
+          "col": 69013.64,
+          "purchasing_power": 1.0721
+        },
+        "2023": {
+          "mli": 130.11,
+          "income": 81211,
+          "col": 65620.7,
+          "purchasing_power": 1.2376
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 130.11,
+        "income": 81211,
+        "col": 65620.7,
+        "purchasing_power": 1.2376,
+        "categories": {
+          "food": {
+            "cost": 8760.84
+          },
+          "housing": {
+            "cost": 19396.07
+          },
+          "transportation": {
+            "cost": 11793.44
+          },
+          "healthcare": {
+            "cost": 5677.17
+          },
+          "personal_insurance": {
+            "cost": 8515.75
+          },
+          "entertainment": {
+            "cost": 3345.47
+          },
+          "apparel": {
+            "cost": 1684.78
+          },
+          "personal_care": {
+            "cost": 851.58
+          },
+          "reading": {
+            "cost": 134.78
+          },
+          "education": {
+            "cost": 1490.26
+          },
+          "tobacco": {
+            "cost": 336.96
+          },
+          "miscellaneous": {
+            "cost": 1064.47
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 539.13
+          }
+        }
+      }
+    },
+    "Virginia": {
+      "name": "Virginia",
+      "timeseries": {
+        "2008": {
+          "mli": 86.5,
+          "income": 61233,
+          "col": 74422.98,
+          "purchasing_power": 0.8228
+        },
+        "2009": {
+          "mli": 84.1,
+          "income": 59330,
+          "col": 74164.99,
+          "purchasing_power": 0.8
+        },
+        "2010": {
+          "mli": 85.35,
+          "income": 60674,
+          "col": 74739.43,
+          "purchasing_power": 0.8118
+        },
+        "2011": {
+          "mli": 87.23,
+          "income": 61882,
+          "col": 74583.71,
+          "purchasing_power": 0.8297
+        },
+        "2012": {
+          "mli": 87.89,
+          "income": 61741,
+          "col": 73850.88,
+          "purchasing_power": 0.836
+        },
+        "2013": {
+          "mli": 87.93,
+          "income": 62666,
+          "col": 74925.57,
+          "purchasing_power": 0.8364
+        },
+        "2014": {
+          "mli": 91.48,
+          "income": 64902,
+          "col": 74585.25,
+          "purchasing_power": 0.8702
+        },
+        "2015": {
+          "mli": 93.48,
+          "income": 66262,
+          "col": 74521.61,
+          "purchasing_power": 0.8892
+        },
+        "2016": {
+          "mli": 97.18,
+          "income": 68114,
+          "col": 73688.53,
+          "purchasing_power": 0.9244
+        },
+        "2017": {
+          "mli": 103.21,
+          "income": 71535,
+          "col": 72864.89,
+          "purchasing_power": 0.9817
+        },
+        "2018": {
+          "mli": 103.67,
+          "income": 72577,
+          "col": 73597.85,
+          "purchasing_power": 0.9861
+        },
+        "2019": {
+          "mli": 112.02,
+          "income": 76456,
+          "col": 71753.49,
+          "purchasing_power": 1.0655
+        },
+        "2021": {
+          "mli": 115.89,
+          "income": 80963,
+          "col": 73445.29,
+          "purchasing_power": 1.1024
+        },
+        "2022": {
+          "mli": 123.95,
+          "income": 85873,
+          "col": 72836.49,
+          "purchasing_power": 1.179
+        },
+        "2023": {
+          "mli": 131.56,
+          "income": 89931,
+          "col": 71861.76,
+          "purchasing_power": 1.2514
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 131.56,
+        "income": 89931,
+        "col": 71861.76,
+        "purchasing_power": 1.2514,
+        "categories": {
+          "food": {
+            "cost": 9127.12
+          },
+          "housing": {
+            "cost": 24959.5
+          },
+          "transportation": {
+            "cost": 12286.5
+          },
+          "healthcare": {
+            "cost": 5597.37
+          },
+          "personal_insurance": {
+            "cost": 8396.05
+          },
+          "entertainment": {
+            "cost": 3298.45
+          },
+          "apparel": {
+            "cost": 1755.21
+          },
+          "personal_care": {
+            "cost": 839.61
+          },
+          "reading": {
+            "cost": 140.42
+          },
+          "education": {
+            "cost": 1469.31
+          },
+          "tobacco": {
+            "cost": 351.04
+          },
+          "miscellaneous": {
+            "cost": 1049.51
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 561.67
+          }
+        }
+      }
+    },
+    "Washington": {
+      "name": "Washington",
+      "timeseries": {
+        "2008": {
+          "mli": 80.14,
+          "income": 58078,
+          "col": 76189.0,
+          "purchasing_power": 0.7623
+        },
+        "2009": {
+          "mli": 78.12,
+          "income": 56548,
+          "col": 76103.5,
+          "purchasing_power": 0.743
+        },
+        "2010": {
+          "mli": 78.37,
+          "income": 55631,
+          "col": 74622.26,
+          "purchasing_power": 0.7455
+        },
+        "2011": {
+          "mli": 79.39,
+          "income": 56835,
+          "col": 75258.98,
+          "purchasing_power": 0.7552
+        },
+        "2012": {
+          "mli": 81.64,
+          "income": 57573,
+          "col": 74135.44,
+          "purchasing_power": 0.7766
+        },
+        "2013": {
+          "mli": 82.58,
+          "income": 58405,
+          "col": 74353.75,
+          "purchasing_power": 0.7855
+        },
+        "2014": {
+          "mli": 85.31,
+          "income": 61366,
+          "col": 75619.78,
+          "purchasing_power": 0.8115
+        },
+        "2015": {
+          "mli": 88.45,
+          "income": 64129,
+          "col": 76226.07,
+          "purchasing_power": 0.8413
+        },
+        "2016": {
+          "mli": 91.34,
+          "income": 67106,
+          "col": 77233.28,
+          "purchasing_power": 0.8689
+        },
+        "2017": {
+          "mli": 94.68,
+          "income": 70979,
+          "col": 78812.62,
+          "purchasing_power": 0.9006
+        },
+        "2018": {
+          "mli": 98.52,
+          "income": 74073,
+          "col": 79040.43,
+          "purchasing_power": 0.9372
+        },
+        "2019": {
+          "mli": 103.71,
+          "income": 78687,
+          "col": 79762.08,
+          "purchasing_power": 0.9865
+        },
+        "2021": {
+          "mli": 110.65,
+          "income": 84247,
+          "col": 80044.76,
+          "purchasing_power": 1.0525
+        },
+        "2022": {
+          "mli": 118.2,
+          "income": 91306,
+          "col": 81211.23,
+          "purchasing_power": 1.1243
+        },
+        "2023": {
+          "mli": 125.26,
+          "income": 94605,
+          "col": 79398.95,
+          "purchasing_power": 1.1915
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 125.26,
+        "income": 94605,
+        "col": 79398.95,
+        "purchasing_power": 1.1915,
+        "categories": {
+          "food": {
+            "cost": 9707.79
+          },
+          "housing": {
+            "cost": 29682.41
+          },
+          "transportation": {
+            "cost": 13068.18
+          },
+          "healthcare": {
+            "cost": 5942.5
+          },
+          "personal_insurance": {
+            "cost": 8913.74
+          },
+          "entertainment": {
+            "cost": 3501.83
+          },
+          "apparel": {
+            "cost": 1866.88
+          },
+          "personal_care": {
+            "cost": 891.37
+          },
+          "reading": {
+            "cost": 149.35
+          },
+          "education": {
+            "cost": 1559.91
+          },
+          "tobacco": {
+            "cost": 373.38
+          },
+          "miscellaneous": {
+            "cost": 1114.22
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 597.4
+          }
+        }
+      }
+    },
+    "West Virginia": {
+      "name": "West Virginia",
+      "timeseries": {
+        "2008": {
+          "mli": 67.78,
+          "income": 37989,
+          "col": 58925.0,
+          "purchasing_power": 0.6447
+        },
+        "2009": {
+          "mli": 67.71,
+          "income": 37435,
+          "col": 58127.29,
+          "purchasing_power": 0.644
+        },
+        "2010": {
+          "mli": 67.44,
+          "income": 38218,
+          "col": 59574.44,
+          "purchasing_power": 0.6415
+        },
+        "2011": {
+          "mli": 67.92,
+          "income": 38482,
+          "col": 59563.49,
+          "purchasing_power": 0.6461
+        },
+        "2012": {
+          "mli": 71.35,
+          "income": 40196,
+          "col": 59228.53,
+          "purchasing_power": 0.6787
+        },
+        "2013": {
+          "mli": 72.22,
+          "income": 41253,
+          "col": 60054.96,
+          "purchasing_power": 0.6869
+        },
+        "2014": {
+          "mli": 72.25,
+          "income": 41059,
+          "col": 59746.05,
+          "purchasing_power": 0.6872
+        },
+        "2015": {
+          "mli": 73.5,
+          "income": 42019,
+          "col": 60099.69,
+          "purchasing_power": 0.6992
+        },
+        "2016": {
+          "mli": 76.55,
+          "income": 43385,
+          "col": 59581.58,
+          "purchasing_power": 0.7282
+        },
+        "2017": {
+          "mli": 77.61,
+          "income": 43469,
+          "col": 58881.61,
+          "purchasing_power": 0.7382
+        },
+        "2018": {
+          "mli": 78.28,
+          "income": 44097,
+          "col": 59218.89,
+          "purchasing_power": 0.7446
+        },
+        "2019": {
+          "mli": 87.33,
+          "income": 48850,
+          "col": 58804.52,
+          "purchasing_power": 0.8307
+        },
+        "2021": {
+          "mli": 89.68,
+          "income": 51248,
+          "col": 60074.89,
+          "purchasing_power": 0.8531
+        },
+        "2022": {
+          "mli": 97.71,
+          "income": 54329,
+          "col": 58454.75,
+          "purchasing_power": 0.9294
+        },
+        "2023": {
+          "mli": 99.73,
+          "income": 55948,
+          "col": 58979.43,
+          "purchasing_power": 0.9486
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 99.73,
+        "income": 55948,
+        "col": 58979.43,
+        "purchasing_power": 0.9486,
+        "categories": {
+          "food": {
+            "cost": 8710.61
+          },
+          "housing": {
+            "cost": 13275.69
+          },
+          "transportation": {
+            "cost": 11725.82
+          },
+          "healthcare": {
+            "cost": 5572.11
+          },
+          "personal_insurance": {
+            "cost": 8358.17
+          },
+          "entertainment": {
+            "cost": 3283.57
+          },
+          "apparel": {
+            "cost": 1675.12
+          },
+          "personal_care": {
+            "cost": 835.82
+          },
+          "reading": {
+            "cost": 134.01
+          },
+          "education": {
+            "cost": 1462.68
+          },
+          "tobacco": {
+            "cost": 335.02
+          },
+          "miscellaneous": {
+            "cost": 1044.77
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 536.04
+          }
+        }
+      }
+    },
+    "Wisconsin": {
+      "name": "Wisconsin",
+      "timeseries": {
+        "2008": {
+          "mli": 85.3,
+          "income": 52094,
+          "col": 64206.75,
+          "purchasing_power": 0.8113
+        },
+        "2009": {
+          "mli": 81.07,
+          "income": 49993,
+          "col": 64830.9,
+          "purchasing_power": 0.7711
+        },
+        "2010": {
+          "mli": 78.65,
+          "income": 49001,
+          "col": 65495.99,
+          "purchasing_power": 0.7482
+        },
+        "2011": {
+          "mli": 81.38,
+          "income": 50395,
+          "col": 65101.92,
+          "purchasing_power": 0.7741
+        },
+        "2012": {
+          "mli": 82.29,
+          "income": 51059,
+          "col": 65232.59,
+          "purchasing_power": 0.7827
+        },
+        "2013": {
+          "mli": 83.74,
+          "income": 51467,
+          "col": 64610.5,
+          "purchasing_power": 0.7966
+        },
+        "2014": {
+          "mli": 85.94,
+          "income": 52622,
+          "col": 64373.18,
+          "purchasing_power": 0.8175
+        },
+        "2015": {
+          "mli": 90.82,
+          "income": 55638,
+          "col": 64407.68,
+          "purchasing_power": 0.8638
+        },
+        "2016": {
+          "mli": 93.38,
+          "income": 56811,
+          "col": 63959.68,
+          "purchasing_power": 0.8882
+        },
+        "2017": {
+          "mli": 96.65,
+          "income": 59305,
+          "col": 64508.17,
+          "purchasing_power": 0.9193
+        },
+        "2018": {
+          "mli": 99.2,
+          "income": 60773,
+          "col": 64408.91,
+          "purchasing_power": 0.9435
+        },
+        "2019": {
+          "mli": 104.65,
+          "income": 64168,
+          "col": 64464.12,
+          "purchasing_power": 0.9954
+        },
+        "2021": {
+          "mli": 111.53,
+          "income": 67125,
+          "col": 63272.94,
+          "purchasing_power": 1.0609
+        },
+        "2022": {
+          "mli": 118.62,
+          "income": 70996,
+          "col": 62922.92,
+          "purchasing_power": 1.1283
+        },
+        "2023": {
+          "mli": 123.68,
+          "income": 74631,
+          "col": 63438.4,
+          "purchasing_power": 1.1764
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 123.68,
+        "income": 74631,
+        "col": 63438.4,
+        "purchasing_power": 1.1764,
+        "categories": {
+          "food": {
+            "cost": 8517.69
+          },
+          "housing": {
+            "cost": 18512.75
+          },
+          "transportation": {
+            "cost": 11466.12
+          },
+          "healthcare": {
+            "cost": 5499.98
+          },
+          "personal_insurance": {
+            "cost": 8249.98
+          },
+          "entertainment": {
+            "cost": 3241.06
+          },
+          "apparel": {
+            "cost": 1638.02
+          },
+          "personal_care": {
+            "cost": 825.0
+          },
+          "reading": {
+            "cost": 131.04
+          },
+          "education": {
+            "cost": 1443.75
+          },
+          "tobacco": {
+            "cost": 327.6
+          },
+          "miscellaneous": {
+            "cost": 1031.25
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 524.17
+          }
+        }
+      }
+    },
+    "Wyoming": {
+      "name": "Wyoming",
+      "timeseries": {
+        "2008": {
+          "mli": 85.86,
+          "income": 53207,
+          "col": 65147.54,
+          "purchasing_power": 0.8167
+        },
+        "2009": {
+          "mli": 82.06,
+          "income": 52664,
+          "col": 67465.52,
+          "purchasing_power": 0.7806
+        },
+        "2010": {
+          "mli": 84.93,
+          "income": 53512,
+          "col": 66235.89,
+          "purchasing_power": 0.8079
+        },
+        "2011": {
+          "mli": 86.79,
+          "income": 56322,
+          "col": 68221.01,
+          "purchasing_power": 0.8256
+        },
+        "2012": {
+          "mli": 86.74,
+          "income": 54901,
+          "col": 66536.86,
+          "purchasing_power": 0.8251
+        },
+        "2013": {
+          "mli": 91.27,
+          "income": 58752,
+          "col": 67673.03,
+          "purchasing_power": 0.8682
+        },
+        "2014": {
+          "mli": 88.3,
+          "income": 57055,
+          "col": 67926.16,
+          "purchasing_power": 0.84
+        },
+        "2015": {
+          "mli": 94.87,
+          "income": 60214,
+          "col": 66724.44,
+          "purchasing_power": 0.9024
+        },
+        "2016": {
+          "mli": 92.13,
+          "income": 59882,
+          "col": 68330.5,
+          "purchasing_power": 0.8764
+        },
+        "2017": {
+          "mli": 94.99,
+          "income": 60434,
+          "col": 66882.6,
+          "purchasing_power": 0.9036
+        },
+        "2018": {
+          "mli": 102.6,
+          "income": 61584,
+          "col": 63104.65,
+          "purchasing_power": 0.9759
+        },
+        "2019": {
+          "mli": 105.64,
+          "income": 65003,
+          "col": 64688.17,
+          "purchasing_power": 1.0049
+        },
+        "2021": {
+          "mli": 108.66,
+          "income": 65204,
+          "col": 63084.4,
+          "purchasing_power": 1.0336
+        },
+        "2022": {
+          "mli": 116.06,
+          "income": 70042,
+          "col": 63447.18,
+          "purchasing_power": 1.1039
+        },
+        "2023": {
+          "mli": 121.91,
+          "income": 72415,
+          "col": 62445.87,
+          "purchasing_power": 1.1596
+        }
+      },
+      "latest": {
+        "year": 2023,
+        "mli": 121.91,
+        "income": 72415,
+        "col": 62445.87,
+        "purchasing_power": 1.1596,
+        "categories": {
+          "food": {
+            "cost": 8629.44
+          },
+          "housing": {
+            "cost": 17956.26
+          },
+          "transportation": {
+            "cost": 11616.55
+          },
+          "healthcare": {
+            "cost": 5301.41
+          },
+          "personal_insurance": {
+            "cost": 7952.11
+          },
+          "entertainment": {
+            "cost": 3124.04
+          },
+          "apparel": {
+            "cost": 1659.51
+          },
+          "personal_care": {
+            "cost": 795.21
+          },
+          "reading": {
+            "cost": 132.76
+          },
+          "education": {
+            "cost": 1391.62
+          },
+          "tobacco": {
+            "cost": 331.9
+          },
+          "miscellaneous": {
+            "cost": 994.01
+          },
+          "cash_contributions": {
+            "cost": 2030.0
+          },
+          "alcohol": {
+            "cost": 531.04
+          }
+        }
+      }
+    }
+  },
+  "national": {
+    "2008": {
+      "avg_mli": 79.96,
+      "avg_income": 51985,
+      "avg_col": 68153.02,
+      "avg_pp": 0.7606
+    },
+    "2009": {
+      "avg_mli": 76.91,
+      "avg_income": 50274,
+      "avg_col": 68486.12,
+      "avg_pp": 0.7315
+    },
+    "2010": {
+      "avg_mli": 76.27,
+      "avg_income": 49755,
+      "avg_col": 68345.87,
+      "avg_pp": 0.7255
+    },
+    "2011": {
+      "avg_mli": 77.55,
+      "avg_income": 50654,
+      "avg_col": 68470.91,
+      "avg_pp": 0.7376
+    },
+    "2012": {
+      "avg_mli": 79.1,
+      "avg_income": 51682,
+      "avg_col": 68441.65,
+      "avg_pp": 0.7524
+    },
+    "2013": {
+      "avg_mli": 80.85,
+      "avg_income": 52884,
+      "avg_col": 68533.16,
+      "avg_pp": 0.769
+    },
+    "2014": {
+      "avg_mli": 82.9,
+      "avg_income": 54109,
+      "avg_col": 68368.42,
+      "avg_pp": 0.7886
+    },
+    "2015": {
+      "avg_mli": 85.88,
+      "avg_income": 56022,
+      "avg_col": 68363.37,
+      "avg_pp": 0.8169
+    },
+    "2016": {
+      "avg_mli": 88.72,
+      "avg_income": 57795,
+      "avg_col": 68231.22,
+      "avg_pp": 0.844
+    },
+    "2017": {
+      "avg_mli": 91.89,
+      "avg_income": 59792,
+      "avg_col": 68190.33,
+      "avg_pp": 0.8741
+    },
+    "2018": {
+      "avg_mli": 94.88,
+      "avg_income": 61549,
+      "avg_col": 67951.7,
+      "avg_pp": 0.9025
+    },
+    "2019": {
+      "avg_mli": 100.0,
+      "avg_income": 64976,
+      "avg_col": 68036.06,
+      "avg_pp": 0.9512
+    },
+    "2021": {
+      "avg_mli": 106.39,
+      "avg_income": 68826,
+      "avg_col": 67797.07,
+      "avg_pp": 1.012
+    },
+    "2022": {
+      "avg_mli": 114.25,
+      "avg_income": 73913,
+      "avg_col": 67812.34,
+      "avg_pp": 1.0868
+    },
+    "2023": {
+      "avg_mli": 119.47,
+      "avg_income": 76976,
+      "avg_col": 67510.94,
+      "avg_pp": 1.1364
+    }
+  }
+}

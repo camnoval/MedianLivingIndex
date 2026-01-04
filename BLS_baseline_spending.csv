@@ -1,0 +1,15 @@
+category,q2_baseline,q3_baseline,q4_baseline,bea_adjuster,description
+food,7250,9100,11500,goods_rpp,Groceries + dining out
+housing,18250,23650,30200,housing_rpp,Rent/mortgage + utilities + furnishings
+transportation,8750,12250,17250,goods_rpp,Vehicle costs + gas + insurance
+healthcare,3750,5600,7650,other_services_rpp,Premiums + out-of-pocket expenses
+personal_insurance,4750,8400,13900,other_services_rpp,FICA + 401k + pensions + life insurance
+entertainment,2000,3300,4800,other_services_rpp,Recreation + entertainment equipment
+apparel,1400,1750,2400,goods_rpp,Clothing + footwear
+personal_care,600,840,1050,other_services_rpp,Hair care + cosmetics
+reading,100,140,190,goods_rpp,Newspapers + magazines + books
+education,750,1470,2400,other_services_rpp,Tuition + textbooks + supplies
+tobacco,300,350,380,goods_rpp,Cigarettes + smoking supplies
+miscellaneous,700,1050,1440,other_services_rpp,Misc spending
+cash_contributions,1250,2030,3360,none,Charity + gifts (not adjusted)
+alcohol,400,560,770,goods_rpp,Beer + wine + liquor

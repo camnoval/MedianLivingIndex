@@ -1,0 +1,15 @@
+category,q2_weight,q3_weight,q4_weight,bea_adjuster,description
+food,0.144,0.129,0.118,goods_rpp,Food at home and away from home
+housing,0.36192,0.335,0.309,housing_rpp,Shelter + utilities + household operations
+transportation,0.174,0.174,0.177,goods_rpp,Vehicle purchases + gas + public transit
+healthcare,0.075,0.079,0.079,other_services_rpp,Health insurance + medical services
+personal_insurance,0.095,0.119,0.143,other_services_rpp,Social Security + pensions + life insurance
+entertainment,0.04,0.047,0.049,other_services_rpp,Fees and admissions + TVs + pets
+apparel,0.028,0.025,0.025,goods_rpp,Clothing and shoes
+personal_care,0.012,0.012,0.011,other_services_rpp,Products and services
+reading,0.002,0.002,0.002,goods_rpp,Newspapers + magazines + books
+education,0.015,0.021,0.025,other_services_rpp,Tuition + books + supplies
+tobacco,0.006,0.005,0.004,goods_rpp,Cigarettes and smoking supplies
+miscellaneous,0.014,0.015,0.015,other_services_rpp,Miscellaneous expenditures
+cash_contributions,0.025,0.029,0.035,none,Gifts to non-CU members + charity
+alcohol,0.008,0.008,0.008,goods_rpp,Alcoholic beverages
