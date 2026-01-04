@@ -1,5 +1,5 @@
-// MLI Interactive Application
-// Main application state and logic
+// MLI Interactive Application - Enhanced Version
+// Updated for simple ratio calculation: MLI = Income / COL
 
 class MLIApp {
     constructor() {
@@ -16,13 +16,13 @@ class MLIApp {
     
     async init() {
         try {
-            // Load data
             await this.loadData();
-            
-            // Initialize components
             this.setupEventListeners();
             this.createMap();
+            this.updateStatsBanner();
             this.updateRankingsTable();
+            this.updateInsights();
+            this.populateStateSelectors();
             
             console.log('MLI App initialized successfully');
         } catch (error) {
@@ -38,7 +38,6 @@ class MLIApp {
             this.availableYears = this.data.years;
             this.currentYear = this.availableYears[this.availableYears.length - 1];
             
-            // Update year slider
             const slider = document.getElementById('yearSlider');
             slider.max = this.availableYears.length - 1;
             slider.value = this.availableYears.length - 1;
@@ -51,27 +50,24 @@ class MLIApp {
     }
     
     setupEventListeners() {
-        // Year slider
         document.getElementById('yearSlider').addEventListener('input', (e) => {
             const index = parseInt(e.target.value);
             this.currentYear = this.availableYears[index];
             document.getElementById('yearDisplay').textContent = this.currentYear;
             this.updateMap();
             this.updateRankingsTable();
+            this.updateStatsBanner();
         });
         
-        // Metric selector
         document.getElementById('metricSelect').addEventListener('change', (e) => {
             this.currentMetric = e.target.value;
             this.updateMap();
         });
         
-        // Detail panel close button
         document.getElementById('closeDetail').addEventListener('click', () => {
             this.closeDetailPanel();
         });
         
-        // Tab controls
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -80,251 +76,378 @@ class MLIApp {
             });
         });
         
-        // Search box
         document.getElementById('searchBox').addEventListener('input', (e) => {
             this.filterTable(e.target.value);
         });
         
-        // Sort selector
         document.getElementById('sortSelect').addEventListener('change', () => {
             this.updateRankingsTable();
         });
+        
+        document.getElementById('compareBtn').addEventListener('click', () => {
+            this.compareStates();
+        });
+    }
+    
+    updateStatsBanner() {
+        const statesData = Object.values(this.data.states).map(state => {
+            const yearData = state.timeseries[this.currentYear];
+            return {
+                name: state.name,
+                mli: yearData.mli
+            };
+        });
+        
+        const surplus = statesData.filter(s => s.mli > 1.05).length;
+        const breakEven = statesData.filter(s => s.mli >= 0.95 && s.mli <= 1.05).length;
+        const deficit = statesData.filter(s => s.mli < 0.95).length;
+        const avgMLI = (statesData.reduce((sum, s) => sum + s.mli, 0) / statesData.length).toFixed(3);
+        
+        document.getElementById('surplusStates').textContent = surplus;
+        document.getElementById('breakEvenStates').textContent = breakEven;
+        document.getElementById('deficitStates').textContent = deficit;
+        document.getElementById('nationalMLI').textContent = avgMLI;
+    }
+    
+    populateStateSelectors() {
+        const states = Object.keys(this.data.states).sort();
+        const select1 = document.getElementById('compareState1');
+        const select2 = document.getElementById('compareState2');
+        
+        states.forEach(state => {
+            select1.add(new Option(state, state));
+            select2.add(new Option(state, state));
+        });
+    }
+    
+    compareStates() {
+        const state1 = document.getElementById('compareState1').value;
+        const state2 = document.getElementById('compareState2').value;
+        
+        if (!state1 || !state2) {
+            alert('Please select both states to compare');
+            return;
+        }
+        
+        const data1 = this.data.states[state1].timeseries[this.currentYear];
+        const data2 = this.data.states[state2].timeseries[this.currentYear];
+        
+        const resultDiv = document.getElementById('comparisonResult');
+        resultDiv.style.display = 'grid';
+        resultDiv.innerHTML = `
+            <div class="compare-state">
+                <h3>${state1}</h3>
+                <div class="compare-metric">
+                    <div class="compare-label">MLI Ratio</div>
+                    <div class="compare-value">${data1.mli.toFixed(3)}</div>
+                </div>
+                <div class="compare-metric">
+                    <div class="compare-label">Surplus/Deficit</div>
+                    <div class="compare-value">${this.formatCurrency(data1.surplus)}</div>
+                </div>
+                <div class="compare-metric">
+                    <div class="compare-label">Median Income</div>
+                    <div class="compare-value">${this.formatCurrency(data1.income)}</div>
+                </div>
+                <div class="compare-metric">
+                    <div class="compare-label">Cost of Living</div>
+                    <div class="compare-value">${this.formatCurrency(data1.col)}</div>
+                </div>
+            </div>
+            <div class="compare-divider"></div>
+            <div class="compare-state">
+                <h3>${state2}</h3>
+                <div class="compare-metric">
+                    <div class="compare-label">MLI Ratio</div>
+                    <div class="compare-value">${data2.mli.toFixed(3)}</div>
+                </div>
+                <div class="compare-metric">
+                    <div class="compare-label">Surplus/Deficit</div>
+                    <div class="compare-value">${this.formatCurrency(data2.surplus)}</div>
+                </div>
+                <div class="compare-metric">
+                    <div class="compare-label">Median Income</div>
+                    <div class="compare-value">${this.formatCurrency(data2.income)}</div>
+                </div>
+                <div class="compare-metric">
+                    <div class="compare-label">Cost of Living</div>
+                    <div class="compare-value">${this.formatCurrency(data2.col)}</div>
+                </div>
+            </div>
+        `;
     }
     
     createMap() {
-        // Set up SVG
         const svg = d3.select('#map');
         const width = 960;
         const height = 600;
         
-        // Create projection
         const projection = d3.geoAlbersUsa()
             .scale(1200)
             .translate([width / 2, height / 2]);
         
         const path = d3.geoPath().projection(projection);
         
-        // Load US states GeoJSON
         d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json')
             .then(us => {
                 const states = topojson.feature(us, us.objects.states);
                 
-                // Create state paths
-                svg.selectAll('path')
+                this.map = svg.selectAll('path')
                     .data(states.features)
-                    .enter()
-                    .append('path')
+                    .join('path')
                     .attr('class', 'state-path')
                     .attr('d', path)
-                    .attr('data-id', d => d.id)
-                    .on('click', (event, d) => this.handleStateClick(d))
                     .on('mouseover', (event, d) => this.showTooltip(event, d))
-                    .on('mousemove', (event, d) => this.moveTooltip(event))
-                    .on('mouseout', () => this.hideTooltip());
+                    .on('mouseout', () => this.hideTooltip())
+                    .on('click', (event, d) => this.selectState(d));
                 
-                // Store map reference
-                this.map = { svg, path, states };
-                
-                // Initial color update
                 this.updateMap();
-            })
-            .catch(error => {
-                console.error('Failed to load map:', error);
-                this.showError('Failed to load map data');
             });
     }
     
     updateMap() {
         if (!this.map) return;
         
-        const colorScale = this.getColorScale();
-        
-        this.map.svg.selectAll('path')
-            .transition()
-            .duration(500)
-            .attr('fill', d => {
-                const stateName = this.getStateName(d.id);
-                const value = this.getMetricValue(stateName);
-                return value ? colorScale(value) : '#ddd';
-            });
-    }
-    
-    getColorScale() {
-        const metric = this.currentMetric;
-        let domain, range;
-        
-        if (metric === 'mli') {
-            domain = [75, 100, 125];
-            range = ['#ef4444', '#fbbf24', '#10b981'];
-        } else if (metric === 'income') {
-            domain = [40000, 75000, 110000];
-            range = ['#ef4444', '#fbbf24', '#10b981'];
-        } else { // col
-            domain = [8000, 12000, 20000];
-            range = ['#10b981', '#fbbf24', '#ef4444'];
-        }
-        
-        return d3.scaleLinear()
-            .domain(domain)
-            .range(range)
-            .clamp(true);
-    }
-    
-    getStateName(stateId) {
-        // FIPS code to state name mapping
-        const fipsToName = {
-            '01': 'Alabama', '02': 'Alaska', '04': 'Arizona', '05': 'Arkansas',
-            '06': 'California', '08': 'Colorado', '09': 'Connecticut', '10': 'Delaware',
-            '12': 'Florida', '13': 'Georgia', '15': 'Hawaii', '16': 'Idaho',
-            '17': 'Illinois', '18': 'Indiana', '19': 'Iowa', '20': 'Kansas',
-            '21': 'Kentucky', '22': 'Louisiana', '23': 'Maine', '24': 'Maryland',
-            '25': 'Massachusetts', '26': 'Michigan', '27': 'Minnesota', '28': 'Mississippi',
-            '29': 'Missouri', '30': 'Montana', '31': 'Nebraska', '32': 'Nevada',
-            '33': 'New Hampshire', '34': 'New Jersey', '35': 'New Mexico', '36': 'New York',
-            '37': 'North Carolina', '38': 'North Dakota', '39': 'Ohio', '40': 'Oklahoma',
-            '41': 'Oregon', '42': 'Pennsylvania', '44': 'Rhode Island', '45': 'South Carolina',
-            '46': 'South Dakota', '47': 'Tennessee', '48': 'Texas', '49': 'Utah',
-            '50': 'Vermont', '51': 'Virginia', '53': 'Washington', '54': 'West Virginia',
-            '55': 'Wisconsin', '56': 'Wyoming'
+        const stateNameMap = {
+            'Alabama': 'Alabama', 'Alaska': 'Alaska', 'Arizona': 'Arizona',
+            'Arkansas': 'Arkansas', 'California': 'California', 'Colorado': 'Colorado',
+            'Connecticut': 'Connecticut', 'Delaware': 'Delaware', 'Florida': 'Florida',
+            'Georgia': 'Georgia', 'Hawaii': 'Hawaii', 'Idaho': 'Idaho',
+            'Illinois': 'Illinois', 'Indiana': 'Indiana', 'Iowa': 'Iowa',
+            'Kansas': 'Kansas', 'Kentucky': 'Kentucky', 'Louisiana': 'Louisiana',
+            'Maine': 'Maine', 'Maryland': 'Maryland', 'Massachusetts': 'Massachusetts',
+            'Michigan': 'Michigan', 'Minnesota': 'Minnesota', 'Mississippi': 'Mississippi',
+            'Missouri': 'Missouri', 'Montana': 'Montana', 'Nebraska': 'Nebraska',
+            'Nevada': 'Nevada', 'New Hampshire': 'New Hampshire', 'New Jersey': 'New Jersey',
+            'New Mexico': 'New Mexico', 'New York': 'New York', 'North Carolina': 'North Carolina',
+            'North Dakota': 'North Dakota', 'Ohio': 'Ohio', 'Oklahoma': 'Oklahoma',
+            'Oregon': 'Oregon', 'Pennsylvania': 'Pennsylvania', 'Rhode Island': 'Rhode Island',
+            'South Carolina': 'South Carolina', 'South Dakota': 'South Dakota', 'Tennessee': 'Tennessee',
+            'Texas': 'Texas', 'Utah': 'Utah', 'Vermont': 'Vermont',
+            'Virginia': 'Virginia', 'Washington': 'Washington', 'West Virginia': 'West Virginia',
+            'Wisconsin': 'Wisconsin', 'Wyoming': 'Wyoming'
         };
         
-        return fipsToName[stateId] || null;
+        this.map.attr('fill', d => {
+            const stateName = d.properties.name;
+            const stateData = this.data.states[stateName];
+            
+            if (!stateData) return '#ccc';
+            
+            const yearData = stateData.timeseries[this.currentYear];
+            if (!yearData) return '#ccc';
+            
+            let value;
+            switch (this.currentMetric) {
+                case 'mli':
+                    value = yearData.mli;
+                    return this.getMLIColor(value);
+                case 'surplus':
+                    value = yearData.surplus;
+                    return this.getSurplusColor(value);
+                case 'income':
+                    value = yearData.income;
+                    return this.getIncomeColor(value);
+                case 'col':
+                    value = yearData.col;
+                    return this.getCOLColor(value);
+                default:
+                    return '#ccc';
+            }
+        });
     }
     
-    getMetricValue(stateName) {
-        if (!stateName || !this.data.states[stateName]) return null;
-        
-        const stateData = this.data.states[stateName].timeseries[this.currentYear];
-        if (!stateData) return null;
-        
-        return stateData[this.currentMetric];
+    getMLIColor(mli) {
+        if (mli < 0.9) return '#dc2626';
+        if (mli < 0.95) return '#f97316';
+        if (mli < 1.0) return '#eab308';
+        if (mli < 1.1) return '#84cc16';
+        if (mli < 1.2) return '#22c55e';
+        return '#059669';
     }
     
-    handleStateClick(feature) {
-        const stateName = this.getStateName(feature.id);
-        if (!stateName) return;
-        
-        this.selectedState = stateName;
-        this.showDetailPanel(stateName);
-        
-        // Highlight selected state
-        this.map.svg.selectAll('path').classed('selected', false);
-        this.map.svg.selectAll(`path[data-id="${feature.id}"]`).classed('selected', true);
+    getSurplusColor(surplus) {
+        if (surplus < -5000) return '#dc2626';
+        if (surplus < 0) return '#f97316';
+        if (surplus < 5000) return '#eab308';
+        if (surplus < 10000) return '#84cc16';
+        if (surplus < 15000) return '#22c55e';
+        return '#059669';
     }
     
-    showTooltip(event, feature) {
-        const stateName = this.getStateName(feature.id);
-        if (!stateName) return;
+    getIncomeColor(income) {
+        if (income < 60000) return '#fef2f2';
+        if (income < 70000) return '#fef9c3';
+        if (income < 80000) return '#d1fae5';
+        if (income < 90000) return '#a7f3d0';
+        return '#6ee7b7';
+    }
+    
+    getCOLColor(col) {
+        if (col > 80000) return '#dc2626';
+        if (col > 75000) return '#f97316';
+        if (col > 70000) return '#eab308';
+        if (col > 65000) return '#84cc16';
+        return '#059669';
+    }
+    
+    showTooltip(event, d) {
+        const stateName = d.properties.name;
+        const stateData = this.data.states[stateName];
         
-        const stateData = this.data.states[stateName].timeseries[this.currentYear];
         if (!stateData) return;
         
+        const yearData = stateData.timeseries[this.currentYear];
         const tooltip = document.getElementById('tooltip');
-        const metricLabels = {
-            mli: 'MLI Score',
-            income: 'Median Income',
-            col: 'Cost of Living'
-        };
         
-        let value = stateData[this.currentMetric];
-        if (this.currentMetric === 'income' || this.currentMetric === 'col') {
-            value = '$' + value.toLocaleString();
-        } else {
-            value = value.toFixed(1);
+        let content = `<div class="tooltip-title">${stateName}</div>`;
+        
+        switch (this.currentMetric) {
+            case 'mli':
+                const interpretation = this.getMLIInterpretation(yearData.mli);
+                content += `
+                    <div class="tooltip-value">${yearData.mli.toFixed(3)}</div>
+                    <div class="tooltip-detail">${interpretation}</div>
+                `;
+                break;
+            case 'surplus':
+                content += `
+                    <div class="tooltip-value">${this.formatCurrency(yearData.surplus)}</div>
+                    <div class="tooltip-detail">${yearData.surplus >= 0 ? 'Annual surplus' : 'Annual deficit'}</div>
+                `;
+                break;
+            case 'income':
+                content += `<div class="tooltip-value">${this.formatCurrency(yearData.income)}</div>`;
+                break;
+            case 'col':
+                content += `<div class="tooltip-value">${this.formatCurrency(yearData.col)}</div>`;
+                break;
         }
         
-        tooltip.innerHTML = `
-            <div class="tooltip-title">${stateName}</div>
-            <div class="tooltip-value">${value}</div>
-            <div>${metricLabels[this.currentMetric]}</div>
-        `;
-        
+        tooltip.innerHTML = content;
         tooltip.classList.add('visible');
-    }
-    
-    moveTooltip(event) {
-        const tooltip = document.getElementById('tooltip');
-        tooltip.style.left = (event.pageX + 15) + 'px';
-        tooltip.style.top = (event.pageY - 30) + 'px';
+        tooltip.style.left = event.pageX + 10 + 'px';
+        tooltip.style.top = event.pageY + 10 + 'px';
     }
     
     hideTooltip() {
         document.getElementById('tooltip').classList.remove('visible');
     }
     
-    showDetailPanel(stateName) {
-        const panel = document.getElementById('detailPanel');
-        const stateData = this.data.states[stateName];
-        const latest = stateData.latest;
+    getMLIInterpretation(mli) {
+        if (mli < 0.95) {
+            const deficit = ((1.0 - mli) * 100).toFixed(0);
+            return `${deficit}% deficit`;
+        } else if (mli > 1.05) {
+            const surplus = ((mli - 1.0) * 100).toFixed(0);
+            return `${surplus}% surplus`;
+        } else {
+            return 'Break even';
+        }
+    }
+    
+    selectState(d) {
+        const stateName = d.properties.name;
+        this.selectedState = stateName;
+        this.showDetailPanel(stateName);
         
-        // Update header
+        this.map.classed('selected', false);
+        d3.select(event.currentTarget).classed('selected', true);
+    }
+    
+    showDetailPanel(stateName) {
+        const stateData = this.data.states[stateName];
+        const yearData = stateData.timeseries[this.currentYear];
+        const latestData = stateData.latest;
+        
+        document.getElementById('detailPanel').style.display = 'block';
         document.getElementById('stateName').textContent = stateName;
         
-        // Calculate rank
-        const allStates = Object.values(this.data.states)
-            .map(s => ({ name: s.name, mli: s.latest.mli }))
-            .sort((a, b) => b.mli - a.mli);
-        const rank = allStates.findIndex(s => s.name === stateName) + 1;
+        const ranking = this.getStateRanking(stateName);
         
-        // Update stat cards
-        document.getElementById('mliScore').textContent = latest.mli.toFixed(1);
-        document.getElementById('mliRank').textContent = `#${rank} of 50`;
-        document.getElementById('medianIncome').textContent = '$' + latest.income.toLocaleString();
-        document.getElementById('costOfLiving').textContent = '$' + latest.col.toLocaleString();
+        document.getElementById('mliScore').textContent = yearData.mli.toFixed(3);
+        document.getElementById('mliRank').textContent = `#${ranking} of 50`;
         
-        // Update trend chart
-        this.updateTrendChart(stateData);
+        const interpEl = document.getElementById('mliInterpretation');
+        interpEl.textContent = this.getMLIInterpretation(yearData.mli);
+        interpEl.className = 'stat-interpretation';
+        if (yearData.mli > 1.05) {
+            interpEl.classList.add('surplus');
+        } else if (yearData.mli < 0.95) {
+            interpEl.classList.add('deficit');
+        } else {
+            interpEl.classList.add('breakeven');
+        }
         
-        // Update cost breakdown
-        this.updateCostBreakdown(latest.categories);
+        document.getElementById('medianIncome').textContent = this.formatCurrency(yearData.income);
+        document.getElementById('costOfLiving').textContent = this.formatCurrency(yearData.col);
         
-        // Show panel
-        panel.style.display = 'block';
-        panel.scrollIntoView({ behavior: 'smooth' });
+        const surplusEl = document.getElementById('annualSurplus');
+        surplusEl.textContent = this.formatCurrency(yearData.surplus);
+        surplusEl.style.color = yearData.surplus >= 0 ? 'var(--green)' : 'var(--red)';
+        
+        const surplusLabel = document.getElementById('surplusLabel');
+        surplusLabel.textContent = yearData.surplus >= 0 ? 'Available for savings' : 'Annual shortfall';
+        
+        this.createTrendChart(stateData);
+        this.createCostBreakdown(latestData.categories);
+        this.createTrendInsight(stateData);
+        
+        setTimeout(() => {
+            document.getElementById('detailPanel').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
     }
     
     closeDetailPanel() {
         document.getElementById('detailPanel').style.display = 'none';
         this.selectedState = null;
-        this.map.svg.selectAll('path').classed('selected', false);
+        this.map.classed('selected', false);
     }
     
-    updateTrendChart(stateData) {
-        const ctx = document.getElementById('trendChart');
+    getStateRanking(stateName) {
+        const statesData = Object.entries(this.data.states).map(([name, data]) => ({
+            name,
+            mli: data.timeseries[this.currentYear].mli
+        }));
         
-        // Destroy existing chart
+        statesData.sort((a, b) => b.mli - a.mli);
+        return statesData.findIndex(s => s.name === stateName) + 1;
+    }
+    
+    createTrendChart(stateData) {
+        const canvas = document.getElementById('trendChart');
+        const ctx = canvas.getContext('2d');
+        
         if (this.chart) {
             this.chart.destroy();
         }
         
-        // Prepare data
         const years = this.availableYears;
-        const mliValues = years.map(year => stateData.timeseries[year]?.mli || null);
-        const nationalAvg = years.map(year => this.data.national[year]?.avg_mli || 100);
+        const mliData = years.map(year => stateData.timeseries[year].mli);
         
-        // Create chart
         this.chart = new Chart(ctx, {
             type: 'line',
             data: {
                 labels: years,
-                datasets: [
-                    {
-                        label: stateData.name,
-                        data: mliValues,
-                        borderColor: '#2563eb',
-                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
-                        tension: 0.3,
-                        fill: true
-                    },
-                    {
-                        label: 'National Average',
-                        data: nationalAvg,
-                        borderColor: '#94a3b8',
-                        borderDash: [5, 5],
-                        tension: 0.3,
-                        fill: false
-                    }
-                ]
+                datasets: [{
+                    label: 'MLI Ratio',
+                    data: mliData,
+                    borderColor: '#0d9488',
+                    backgroundColor: 'rgba(13, 148, 136, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 4,
+                    pointHoverRadius: 6
+                }, {
+                    label: 'Break Even (1.0)',
+                    data: years.map(() => 1.0),
+                    borderColor: '#f97316',
+                    borderWidth: 2,
+                    borderDash: [5, 5],
+                    fill: false,
+                    pointRadius: 0
+                }]
             },
             options: {
                 responsive: true,
@@ -336,7 +459,15 @@ class MLIApp {
                     },
                     tooltip: {
                         mode: 'index',
-                        intersect: false
+                        intersect: false,
+                        callbacks: {
+                            label: function(context) {
+                                if (context.datasetIndex === 0) {
+                                    return `MLI: ${context.parsed.y.toFixed(3)}`;
+                                }
+                                return 'Break Even';
+                            }
+                        }
                     }
                 },
                 scales: {
@@ -344,7 +475,7 @@ class MLIApp {
                         beginAtZero: false,
                         title: {
                             display: true,
-                            text: 'MLI Score'
+                            text: 'MLI Ratio'
                         }
                     },
                     x: {
@@ -358,100 +489,127 @@ class MLIApp {
         });
     }
     
-    updateCostBreakdown(categories) {
-        const container = document.getElementById('costBreakdown');
-        container.innerHTML = '';
+    createTrendInsight(stateData) {
+        const firstYear = this.availableYears[0];
+        const lastYear = this.availableYears[this.availableYears.length - 1];
         
-        // Sort categories by cost
-        const sorted = Object.entries(categories)
-            .sort((a, b) => b[1].cost - a[1].cost)
-            .slice(0, 10); // Top 10 categories
+        const firstMLI = stateData.timeseries[firstYear].mli;
+        const lastMLI = stateData.timeseries[lastYear].mli;
+        const change = lastMLI - firstMLI;
+        const pctChange = ((change / firstMLI) * 100).toFixed(1);
         
-        const maxCost = sorted[0][1].cost;
+        const insightEl = document.getElementById('trendInsight');
         
-        sorted.forEach(([category, data]) => {
-            const percentage = (data.cost / maxCost) * 100;
-            
-            const bar = document.createElement('div');
-            bar.className = 'cost-bar';
-            bar.innerHTML = `
-                <div class="cost-label">${category.replace(/_/g, ' ')}</div>
-                <div class="cost-bar-container">
-                    <div class="cost-bar-fill" style="width: ${percentage}%">
-                        ${data.cost >= maxCost * 0.3 ? '$' + data.cost.toLocaleString() : ''}
-                    </div>
-                </div>
-                <div class="cost-value">$${data.cost.toLocaleString()}</div>
+        if (change > 0) {
+            insightEl.innerHTML = `
+                <strong>Improving:</strong> MLI increased by ${Math.abs(pctChange)}% from ${firstYear} to ${lastYear}, 
+                from ${firstMLI.toFixed(3)} to ${lastMLI.toFixed(3)}. Purchasing power is improving.
             `;
-            
-            container.appendChild(bar);
-        });
+        } else {
+            insightEl.innerHTML = `
+                <strong>Declining:</strong> MLI decreased by ${Math.abs(pctChange)}% from ${firstYear} to ${lastYear}, 
+                from ${firstMLI.toFixed(3)} to ${lastMLI.toFixed(3)}. Purchasing power is declining.
+            `;
+        }
+    }
+    
+    createCostBreakdown(categories) {
+        const container = document.getElementById('costBreakdown');
+        const sortedCategories = Object.entries(categories)
+            .sort((a, b) => b[1].cost - a[1].cost);
+        
+        const total = sortedCategories.reduce((sum, [_, data]) => sum + data.cost, 0);
+        
+        container.innerHTML = sortedCategories.map(([category, data]) => {
+            const pct = (data.cost / total * 100).toFixed(1);
+            return `
+                <div class="cost-bar">
+                    <div class="cost-label">${category}</div>
+                    <div class="cost-bar-container">
+                        <div class="cost-bar-fill" style="width: ${pct}%">
+                            ${pct}%
+                        </div>
+                    </div>
+                    <div class="cost-value">${this.formatCurrency(data.cost)}</div>
+                </div>
+            `;
+        }).join('');
     }
     
     updateRankingsTable(filter = 'all') {
-        const tbody = document.getElementById('rankingsBody');
-        const sortSelect = document.getElementById('sortSelect');
-        
-        // Get all states with current year data
-        let states = Object.values(this.data.states)
-            .map(state => {
-                const latest = state.latest;
-                const first = state.timeseries[this.availableYears[0]];
-                const change = latest.mli - (first?.mli || latest.mli);
-                
-                return {
-                    name: state.name,
-                    mli: latest.mli,
-                    income: latest.income,
-                    col: latest.col,
-                    change: change
-                };
-            });
-        
-        // Apply sorting
-        const sortValue = sortSelect.value;
-        if (sortValue === 'mli-desc') {
-            states.sort((a, b) => b.mli - a.mli);
-        } else if (sortValue === 'mli-asc') {
-            states.sort((a, b) => a.mli - b.mli);
-        } else if (sortValue === 'name') {
-            states.sort((a, b) => a.name.localeCompare(b.name));
-        } else if (sortValue === 'income-desc') {
-            states.sort((a, b) => b.income - a.income);
-        } else if (sortValue === 'col-asc') {
-            states.sort((a, b) => a.col - b.col);
-        }
-        
-        // Apply filter
-        if (filter === 'top10') {
-            states = states.slice(0, 10);
-        } else if (filter === 'bottom10') {
-            states = states.slice(-10).reverse();
-        }
-        
-        // Clear and rebuild table
-        tbody.innerHTML = '';
-        
-        states.forEach((state, index) => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td class="rank-cell">${index + 1}</td>
-                <td class="state-cell">${state.name}</td>
-                <td class="mli-cell">${state.mli.toFixed(1)}</td>
-                <td>$${state.income.toLocaleString()}</td>
-                <td>$${state.col.toLocaleString()}</td>
-                <td class="${state.change >= 0 ? 'change-positive' : 'change-negative'}">
-                    ${state.change >= 0 ? '+' : ''}${state.change.toFixed(1)}
-                </td>
-            `;
+        const statesData = Object.entries(this.data.states).map(([name, data]) => {
+            const yearData = data.timeseries[this.currentYear];
+            const firstYear = this.availableYears[0];
+            const firstYearData = data.timeseries[firstYear];
+            const change = yearData.mli - firstYearData.mli;
             
-            row.addEventListener('click', () => {
-                // Find the state on the map and show details
-                this.showDetailPanel(state.name);
-            });
-            
-            tbody.appendChild(row);
+            return {
+                name,
+                mli: yearData.mli,
+                surplus: yearData.surplus,
+                income: yearData.income,
+                col: yearData.col,
+                change
+            };
         });
+        
+        const sortValue = document.getElementById('sortSelect').value;
+        this.sortStates(statesData, sortValue);
+        
+        let displayData = statesData;
+        if (filter === 'top10') {
+            displayData = statesData.slice(0, 10);
+        } else if (filter === 'bottom10') {
+            displayData = statesData.slice(-10).reverse();
+        }
+        
+        const tbody = document.getElementById('rankingsBody');
+        tbody.innerHTML = displayData.map((state, index) => {
+            const rank = filter === 'bottom10' ? statesData.length - 9 + index : index + 1;
+            const surplusClass = state.surplus >= 0 ? 'positive' : 'negative';
+            const changeClass = state.change >= 0 ? 'change-positive' : 'change-negative';
+            
+            return `
+                <tr onclick="app.selectStateFromTable('${state.name}')">
+                    <td class="rank-cell">${rank}</td>
+                    <td class="state-cell">${state.name}</td>
+                    <td class="mli-cell">${state.mli.toFixed(3)}</td>
+                    <td class="surplus-cell ${surplusClass}">${this.formatCurrency(state.surplus)}</td>
+                    <td>${this.formatCurrency(state.income)}</td>
+                    <td>${this.formatCurrency(state.col)}</td>
+                    <td class="${changeClass}">${state.change >= 0 ? '+' : ''}${state.change.toFixed(3)}</td>
+                </tr>
+            `;
+        }).join('');
+    }
+    
+    sortStates(states, sortValue) {
+        switch (sortValue) {
+            case 'mli-desc':
+                states.sort((a, b) => b.mli - a.mli);
+                break;
+            case 'mli-asc':
+                states.sort((a, b) => a.mli - b.mli);
+                break;
+            case 'name':
+                states.sort((a, b) => a.name.localeCompare(b.name));
+                break;
+            case 'surplus-desc':
+                states.sort((a, b) => b.surplus - a.surplus);
+                break;
+            case 'income-desc':
+                states.sort((a, b) => b.income - a.income);
+                break;
+            case 'col-asc':
+                states.sort((a, b) => a.col - b.col);
+                break;
+        }
+    }
+    
+    selectStateFromTable(stateName) {
+        const stateFeature = { properties: { name: stateName } };
+        this.selectedState = stateName;
+        this.showDetailPanel(stateName);
     }
     
     filterTable(searchTerm) {
@@ -464,16 +622,59 @@ class MLIApp {
         });
     }
     
+    updateInsights() {
+        const statesData = Object.entries(this.data.states).map(([name, data]) => {
+            const yearData = data.timeseries[this.currentYear];
+            const firstYear = this.availableYears[0];
+            const firstYearData = data.timeseries[firstYear];
+            const change = yearData.mli - firstYearData.mli;
+            
+            return { name, mli: yearData.mli, change };
+        });
+        
+        statesData.sort((a, b) => b.mli - a.mli);
+        const best = statesData.slice(0, 5);
+        const worst = statesData.slice(-5).reverse();
+        
+        const improved = [...statesData].sort((a, b) => b.change - a.change).slice(0, 5);
+        const declined = [...statesData].sort((a, b) => a.change - b.change).slice(0, 5);
+        
+        document.getElementById('bestStates').innerHTML = '<ul>' + 
+            best.map(s => `<li><strong>${s.name}:</strong> ${s.mli.toFixed(3)}</li>`).join('') + 
+            '</ul>';
+        
+        document.getElementById('worstStates').innerHTML = '<ul>' + 
+            worst.map(s => `<li><strong>${s.name}:</strong> ${s.mli.toFixed(3)}</li>`).join('') + 
+            '</ul>';
+        
+        document.getElementById('improvedStates').innerHTML = '<ul>' + 
+            improved.map(s => `<li><strong>${s.name}:</strong> +${s.change.toFixed(3)}</li>`).join('') + 
+            '</ul>';
+        
+        document.getElementById('declinedStates').innerHTML = '<ul>' + 
+            declined.map(s => `<li><strong>${s.name}:</strong> ${s.change.toFixed(3)}</li>`).join('') + 
+            '</ul>';
+    }
+    
+    formatCurrency(value) {
+        return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        }).format(value);
+    }
+    
     showError(message) {
         const main = document.querySelector('main');
-        const errorDiv = document.createElement('div');
-        errorDiv.style.cssText = 'padding: 2rem; background: #fee2e2; color: #991b1b; border-radius: 0.5rem; margin: 2rem 0;';
-        errorDiv.textContent = message;
-        main.insertBefore(errorDiv, main.firstChild);
+        main.innerHTML = `
+            <section class="intro">
+                <h2>Error</h2>
+                <p>${message}</p>
+            </section>
+        `;
     }
 }
 
 // Initialize app when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    window.mliApp = new MLIApp();
-});
+const app = new MLIApp();

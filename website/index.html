@@ -3,32 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Median Living Index - State Affordability Explorer</title>
+    <title>Median Living Index - Real Purchasing Power Across America</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="See which states let you save vs. spend more than you earn. Interactive map showing purchasing power across America.">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <h1>Median Living Index</h1>
-            <p class="subtitle">What GDP Misses: Real Purchasing Power Across America</p>
+            <p class="subtitle">Where Can Americans Actually Save Money?</p>
+            <p class="tagline">Interactive map showing real purchasing power: Income ÷ Cost of Living</p>
         </div>
     </header>
+
+    <!-- Quick Stats Banner -->
+    <div class="stats-banner">
+        <div class="container">
+            <div class="stat-item">
+                <span class="stat-number" id="surplusStates">--</span>
+                <span class="stat-label">States with Surplus</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="breakEvenStates">--</span>
+                <span class="stat-label">Breaking Even</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="deficitStates">--</span>
+                <span class="stat-label">States in Deficit</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="nationalMLI">--</span>
+                <span class="stat-label">National Average MLI</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main class="container">
         <!-- Introduction -->
         <section class="intro">
-            <h2>How Affordable Is Your State?</h2>
-            <p>
-                The Median Living Index (MLI) measures what median household income actually buys 
-                in each state after accounting for local costs. A score of 100 = national average. 
-                Higher scores mean better affordability.
-            </p>
+            <h2>How It Works</h2>
+            <div class="explainer-grid">
+                <div class="explainer-card">
+                    <div class="explainer-icon">📊</div>
+                    <h3>The Formula</h3>
+                    <p class="formula">MLI = Median Income ÷ Cost of Living</p>
+                </div>
+                <div class="explainer-card">
+                    <div class="explainer-icon">⚖️</div>
+                    <h3>Break Even Point</h3>
+                    <p><strong>1.0 = Paycheck to Paycheck</strong><br>Income exactly covers annual expenses</p>
+                </div>
+                <div class="explainer-card">
+                    <div class="explainer-icon">💰</div>
+                    <h3>Above 1.0 = Surplus</h3>
+                    <p><strong>1.3 = 30% Surplus</strong><br>Can save/invest 30% of income</p>
+                </div>
+                <div class="explainer-card">
+                    <div class="explainer-icon">⚠️</div>
+                    <h3>Below 1.0 = Deficit</h3>
+                    <p><strong>0.9 = 10% Deficit</strong><br>Spending 10% more than earning</p>
+                </div>
+            </div>
         </section>
 
         <!-- Interactive Map Section -->
         <section class="map-section">
+            <h2>Interactive Map</h2>
+            
             <div class="controls">
                 <div class="control-group">
                     <label for="yearSlider">Year: <span id="yearDisplay">2023</span></label>
@@ -37,7 +80,8 @@
                 <div class="control-group">
                     <label for="metricSelect">Show:</label>
                     <select id="metricSelect">
-                        <option value="mli" selected>MLI Score</option>
+                        <option value="mli" selected>MLI Ratio</option>
+                        <option value="surplus">Annual Surplus/Deficit</option>
                         <option value="income">Median Income</option>
                         <option value="col">Cost of Living</option>
                     </select>
@@ -50,20 +94,36 @@
             </div>
 
             <div class="legend">
-                <div class="legend-title">MLI Score</div>
+                <div class="legend-title">MLI Scale</div>
                 <div class="legend-gradient">
-                    <span class="legend-label">75</span>
+                    <span class="legend-label">0.8</span>
                     <div class="gradient-bar"></div>
-                    <span class="legend-label">100</span>
+                    <span class="legend-label">1.0</span>
                     <div class="gradient-bar"></div>
-                    <span class="legend-label">125</span>
+                    <span class="legend-label">1.5</span>
                 </div>
                 <div class="legend-labels">
-                    <span>Least Affordable</span>
-                    <span>National Average</span>
-                    <span>Most Affordable</span>
+                    <span>Deficit (Debt)</span>
+                    <span>Break Even</span>
+                    <span>Surplus (Savings)</span>
                 </div>
             </div>
+        </section>
+
+        <!-- State Comparison Tool -->
+        <section class="comparison-section">
+            <h2>Compare Two States</h2>
+            <div class="comparison-controls">
+                <select id="compareState1" class="state-select">
+                    <option value="">Select state 1...</option>
+                </select>
+                <span class="vs-text">vs</span>
+                <select id="compareState2" class="state-select">
+                    <option value="">Select state 2...</option>
+                </select>
+                <button id="compareBtn" class="compare-btn">Compare</button>
+            </div>
+            <div id="comparisonResult" class="comparison-result" style="display: none;"></div>
         </section>
 
         <!-- State Detail Panel -->
@@ -76,30 +136,38 @@
             <div class="detail-content">
                 <div class="stat-cards">
                     <div class="stat-card">
-                        <div class="stat-label">MLI Score</div>
+                        <div class="stat-label">MLI Ratio</div>
                         <div class="stat-value" id="mliScore">--</div>
                         <div class="stat-rank" id="mliRank">--</div>
+                        <div class="stat-interpretation" id="mliInterpretation">--</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-label">Median Income</div>
                         <div class="stat-value" id="medianIncome">--</div>
+                        <div class="stat-subtitle">Annual household income</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-label">Cost of Living</div>
                         <div class="stat-value" id="costOfLiving">--</div>
                         <div class="stat-subtitle">Annual expenses</div>
                     </div>
+                    <div class="stat-card highlight-card">
+                        <div class="stat-label">Annual Surplus/Deficit</div>
+                        <div class="stat-value" id="annualSurplus">--</div>
+                        <div class="stat-subtitle" id="surplusLabel">Available for savings</div>
+                    </div>
                 </div>
 
                 <!-- Trend Chart -->
                 <div class="chart-container">
-                    <h3>MLI Trend (2008-2023)</h3>
+                    <h3>MLI History (2008-2023)</h3>
                     <canvas id="trendChart"></canvas>
+                    <div class="chart-insight" id="trendInsight"></div>
                 </div>
 
                 <!-- Cost Breakdown -->
                 <div class="breakdown-container">
-                    <h3>Cost Breakdown (2023)</h3>
+                    <h3>Where Your Money Goes (2023)</h3>
                     <div id="costBreakdown" class="cost-bars"></div>
                 </div>
             </div>
@@ -111,8 +179,8 @@
             
             <div class="tab-controls">
                 <button class="tab-btn active" data-tab="all">All States</button>
-                <button class="tab-btn" data-tab="top10">Top 10</button>
-                <button class="tab-btn" data-tab="bottom10">Bottom 10</button>
+                <button class="tab-btn" data-tab="top10">Top 10 (Best)</button>
+                <button class="tab-btn" data-tab="bottom10">Bottom 10 (Worst)</button>
             </div>
 
             <div class="table-controls">
@@ -121,6 +189,7 @@
                     <option value="mli-desc" selected>Highest MLI</option>
                     <option value="mli-asc">Lowest MLI</option>
                     <option value="name">Alphabetical</option>
+                    <option value="surplus-desc">Highest Surplus</option>
                     <option value="income-desc">Highest Income</option>
                     <option value="col-asc">Lowest Cost</option>
                 </select>
@@ -132,10 +201,11 @@
                         <tr>
                             <th>Rank</th>
                             <th>State</th>
-                            <th>MLI Score</th>
+                            <th>MLI</th>
+                            <th>Surplus/Deficit</th>
                             <th>Median Income</th>
                             <th>Cost of Living</th>
-                            <th>Change (2008-2023)</th>
+                            <th>15yr Change</th>
                         </tr>
                     </thead>
                     <tbody id="rankingsBody">
@@ -145,28 +215,68 @@
             </div>
         </section>
 
+        <!-- Insights Section -->
+        <section class="insights-section">
+            <h2>Key Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h3>🏆 Best Purchasing Power</h3>
+                    <div id="bestStates" class="insight-content"></div>
+                </div>
+                <div class="insight-card">
+                    <h3>⚠️ Biggest Deficits</h3>
+                    <div id="worstStates" class="insight-content"></div>
+                </div>
+                <div class="insight-card">
+                    <h3>📈 Biggest Improvements</h3>
+                    <div id="improvedStates" class="insight-content"></div>
+                </div>
+                <div class="insight-card">
+                    <h3>📉 Biggest Declines</h3>
+                    <div id="declinedStates" class="insight-content"></div>
+                </div>
+            </div>
+        </section>
+
         <!-- Methodology -->
         <section class="methodology">
             <h2>Methodology</h2>
             <div class="method-grid">
                 <div class="method-card">
-                    <h3>Data Sources</h3>
+                    <h3>📊 Data Sources</h3>
                     <ul>
-                        <li><strong>Income:</strong> US Census Bureau ACS</li>
+                        <li><strong>Income:</strong> US Census Bureau (ACS)</li>
                         <li><strong>Costs:</strong> BEA Regional Price Parities</li>
                         <li><strong>Spending:</strong> BLS Consumer Expenditure Survey</li>
                     </ul>
                 </div>
                 <div class="method-card">
-                    <h3>Calculation</h3>
-                    <p>MLI = (State Purchasing Power / National Average Purchasing Power) × 100</p>
-                    <p>Where Purchasing Power = Median Income ÷ Cost of Living</p>
+                    <h3>🧮 Calculation</h3>
+                    <p><strong>MLI = Median Income ÷ Cost of Living</strong></p>
+                    <p>Cost of Living includes 14 categories: housing, transportation, food, healthcare, and more, adjusted for state-specific price differences.</p>
                 </div>
                 <div class="method-card">
-                    <h3>Cost Categories (14)</h3>
-                    <p>Housing, Transportation, Food, Healthcare, Personal Insurance, Entertainment, and 8 others</p>
-                    <p>Weighted by middle-class spending patterns</p>
+                    <h3>💡 Interpretation</h3>
+                    <p><strong>MLI of 1.0</strong> means a median household's income exactly covers their annual expenses.</p>
+                    <p><strong>Above 1.0:</strong> Surplus for savings/investment</p>
+                    <p><strong>Below 1.0:</strong> Deficit (debt accumulation)</p>
                 </div>
+            </div>
+
+            <div class="faq">
+                <h3>Common Questions</h3>
+                <details>
+                    <summary>Why is this different from GDP or cost of living indices?</summary>
+                    <p>GDP measures economic output, not what median households can actually afford. Traditional cost of living indices don't account for income. MLI shows the ratio between what people earn and what things cost—the actual purchasing power of middle-class households.</p>
+                </details>
+                <details>
+                    <summary>Can a state have high income but low MLI?</summary>
+                    <p>Yes! California has median income of ~$85k but costs of ~$90k, resulting in MLI < 1.0. High income doesn't help if costs are even higher.</p>
+                </details>
+                <details>
+                    <summary>What does "paycheck to paycheck" mean exactly?</summary>
+                    <p>MLI = 1.0 means annual income equals annual expenses. No surplus for emergencies, savings, or investment. One unexpected expense creates debt.</p>
+                </details>
             </div>
         </section>
     </main>
@@ -175,7 +285,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Median Living Index | Data: Census Bureau, BEA, BLS</p>
-            <p>Created by Cam Noval| <a href="https://github.com/camnoval/mli" target="_blank">View on GitHub</a></p>
+            <p>Created by Cam Noval | <a href="https://github.com/camnoval/mli" target="_blank">View on GitHub</a></p>
         </div>
     </footer>
 
