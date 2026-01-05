@@ -1,0 +1,1376 @@
+{
+  "metadata": {
+    "generated": "2026-01-05T18:08:52.981577",
+    "title": "Wall Street vs Main Street: The Real Story",
+    "description": "Proper baseline comparison showing true middle class trajectory",
+    "note": "2008 excluded as baseline - worst economic crisis, not representative"
+  },
+  "summary_2012_2023": {
+    "baseline_year": 2012,
+    "final_year": 2023,
+    "sp500_total_gain": 234.44562084995687,
+    "income_total_gain": 48.94051587862089,
+    "col_total_gain": 30.819251523983414,
+    "mli_total_gain": 13.922248731880416,
+    "middle_class_capture": 5.938370135218065
+  },
+  "summary_2018_2023": {
+    "baseline_year": 2018,
+    "final_year": 2023,
+    "sp500_total_gain": 90.27185511697948,
+    "income_total_gain": 25.064793609283488,
+    "col_total_gain": 20.870097791020136,
+    "mli_total_gain": 3.517944980870813,
+    "middle_class_capture": 3.897056260018205
+  },
+  "key_findings": {
+    "from_2012": {
+      "period": "2012-2023 (Post-Crisis Recovery)",
+      "sp500_gain": 234.4,
+      "income_gain": 48.9,
+      "col_gain": 30.8,
+      "mli_gain": 13.9,
+      "capture_rate": 5.9
+    },
+    "from_2018": {
+      "period": "2018-2023 (COVID/Inflation Era)",
+      "sp500_gain": 90.3,
+      "income_gain": 25.1,
+      "col_gain": 20.9,
+      "mli_gain": 3.5,
+      "capture_rate": 3.9
+    }
+  },
+  "market_comparison_2012": [
+    {
+      "year": 2012,
+      "sp500_indexed": 100.0,
+      "income_indexed": 100.0,
+      "col_indexed": 100.0,
+      "mli_indexed": 100.0,
+      "sp500_gain": 0.0,
+      "income_gain": 0.0,
+      "col_gain": 0.0,
+      "mli_gain": 0.0
+    },
+    {
+      "year": 2013,
+      "sp500_indexed": 129.60124527587487,
+      "income_indexed": 102.32456895634323,
+      "col_indexed": 101.5457997402905,
+      "mli_indexed": 100.78994326042063,
+      "sp500_gain": 29.601245275874867,
+      "income_gain": 2.3245689563432315,
+      "col_gain": 1.5457997402904988,
+      "mli_gain": 0.7899432604206336
+    },
+    {
+      "year": 2014,
+      "sp500_indexed": 144.3636542115707,
+      "income_indexed": 104.69600078943245,
+      "col_indexed": 102.8989101068702,
+      "mli_indexed": 101.75231068428332,
+      "sp500_gain": 44.36365421157069,
+      "income_gain": 4.696000789432442,
+      "col_gain": 2.8989101068702006,
+      "mli_gain": 1.7523106842833203
+    },
+    {
+      "year": 2015,
+      "sp500_indexed": 143.31470561425897,
+      "income_indexed": 108.39669754095664,
+      "col_indexed": 102.61053507474134,
+      "mli_indexed": 105.70403191851953,
+      "sp500_gain": 43.31470561425896,
+      "income_gain": 8.396697540956644,
+      "col_gain": 2.610535074741338,
+      "mli_gain": 5.7040319185195365
+    },
+    {
+      "year": 2016,
+      "sp500_indexed": 156.9797853020986,
+      "income_indexed": 111.82786503027127,
+      "col_indexed": 103.55117114953403,
+      "mli_indexed": 108.0076989393909,
+      "sp500_gain": 56.9797853020986,
+      "income_gain": 11.827865030271267,
+      "col_gain": 3.551171149534027,
+      "mli_gain": 8.007698939390906
+    },
+    {
+      "year": 2017,
+      "sp500_indexed": 187.46520449589465,
+      "income_indexed": 115.69171115286161,
+      "col_indexed": 105.88401477752197,
+      "mli_indexed": 109.33295907933514,
+      "sp500_gain": 87.46520449589465,
+      "income_gain": 15.69171115286161,
+      "col_gain": 5.884014777521962,
+      "mli_gain": 9.332959079335135
+    },
+    {
+      "year": 2018,
+      "sp500_indexed": 175.77251277880225,
+      "income_indexed": 119.09068218185195,
+      "col_indexed": 108.23127797097096,
+      "mli_indexed": 110.05072478296609,
+      "sp500_gain": 75.77251277880225,
+      "income_gain": 19.090682181851946,
+      "col_gain": 8.231277970970963,
+      "mli_gain": 10.050724782966093
+    },
+    {
+      "year": 2019,
+      "sp500_indexed": 226.53222922611997,
+      "income_indexed": 125.72141161355734,
+      "col_indexed": 110.2671553628324,
+      "mli_indexed": 113.9984361529362,
+      "sp500_gain": 126.53222922611995,
+      "income_gain": 25.721411613557343,
+      "col_gain": 10.267155362832403,
+      "mli_gain": 13.99843615293619
+    },
+    {
+      "year": 2021,
+      "sp500_indexed": 334.1896942202652,
+      "income_indexed": 133.1719898534713,
+      "col_indexed": 116.60372715790193,
+      "mli_indexed": 114.28313651582893,
+      "sp500_gain": 234.1896942202652,
+      "income_gain": 33.171989853471295,
+      "col_gain": 16.603727157901925,
+      "mli_gain": 14.283136515828932
+    },
+    {
+      "year": 2022,
+      "sp500_indexed": 269.2137793702101,
+      "income_indexed": 143.01474187687563,
+      "col_indexed": 126.5029725806113,
+      "mli_indexed": 113.1503498606572,
+      "sp500_gain": 169.21377937021012,
+      "income_gain": 43.01474187687564,
+      "col_gain": 26.502972580611296,
+      "mli_gain": 13.150349860657196
+    },
+    {
+      "year": 2023,
+      "sp500_indexed": 334.44562084995687,
+      "income_indexed": 148.9405158786209,
+      "col_indexed": 130.8192515239834,
+      "mli_indexed": 113.92224873188042,
+      "sp500_gain": 234.44562084995687,
+      "income_gain": 48.94051587862089,
+      "col_gain": 30.819251523983414,
+      "mli_gain": 13.922248731880416
+    }
+  ],
+  "market_comparison_2018": [
+    {
+      "year": 2018,
+      "sp500_indexed": 100.0,
+      "income_indexed": 100.0,
+      "col_indexed": 100.0,
+      "mli_indexed": 100.0,
+      "sp500_gain": 0.0,
+      "income_gain": 0.0,
+      "col_gain": 0.0,
+      "mli_gain": 0.0
+    },
+    {
+      "year": 2019,
+      "sp500_indexed": 128.87807407702897,
+      "income_indexed": 105.56779868099188,
+      "col_indexed": 101.88104347470377,
+      "mli_indexed": 103.58717434869737,
+      "sp500_gain": 28.87807407702896,
+      "income_gain": 5.567798680991887,
+      "col_gain": 1.8810434747037696,
+      "mli_gain": 3.587174348697375
+    },
+    {
+      "year": 2021,
+      "sp500_indexed": 190.12625406386502,
+      "income_indexed": 111.82402133704896,
+      "col_indexed": 107.73570204832707,
+      "mli_indexed": 103.84587356531243,
+      "sp500_gain": 90.12625406386503,
+      "income_gain": 11.824021337048961,
+      "col_gain": 7.7357020483270755,
+      "mli_gain": 3.84587356531243
+    },
+    {
+      "year": 2022,
+      "sp500_indexed": 153.1603406665736,
+      "income_indexed": 120.08894336375666,
+      "col_indexed": 116.88208339787047,
+      "mli_indexed": 102.8165421752596,
+      "sp500_gain": 53.1603406665736,
+      "income_gain": 20.088943363756663,
+      "col_gain": 16.882083397870474,
+      "mli_gain": 2.8165421752595954
+    },
+    {
+      "year": 2023,
+      "sp500_indexed": 190.27185511697948,
+      "income_indexed": 125.06479360928348,
+      "col_indexed": 120.87009779102014,
+      "mli_indexed": 103.51794498087081,
+      "sp500_gain": 90.27185511697948,
+      "income_gain": 25.064793609283488,
+      "col_gain": 20.870097791020136,
+      "mli_gain": 3.517944980870813
+    }
+  ],
+  "savings_timeline": [
+    {
+      "year": 2008,
+      "states_can_save": 30,
+      "states_paycheck": 15,
+      "states_deficit": 5,
+      "avg_surplus": 4045.0022,
+      "median_surplus": 3743.505000000001
+    },
+    {
+      "year": 2009,
+      "states_can_save": 23,
+      "states_paycheck": 22,
+      "states_deficit": 5,
+      "avg_surplus": 2506.0283999999997,
+      "median_surplus": 1918.6899999999987
+    },
+    {
+      "year": 2010,
+      "states_can_save": 18,
+      "states_paycheck": 19,
+      "states_deficit": 13,
+      "avg_surplus": 1122.4456,
+      "median_surplus": 23.2300000000032
+    },
+    {
+      "year": 2011,
+      "states_can_save": 15,
+      "states_paycheck": 14,
+      "states_deficit": 21,
+      "avg_surplus": 134.77239999999975,
+      "median_surplus": -331.21500000000015
+    },
+    {
+      "year": 2012,
+      "states_can_save": 15,
+      "states_paycheck": 15,
+      "states_deficit": 20,
+      "avg_surplus": 76.42919999999977,
+      "median_surplus": -730.8300000000017
+    },
+    {
+      "year": 2013,
+      "states_can_save": 16,
+      "states_paycheck": 17,
+      "states_deficit": 17,
+      "avg_surplus": 480.0995999999999,
+      "median_surplus": -853.5
+    },
+    {
+      "year": 2014,
+      "states_can_save": 18,
+      "states_paycheck": 16,
+      "states_deficit": 16,
+      "avg_surplus": 1007.4297999999997,
+      "median_surplus": 18.68999999999869
+    },
+    {
+      "year": 2015,
+      "states_can_save": 22,
+      "states_paycheck": 22,
+      "states_deficit": 6,
+      "avg_surplus": 3068.8693999999996,
+      "median_surplus": 2128.2649999999994
+    },
+    {
+      "year": 2016,
+      "states_can_save": 28,
+      "states_paycheck": 16,
+      "states_deficit": 6,
+      "avg_surplus": 4356.7622,
+      "median_surplus": 3252.5
+    },
+    {
+      "year": 2017,
+      "states_can_save": 30,
+      "states_paycheck": 15,
+      "states_deficit": 5,
+      "avg_surplus": 5149.8086,
+      "median_surplus": 4176.77
+    },
+    {
+      "year": 2018,
+      "states_can_save": 33,
+      "states_paycheck": 12,
+      "states_deficit": 5,
+      "avg_surplus": 5695.1536000000015,
+      "median_surplus": 4282.735000000001
+    },
+    {
+      "year": 2019,
+      "states_can_save": 42,
+      "states_paycheck": 7,
+      "states_deficit": 1,
+      "avg_surplus": 8071.453200000001,
+      "median_surplus": 7345.795000000002
+    },
+    {
+      "year": 2021,
+      "states_can_save": 39,
+      "states_paycheck": 11,
+      "states_deficit": 0,
+      "avg_surplus": 8652.044800000001,
+      "median_surplus": 8573.274999999998
+    },
+    {
+      "year": 2022,
+      "states_can_save": 40,
+      "states_paycheck": 8,
+      "states_deficit": 2,
+      "avg_surplus": 8630.413400000001,
+      "median_surplus": 7994.300000000003
+    },
+    {
+      "year": 2023,
+      "states_can_save": 41,
+      "states_paycheck": 7,
+      "states_deficit": 2,
+      "avg_surplus": 9465.542800000001,
+      "median_surplus": 8541.399999999998
+    }
+  ],
+  "inflation_analysis": [
+    {
+      "period": "2012-2023",
+      "housing_inflation": 40.09573845139458,
+      "goods_inflation": 21.22235411010458,
+      "gap": 18.87338434129
+    },
+    {
+      "period": "2018-2023",
+      "housing_inflation": 22.426436162588704,
+      "goods_inflation": 22.18746891012293,
+      "gap": 0.23896725246577155
+    }
+  ],
+  "state_changes_2018_2023": [
+    {
+      "state": "Alabama",
+      "mli_2018": 1.038,
+      "annual_surplus_2018": 1813.9599999999991,
+      "mli_2023": 1.038,
+      "annual_surplus_2023": 2275.6600000000035,
+      "mli_change": 0.0,
+      "surplus_change": 461.70000000000437
+    },
+    {
+      "state": "Alaska",
+      "mli_2018": 1.235,
+      "annual_surplus_2018": 14144.300000000005,
+      "mli_2023": 1.229,
+      "annual_surplus_2023": 16160.630000000005,
+      "mli_change": -0.006000000000000005,
+      "surplus_change": 2016.33
+    },
+    {
+      "state": "Arizona",
+      "mli_2018": 1.06,
+      "annual_surplus_2018": 3353.709999999999,
+      "mli_2023": 1.068,
+      "annual_surplus_2023": 4938.809999999998,
+      "mli_change": 0.008000000000000007,
+      "surplus_change": 1585.0999999999985
+    },
+    {
+      "state": "Arkansas",
+      "mli_2018": 0.984,
+      "annual_surplus_2018": -773.9199999999983,
+      "mli_2023": 1.023,
+      "annual_surplus_2023": 1336.4599999999991,
+      "mli_change": 0.038999999999999924,
+      "surplus_change": 2110.3799999999974
+    },
+    {
+      "state": "California",
+      "mli_2018": 1.047,
+      "annual_surplus_2018": 3345.3899999999994,
+      "mli_2023": 1.098,
+      "annual_surplus_2023": 8536.529999999999,
+      "mli_change": 0.051000000000000156,
+      "surplus_change": 5191.139999999999
+    },
+    {
+      "state": "Colorado",
+      "mli_2018": 1.16,
+      "annual_surplus_2018": 9916.300000000005,
+      "mli_2023": 1.215,
+      "annual_surplus_2023": 16431.289999999994,
+      "mli_change": 0.05500000000000016,
+      "surplus_change": 6514.989999999989
+    },
+    {
+      "state": "Connecticut",
+      "mli_2018": 1.222,
+      "annual_surplus_2018": 13893.78,
+      "mli_2023": 1.232,
+      "annual_surplus_2023": 17287.699999999997,
+      "mli_change": 0.010000000000000009,
+      "surplus_change": 3393.9199999999964
+    },
+    {
+      "state": "Delaware",
+      "mli_2018": 1.131,
+      "annual_surplus_2018": 7494.4000000000015,
+      "mli_2023": 1.166,
+      "annual_surplus_2023": 11582.25,
+      "mli_change": 0.03499999999999992,
+      "surplus_change": 4087.8499999999985
+    },
+    {
+      "state": "Florida",
+      "mli_2018": 0.934,
+      "annual_surplus_2018": -3913.0,
+      "mli_2023": 0.967,
+      "annual_surplus_2023": -2500.470000000001,
+      "mli_change": 0.03299999999999992,
+      "surplus_change": 1412.5299999999988
+    },
+    {
+      "state": "Georgia",
+      "mli_2018": 1.097,
+      "annual_surplus_2018": 5209.010000000002,
+      "mli_2023": 1.113,
+      "annual_surplus_2023": 7599.860000000001,
+      "mli_change": 0.016000000000000014,
+      "surplus_change": 2390.8499999999985
+    },
+    {
+      "state": "Hawaii",
+      "mli_2018": 1.162,
+      "annual_surplus_2018": 11195.839999999997,
+      "mli_2023": 1.201,
+      "annual_surplus_2023": 15947.820000000009,
+      "mli_change": 0.039000000000000146,
+      "surplus_change": 4751.980000000012
+    },
+    {
+      "state": "Idaho",
+      "mli_2018": 1.067,
+      "annual_surplus_2018": 3486.3899999999994,
+      "mli_2023": 1.163,
+      "annual_surplus_2023": 10477.839999999997,
+      "mli_change": 0.09600000000000009,
+      "surplus_change": 6991.449999999997
+    },
+    {
+      "state": "Illinois",
+      "mli_2018": 1.119,
+      "annual_surplus_2018": 6921.370000000003,
+      "mli_2023": 1.164,
+      "annual_surplus_2023": 11305.910000000003,
+      "mli_change": 0.04499999999999993,
+      "surplus_change": 4384.540000000001
+    },
+    {
+      "state": "Indiana",
+      "mli_2018": 1.077,
+      "annual_surplus_2018": 4005.07,
+      "mli_2023": 1.119,
+      "annual_surplus_2023": 7406.830000000002,
+      "mli_change": 0.04200000000000004,
+      "surplus_change": 3401.7600000000016
+    },
+    {
+      "state": "Iowa",
+      "mli_2018": 1.176,
+      "annual_surplus_2018": 8973.529999999999,
+      "mli_2023": 1.194,
+      "annual_surplus_2023": 11598.43,
+      "mli_change": 0.018000000000000016,
+      "surplus_change": 2624.9000000000015
+    },
+    {
+      "state": "Kansas",
+      "mli_2018": 1.138,
+      "annual_surplus_2018": 7068.220000000001,
+      "mli_2023": 1.161,
+      "annual_surplus_2023": 9750.419999999998,
+      "mli_change": 0.02300000000000013,
+      "surplus_change": 2682.199999999997
+    },
+    {
+      "state": "Kentucky",
+      "mli_2018": 1.021,
+      "annual_surplus_2018": 1010.7900000000008,
+      "mli_2023": 1.016,
+      "annual_surplus_2023": 935.2900000000008,
+      "mli_change": -0.004999999999999893,
+      "surplus_change": -75.5
+    },
+    {
+      "state": "Louisiana",
+      "mli_2018": 0.949,
+      "annual_surplus_2018": -2571.5599999999977,
+      "mli_2023": 0.981,
+      "annual_surplus_2023": -1123.4800000000032,
+      "mli_change": 0.03200000000000003,
+      "surplus_change": 1448.0799999999945
+    },
+    {
+      "state": "Maine",
+      "mli_2018": 1.012,
+      "annual_surplus_2018": 649.3300000000017,
+      "mli_2023": 1.123,
+      "annual_surplus_2023": 8073.070000000007,
+      "mli_change": 0.11099999999999999,
+      "surplus_change": 7423.740000000005
+    },
+    {
+      "state": "Maryland",
+      "mli_2018": 1.295,
+      "annual_surplus_2018": 18943.31,
+      "mli_2023": 1.301,
+      "annual_surplus_2023": 22817.130000000005,
+      "mli_change": 0.006000000000000005,
+      "surplus_change": 3873.8200000000033
+    },
+    {
+      "state": "Massachusetts",
+      "mli_2018": 1.237,
+      "annual_surplus_2018": 15310.96,
+      "mli_2023": 1.261,
+      "annual_surplus_2023": 20688.910000000003,
+      "mli_change": 0.0239999999999998,
+      "surplus_change": 5377.950000000004
+    },
+    {
+      "state": "Michigan",
+      "mli_2018": 1.065,
+      "annual_surplus_2018": 3449.8899999999994,
+      "mli_2023": 1.08,
+      "annual_surplus_2023": 5126.790000000001,
+      "mli_change": 0.015000000000000124,
+      "surplus_change": 1676.9000000000015
+    },
+    {
+      "state": "Minnesota",
+      "mli_2018": 1.228,
+      "annual_surplus_2018": 13063.39,
+      "mli_2023": 1.241,
+      "annual_surplus_2023": 16506.679999999993,
+      "mli_change": 0.013000000000000123,
+      "surplus_change": 3443.2899999999936
+    },
+    {
+      "state": "Mississippi",
+      "mli_2018": 0.94,
+      "annual_surplus_2018": -2841.220000000001,
+      "mli_2023": 0.931,
+      "annual_surplus_2023": -4010.769999999997,
+      "mli_change": -0.008999999999999897,
+      "surplus_change": -1169.5499999999956
+    },
+    {
+      "state": "Missouri",
+      "mli_2018": 1.071,
+      "annual_surplus_2018": 3619.290000000001,
+      "mli_2023": 1.106,
+      "annual_surplus_2023": 6592.279999999999,
+      "mli_change": 0.03500000000000014,
+      "surplus_change": 2972.989999999998
+    },
+    {
+      "state": "Montana",
+      "mli_2018": 1.062,
+      "annual_surplus_2018": 3238.8899999999994,
+      "mli_2023": 1.137,
+      "annual_surplus_2023": 8546.269999999997,
+      "mli_change": 0.07499999999999996,
+      "surplus_change": 5307.379999999997
+    },
+    {
+      "state": "Nebraska",
+      "mli_2018": 1.164,
+      "annual_surplus_2018": 8404.239999999998,
+      "mli_2023": 1.208,
+      "annual_surplus_2023": 12832.0,
+      "mli_change": 0.04400000000000004,
+      "surplus_change": 4427.760000000002
+    },
+    {
+      "state": "Nevada",
+      "mli_2018": 1.033,
+      "annual_surplus_2018": 1889.260000000002,
+      "mli_2023": 1.074,
+      "annual_surplus_2023": 5247.309999999998,
+      "mli_change": 0.04100000000000015,
+      "surplus_change": 3358.0499999999956
+    },
+    {
+      "state": "New Hampshire",
+      "mli_2018": 1.245,
+      "annual_surplus_2018": 14772.699999999995,
+      "mli_2023": 1.292,
+      "annual_surplus_2023": 21875.679999999997,
+      "mli_change": 0.04699999999999993,
+      "surplus_change": 7102.980000000001
+    },
+    {
+      "state": "New Jersey",
+      "mli_2018": 1.198,
+      "annual_surplus_2018": 13494.169999999998,
+      "mli_2023": 1.231,
+      "annual_surplus_2023": 18751.399999999998,
+      "mli_change": 0.03300000000000014,
+      "surplus_change": 5257.23
+    },
+    {
+      "state": "New Mexico",
+      "mli_2018": 0.914,
+      "annual_surplus_2018": -4465.32,
+      "mli_2023": 1.001,
+      "annual_surplus_2023": 40.30000000000291,
+      "mli_change": 0.08699999999999986,
+      "surplus_change": 4505.620000000003
+    },
+    {
+      "state": "New York",
+      "mli_2018": 1.029,
+      "annual_surplus_2018": 1892.050000000003,
+      "mli_2023": 1.053,
+      "annual_surplus_2023": 4101.990000000005,
+      "mli_change": 0.02400000000000002,
+      "surplus_change": 2209.9400000000023
+    },
+    {
+      "state": "North Carolina",
+      "mli_2018": 1.034,
+      "annual_surplus_2018": 1779.5899999999965,
+      "mli_2023": 1.094,
+      "annual_surplus_2023": 6086.540000000001,
+      "mli_change": 0.06000000000000005,
+      "surplus_change": 4306.950000000004
+    },
+    {
+      "state": "North Dakota",
+      "mli_2018": 1.259,
+      "annual_surplus_2018": 13124.03,
+      "mli_2023": 1.27,
+      "annual_surplus_2023": 16249.370000000004,
+      "mli_change": 0.01100000000000012,
+      "surplus_change": 3125.340000000004
+    },
+    {
+      "state": "Ohio",
+      "mli_2018": 1.083,
+      "annual_surplus_2018": 4314.029999999999,
+      "mli_2023": 1.096,
+      "annual_surplus_2023": 5939.470000000001,
+      "mli_change": 0.013000000000000123,
+      "surplus_change": 1625.4400000000023
+    },
+    {
+      "state": "Oklahoma",
+      "mli_2018": 1.044,
+      "annual_surplus_2018": 2190.540000000001,
+      "mli_2023": 1.046,
+      "annual_surplus_2023": 2757.900000000001,
+      "mli_change": 0.0020000000000000018,
+      "surplus_change": 567.3600000000001
+    },
+    {
+      "state": "Oregon",
+      "mli_2018": 1.031,
+      "annual_surplus_2018": 1919.239999999998,
+      "mli_2023": 1.075,
+      "annual_surplus_2023": 5583.169999999998,
+      "mli_change": 0.04400000000000004,
+      "surplus_change": 3663.9300000000003
+    },
+    {
+      "state": "Pennsylvania",
+      "mli_2018": 1.099,
+      "annual_surplus_2018": 5462.8399999999965,
+      "mli_2023": 1.106,
+      "annual_surplus_2023": 7056.279999999999,
+      "mli_change": 0.007000000000000117,
+      "surplus_change": 1593.4400000000023
+    },
+    {
+      "state": "Rhode Island",
+      "mli_2018": 1.074,
+      "annual_surplus_2018": 4429.720000000001,
+      "mli_2023": 1.201,
+      "annual_surplus_2023": 14199.410000000003,
+      "mli_change": 0.127,
+      "surplus_change": 9769.690000000002
+    },
+    {
+      "state": "South Carolina",
+      "mli_2018": 1.012,
+      "annual_surplus_2018": 637.9400000000023,
+      "mli_2023": 1.055,
+      "annual_surplus_2023": 3543.1200000000026,
+      "mli_change": 0.04299999999999993,
+      "surplus_change": 2905.1800000000003
+    },
+    {
+      "state": "South Dakota",
+      "mli_2018": 1.12,
+      "annual_surplus_2018": 6037.0,
+      "mli_2023": 1.206,
+      "annual_surplus_2023": 12269.550000000005,
+      "mli_change": 0.08599999999999985,
+      "surplus_change": 6232.550000000005
+    },
+    {
+      "state": "Tennessee",
+      "mli_2018": 1.038,
+      "annual_surplus_2018": 1917.4700000000007,
+      "mli_2023": 1.065,
+      "annual_surplus_2023": 4132.419999999998,
+      "mli_change": 0.026999999999999913,
+      "surplus_change": 2214.9499999999975
+    },
+    {
+      "state": "Texas",
+      "mli_2018": 1.075,
+      "annual_surplus_2018": 4251.440000000002,
+      "mli_2023": 1.102,
+      "annual_surplus_2023": 7019.720000000001,
+      "mli_change": 0.027000000000000135,
+      "surplus_change": 2768.279999999999
+    },
+    {
+      "state": "Utah",
+      "mli_2018": 1.275,
+      "annual_surplus_2018": 15390.78,
+      "mli_2023": 1.352,
+      "annual_surplus_2023": 24307.48,
+      "mli_change": 0.07700000000000018,
+      "surplus_change": 8916.699999999999
+    },
+    {
+      "state": "Vermont",
+      "mli_2018": 1.055,
+      "annual_surplus_2018": 3175.230000000003,
+      "mli_2023": 1.238,
+      "annual_surplus_2023": 15590.300000000005,
+      "mli_change": 0.18300000000000005,
+      "surplus_change": 12415.070000000002
+    },
+    {
+      "state": "Virginia",
+      "mli_2018": 1.201,
+      "annual_surplus_2018": 12150.9,
+      "mli_2023": 1.251,
+      "annual_surplus_2023": 18069.240000000005,
+      "mli_change": 0.04999999999999982,
+      "surplus_change": 5918.340000000006
+    },
+    {
+      "state": "Washington",
+      "mli_2018": 1.143,
+      "annual_surplus_2018": 9240.949999999995,
+      "mli_2023": 1.192,
+      "annual_surplus_2023": 15206.050000000005,
+      "mli_change": 0.04899999999999993,
+      "surplus_change": 5965.1000000000095
+    },
+    {
+      "state": "West Virginia",
+      "mli_2018": 0.904,
+      "annual_surplus_2018": -4709.43,
+      "mli_2023": 0.949,
+      "annual_surplus_2023": -3031.4300000000003,
+      "mli_change": 0.04499999999999993,
+      "surplus_change": 1678.0
+    },
+    {
+      "state": "Wisconsin",
+      "mli_2018": 1.147,
+      "annual_surplus_2018": 7801.07,
+      "mli_2023": 1.176,
+      "annual_surplus_2023": 11192.6,
+      "mli_change": 0.028999999999999915,
+      "surplus_change": 3391.5300000000007
+    },
+    {
+      "state": "Wyoming",
+      "mli_2018": 1.186,
+      "annual_surplus_2018": 9649.82,
+      "mli_2023": 1.16,
+      "annual_surplus_2023": 9969.129999999996,
+      "mli_change": -0.026000000000000023,
+      "surplus_change": 319.30999999999585
+    }
+  ],
+  "current_snapshot_2023": [
+    {
+      "state": "Alabama",
+      "year": 2023,
+      "median_income": 62212,
+      "col": 59936.34,
+      "mli": 1.038,
+      "annual_surplus": 2275.6600000000035,
+      "surplus_pct": 3.8,
+      "status": "Paycheck-to-Paycheck",
+      "monthly_surplus": 189.63833333333363
+    },
+    {
+      "state": "Alaska",
+      "year": 2023,
+      "median_income": 86631,
+      "col": 70470.37,
+      "mli": 1.229,
+      "annual_surplus": 16160.630000000005,
+      "surplus_pct": 22.9,
+      "status": "Surplus",
+      "monthly_surplus": 1346.719166666667
+    },
+    {
+      "state": "Arizona",
+      "year": 2023,
+      "median_income": 77315,
+      "col": 72376.19,
+      "mli": 1.068,
+      "annual_surplus": 4938.809999999998,
+      "surplus_pct": 6.8,
+      "status": "Surplus",
+      "monthly_surplus": 411.5674999999998
+    },
+    {
+      "state": "Arkansas",
+      "year": 2023,
+      "median_income": 58700,
+      "col": 57363.54,
+      "mli": 1.023,
+      "annual_surplus": 1336.4599999999991,
+      "surplus_pct": 2.3,
+      "status": "Paycheck-to-Paycheck",
+      "monthly_surplus": 111.3716666666666
+    },
+    {
+      "state": "California",
+      "year": 2023,
+      "median_income": 95521,
+      "col": 86984.47,
+      "mli": 1.098,
+      "annual_surplus": 8536.529999999999,
+      "surplus_pct": 9.8,
+      "status": "Surplus",
+      "monthly_surplus": 711.3774999999999
+    },
+    {
+      "state": "Colorado",
+      "year": 2023,
+      "median_income": 92911,
+      "col": 76479.71,
+      "mli": 1.215,
+      "annual_surplus": 16431.289999999994,
+      "surplus_pct": 21.5,
+      "status": "Surplus",
+      "monthly_surplus": 1369.2741666666661
+    },
+    {
+      "state": "Connecticut",
+      "year": 2023,
+      "median_income": 91665,
+      "col": 74377.3,
+      "mli": 1.232,
+      "annual_surplus": 17287.699999999997,
+      "surplus_pct": 23.2,
+      "status": "Surplus",
+      "monthly_surplus": 1440.6416666666664
+    },
+    {
+      "state": "Delaware",
+      "year": 2023,
+      "median_income": 81361,
+      "col": 69778.75,
+      "mli": 1.166,
+      "annual_surplus": 11582.25,
+      "surplus_pct": 16.6,
+      "status": "Surplus",
+      "monthly_surplus": 965.1875
+    },
+    {
+      "state": "Florida",
+      "year": 2023,
+      "median_income": 73311,
+      "col": 75811.47,
+      "mli": 0.967,
+      "annual_surplus": -2500.470000000001,
+      "surplus_pct": -3.3,
+      "status": "Paycheck-to-Paycheck",
+      "monthly_surplus": -208.3725000000001
+    },
+    {
+      "state": "Georgia",
+      "year": 2023,
+      "median_income": 74632,
+      "col": 67032.14,
+      "mli": 1.113,
+      "annual_surplus": 7599.860000000001,
+      "surplus_pct": 11.3,
+      "status": "Surplus",
+      "monthly_surplus": 633.3216666666667
+    },
+    {
+      "state": "Hawaii",
+      "year": 2023,
+      "median_income": 95322,
+      "col": 79374.18,
+      "mli": 1.201,
+      "annual_surplus": 15947.820000000009,
+      "surplus_pct": 20.1,
+      "status": "Surplus",
+      "monthly_surplus": 1328.9850000000008
+    },
+    {
+      "state": "Idaho",
+      "year": 2023,
+      "median_income": 74942,
+      "col": 64464.16,
+      "mli": 1.163,
+      "annual_surplus": 10477.839999999997,
+      "surplus_pct": 16.3,
+      "status": "Surplus",
+      "monthly_surplus": 873.1533333333331
+    },
+    {
+      "state": "Illinois",
+      "year": 2023,
+      "median_income": 80306,
+      "col": 69000.09,
+      "mli": 1.164,
+      "annual_surplus": 11305.910000000003,
+      "surplus_pct": 16.4,
+      "status": "Surplus",
+      "monthly_surplus": 942.1591666666669
+    },
+    {
+      "state": "Indiana",
+      "year": 2023,
+      "median_income": 69477,
+      "col": 62070.17,
+      "mli": 1.119,
+      "annual_surplus": 7406.830000000002,
+      "surplus_pct": 11.9,
+      "status": "Surplus",
+      "monthly_surplus": 617.2358333333335
+    },
+    {
+      "state": "Iowa",
+      "year": 2023,
+      "median_income": 71433,
+      "col": 59834.57,
+      "mli": 1.194,
+      "annual_surplus": 11598.43,
+      "surplus_pct": 19.4,
+      "status": "Surplus",
+      "monthly_surplus": 966.5358333333334
+    },
+    {
+      "state": "Kansas",
+      "year": 2023,
+      "median_income": 70333,
+      "col": 60582.58,
+      "mli": 1.161,
+      "annual_surplus": 9750.419999999998,
+      "surplus_pct": 16.1,
+      "status": "Surplus",
+      "monthly_surplus": 812.5349999999999
+    },
+    {
+      "state": "Kentucky",
+      "year": 2023,
+      "median_income": 61118,
+      "col": 60182.71,
+      "mli": 1.016,
+      "annual_surplus": 935.2900000000008,
+      "surplus_pct": 1.6,
+      "status": "Paycheck-to-Paycheck",
+      "monthly_surplus": 77.9408333333334
+    },
+    {
+      "state": "Louisiana",
+      "year": 2023,
+      "median_income": 58229,
+      "col": 59352.48,
+      "mli": 0.981,
+      "annual_surplus": -1123.4800000000032,
+      "surplus_pct": -1.9,
+      "status": "Paycheck-to-Paycheck",
+      "monthly_surplus": -93.6233333333336
+    },
+    {
+      "state": "Maine",
+      "year": 2023,
+      "median_income": 73733,
+      "col": 65659.93,
+      "mli": 1.123,
+      "annual_surplus": 8073.070000000007,
+      "surplus_pct": 12.3,
+      "status": "Surplus",
+      "monthly_surplus": 672.755833333334
+    },
+    {
+      "state": "Maryland",
+      "year": 2023,
+      "median_income": 98678,
+      "col": 75860.87,
+      "mli": 1.301,
+      "annual_surplus": 22817.130000000005,
+      "surplus_pct": 30.1,
+      "status": "Surplus",
+      "monthly_surplus": 1901.4275000000005
+    },
+    {
+      "state": "Massachusetts",
+      "year": 2023,
+      "median_income": 99858,
+      "col": 79169.09,
+      "mli": 1.261,
+      "annual_surplus": 20688.910000000003,
+      "surplus_pct": 26.1,
+      "status": "Surplus",
+      "monthly_surplus": 1724.0758333333335
+    },
+    {
+      "state": "Michigan",
+      "year": 2023,
+      "median_income": 69183,
+      "col": 64056.21,
+      "mli": 1.08,
+      "annual_surplus": 5126.790000000001,
+      "surplus_pct": 8.0,
+      "status": "Surplus",
+      "monthly_surplus": 427.2325000000001
+    },
+    {
+      "state": "Minnesota",
+      "year": 2023,
+      "median_income": 85086,
+      "col": 68579.32,
+      "mli": 1.241,
+      "annual_surplus": 16506.679999999993,
+      "surplus_pct": 24.1,
+      "status": "Surplus",
+      "monthly_surplus": 1375.5566666666662
+    },
+    {
+      "state": "Mississippi",
+      "year": 2023,
+      "median_income": 54203,
+      "col": 58213.77,
+      "mli": 0.931,
+      "annual_surplus": -4010.769999999997,
+      "surplus_pct": -6.9,
+      "status": "Deficit",
+      "monthly_surplus": -334.23083333333307
+    },
+    {
+      "state": "Missouri",
+      "year": 2023,
+      "median_income": 68545,
+      "col": 61952.72,
+      "mli": 1.106,
+      "annual_surplus": 6592.279999999999,
+      "surplus_pct": 10.6,
+      "status": "Surplus",
+      "monthly_surplus": 549.3566666666666
+    },
+    {
+      "state": "Montana",
+      "year": 2023,
+      "median_income": 70804,
+      "col": 62257.73,
+      "mli": 1.137,
+      "annual_surplus": 8546.269999999997,
+      "surplus_pct": 13.7,
+      "status": "Surplus",
+      "monthly_surplus": 712.1891666666664
+    },
+    {
+      "state": "Nebraska",
+      "year": 2023,
+      "median_income": 74590,
+      "col": 61758.0,
+      "mli": 1.208,
+      "annual_surplus": 12832.0,
+      "surplus_pct": 20.8,
+      "status": "Surplus",
+      "monthly_surplus": 1069.3333333333333
+    },
+    {
+      "state": "Nevada",
+      "year": 2023,
+      "median_income": 76364,
+      "col": 71116.69,
+      "mli": 1.074,
+      "annual_surplus": 5247.309999999998,
+      "surplus_pct": 7.4,
+      "status": "Surplus",
+      "monthly_surplus": 437.27583333333314
+    },
+    {
+      "state": "New Hampshire",
+      "year": 2023,
+      "median_income": 96838,
+      "col": 74962.32,
+      "mli": 1.292,
+      "annual_surplus": 21875.679999999997,
+      "surplus_pct": 29.2,
+      "status": "Surplus",
+      "monthly_surplus": 1822.9733333333331
+    },
+    {
+      "state": "New Jersey",
+      "year": 2023,
+      "median_income": 99781,
+      "col": 81029.6,
+      "mli": 1.231,
+      "annual_surplus": 18751.399999999998,
+      "surplus_pct": 23.1,
+      "status": "Surplus",
+      "monthly_surplus": 1562.6166666666666
+    },
+    {
+      "state": "New Mexico",
+      "year": 2023,
+      "median_income": 62268,
+      "col": 62227.7,
+      "mli": 1.001,
+      "annual_surplus": 40.30000000000291,
+      "surplus_pct": 0.1,
+      "status": "Paycheck-to-Paycheck",
+      "monthly_surplus": 3.358333333333576
+    },
+    {
+      "state": "New York",
+      "year": 2023,
+      "median_income": 82095,
+      "col": 77993.01,
+      "mli": 1.053,
+      "annual_surplus": 4101.990000000005,
+      "surplus_pct": 5.3,
+      "status": "Surplus",
+      "monthly_surplus": 341.83250000000044
+    },
+    {
+      "state": "North Carolina",
+      "year": 2023,
+      "median_income": 70804,
+      "col": 64717.46,
+      "mli": 1.094,
+      "annual_surplus": 6086.540000000001,
+      "surplus_pct": 9.4,
+      "status": "Surplus",
+      "monthly_surplus": 507.21166666666676
+    },
+    {
+      "state": "North Dakota",
+      "year": 2023,
+      "median_income": 76525,
+      "col": 60275.63,
+      "mli": 1.27,
+      "annual_surplus": 16249.370000000004,
+      "surplus_pct": 27.0,
+      "status": "Surplus",
+      "monthly_surplus": 1354.114166666667
+    },
+    {
+      "state": "Ohio",
+      "year": 2023,
+      "median_income": 67769,
+      "col": 61829.53,
+      "mli": 1.096,
+      "annual_surplus": 5939.470000000001,
+      "surplus_pct": 9.6,
+      "status": "Surplus",
+      "monthly_surplus": 494.95583333333343
+    },
+    {
+      "state": "Oklahoma",
+      "year": 2023,
+      "median_income": 62138,
+      "col": 59380.1,
+      "mli": 1.046,
+      "annual_surplus": 2757.900000000001,
+      "surplus_pct": 4.6,
+      "status": "Paycheck-to-Paycheck",
+      "monthly_surplus": 229.82500000000007
+    },
+    {
+      "state": "Oregon",
+      "year": 2023,
+      "median_income": 80160,
+      "col": 74576.83,
+      "mli": 1.075,
+      "annual_surplus": 5583.169999999998,
+      "surplus_pct": 7.5,
+      "status": "Surplus",
+      "monthly_surplus": 465.26416666666654
+    },
+    {
+      "state": "Pennsylvania",
+      "year": 2023,
+      "median_income": 73824,
+      "col": 66767.72,
+      "mli": 1.106,
+      "annual_surplus": 7056.279999999999,
+      "surplus_pct": 10.6,
+      "status": "Surplus",
+      "monthly_surplus": 588.0233333333332
+    },
+    {
+      "state": "Rhode Island",
+      "year": 2023,
+      "median_income": 84972,
+      "col": 70772.59,
+      "mli": 1.201,
+      "annual_surplus": 14199.410000000003,
+      "surplus_pct": 20.1,
+      "status": "Surplus",
+      "monthly_surplus": 1183.284166666667
+    },
+    {
+      "state": "South Carolina",
+      "year": 2023,
+      "median_income": 67804,
+      "col": 64260.88,
+      "mli": 1.055,
+      "annual_surplus": 3543.1200000000026,
+      "surplus_pct": 5.5,
+      "status": "Surplus",
+      "monthly_surplus": 295.2600000000002
+    },
+    {
+      "state": "South Dakota",
+      "year": 2023,
+      "median_income": 71810,
+      "col": 59540.45,
+      "mli": 1.206,
+      "annual_surplus": 12269.550000000005,
+      "surplus_pct": 20.6,
+      "status": "Surplus",
+      "monthly_surplus": 1022.4625000000004
+    },
+    {
+      "state": "Tennessee",
+      "year": 2023,
+      "median_income": 67631,
+      "col": 63498.58,
+      "mli": 1.065,
+      "annual_surplus": 4132.419999999998,
+      "surplus_pct": 6.5,
+      "status": "Surplus",
+      "monthly_surplus": 344.36833333333317
+    },
+    {
+      "state": "Texas",
+      "year": 2023,
+      "median_income": 75780,
+      "col": 68760.28,
+      "mli": 1.102,
+      "annual_surplus": 7019.720000000001,
+      "surplus_pct": 10.2,
+      "status": "Surplus",
+      "monthly_surplus": 584.9766666666668
+    },
+    {
+      "state": "Utah",
+      "year": 2023,
+      "median_income": 93421,
+      "col": 69113.52,
+      "mli": 1.352,
+      "annual_surplus": 24307.48,
+      "surplus_pct": 35.2,
+      "status": "Surplus",
+      "monthly_surplus": 2025.6233333333332
+    },
+    {
+      "state": "Vermont",
+      "year": 2023,
+      "median_income": 81211,
+      "col": 65620.7,
+      "mli": 1.238,
+      "annual_surplus": 15590.300000000005,
+      "surplus_pct": 23.8,
+      "status": "Surplus",
+      "monthly_surplus": 1299.191666666667
+    },
+    {
+      "state": "Virginia",
+      "year": 2023,
+      "median_income": 89931,
+      "col": 71861.76,
+      "mli": 1.251,
+      "annual_surplus": 18069.240000000005,
+      "surplus_pct": 25.1,
+      "status": "Surplus",
+      "monthly_surplus": 1505.7700000000004
+    },
+    {
+      "state": "Washington",
+      "year": 2023,
+      "median_income": 94605,
+      "col": 79398.95,
+      "mli": 1.192,
+      "annual_surplus": 15206.050000000005,
+      "surplus_pct": 19.2,
+      "status": "Surplus",
+      "monthly_surplus": 1267.1708333333338
+    },
+    {
+      "state": "West Virginia",
+      "year": 2023,
+      "median_income": 55948,
+      "col": 58979.43,
+      "mli": 0.949,
+      "annual_surplus": -3031.4300000000003,
+      "surplus_pct": -5.1,
+      "status": "Deficit",
+      "monthly_surplus": -252.6191666666667
+    },
+    {
+      "state": "Wisconsin",
+      "year": 2023,
+      "median_income": 74631,
+      "col": 63438.4,
+      "mli": 1.176,
+      "annual_surplus": 11192.6,
+      "surplus_pct": 17.6,
+      "status": "Surplus",
+      "monthly_surplus": 932.7166666666667
+    },
+    {
+      "state": "Wyoming",
+      "year": 2023,
+      "median_income": 72415,
+      "col": 62445.87,
+      "mli": 1.16,
+      "annual_surplus": 9969.129999999996,
+      "surplus_pct": 16.0,
+      "status": "Surplus",
+      "monthly_surplus": 830.7608333333329
+    }
+  ],
+  "headlines": {
+    "main_2012": "Since 2012: S&P +234%, Middle Class Purchasing Power +13.9%",
+    "main_2018": "Since 2018: S&P +90%, Middle Class Purchasing Power +3.5%",
+    "inflation": "Housing Costs Up 22% Since 2018, Goods Up 22%",
+    "states_worse": "4 States Became Less Affordable in Last 5 Years"
+  },
+  "media_hooks": [
+    "Why 'Economic Recovery' Feels Like Decline",
+    "4 States Where It Got Harder to Make Ends Meet",
+    "The Housing Inflation CPI Doesn't Show",
+    "Middle Class Captured Just 4% of Market Gains Since 2018"
+  ]
+}
