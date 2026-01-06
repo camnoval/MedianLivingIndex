@@ -1,0 +1,121 @@
+================================================================================
+MLI COMPARISON REPORT: OLD (BLENDED) VS NEW (MARKET-ADJUSTED)
+================================================================================
+
+
+2012 NATIONAL AVERAGES:
+----------------------------------------
+  Old MLI: 0.998
+  New MLI: 1.004
+  Change:  +0.007
+
+  Old COL: $51,606
+  New COL: $51,237
+  Change:  +$-369 (+-0.7%)
+
+2018 NATIONAL AVERAGES:
+----------------------------------------
+  Old MLI: 1.098
+  New MLI: 1.105
+  Change:  +0.007
+
+  Old COL: $55,854
+  New COL: $55,470
+  Change:  +$-384 (+-0.6%)
+
+2023 NATIONAL AVERAGES:
+----------------------------------------
+  Old MLI: 1.136
+  New MLI: 1.141
+  Change:  +0.004
+
+  Old COL: $67,511
+  New COL: $67,218
+  Change:  +$-293 (+-0.4%)
+
+
+2018-2023 PURCHASING POWER CHANGES:
+========================================
+
+Old Method (Blended Housing):
+  2018 MLI: 1.098
+  2023 MLI: 1.136
+  Change: +3.5%
+
+New Method (Market Housing):
+  2018 MLI: 1.105
+  2023 MLI: 1.141
+  Change: +3.3%
+
+Difference: -0.3pts
+
+✓ New method shows SLOWER improvement
+  More realistic than old method
+
+
+STATES WITH DECLINING PURCHASING POWER (2018-2023):
+  Old method: 4 states
+  New method: 5 states
+  Difference: +1 states now recognized as declining
+
+
+================================================================================
+HOUSING VS GOODS INFLATION
+================================================================================
+
+2012-2023:
+  Housing inflation: +41.6%
+  Goods inflation:   +26.2%
+  Housing premium:   +15.4pts
+
+2018-2023:
+  Housing inflation: +23.4%
+  Goods inflation:   +23.6%
+  Housing premium:   +-0.2pts
+  ✓ Housing clearly outpaced goods (was incorrectly lower in old method)
+
+
+================================================================================
+STATE RANKINGS CHANGES (2023)
+================================================================================
+
+Biggest Rank Drops (worse with market housing):
+  California          : #32 → #26 ( +6)
+  New York            : #41 → #37 ( +4)
+  New Jersey          : #10 → # 7 ( +3)
+  Hawaii              : #16 → #14 ( +2)
+  Kansas              : #23 → #21 ( +2)
+  Nevada              : #37 → #35 ( +2)
+  Connecticut         : # 9 → # 8 ( +1)
+  Alaska              : #11 → #10 ( +1)
+  Washington          : #18 → #17 ( +1)
+  Illinois            : #21 → #20 ( +1)
+
+Biggest Rank Gains (better with market housing):
+  Vermont             : # 8 → #11 ( -3)
+  Michigan            : #35 → #38 ( -3)
+  Minnesota           : # 7 → # 9 ( -2)
+  South Dakota        : #14 → #16 ( -2)
+  Delaware            : #20 → #22 ( -2)
+  Maine               : #26 → #28 ( -2)
+  Missouri            : #29 → #31 ( -2)
+  Pennsylvania        : #30 → #32 ( -2)
+  Iowa                : #17 → #18 ( -1)
+  Idaho               : #22 → #23 ( -1)
+
+
+================================================================================
+MARKETS VS PURCHASING POWER (WITH MARKET HOUSING)
+================================================================================
+
+2012-2023:
+  S&P 500:               +234.4%
+  Median Income:         +48.9%
+  Cost of Living:        +31.2%
+  Real Purchasing Power: +13.6%
+
+2018-2023:
+  S&P 500:               +90.3%
+  Median Income:         +25.1%
+  Cost of Living:        +21.2%
+  Real Purchasing Power: +3.3%

@@ -1,0 +1,766 @@
+state,year,homeownership_rate,rental_rate
+Alabama,2008,65.0,35.0
+Alabama,2009,65.0,35.0
+Alabama,2010,65.0,35.0
+Alabama,2011,65.0,35.0
+Alabama,2012,65.0,35.0
+Alabama,2013,65.0,35.0
+Alabama,2014,65.0,35.0
+Alabama,2015,65.0,35.0
+Alabama,2016,65.0,35.0
+Alabama,2017,65.0,35.0
+Alabama,2018,65.0,35.0
+Alabama,2019,65.0,35.0
+Alabama,2021,65.0,35.0
+Alabama,2022,65.0,35.0
+Alabama,2023,65.0,35.0
+Alaska,2008,65.0,35.0
+Alaska,2009,65.0,35.0
+Alaska,2010,65.0,35.0
+Alaska,2011,65.0,35.0
+Alaska,2012,65.0,35.0
+Alaska,2013,65.0,35.0
+Alaska,2014,65.0,35.0
+Alaska,2015,65.0,35.0
+Alaska,2016,65.0,35.0
+Alaska,2017,65.0,35.0
+Alaska,2018,65.0,35.0
+Alaska,2019,65.0,35.0
+Alaska,2021,65.0,35.0
+Alaska,2022,65.0,35.0
+Alaska,2023,65.0,35.0
+Arizona,2008,65.0,35.0
+Arizona,2009,65.0,35.0
+Arizona,2010,65.0,35.0
+Arizona,2011,65.0,35.0
+Arizona,2012,65.0,35.0
+Arizona,2013,65.0,35.0
+Arizona,2014,65.0,35.0
+Arizona,2015,65.0,35.0
+Arizona,2016,65.0,35.0
+Arizona,2017,65.0,35.0
+Arizona,2018,65.0,35.0
+Arizona,2019,65.0,35.0
+Arizona,2021,65.0,35.0
+Arizona,2022,65.0,35.0
+Arizona,2023,65.0,35.0
+Arkansas,2008,65.0,35.0
+Arkansas,2009,65.0,35.0
+Arkansas,2010,65.0,35.0
+Arkansas,2011,65.0,35.0
+Arkansas,2012,65.0,35.0
+Arkansas,2013,65.0,35.0
+Arkansas,2014,65.0,35.0
+Arkansas,2015,65.0,35.0
+Arkansas,2016,65.0,35.0
+Arkansas,2017,65.0,35.0
+Arkansas,2018,65.0,35.0
+Arkansas,2019,65.0,35.0
+Arkansas,2021,65.0,35.0
+Arkansas,2022,65.0,35.0
+Arkansas,2023,65.0,35.0
+California,2008,65.0,35.0
+California,2009,65.0,35.0
+California,2010,65.0,35.0
+California,2011,65.0,35.0
+California,2012,65.0,35.0
+California,2013,65.0,35.0
+California,2014,65.0,35.0
+California,2015,65.0,35.0
+California,2016,65.0,35.0
+California,2017,65.0,35.0
+California,2018,65.0,35.0
+California,2019,65.0,35.0
+California,2021,65.0,35.0
+California,2022,65.0,35.0
+California,2023,65.0,35.0
+Colorado,2008,65.0,35.0
+Colorado,2009,65.0,35.0
+Colorado,2010,65.0,35.0
+Colorado,2011,65.0,35.0
+Colorado,2012,65.0,35.0
+Colorado,2013,65.0,35.0
+Colorado,2014,65.0,35.0
+Colorado,2015,65.0,35.0
+Colorado,2016,65.0,35.0
+Colorado,2017,65.0,35.0
+Colorado,2018,65.0,35.0
+Colorado,2019,65.0,35.0
+Colorado,2021,65.0,35.0
+Colorado,2022,65.0,35.0
+Colorado,2023,65.0,35.0
+Connecticut,2008,65.0,35.0
+Connecticut,2009,65.0,35.0
+Connecticut,2010,65.0,35.0
+Connecticut,2011,65.0,35.0
+Connecticut,2012,65.0,35.0
+Connecticut,2013,65.0,35.0
+Connecticut,2014,65.0,35.0
+Connecticut,2015,65.0,35.0
+Connecticut,2016,65.0,35.0
+Connecticut,2017,65.0,35.0
+Connecticut,2018,65.0,35.0
+Connecticut,2019,65.0,35.0
+Connecticut,2021,65.0,35.0
+Connecticut,2022,65.0,35.0
+Connecticut,2023,65.0,35.0
+Delaware,2008,65.0,35.0
+Delaware,2009,65.0,35.0
+Delaware,2010,65.0,35.0
+Delaware,2011,65.0,35.0
+Delaware,2012,65.0,35.0
+Delaware,2013,65.0,35.0
+Delaware,2014,65.0,35.0
+Delaware,2015,65.0,35.0
+Delaware,2016,65.0,35.0
+Delaware,2017,65.0,35.0
+Delaware,2018,65.0,35.0
+Delaware,2019,65.0,35.0
+Delaware,2021,65.0,35.0
+Delaware,2022,65.0,35.0
+Delaware,2023,65.0,35.0
+Florida,2008,65.0,35.0
+Florida,2009,65.0,35.0
+Florida,2010,65.0,35.0
+Florida,2011,65.0,35.0
+Florida,2012,65.0,35.0
+Florida,2013,65.0,35.0
+Florida,2014,65.0,35.0
+Florida,2015,65.0,35.0
+Florida,2016,65.0,35.0
+Florida,2017,65.0,35.0
+Florida,2018,65.0,35.0
+Florida,2019,65.0,35.0
+Florida,2021,65.0,35.0
+Florida,2022,65.0,35.0
+Florida,2023,65.0,35.0
+Georgia,2008,65.0,35.0
+Georgia,2009,65.0,35.0
+Georgia,2010,65.0,35.0
+Georgia,2011,65.0,35.0
+Georgia,2012,65.0,35.0
+Georgia,2013,65.0,35.0
+Georgia,2014,65.0,35.0
+Georgia,2015,65.0,35.0
+Georgia,2016,65.0,35.0
+Georgia,2017,65.0,35.0
+Georgia,2018,65.0,35.0
+Georgia,2019,65.0,35.0
+Georgia,2021,65.0,35.0
+Georgia,2022,65.0,35.0
+Georgia,2023,65.0,35.0
+Hawaii,2008,65.0,35.0
+Hawaii,2009,65.0,35.0
+Hawaii,2010,65.0,35.0
+Hawaii,2011,65.0,35.0
+Hawaii,2012,65.0,35.0
+Hawaii,2013,65.0,35.0
+Hawaii,2014,65.0,35.0
+Hawaii,2015,65.0,35.0
+Hawaii,2016,65.0,35.0
+Hawaii,2017,65.0,35.0
+Hawaii,2018,65.0,35.0
+Hawaii,2019,65.0,35.0
+Hawaii,2021,65.0,35.0
+Hawaii,2022,65.0,35.0
+Hawaii,2023,65.0,35.0
+Idaho,2008,65.0,35.0
+Idaho,2009,65.0,35.0
+Idaho,2010,65.0,35.0
+Idaho,2011,65.0,35.0
+Idaho,2012,65.0,35.0
+Idaho,2013,65.0,35.0
+Idaho,2014,65.0,35.0
+Idaho,2015,65.0,35.0
+Idaho,2016,65.0,35.0
+Idaho,2017,65.0,35.0
+Idaho,2018,65.0,35.0
+Idaho,2019,65.0,35.0
+Idaho,2021,65.0,35.0
+Idaho,2022,65.0,35.0
+Idaho,2023,65.0,35.0
+Illinois,2008,65.0,35.0
+Illinois,2009,65.0,35.0
+Illinois,2010,65.0,35.0
+Illinois,2011,65.0,35.0
+Illinois,2012,65.0,35.0
+Illinois,2013,65.0,35.0
+Illinois,2014,65.0,35.0
+Illinois,2015,65.0,35.0
+Illinois,2016,65.0,35.0
+Illinois,2017,65.0,35.0
+Illinois,2018,65.0,35.0
+Illinois,2019,65.0,35.0
+Illinois,2021,65.0,35.0
+Illinois,2022,65.0,35.0
+Illinois,2023,65.0,35.0
+Indiana,2008,65.0,35.0
+Indiana,2009,65.0,35.0
+Indiana,2010,65.0,35.0
+Indiana,2011,65.0,35.0
+Indiana,2012,65.0,35.0
+Indiana,2013,65.0,35.0
+Indiana,2014,65.0,35.0
+Indiana,2015,65.0,35.0
+Indiana,2016,65.0,35.0
+Indiana,2017,65.0,35.0
+Indiana,2018,65.0,35.0
+Indiana,2019,65.0,35.0
+Indiana,2021,65.0,35.0
+Indiana,2022,65.0,35.0
+Indiana,2023,65.0,35.0
+Iowa,2008,65.0,35.0
+Iowa,2009,65.0,35.0
+Iowa,2010,65.0,35.0
+Iowa,2011,65.0,35.0
+Iowa,2012,65.0,35.0
+Iowa,2013,65.0,35.0
+Iowa,2014,65.0,35.0
+Iowa,2015,65.0,35.0
+Iowa,2016,65.0,35.0
+Iowa,2017,65.0,35.0
+Iowa,2018,65.0,35.0
+Iowa,2019,65.0,35.0
+Iowa,2021,65.0,35.0
+Iowa,2022,65.0,35.0
+Iowa,2023,65.0,35.0
+Kansas,2008,65.0,35.0
+Kansas,2009,65.0,35.0
+Kansas,2010,65.0,35.0
+Kansas,2011,65.0,35.0
+Kansas,2012,65.0,35.0
+Kansas,2013,65.0,35.0
+Kansas,2014,65.0,35.0
+Kansas,2015,65.0,35.0
+Kansas,2016,65.0,35.0
+Kansas,2017,65.0,35.0
+Kansas,2018,65.0,35.0
+Kansas,2019,65.0,35.0
+Kansas,2021,65.0,35.0
+Kansas,2022,65.0,35.0
+Kansas,2023,65.0,35.0
+Kentucky,2008,65.0,35.0
+Kentucky,2009,65.0,35.0
+Kentucky,2010,65.0,35.0
+Kentucky,2011,65.0,35.0
+Kentucky,2012,65.0,35.0
+Kentucky,2013,65.0,35.0
+Kentucky,2014,65.0,35.0
+Kentucky,2015,65.0,35.0
+Kentucky,2016,65.0,35.0
+Kentucky,2017,65.0,35.0
+Kentucky,2018,65.0,35.0
+Kentucky,2019,65.0,35.0
+Kentucky,2021,65.0,35.0
+Kentucky,2022,65.0,35.0
+Kentucky,2023,65.0,35.0
+Louisiana,2008,65.0,35.0
+Louisiana,2009,65.0,35.0
+Louisiana,2010,65.0,35.0
+Louisiana,2011,65.0,35.0
+Louisiana,2012,65.0,35.0
+Louisiana,2013,65.0,35.0
+Louisiana,2014,65.0,35.0
+Louisiana,2015,65.0,35.0
+Louisiana,2016,65.0,35.0
+Louisiana,2017,65.0,35.0
+Louisiana,2018,65.0,35.0
+Louisiana,2019,65.0,35.0
+Louisiana,2021,65.0,35.0
+Louisiana,2022,65.0,35.0
+Louisiana,2023,65.0,35.0
+Maine,2008,65.0,35.0
+Maine,2009,65.0,35.0
+Maine,2010,65.0,35.0
+Maine,2011,65.0,35.0
+Maine,2012,65.0,35.0
+Maine,2013,65.0,35.0
+Maine,2014,65.0,35.0
+Maine,2015,65.0,35.0
+Maine,2016,65.0,35.0
+Maine,2017,65.0,35.0
+Maine,2018,65.0,35.0
+Maine,2019,65.0,35.0
+Maine,2021,65.0,35.0
+Maine,2022,65.0,35.0
+Maine,2023,65.0,35.0
+Maryland,2008,65.0,35.0
+Maryland,2009,65.0,35.0
+Maryland,2010,65.0,35.0
+Maryland,2011,65.0,35.0
+Maryland,2012,65.0,35.0
+Maryland,2013,65.0,35.0
+Maryland,2014,65.0,35.0
+Maryland,2015,65.0,35.0
+Maryland,2016,65.0,35.0
+Maryland,2017,65.0,35.0
+Maryland,2018,65.0,35.0
+Maryland,2019,65.0,35.0
+Maryland,2021,65.0,35.0
+Maryland,2022,65.0,35.0
+Maryland,2023,65.0,35.0
+Massachusetts,2008,65.0,35.0
+Massachusetts,2009,65.0,35.0
+Massachusetts,2010,65.0,35.0
+Massachusetts,2011,65.0,35.0
+Massachusetts,2012,65.0,35.0
+Massachusetts,2013,65.0,35.0
+Massachusetts,2014,65.0,35.0
+Massachusetts,2015,65.0,35.0
+Massachusetts,2016,65.0,35.0
+Massachusetts,2017,65.0,35.0
+Massachusetts,2018,65.0,35.0
+Massachusetts,2019,65.0,35.0
+Massachusetts,2021,65.0,35.0
+Massachusetts,2022,65.0,35.0
+Massachusetts,2023,65.0,35.0
+Michigan,2008,65.0,35.0
+Michigan,2009,65.0,35.0
+Michigan,2010,65.0,35.0
+Michigan,2011,65.0,35.0
+Michigan,2012,65.0,35.0
+Michigan,2013,65.0,35.0
+Michigan,2014,65.0,35.0
+Michigan,2015,65.0,35.0
+Michigan,2016,65.0,35.0
+Michigan,2017,65.0,35.0
+Michigan,2018,65.0,35.0
+Michigan,2019,65.0,35.0
+Michigan,2021,65.0,35.0
+Michigan,2022,65.0,35.0
+Michigan,2023,65.0,35.0
+Minnesota,2008,65.0,35.0
+Minnesota,2009,65.0,35.0
+Minnesota,2010,65.0,35.0
+Minnesota,2011,65.0,35.0
+Minnesota,2012,65.0,35.0
+Minnesota,2013,65.0,35.0
+Minnesota,2014,65.0,35.0
+Minnesota,2015,65.0,35.0
+Minnesota,2016,65.0,35.0
+Minnesota,2017,65.0,35.0
+Minnesota,2018,65.0,35.0
+Minnesota,2019,65.0,35.0
+Minnesota,2021,65.0,35.0
+Minnesota,2022,65.0,35.0
+Minnesota,2023,65.0,35.0
+Mississippi,2008,65.0,35.0
+Mississippi,2009,65.0,35.0
+Mississippi,2010,65.0,35.0
+Mississippi,2011,65.0,35.0
+Mississippi,2012,65.0,35.0
+Mississippi,2013,65.0,35.0
+Mississippi,2014,65.0,35.0
+Mississippi,2015,65.0,35.0
+Mississippi,2016,65.0,35.0
+Mississippi,2017,65.0,35.0
+Mississippi,2018,65.0,35.0
+Mississippi,2019,65.0,35.0
+Mississippi,2021,65.0,35.0
+Mississippi,2022,65.0,35.0
+Mississippi,2023,65.0,35.0
+Missouri,2008,65.0,35.0
+Missouri,2009,65.0,35.0
+Missouri,2010,65.0,35.0
+Missouri,2011,65.0,35.0
+Missouri,2012,65.0,35.0
+Missouri,2013,65.0,35.0
+Missouri,2014,65.0,35.0
+Missouri,2015,65.0,35.0
+Missouri,2016,65.0,35.0
+Missouri,2017,65.0,35.0
+Missouri,2018,65.0,35.0
+Missouri,2019,65.0,35.0
+Missouri,2021,65.0,35.0
+Missouri,2022,65.0,35.0
+Missouri,2023,65.0,35.0
+Montana,2008,65.0,35.0
+Montana,2009,65.0,35.0
+Montana,2010,65.0,35.0
+Montana,2011,65.0,35.0
+Montana,2012,65.0,35.0
+Montana,2013,65.0,35.0
+Montana,2014,65.0,35.0
+Montana,2015,65.0,35.0
+Montana,2016,65.0,35.0
+Montana,2017,65.0,35.0
+Montana,2018,65.0,35.0
+Montana,2019,65.0,35.0
+Montana,2021,65.0,35.0
+Montana,2022,65.0,35.0
+Montana,2023,65.0,35.0
+Nebraska,2008,65.0,35.0
+Nebraska,2009,65.0,35.0
+Nebraska,2010,65.0,35.0
+Nebraska,2011,65.0,35.0
+Nebraska,2012,65.0,35.0
+Nebraska,2013,65.0,35.0
+Nebraska,2014,65.0,35.0
+Nebraska,2015,65.0,35.0
+Nebraska,2016,65.0,35.0
+Nebraska,2017,65.0,35.0
+Nebraska,2018,65.0,35.0
+Nebraska,2019,65.0,35.0
+Nebraska,2021,65.0,35.0
+Nebraska,2022,65.0,35.0
+Nebraska,2023,65.0,35.0
+Nevada,2008,65.0,35.0
+Nevada,2009,65.0,35.0
+Nevada,2010,65.0,35.0
+Nevada,2011,65.0,35.0
+Nevada,2012,65.0,35.0
+Nevada,2013,65.0,35.0
+Nevada,2014,65.0,35.0
+Nevada,2015,65.0,35.0
+Nevada,2016,65.0,35.0
+Nevada,2017,65.0,35.0
+Nevada,2018,65.0,35.0
+Nevada,2019,65.0,35.0
+Nevada,2021,65.0,35.0
+Nevada,2022,65.0,35.0
+Nevada,2023,65.0,35.0
+New Hampshire,2008,65.0,35.0
+New Hampshire,2009,65.0,35.0
+New Hampshire,2010,65.0,35.0
+New Hampshire,2011,65.0,35.0
+New Hampshire,2012,65.0,35.0
+New Hampshire,2013,65.0,35.0
+New Hampshire,2014,65.0,35.0
+New Hampshire,2015,65.0,35.0
+New Hampshire,2016,65.0,35.0
+New Hampshire,2017,65.0,35.0
+New Hampshire,2018,65.0,35.0
+New Hampshire,2019,65.0,35.0
+New Hampshire,2021,65.0,35.0
+New Hampshire,2022,65.0,35.0
+New Hampshire,2023,65.0,35.0
+New Jersey,2008,65.0,35.0
+New Jersey,2009,65.0,35.0
+New Jersey,2010,65.0,35.0
+New Jersey,2011,65.0,35.0
+New Jersey,2012,65.0,35.0
+New Jersey,2013,65.0,35.0
+New Jersey,2014,65.0,35.0
+New Jersey,2015,65.0,35.0
+New Jersey,2016,65.0,35.0
+New Jersey,2017,65.0,35.0
+New Jersey,2018,65.0,35.0
+New Jersey,2019,65.0,35.0
+New Jersey,2021,65.0,35.0
+New Jersey,2022,65.0,35.0
+New Jersey,2023,65.0,35.0
+New Mexico,2008,65.0,35.0
+New Mexico,2009,65.0,35.0
+New Mexico,2010,65.0,35.0
+New Mexico,2011,65.0,35.0
+New Mexico,2012,65.0,35.0
+New Mexico,2013,65.0,35.0
+New Mexico,2014,65.0,35.0
+New Mexico,2015,65.0,35.0
+New Mexico,2016,65.0,35.0
+New Mexico,2017,65.0,35.0
+New Mexico,2018,65.0,35.0
+New Mexico,2019,65.0,35.0
+New Mexico,2021,65.0,35.0
+New Mexico,2022,65.0,35.0
+New Mexico,2023,65.0,35.0
+New York,2008,65.0,35.0
+New York,2009,65.0,35.0
+New York,2010,65.0,35.0
+New York,2011,65.0,35.0
+New York,2012,65.0,35.0
+New York,2013,65.0,35.0
+New York,2014,65.0,35.0
+New York,2015,65.0,35.0
+New York,2016,65.0,35.0
+New York,2017,65.0,35.0
+New York,2018,65.0,35.0
+New York,2019,65.0,35.0
+New York,2021,65.0,35.0
+New York,2022,65.0,35.0
+New York,2023,65.0,35.0
+North Carolina,2008,65.0,35.0
+North Carolina,2009,65.0,35.0
+North Carolina,2010,65.0,35.0
+North Carolina,2011,65.0,35.0
+North Carolina,2012,65.0,35.0
+North Carolina,2013,65.0,35.0
+North Carolina,2014,65.0,35.0
+North Carolina,2015,65.0,35.0
+North Carolina,2016,65.0,35.0
+North Carolina,2017,65.0,35.0
+North Carolina,2018,65.0,35.0
+North Carolina,2019,65.0,35.0
+North Carolina,2021,65.0,35.0
+North Carolina,2022,65.0,35.0
+North Carolina,2023,65.0,35.0
+North Dakota,2008,65.0,35.0
+North Dakota,2009,65.0,35.0
+North Dakota,2010,65.0,35.0
+North Dakota,2011,65.0,35.0
+North Dakota,2012,65.0,35.0
+North Dakota,2013,65.0,35.0
+North Dakota,2014,65.0,35.0
+North Dakota,2015,65.0,35.0
+North Dakota,2016,65.0,35.0
+North Dakota,2017,65.0,35.0
+North Dakota,2018,65.0,35.0
+North Dakota,2019,65.0,35.0
+North Dakota,2021,65.0,35.0
+North Dakota,2022,65.0,35.0
+North Dakota,2023,65.0,35.0
+Ohio,2008,65.0,35.0
+Ohio,2009,65.0,35.0
+Ohio,2010,65.0,35.0
+Ohio,2011,65.0,35.0
+Ohio,2012,65.0,35.0
+Ohio,2013,65.0,35.0
+Ohio,2014,65.0,35.0
+Ohio,2015,65.0,35.0
+Ohio,2016,65.0,35.0
+Ohio,2017,65.0,35.0
+Ohio,2018,65.0,35.0
+Ohio,2019,65.0,35.0
+Ohio,2021,65.0,35.0
+Ohio,2022,65.0,35.0
+Ohio,2023,65.0,35.0
+Oklahoma,2008,65.0,35.0
+Oklahoma,2009,65.0,35.0
+Oklahoma,2010,65.0,35.0
+Oklahoma,2011,65.0,35.0
+Oklahoma,2012,65.0,35.0
+Oklahoma,2013,65.0,35.0
+Oklahoma,2014,65.0,35.0
+Oklahoma,2015,65.0,35.0
+Oklahoma,2016,65.0,35.0
+Oklahoma,2017,65.0,35.0
+Oklahoma,2018,65.0,35.0
+Oklahoma,2019,65.0,35.0
+Oklahoma,2021,65.0,35.0
+Oklahoma,2022,65.0,35.0
+Oklahoma,2023,65.0,35.0
+Oregon,2008,65.0,35.0
+Oregon,2009,65.0,35.0
+Oregon,2010,65.0,35.0
+Oregon,2011,65.0,35.0
+Oregon,2012,65.0,35.0
+Oregon,2013,65.0,35.0
+Oregon,2014,65.0,35.0
+Oregon,2015,65.0,35.0
+Oregon,2016,65.0,35.0
+Oregon,2017,65.0,35.0
+Oregon,2018,65.0,35.0
+Oregon,2019,65.0,35.0
+Oregon,2021,65.0,35.0
+Oregon,2022,65.0,35.0
+Oregon,2023,65.0,35.0
+Pennsylvania,2008,65.0,35.0
+Pennsylvania,2009,65.0,35.0
+Pennsylvania,2010,65.0,35.0
+Pennsylvania,2011,65.0,35.0
+Pennsylvania,2012,65.0,35.0
+Pennsylvania,2013,65.0,35.0
+Pennsylvania,2014,65.0,35.0
+Pennsylvania,2015,65.0,35.0
+Pennsylvania,2016,65.0,35.0
+Pennsylvania,2017,65.0,35.0
+Pennsylvania,2018,65.0,35.0
+Pennsylvania,2019,65.0,35.0
+Pennsylvania,2021,65.0,35.0
+Pennsylvania,2022,65.0,35.0
+Pennsylvania,2023,65.0,35.0
+Rhode Island,2008,65.0,35.0
+Rhode Island,2009,65.0,35.0
+Rhode Island,2010,65.0,35.0
+Rhode Island,2011,65.0,35.0
+Rhode Island,2012,65.0,35.0
+Rhode Island,2013,65.0,35.0
+Rhode Island,2014,65.0,35.0
+Rhode Island,2015,65.0,35.0
+Rhode Island,2016,65.0,35.0
+Rhode Island,2017,65.0,35.0
+Rhode Island,2018,65.0,35.0
+Rhode Island,2019,65.0,35.0
+Rhode Island,2021,65.0,35.0
+Rhode Island,2022,65.0,35.0
+Rhode Island,2023,65.0,35.0
+South Carolina,2008,65.0,35.0
+South Carolina,2009,65.0,35.0
+South Carolina,2010,65.0,35.0
+South Carolina,2011,65.0,35.0
+South Carolina,2012,65.0,35.0
+South Carolina,2013,65.0,35.0
+South Carolina,2014,65.0,35.0
+South Carolina,2015,65.0,35.0
+South Carolina,2016,65.0,35.0
+South Carolina,2017,65.0,35.0
+South Carolina,2018,65.0,35.0
+South Carolina,2019,65.0,35.0
+South Carolina,2021,65.0,35.0
+South Carolina,2022,65.0,35.0
+South Carolina,2023,65.0,35.0
+South Dakota,2008,65.0,35.0
+South Dakota,2009,65.0,35.0
+South Dakota,2010,65.0,35.0
+South Dakota,2011,65.0,35.0
+South Dakota,2012,65.0,35.0
+South Dakota,2013,65.0,35.0
+South Dakota,2014,65.0,35.0
+South Dakota,2015,65.0,35.0
+South Dakota,2016,65.0,35.0
+South Dakota,2017,65.0,35.0
+South Dakota,2018,65.0,35.0
+South Dakota,2019,65.0,35.0
+South Dakota,2021,65.0,35.0
+South Dakota,2022,65.0,35.0
+South Dakota,2023,65.0,35.0
+Tennessee,2008,65.0,35.0
+Tennessee,2009,65.0,35.0
+Tennessee,2010,65.0,35.0
+Tennessee,2011,65.0,35.0
+Tennessee,2012,65.0,35.0
+Tennessee,2013,65.0,35.0
+Tennessee,2014,65.0,35.0
+Tennessee,2015,65.0,35.0
+Tennessee,2016,65.0,35.0
+Tennessee,2017,65.0,35.0
+Tennessee,2018,65.0,35.0
+Tennessee,2019,65.0,35.0
+Tennessee,2021,65.0,35.0
+Tennessee,2022,65.0,35.0
+Tennessee,2023,65.0,35.0
+Texas,2008,65.0,35.0
+Texas,2009,65.0,35.0
+Texas,2010,65.0,35.0
+Texas,2011,65.0,35.0
+Texas,2012,65.0,35.0
+Texas,2013,65.0,35.0
+Texas,2014,65.0,35.0
+Texas,2015,65.0,35.0
+Texas,2016,65.0,35.0
+Texas,2017,65.0,35.0
+Texas,2018,65.0,35.0
+Texas,2019,65.0,35.0
+Texas,2021,65.0,35.0
+Texas,2022,65.0,35.0
+Texas,2023,65.0,35.0
+Utah,2008,65.0,35.0
+Utah,2009,65.0,35.0
+Utah,2010,65.0,35.0
+Utah,2011,65.0,35.0
+Utah,2012,65.0,35.0
+Utah,2013,65.0,35.0
+Utah,2014,65.0,35.0
+Utah,2015,65.0,35.0
+Utah,2016,65.0,35.0
+Utah,2017,65.0,35.0
+Utah,2018,65.0,35.0
+Utah,2019,65.0,35.0
+Utah,2021,65.0,35.0
+Utah,2022,65.0,35.0
+Utah,2023,65.0,35.0
+Vermont,2008,65.0,35.0
+Vermont,2009,65.0,35.0
+Vermont,2010,65.0,35.0
+Vermont,2011,65.0,35.0
+Vermont,2012,65.0,35.0
+Vermont,2013,65.0,35.0
+Vermont,2014,65.0,35.0
+Vermont,2015,65.0,35.0
+Vermont,2016,65.0,35.0
+Vermont,2017,65.0,35.0
+Vermont,2018,65.0,35.0
+Vermont,2019,65.0,35.0
+Vermont,2021,65.0,35.0
+Vermont,2022,65.0,35.0
+Vermont,2023,65.0,35.0
+Virginia,2008,65.0,35.0
+Virginia,2009,65.0,35.0
+Virginia,2010,65.0,35.0
+Virginia,2011,65.0,35.0
+Virginia,2012,65.0,35.0
+Virginia,2013,65.0,35.0
+Virginia,2014,65.0,35.0
+Virginia,2015,65.0,35.0
+Virginia,2016,65.0,35.0
+Virginia,2017,65.0,35.0
+Virginia,2018,65.0,35.0
+Virginia,2019,65.0,35.0
+Virginia,2021,65.0,35.0
+Virginia,2022,65.0,35.0
+Virginia,2023,65.0,35.0
+Washington,2008,65.0,35.0
+Washington,2009,65.0,35.0
+Washington,2010,65.0,35.0
+Washington,2011,65.0,35.0
+Washington,2012,65.0,35.0
+Washington,2013,65.0,35.0
+Washington,2014,65.0,35.0
+Washington,2015,65.0,35.0
+Washington,2016,65.0,35.0
+Washington,2017,65.0,35.0
+Washington,2018,65.0,35.0
+Washington,2019,65.0,35.0
+Washington,2021,65.0,35.0
+Washington,2022,65.0,35.0
+Washington,2023,65.0,35.0
+West Virginia,2008,65.0,35.0
+West Virginia,2009,65.0,35.0
+West Virginia,2010,65.0,35.0
+West Virginia,2011,65.0,35.0
+West Virginia,2012,65.0,35.0
+West Virginia,2013,65.0,35.0
+West Virginia,2014,65.0,35.0
+West Virginia,2015,65.0,35.0
+West Virginia,2016,65.0,35.0
+West Virginia,2017,65.0,35.0
+West Virginia,2018,65.0,35.0
+West Virginia,2019,65.0,35.0
+West Virginia,2021,65.0,35.0
+West Virginia,2022,65.0,35.0
+West Virginia,2023,65.0,35.0
+Wisconsin,2008,65.0,35.0
+Wisconsin,2009,65.0,35.0
+Wisconsin,2010,65.0,35.0
+Wisconsin,2011,65.0,35.0
+Wisconsin,2012,65.0,35.0
+Wisconsin,2013,65.0,35.0
+Wisconsin,2014,65.0,35.0
+Wisconsin,2015,65.0,35.0
+Wisconsin,2016,65.0,35.0
+Wisconsin,2017,65.0,35.0
+Wisconsin,2018,65.0,35.0
+Wisconsin,2019,65.0,35.0
+Wisconsin,2021,65.0,35.0
+Wisconsin,2022,65.0,35.0
+Wisconsin,2023,65.0,35.0
+Wyoming,2008,65.0,35.0
+Wyoming,2009,65.0,35.0
+Wyoming,2010,65.0,35.0
+Wyoming,2011,65.0,35.0
+Wyoming,2012,65.0,35.0
+Wyoming,2013,65.0,35.0
+Wyoming,2014,65.0,35.0
+Wyoming,2015,65.0,35.0
+Wyoming,2016,65.0,35.0
+Wyoming,2017,65.0,35.0
+Wyoming,2018,65.0,35.0
+Wyoming,2019,65.0,35.0
+Wyoming,2021,65.0,35.0
+Wyoming,2022,65.0,35.0
+Wyoming,2023,65.0,35.0
+District of Columbia,2008,65.0,35.0
+District of Columbia,2009,65.0,35.0
+District of Columbia,2010,65.0,35.0
+District of Columbia,2011,65.0,35.0
+District of Columbia,2012,65.0,35.0
+District of Columbia,2013,65.0,35.0
+District of Columbia,2014,65.0,35.0
+District of Columbia,2015,65.0,35.0
+District of Columbia,2016,65.0,35.0
+District of Columbia,2017,65.0,35.0
+District of Columbia,2018,65.0,35.0
+District of Columbia,2019,65.0,35.0
+District of Columbia,2021,65.0,35.0
+District of Columbia,2022,65.0,35.0
+District of Columbia,2023,65.0,35.0

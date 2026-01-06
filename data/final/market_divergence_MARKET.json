@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "generated": "2026-01-06T14:56:52.199126",
+    "title": "Financial Markets & Purchasing Power - Market-Adjusted Housing",
+    "methodology": "Uses actual market rent data weighted by homeownership rates",
+    "housing_methodology": "Weighted: (rental_rate \u00d7 market_rent) + (ownership_rate \u00d7 owner_costs)"
+  },
+  "summary_2012_2023": {
+    "baseline_year": 2012,
+    "final_year": 2023,
+    "sp500_total_gain": 234.44562084995687,
+    "income_total_gain": 48.94051587862089,
+    "col_total_gain": 31.189046405804312,
+    "mli_total_gain": 13.606309248785164
+  },
+  "summary_2018_2023": {
+    "baseline_year": 2018,
+    "final_year": 2023,
+    "sp500_total_gain": 90.27185511697948,
+    "income_total_gain": 25.064793609283488,
+    "col_total_gain": 21.178754535427103,
+    "mli_total_gain": 3.2676188924491756
+  },
+  "market_comparison_2012": [
+    {
+      "year": 2012,
+      "sp500_indexed": 100.0,
+      "income_indexed": 100.0,
+      "col_indexed": 100.0,
+      "mli_indexed": 100.0,
+      "sp500_gain": 0.0,
+      "income_gain": 0.0,
+      "col_gain": 0.0,
+      "mli_gain": 0.0
+    },
+    {
+      "year": 2013,
+      "sp500_indexed": 129.60124527587487,
+      "income_indexed": 102.32456895634323,
+      "col_indexed": 101.48348979773903,
+      "mli_indexed": 100.85039432804908,
+      "sp500_gain": 29.601245275874867,
+      "income_gain": 2.3245689563432315,
+      "col_gain": 1.4834897977390238,
+      "mli_gain": 0.8503943280490756
+    },
+    {
+      "year": 2014,
+      "sp500_indexed": 144.3636542115707,
+      "income_indexed": 104.69600078943245,
+      "col_indexed": 102.76869872914311,
+      "mli_indexed": 101.87007089938662,
+      "sp500_gain": 44.36365421157069,
+      "income_gain": 4.696000789432442,
+      "col_gain": 2.7686987291431153,
+      "mli_gain": 1.8700708993866222
+    },
+    {
+      "year": 2015,
+      "sp500_indexed": 143.31470561425897,
+      "income_indexed": 108.39669754095664,
+      "col_indexed": 102.47530984203136,
+      "mli_indexed": 105.81534294590935,
+      "sp500_gain": 43.31470561425896,
+      "income_gain": 8.396697540956644,
+      "col_gain": 2.47530984203137,
+      "mli_gain": 5.815342945909352
+    },
+    {
+      "year": 2016,
+      "sp500_indexed": 156.9797853020986,
+      "income_indexed": 111.82786503027127,
+      "col_indexed": 103.43298758469388,
+      "mli_indexed": 108.12355612204254,
+      "sp500_gain": 56.9797853020986,
+      "income_gain": 11.827865030271267,
+      "col_gain": 3.4329875846938807,
+      "mli_gain": 8.12355612204254
+    },
+    {
+      "year": 2017,
+      "sp500_indexed": 187.46520449589465,
+      "income_indexed": 115.69171115286161,
+      "col_indexed": 105.87853825841273,
+      "mli_indexed": 109.33243049470245,
+      "sp500_gain": 87.46520449589465,
+      "income_gain": 15.69171115286161,
+      "col_gain": 5.8785382584127355,
+      "mli_gain": 9.332430494702448
+    },
+    {
+      "year": 2018,
+      "sp500_indexed": 175.77251277880225,
+      "income_indexed": 119.09068218185195,
+      "col_indexed": 108.26076477576822,
+      "mli_indexed": 110.01155102365969,
+      "sp500_gain": 75.77251277880225,
+      "income_gain": 19.090682181851946,
+      "col_gain": 8.260764775768227,
+      "mli_gain": 10.011551023659692
+    },
+    {
+      "year": 2019,
+      "sp500_indexed": 226.53222922611997,
+      "income_indexed": 125.72141161355734,
+      "col_indexed": 110.31887870635853,
+      "mli_indexed": 113.94288217955868,
+      "sp500_gain": 126.53222922611995,
+      "income_gain": 25.721411613557343,
+      "col_gain": 10.318878706358525,
+      "mli_gain": 13.94288217955868
+    },
+    {
+      "year": 2021,
+      "sp500_indexed": 334.1896942202652,
+      "income_indexed": 133.1719898534713,
+      "col_indexed": 116.9139809988887,
+      "mli_indexed": 113.97673862821634,
+      "sp500_gain": 234.1896942202652,
+      "income_gain": 33.171989853471295,
+      "col_gain": 16.9139809988887,
+      "mli_gain": 13.976738628216335
+    },
+    {
+      "year": 2022,
+      "sp500_indexed": 269.2137793702101,
+      "income_indexed": 143.01474187687563,
+      "col_indexed": 126.88234292664688,
+      "mli_indexed": 112.81367003903449,
+      "sp500_gain": 169.21377937021012,
+      "income_gain": 43.01474187687564,
+      "col_gain": 26.882342926646885,
+      "mli_gain": 12.813670039034486
+    },
+    {
+      "year": 2023,
+      "sp500_indexed": 334.44562084995687,
+      "income_indexed": 148.9405158786209,
+      "col_indexed": 131.1890464058043,
+      "mli_indexed": 113.60630924878517,
+      "sp500_gain": 234.44562084995687,
+      "income_gain": 48.94051587862089,
+      "col_gain": 31.189046405804312,
+      "mli_gain": 13.606309248785164
+    }
+  ],
+  "market_comparison_2018": [
+    {
+      "year": 2018,
+      "sp500_indexed": 100.0,
+      "income_indexed": 100.0,
+      "col_indexed": 100.0,
+      "mli_indexed": 100.0,
+      "sp500_gain": 0.0,
+      "income_gain": 0.0,
+      "col_gain": 0.0,
+      "mli_gain": 0.0
+    },
+    {
+      "year": 2019,
+      "sp500_indexed": 128.87807407702897,
+      "income_indexed": 105.56779868099188,
+      "col_indexed": 101.90107093262559,
+      "mli_indexed": 103.57356215717155,
+      "sp500_gain": 28.87807407702896,
+      "income_gain": 5.567798680991887,
+      "col_gain": 1.9010709326255926,
+      "mli_gain": 3.5735621571715503
+    },
+    {
+      "year": 2021,
+      "sp500_indexed": 190.12625406386502,
+      "income_indexed": 111.82402133704896,
+      "col_indexed": 107.99293838450448,
+      "mli_indexed": 103.60433751516136,
+      "sp500_gain": 90.12625406386503,
+      "income_gain": 11.824021337048961,
+      "col_gain": 7.992938384504478,
+      "mli_gain": 3.60433751516136
+    },
+    {
+      "year": 2022,
+      "sp500_indexed": 153.1603406665736,
+      "income_indexed": 120.08894336375666,
+      "col_indexed": 117.20067116600185,
+      "mli_indexed": 102.54711345245207,
+      "sp500_gain": 53.1603406665736,
+      "income_gain": 20.088943363756663,
+      "col_gain": 17.200671166001857,
+      "mli_gain": 2.5471134524520656
+    },
+    {
+      "year": 2023,
+      "sp500_indexed": 190.27185511697948,
+      "income_indexed": 125.06479360928348,
+      "col_indexed": 121.1787545354271,
+      "mli_indexed": 103.26761889244918,
+      "sp500_gain": 90.27185511697948,
+      "income_gain": 25.064793609283488,
+      "col_gain": 21.178754535427103,
+      "mli_gain": 3.2676188924491756
+    }
+  ]
+}
