@@ -118,50 +118,85 @@ header .tagline {
 }
 
 /* ============================================================================
-   STATS BANNER - COMPACT
+   STATS BANNER - EDITORIAL NARRATIVE STYLE
    ============================================================================ */
 .stats-banner {
-    background: var(--bg-main);
-    border-bottom: 1px solid var(--border);
-    padding: var(--space-lg) 0;
-    box-shadow: var(--shadow-sm);
+    background: white;
+    border-top: 1px solid var(--border);
+    border-bottom: 3px solid var(--primary);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
 }
 
-.stats-banner .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
+.stats-intro {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray-200);
 }
 
-@media (min-width: 640px) {
-    .stats-banner .container {
-        grid-template-columns: repeat(4, 1fr);
+.stats-context {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    font-weight: 400;
+    text-align: center;
+}
+
+.stats-context strong {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.stats-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .stats-breakdown {
+        gap: 1rem;
     }
 }
 
-.stat-item {
+.stat-group {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: var(--space-sm);
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
-.stat-number {
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
+.stat-figure {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 1.4rem;
     font-weight: 700;
-    color: var(--primary);
     font-variant-numeric: tabular-nums;
-    line-height: 1;
-    margin-bottom: var(--space-xs);
+    min-width: 2.5rem;
+    text-align: right;
 }
 
-.stat-label {
-    font-size: 0.75rem;
+.stat-description {
     color: var(--text-secondary);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    flex: 1;
+    font-weight: 400;
+}
+
+.surplus-group .stat-figure {
+    color: #059669;
+}
+
+.neutral-group .stat-figure {
+    color: #7c3aed;
+}
+
+.deficit-group .stat-figure {
+    color: #dc2626;
 }
 
 /* ============================================================================
@@ -205,74 +240,38 @@ section h3 {
 }
 
 /* ============================================================================
-   INTRO / EXPLAINER CARDS - PROFESSIONAL
+   INTRO / EXPLAINER - EDITORIAL LIST STYLE
    ============================================================================ */
 .intro {
     background: white;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.explainer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
+.formula-display {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--gray-200);
+    margin-bottom: 2rem;
 }
 
-@media (min-width: 640px) {
-    .explainer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .explainer-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.explainer-card {
-    background: white;
-    border: 2px solid var(--border);
+.formula-box {
+    background: var(--gray-50);
+    padding: 1.5rem 2rem;
     border-radius: var(--radius-sm);
-    padding: var(--space-xl);
-    transition: var(--transition);
-}
-
-.explainer-card:hover {
-    border-color: var(--primary);
-    box-shadow: var(--shadow-md);
-}
-
-.explainer-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: var(--space-md);
-    color: var(--primary);
-    font-weight: 600;
-}
-
-.explainer-card p {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-.formula {
-    background: var(--gray-100);
-    padding: var(--space-lg);
-    border-radius: var(--radius-sm);
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--primary);
-    margin-top: var(--space-sm);
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    border-left: 3px solid var(--primary);
+    gap: 0.75rem;
+    border: 2px solid var(--gray-200);
     font-family: 'IBM Plex Sans', sans-serif;
+    margin-bottom: 1rem;
 }
 
 .formula-label {
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+    color: var(--text-primary);
 }
 
 .formula-fraction {
@@ -283,16 +282,90 @@ section h3 {
 }
 
 .formula-numerator {
-    padding-bottom: 0.25rem;
-    border-bottom: 2px solid var(--primary);
-    font-size: 0.9rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--text-primary);
+    font-size: 1rem;
     font-weight: 500;
+    color: var(--text-primary);
 }
 
 .formula-denominator {
-    padding-top: 0.25rem;
-    font-size: 0.9rem;
+    padding-top: 0.35rem;
+    font-size: 1rem;
     font-weight: 500;
+    color: var(--text-primary);
+}
+
+.formula-explanation {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+.interpretation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.interpretation-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.interpretation-item:last-child {
+    border-bottom: none;
+}
+
+.interp-value {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    min-width: 4rem;
+    text-align: center;
+    padding-top: 0.25rem;
+}
+
+.interp-content {
+    flex: 1;
+}
+
+.interp-content strong {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.interp-content p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .interpretation-item {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .interp-value {
+        text-align: left;
+    }
+    
+    .formula-box {
+        padding: 1.25rem 1.5rem;
+    }
 }
 
 /* ============================================================================
@@ -1023,102 +1096,125 @@ td {
 }
 
 /* ============================================================================
-   INSIGHTS SECTION - COMPACT
+   INSIGHTS SECTION - EDITORIAL COLUMNS
    ============================================================================ */
-.insights-grid {
+.insights-section {
+    background: var(--gray-50);
+}
+
+.insights-columns {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-    .insights-grid {
+    .insights-columns {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-.insight-card {
+.insight-column {
     background: white;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: var(--space-lg);
-    transition: var(--transition);
+    padding: 1.5rem;
+    border-left: 3px solid var(--primary);
+    box-shadow: var(--shadow-sm);
 }
 
-.insight-card:hover {
-    border-color: var(--primary-light);
-    box-shadow: var(--shadow-md);
+.insight-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--gray-200);
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.insight-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: var(--space-md);
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
+.insight-subsection {
+    margin-bottom: 1.75rem;
 }
 
-.insight-content ul {
+.insight-subsection:last-child {
+    margin-bottom: 0;
+}
+
+.insight-subsection h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.insight-list ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.insight-content li {
-    padding: var(--space-sm) 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 0.85rem;
+.insight-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
-.insight-content li:last-child {
+.insight-list li:last-child {
     border-bottom: none;
 }
 
-.insight-content strong {
-    color: var(--primary);
+.insight-list strong {
+    color: var(--text-primary);
     font-weight: 600;
+    flex: 1;
 }
 
 /* ============================================================================
-   METHODOLOGY - COMPACT
+   METHODOLOGY - EDITORIAL PROSE
    ============================================================================ */
 .methodology {
-    background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
-}
-
-.method-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-    margin-bottom: var(--space-xl);
-}
-
-@media (min-width: 768px) {
-    .method-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.method-card {
     background: white;
-    padding: var(--space-lg);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border);
 }
 
-.method-card h3 {
+.method-prose {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.method-prose h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.method-prose h3:first-child {
+    margin-top: 0;
+}
+
+.method-prose p {
     font-size: 1rem;
-    margin-bottom: var(--space-md);
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
 }
 
-.method-card ul {
-    list-style: none;
-    padding: 0;
+.method-prose strong {
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
-.method-card li {
+.method-prose em {
+    font-style: italic;
+    color: var(--text-primary);
     padding: var(--space-xs) 0;
     font-size: 0.85rem;
     color: var(--text-secondary);

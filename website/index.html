@@ -6,7 +6,7 @@
     <title>Median Living Index - Real Purchasing Power Across America</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="See which states let you save vs. spend more than you earn. Interactive map showing purchasing power across America.">
 </head>
@@ -22,21 +22,22 @@
     <!-- Quick Stats Banner -->
     <div class="stats-banner">
         <div class="container">
-            <div class="stat-item">
-                <span class="stat-number" id="surplusStates">--</span>
-                <span class="stat-label">States with Surplus</span>
+            <div class="stats-intro">
+                <p class="stats-context">2023 National Average: <strong id="nationalMLI">--</strong></p>
             </div>
-            <div class="stat-item">
-                <span class="stat-number" id="breakEvenStates">--</span>
-                <span class="stat-label">Breaking Even</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="deficitStates">--</span>
-                <span class="stat-label">States in Deficit</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="nationalMLI">--</span>
-                <span class="stat-label">National Average MLI</span>
+            <div class="stats-breakdown">
+                <div class="stat-group surplus-group">
+                    <span class="stat-figure" id="surplusStates">--</span>
+                    <span class="stat-description">states with income surplus</span>
+                </div>
+                <div class="stat-group neutral-group">
+                    <span class="stat-figure" id="breakEvenStates">--</span>
+                    <span class="stat-description">states breaking even</span>
+                </div>
+                <div class="stat-group deficit-group">
+                    <span class="stat-figure" id="deficitStates">--</span>
+                    <span class="stat-description">states with income deficit</span>
+                </div>
             </div>
         </div>
     </div>
@@ -46,32 +47,38 @@
         <!-- Introduction -->
         <section class="intro">
             <h2>How It Works</h2>
-            <div class="explainer-grid">
-                <div class="explainer-card">
-                    <h3>The Formula</h3>
-                    <p class="formula">
-                        <span class="formula-label">MLI =</span>
-                        <span class="formula-fraction">
-                            <span class="formula-numerator">Median Income</span>
-                            <span class="formula-denominator">Cost of Living</span>
-                        </span>
-                    </p>
-                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Simple ratio showing purchasing power</p>
+            <div class="formula-display">
+                <div class="formula-box">
+                    <span class="formula-label">MLI =</span>
+                    <span class="formula-fraction">
+                        <span class="formula-numerator">Median Income</span>
+                        <span class="formula-denominator">Cost of Living</span>
+                    </span>
                 </div>
-                <div class="explainer-card">
-                    <h3>Break Even (1.0)</h3>
-                    <p><strong>Income = Expenses</strong><br>Paycheck to paycheck living<br>
-                    <span style="font-size: 0.8rem; color: var(--text-secondary);">Ex: New Mexico (~1.00)</span></p>
+                <p class="formula-explanation">Simple ratio measuring household purchasing power in each state</p>
+            </div>
+            
+            <div class="interpretation-list">
+                <div class="interpretation-item">
+                    <span class="interp-value">1.0</span>
+                    <div class="interp-content">
+                        <strong>Break Even</strong>
+                        <p>Income matches expenses. No surplus for savings or emergencies.</p>
+                    </div>
                 </div>
-                <div class="explainer-card">
-                    <h3>Surplus (&gt;1.0)</h3>
-                    <p><strong>1.35 = 35% Surplus</strong><br>Room for savings & investment<br>
-                    <span style="font-size: 0.8rem; color: var(--text-secondary);">Ex: Utah (1.35), Maryland (1.30)</span></p>
+                <div class="interpretation-item">
+                    <span class="interp-value">&gt;1.0</span>
+                    <div class="interp-content">
+                        <strong>Surplus</strong>
+                        <p>Income exceeds living costs. Example: MLI of 1.35 = 35% surplus available for savings.</p>
+                    </div>
                 </div>
-                <div class="explainer-card">
-                    <h3>Deficit (&lt;1.0)</h3>
-                    <p><strong>0.93 = 7% Deficit</strong><br>Expenses exceed income<br>
-                    <span style="font-size: 0.8rem; color: var(--text-secondary);">Ex: Mississippi (0.93), W. Virginia (0.95)</span></p>
+                <div class="interpretation-item">
+                    <span class="interp-value">&lt;1.0</span>
+                    <div class="interp-content">
+                        <strong>Deficit</strong>
+                        <p>Expenses exceed income. Households typically rely on debt or multiple income sources.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -225,22 +232,30 @@
         <!-- Insights Section -->
         <section class="insights-section">
             <h2>Key Insights</h2>
-            <div class="insights-grid">
-                <div class="insight-card">
-                    <h3>Best Purchasing Power</h3>
-                    <div id="bestStates" class="insight-content"></div>
+            
+            <div class="insights-columns">
+                <div class="insight-column">
+                    <h3 class="insight-header">Top & Bottom Performers</h3>
+                    <div class="insight-subsection">
+                        <h4>Best Purchasing Power</h4>
+                        <div id="bestStates" class="insight-list"></div>
+                    </div>
+                    <div class="insight-subsection">
+                        <h4>Biggest Deficits</h4>
+                        <div id="worstStates" class="insight-list"></div>
+                    </div>
                 </div>
-                <div class="insight-card">
-                    <h3>Biggest Deficits</h3>
-                    <div id="worstStates" class="insight-content"></div>
-                </div>
-                <div class="insight-card">
-                    <h3>Biggest Improvements (5yr)</h3>
-                    <div id="improvedStates" class="insight-content"></div>
-                </div>
-                <div class="insight-card">
-                    <h3>Biggest Declines (5yr)</h3>
-                    <div id="declinedStates" class="insight-content"></div>
+                
+                <div class="insight-column">
+                    <h3 class="insight-header">5-Year Trends</h3>
+                    <div class="insight-subsection">
+                        <h4>Biggest Improvements</h4>
+                        <div id="improvedStates" class="insight-list"></div>
+                    </div>
+                    <div class="insight-subsection">
+                        <h4>Biggest Declines</h4>
+                        <div id="declinedStates" class="insight-list"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -248,27 +263,18 @@
         <!-- Methodology -->
         <section class="methodology">
             <h2>Methodology</h2>
-            <div class="method-grid">
-                <div class="method-card">
-                    <h3>Data Sources</h3>
-                    <ul>
-                        <li><strong>Income:</strong> US Census Bureau (ACS)</li>
-                        <li><strong>Costs:</strong> BEA Regional Price Parities</li>
-                        <li><strong>Spending:</strong> BLS Consumer Expenditure Survey</li>
-                    </ul>
-                </div>
-                <div class="method-card">
-                    <h3>Calculation</h3>
-                    <p><strong>MLI = Median Income ÷ Cost of Living</strong></p>
-                    <p>Cost of Living includes 14 categories: housing, transportation, food, healthcare, and more, adjusted for state-specific price differences.</p>
-                </div>
-                <div class="method-card">
-                    <h3>Interpretation</h3>
-                    <p><strong>MLI of 1.0</strong> means a median household's income exactly covers their annual expenses.</p>
-                    <p><strong>Above 1.0:</strong> Surplus for savings/investment</p>
-                    <p><strong>Below 1.0:</strong> Deficit (debt accumulation)</p>
-                </div>
+            
+            <div class="method-prose">
+                <h3>Data Sources</h3>
+                <p>Income data from US Census Bureau American Community Survey (ACS). Cost of living calculated using Bureau of Economic Analysis Regional Price Parities adjusted for state-specific prices. Spending patterns based on Bureau of Labor Statistics Consumer Expenditure Survey across 14 expense categories.</p>
+                
+                <h3>Calculation</h3>
+                <p>MLI divides median household income by estimated annual cost of living. An MLI of 1.0 indicates income equals expenses. Values above 1.0 show surplus (percentage by which income exceeds costs). Values below 1.0 indicate deficit where households cannot cover typical expenses without debt or additional income.</p>
+                
+                <h3>Interpretation</h3>
+                <p>The index measures whether the median household can afford typical expenses in their state. Results represent the middle household—50% spend more, 50% spend less. Low MLI states often correlate with higher household debt and lower savings rates.</p>
             </div>
+        </section>
 
             <div class="faq">
                 <h3>Common Questions</h3>
