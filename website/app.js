@@ -860,7 +860,7 @@ class MLIApp {
         
         const tbody = document.getElementById('rankingsBody');
         tbody.innerHTML = displayData.map((state, index) => {
-            const rank = filter === 'bottom10' ? statesData.length - 9 + index : index + 1;
+            const rank = filter === 'bottom10' ? statesData.length - index : index + 1;
             const surplusClass = state.surplus >= 0 ? 'positive' : 'negative';
             const changeClass = state.change >= 0 ? 'change-positive' : 'change-negative';
             const change5yrClass = state.change5yr >= 0 ? 'change-positive' : 'change-negative';
