@@ -25,15 +25,7 @@ function initializePage(data) {
     createComparisonChart('2012', data);
     createComparisonChart('2018', data);
     
-    // Populate state changes
-    populateStateChanges(data);
-    
-    // Create scatter plot
-    createScatterPlot(data);
-    
-    // Populate inflation analysis
-    populateInflationAnalysis(data);
-    
+
     // Create savings timeline
     createSavingsTimeline(data);
     
@@ -563,21 +555,28 @@ function createSavingsTimeline(data) {
 }
 
 function setupInteractivity(data) {
-    // Period tab switching
-    const periodTabs = document.querySelectorAll('.period-tab');
-    const periodContents = document.querySelectorAll('.period-content');
+    // Period tab switching for all sections
+    const allSections = document.querySelectorAll('.comparison-section, .gdp-comparison');
     
-    periodTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const period = tab.getAttribute('data-period');
-            
-            // Update tabs
-            periodTabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            
-            // Update content
-            periodContents.forEach(c => c.classList.remove('active'));
-            document.querySelector(`.period-content[data-period="${period}"]`).classList.add('active');
+    allSections.forEach(section => {
+        const tabs = section.querySelectorAll('.period-tab');
+        const contents = section.querySelectorAll('.period-content');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const period = tab.getAttribute('data-period');
+                
+                // Update tabs within this section
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Update content within this section
+                contents.forEach(c => c.classList.remove('active'));
+                const targetContent = section.querySelector(`.period-content[data-period="${period}"]`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
         });
     });
     

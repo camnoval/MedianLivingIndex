@@ -612,3 +612,270 @@
 .download-btn span {
     font-size: 18px;
 }
+/* GDP Comparison Section */
+.gdp-comparison {
+    margin: 48px 0;
+}
+
+.comparison-bars {
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    margin: 32px 0;
+}
+
+.comp-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.comp-row:last-child {
+    margin-bottom: 0;
+}
+
+.comp-label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #475569;
+    min-width: 180px;
+}
+
+.comp-bar-container {
+    flex: 1;
+    position: relative;
+}
+
+.comp-bar {
+    height: 48px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    min-width: 100px;
+}
+
+.comp-bar.markets {
+    background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+}
+
+.comp-bar.gdp {
+    background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%);
+}
+
+.comp-bar.household {
+    background: linear-gradient(90deg, #059669 0%, #10b981 100%);
+}
+
+.comp-value {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+}
+
+/* Market Milestones Timeline */
+.milestones-section {
+    margin: 48px 0;
+}
+
+.timeline-container {
+    background: white;
+    padding: 48px 32px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    margin: 32px 0;
+}
+
+.timeline-track {
+    position: relative;
+    height: 200px;
+    margin: 32px 0;
+}
+
+.timeline-track::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 4px;
+    background: linear-gradient(90deg, #e5e7eb 0%, #cbd5e1 100%);
+    transform: translateY(-50%);
+}
+
+.milestone {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.milestone.market {
+    top: 25%;
+}
+
+.milestone.household {
+    top: 75%;
+}
+
+.milestone.both {
+    top: 50%;
+}
+
+.milestone-marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 2;
+}
+
+.milestone-marker.markets {
+    background: #2563eb;
+}
+
+.milestone-marker.household {
+    background: #059669;
+}
+
+.milestone-marker.both {
+    background: linear-gradient(135deg, #2563eb 0%, #059669 100%);
+    width: 24px;
+    height: 24px;
+}
+
+.milestone-label {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    min-width: 140px;
+}
+
+.milestone.market .milestone-label {
+    top: -80px;
+}
+
+.milestone.household .milestone-label {
+    top: 30px;
+}
+
+.milestone.both .milestone-label {
+    top: 35px;
+    min-width: 180px;
+}
+
+.milestone-year {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.milestone-desc {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #64748b;
+}
+
+.milestone-desc strong {
+    color: #059669;
+    font-weight: 700;
+}
+
+.timeline-legend {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.legend-item span {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569;
+}
+
+.milestone-insights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.insight-card {
+    background: #f8fafc;
+    padding: 24px;
+    border-radius: 8px;
+    border-left: 4px solid #2563eb;
+}
+
+.insight-card h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.insight-card p {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .comp-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .comp-label {
+        min-width: auto;
+    }
+    
+    .comp-bar-container {
+        width: 100%;
+    }
+    
+    .timeline-track {
+        height: 300px;
+    }
+    
+    .milestone-label {
+        min-width: 100px;
+        font-size: 11px;
+    }
+    
+    .milestone.both .milestone-label {
+        min-width: 120px;
+    }
+}
