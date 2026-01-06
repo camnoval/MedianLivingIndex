@@ -881,7 +881,7 @@ class MLIApp {
     }
     
     sortStates(states) {
-        const direction = this.sortDirection === 'asc' ? 1 : -1;
+        const direction = this.sortDirection === 'asc' ? -1 : 1;
         
         states.sort((a, b) => {
             let aVal, bVal;
