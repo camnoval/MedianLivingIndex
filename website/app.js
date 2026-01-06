@@ -944,11 +944,26 @@ class MLIApp {
     updateInsights() {
         const statesData = Object.entries(this.data.states).map(([name, data]) => {
             const yearData = data.timeseries[this.currentYear];
-            const firstYear = this.availableYears[0];
-            const firstYearData = data.timeseries[firstYear];
-            const change = yearData.mli - firstYearData.mli;
             
-            return { name, mli: yearData.mli, change };
+            // Calculate 5-year change
+            const currentYearIndex = this.availableYears.findIndex(y => y === this.currentYear);
+            const fiveYearIndex = currentYearIndex - 5;
+            let change5yr = 0;
+            
+            if (fiveYearIndex >= 0) {
+                const fiveYearsAgo = this.availableYears[fiveYearIndex];
+                const fiveYearData = data.timeseries[fiveYearsAgo];
+                if (fiveYearData) {
+                    change5yr = yearData.mli - fiveYearData.mli;
+                }
+            } else {
+                // Fall back to full historical if 5 years not available
+                const firstYear = this.availableYears[0];
+                const firstYearData = data.timeseries[firstYear];
+                change5yr = yearData.mli - firstYearData.mli;
+            }
+            
+            return { name, mli: yearData.mli, change: change5yr };
         });
         
         statesData.sort((a, b) => b.mli - a.mli);
