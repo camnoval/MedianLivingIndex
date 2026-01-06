@@ -16,6 +16,10 @@
         <div class="container">
             <h1>Median Living Index</h1>
             <p class="subtitle">Measuring Real Purchasing Power Across the United States</p>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active">Overview</a>
+                <a href="rankings.html" class="nav-link">State Rankings</a>
+            </nav>
         </div>
     </header>
 
@@ -183,49 +187,6 @@
                     <h3>Where Your Money Goes (2023)</h3>
                     <div id="costBreakdown" class="cost-bars"></div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Rankings Table -->
-        <section class="rankings-section">
-            <h2>State Rankings</h2>
-            
-            <div class="tab-controls">
-                <button class="tab-btn active" data-tab="all">All States</button>
-                <button class="tab-btn" data-tab="top10">Top 10 (Best)</button>
-                <button class="tab-btn" data-tab="bottom10">Bottom 10 (Worst)</button>
-            </div>
-
-            <div class="table-controls">
-                <input type="text" id="searchBox" placeholder="Search states..." class="search-box">
-                <select id="sortSelect" class="sort-select">
-                    <option value="mli-desc" selected>Highest MLI</option>
-                    <option value="mli-asc">Lowest MLI</option>
-                    <option value="name">Alphabetical</option>
-                    <option value="surplus-desc">Highest Surplus</option>
-                    <option value="income-desc">Highest Income</option>
-                    <option value="col-asc">Lowest Cost</option>
-                </select>
-            </div>
-
-            <div class="table-container">
-                <table id="rankingsTable">
-                    <thead>
-                        <tr>
-                            <th data-sort="rank" class="sortable">Rank<span class="sort-arrow"></span></th>
-                            <th data-sort="name" class="sortable">State<span class="sort-arrow"></span></th>
-                            <th data-sort="mli" class="sortable sort-desc">MLI<span class="sort-arrow"></span></th>
-                            <th data-sort="surplus" class="sortable">Surplus/Deficit<span class="sort-arrow"></span></th>
-                            <th data-sort="income" class="sortable">Median Income<span class="sort-arrow"></span></th>
-                            <th data-sort="col" class="sortable">Cost of Living<span class="sort-arrow"></span></th>
-                            <th data-sort="change5yr" class="sortable">5yr Change<span class="sort-arrow"></span></th>
-                            <th data-sort="change" class="sortable">15yr Change<span class="sort-arrow"></span></th>
-                        </tr>
-                    </thead>
-                    <tbody id="rankingsBody">
-                        <!-- Populated by JavaScript -->
-                    </tbody>
-                </table>
             </div>
         </section>
 

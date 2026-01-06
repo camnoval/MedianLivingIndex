@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Rankings - Median Living Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Complete state-by-state rankings of purchasing power and financial health across America.">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Median Living Index</h1>
+            <p class="subtitle">Measuring Real Purchasing Power Across the United States</p>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Overview</a>
+                <a href="rankings.html" class="nav-link active">State Rankings</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Rankings Table -->
+        <section class="rankings-section">
+            <h2>State Rankings</h2>
+            
+            <div class="tab-controls">
+                <button class="tab-btn active" data-tab="all">All States</button>
+                <button class="tab-btn" data-tab="top10">Top 10 (Best)</button>
+                <button class="tab-btn" data-tab="bottom10">Bottom 10 (Worst)</button>
+            </div>
+
+            <div class="table-controls">
+                <input type="text" id="searchBox" placeholder="Search states..." class="search-box">
+            </div>
+
+            <div class="table-container">
+                <table id="rankingsTable">
+                    <thead>
+                        <tr>
+                            <th data-sort="rank" class="sortable">Rank<span class="sort-arrow"></span></th>
+                            <th data-sort="name" class="sortable">State<span class="sort-arrow"></span></th>
+                            <th data-sort="mli" class="sortable sort-desc">MLI<span class="sort-arrow"></span></th>
+                            <th data-sort="surplus" class="sortable">Surplus/Deficit<span class="sort-arrow"></span></th>
+                            <th data-sort="income" class="sortable">Median Income<span class="sort-arrow"></span></th>
+                            <th data-sort="col" class="sortable">Cost of Living<span class="sort-arrow"></span></th>
+                            <th data-sort="change5yr" class="sortable">5yr Change<span class="sort-arrow"></span></th>
+                            <th data-sort="change" class="sortable">15yr Change<span class="sort-arrow"></span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="rankingsBody">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- State Detail Panel -->
+        <section class="detail-panel" id="detailPanel" style="display: none;">
+            <div class="detail-header">
+                <h2 id="stateName">Select a state</h2>
+                <button id="closeDetail" class="close-btn">&times;</button>
+            </div>
+            
+            <div class="detail-content">
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <div class="stat-label">MLI Ratio</div>
+                        <div class="stat-value" id="mliScore">--</div>
+                        <div class="stat-rank" id="mliRank">--</div>
+                        <div class="stat-interpretation" id="mliInterpretation">--</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Median Income</div>
+                        <div class="stat-value" id="medianIncome">--</div>
+                        <div class="stat-subtitle">Annual household income</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Cost of Living</div>
+                        <div class="stat-value" id="costOfLiving">--</div>
+                        <div class="stat-subtitle">Annual expenses</div>
+                    </div>
+                    <div class="stat-card highlight-card">
+                        <div class="stat-label">Annual Surplus/Deficit</div>
+                        <div class="stat-value" id="annualSurplus">--</div>
+                        <div class="stat-subtitle" id="surplusLabel">Available for savings</div>
+                    </div>
+                </div>
+
+                <!-- Trend Chart -->
+                <div class="chart-container">
+                    <h3>MLI History (2008-2023)</h3>
+                    <canvas id="trendChart"></canvas>
+                    <div class="chart-insight" id="trendInsight"></div>
+                </div>
+
+                <!-- Cost Breakdown -->
+                <div class="breakdown-container">
+                    <h3>Where Your Money Goes (2023)</h3>
+                    <div id="costBreakdown" class="cost-bars"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Median Living Index | Data: Census Bureau, BEA, BLS</p>
+            <p>Created by Cam Noval | <a href="https://github.com/camnoval/mli" target="_blank">View on GitHub</a></p>
+        </div>
+    </footer>
+
+    <!-- Load D3.js for map -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    
+    <!-- Load Chart.js for trend charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+    
+    <!-- Main application script -->
+    <script src="app.js"></script>
+</body>
+</html>
