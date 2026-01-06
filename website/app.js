@@ -20,32 +20,12 @@ class MLIApp {
         try {
             await this.loadData();
             this.setupEventListeners();
-            
-            // Only create map if map container exists (index page)
-            if (document.getElementById('map')) {
-                this.createMap();
-                this.updateLegend();
-            }
-            
-            // Update stats banner if it exists (both pages)
-            if (document.getElementById('surplusStates')) {
-                this.updateStatsBanner();
-            }
-            
-            // Update rankings table if it exists (rankings page)
-            if (document.getElementById('rankingsTable')) {
-                this.updateRankingsTable();
-            }
-            
-            // Update insights if they exist (index page)
-            if (document.getElementById('bestStates')) {
-                this.updateInsights();
-            }
-            
-            // Populate state selectors if they exist (index page)
-            if (document.getElementById('compareState1')) {
-                this.populateStateSelectors();
-            }
+            this.createMap();
+            this.updateStatsBanner();
+            this.updateRankingsTable();
+            this.updateInsights();
+            this.populateStateSelectors();
+            this.updateLegend();
             
             console.log('MLI App initialized successfully');
         } catch (error) {
@@ -116,51 +96,28 @@ class MLIApp {
     }
     
     setupEventListeners() {
-        // Setup draggable panel if it exists
-        const detailPanel = document.getElementById('detailPanel');
-        if (detailPanel) {
-            this.setupDraggablePanel();
-        }
+        this.setupDraggablePanel();
         
-        // Year slider (index page only)
-        const yearSlider = document.getElementById('yearSlider');
-        if (yearSlider) {
-            yearSlider.addEventListener('input', (e) => {
-                const index = parseInt(e.target.value);
-                this.currentYear = this.availableYears[index];
-                document.getElementById('yearDisplay').textContent = this.currentYear;
-                if (document.getElementById('map')) {
-                    this.updateMap();
-                    this.updateLegend();
-                }
-                if (document.getElementById('rankingsTable')) {
-                    this.updateRankingsTable();
-                }
-                if (document.getElementById('surplusStates')) {
-                    this.updateStatsBanner();
-                }
-            });
-        }
+        document.getElementById('yearSlider').addEventListener('input', (e) => {
+            const index = parseInt(e.target.value);
+            this.currentYear = this.availableYears[index];
+            document.getElementById('yearDisplay').textContent = this.currentYear;
+            this.updateMap();
+            this.updateRankingsTable();
+            this.updateStatsBanner();
+            this.updateLegend();
+        });
         
-        // Metric select (index page only)
-        const metricSelect = document.getElementById('metricSelect');
-        if (metricSelect) {
-            metricSelect.addEventListener('change', (e) => {
-                this.currentMetric = e.target.value;
-                this.updateMap();
-                this.updateLegend();
-            });
-        }
+        document.getElementById('metricSelect').addEventListener('change', (e) => {
+            this.currentMetric = e.target.value;
+            this.updateMap();
+            this.updateLegend();
+        });
         
-        // Close detail button
-        const closeDetail = document.getElementById('closeDetail');
-        if (closeDetail) {
-            closeDetail.addEventListener('click', () => {
-                this.closeDetailPanel();
-            });
-        }
+        document.getElementById('closeDetail').addEventListener('click', () => {
+            this.closeDetailPanel();
+        });
         
-        // Tab buttons (rankings page)
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -169,15 +126,11 @@ class MLIApp {
             });
         });
         
-        // Search box (rankings page)
-        const searchBox = document.getElementById('searchBox');
-        if (searchBox) {
-            searchBox.addEventListener('input', (e) => {
-                this.filterTable(e.target.value);
-            });
-        }
+        document.getElementById('searchBox').addEventListener('input', (e) => {
+            this.filterTable(e.target.value);
+        });
         
-        // Sortable table headers (rankings page)
+        // Sortable table headers
         document.querySelectorAll('#rankingsTable th[data-sort]').forEach(th => {
             th.addEventListener('click', () => {
                 const sortKey = th.dataset.sort;
@@ -200,13 +153,9 @@ class MLIApp {
             });
         });
         
-        // Compare button (index page)
-        const compareBtn = document.getElementById('compareBtn');
-        if (compareBtn) {
-            compareBtn.addEventListener('click', () => {
-                this.compareStates();
-            });
-        }
+        document.getElementById('compareBtn').addEventListener('click', () => {
+            this.compareStates();
+        });
     }
     
     updateStatsBanner() {
