@@ -3,7 +3,7 @@
 // Load data on page load
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('market_divergence_corrected.json');
+        const response = await fetch('data/final/market_divergence_corrected.json');
         const data = await response.json();
         
         initializePage(data);
