@@ -176,96 +176,178 @@
             </div>
         </section>
 
-        <!-- State Changes -->
-        <section class="state-changes-section">
-            <h2>State-Level Analysis (2018-2023)</h2>
+        <!-- GDP vs Reality Check -->
+        <section class="gdp-comparison">
+            <h2>GDP vs Reality Check</h2>
             <p class="section-intro">
-                State-level data reveals substantial geographic variation in purchasing power trends during the 2018-2023 period.
+                While headlines tout GDP growth as evidence of economic health, a comparison across three key metrics reveals a stark divergence: financial markets surged, aggregate economic output expanded modestly, but median household purchasing power barely budged.
             </p>
 
-            <div class="state-categories">
-                <div class="category-stat">
-                    <span class="cat-number declined" id="statesWorse">--</span>
-                    <span class="cat-label">States Declined</span>
+            <div class="period-tabs">
+                <button class="period-tab active" data-period="gdp2012">2012-2023: Recovery Era</button>
+                <button class="period-tab" data-period="gdp2018">2018-2023: Inflation Era</button>
+            </div>
+
+            <div class="period-content active" data-period="gdp2012">
+                <div class="comparison-bars">
+                    <div class="comp-row">
+                        <span class="comp-label">S&P 500</span>
+                        <div class="comp-bar-container">
+                            <div class="comp-bar markets" style="width: 100%">
+                                <span class="comp-value">+234.4%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comp-row">
+                        <span class="comp-label">Real GDP</span>
+                        <div class="comp-bar-container">
+                            <div class="comp-bar gdp" style="width: 14.4%">
+                                <span class="comp-value">+33.8%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comp-row">
+                        <span class="comp-label">Median Living Index</span>
+                        <div class="comp-bar-container">
+                            <div class="comp-bar household" style="width: 5.9%">
+                                <span class="comp-value">+13.9%</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="category-stat">
-                    <span class="cat-number improved" id="statesBetter">--</span>
-                    <span class="cat-label">States Improved</span>
+
+                <div class="interpretation">
+                    <h3>The Great Divergence</h3>
+                    <p>Over the 11-year recovery period, the S&P 500 gained 6.9× more than GDP and 16.9× more than median purchasing power. While the stock market tripled, typical households saw just 14% improvement in their ability to afford living costs. This reflects wealth concentration: market gains primarily benefit the ~58% of Americans who own stocks, while GDP growth captures aggregate output that doesn't necessarily translate to median household gains.</p>
                 </div>
             </div>
 
-            <div class="state-lists">
-                <div class="state-list-column">
-                    <h3>Greatest Improvements</h3>
-                    <div class="state-rankings" id="topWinners">
-                        <!-- Populated by JS -->
+            <div class="period-content" data-period="gdp2018">
+                <div class="comparison-bars">
+                    <div class="comp-row">
+                        <span class="comp-label">S&P 500</span>
+                        <div class="comp-bar-container">
+                            <div class="comp-bar markets" style="width: 100%">
+                                <span class="comp-value">+90.3%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comp-row">
+                        <span class="comp-label">Real GDP</span>
+                        <div class="comp-bar-container">
+                            <div class="comp-bar gdp" style="width: 17.6%">
+                                <span class="comp-value">+15.9%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comp-row">
+                        <span class="comp-label">Median Living Index</span>
+                        <div class="comp-bar-container">
+                            <div class="comp-bar household" style="width: 3.9%">
+                                <span class="comp-value">+3.5%</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="state-list-column">
-                    <h3>Steepest Declines</h3>
-                    <div class="state-rankings" id="topLosers">
-                        <!-- Populated by JS -->
-                    </div>
-                </div>
-            </div>
 
-            <div class="scatter-plot-container">
-                <h3>2018 vs 2023 Purchasing Power Scatter</h3>
-                <canvas id="scatterChart"></canvas>
+                <div class="interpretation">
+                    <h3>Inflation's Unequal Impact</h3>
+                    <p>The 2018-2023 period amplified the divergence. Markets nearly doubled despite pandemic disruptions, GDP grew 16%, but median purchasing power increased just 3.5% - barely keeping pace with a single year of normal growth. The disconnect reveals a fundamental truth: aggregate metrics like GDP and market indices can signal "economic health" while typical households struggle with stagnant real purchasing power. Cost of living increases consumed nearly all nominal income gains, leaving median families with minimal improvement despite strong headline numbers.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Housing vs Goods -->
-        <section class="inflation-section">
-            <h2>Cost Category Analysis</h2>
+        <!-- Market Milestones Timeline -->
+        <section class="milestones-section">
+            <h2>Market Milestones vs Household Reality</h2>
             <p class="section-intro">
-                Breaking down cost increases by category reveals divergent inflation patterns. Housing inflation significantly exceeded goods inflation in the 2012-2023 recovery period (+40.1% vs +26.2%), but this relationship reversed during 2018-2023, when goods inflation marginally surpassed housing costs (+23.6% vs +22.4%).
+                Comparing the timing of market achievements against household economic conditions reveals a fundamental disconnect. While financial markets repeatedly set new records, median household purchasing power peaked in 2019 and has struggled to recover.
             </p>
 
-            <div class="inflation-comparison">
-                <div class="inflation-period">
-                    <h3>2012-2023 (11 years)</h3>
-                    <div class="inflation-bars">
-                        <div class="inflation-bar">
-                            <div class="bar-label">Housing</div>
-                            <div class="bar-visual" style="width: 80%">
-                                <span class="bar-value" id="housing_2012">--</span>
-                            </div>
-                        </div>
-                        <div class="inflation-bar">
-                            <div class="bar-label">Goods</div>
-                            <div class="bar-visual" style="width: 60%">
-                                <span class="bar-value" id="goods_2012">--</span>
-                            </div>
+            <div class="timeline-container">
+                <div class="timeline-track">
+                    <div class="milestone market" style="left: 0%">
+                        <div class="milestone-marker markets"></div>
+                        <div class="milestone-label">
+                            <div class="milestone-year">2012</div>
+                            <div class="milestone-desc">Post-crisis baseline<br>S&P: 1,426</div>
                         </div>
                     </div>
-                    <div class="inflation-gap">Gap: <span id="gap_2012">--</span> percentage points</div>
+
+                    <div class="milestone household" style="left: 18.2%">
+                        <div class="milestone-marker household"></div>
+                        <div class="milestone-label">
+                            <div class="milestone-year">2014</div>
+                            <div class="milestone-desc">20 states in deficit<br>MLI recovery stalls</div>
+                        </div>
+                    </div>
+
+                    <div class="milestone market" style="left: 36.4%">
+                        <div class="milestone-marker markets"></div>
+                        <div class="milestone-label">
+                            <div class="milestone-year">2016</div>
+                            <div class="milestone-desc">S&P up 57%<br>Markets surge</div>
+                        </div>
+                    </div>
+
+                    <div class="milestone household" style="left: 54.5%">
+                        <div class="milestone-marker household"></div>
+                        <div class="milestone-label">
+                            <div class="milestone-year">2018</div>
+                            <div class="milestone-desc">Best year: 5 states in deficit<br>33 states can save</div>
+                        </div>
+                    </div>
+
+                    <div class="milestone both" style="left: 63.6%">
+                        <div class="milestone-marker both"></div>
+                        <div class="milestone-label">
+                            <div class="milestone-year">2019</div>
+                            <div class="milestone-desc"><strong>MLI PEAK</strong>: 42 states can save<br>1 state in deficit</div>
+                        </div>
+                    </div>
+
+                    <div class="milestone market" style="left: 81.8%">
+                        <div class="milestone-marker markets"></div>
+                        <div class="milestone-label">
+                            <div class="milestone-year">2021</div>
+                            <div class="milestone-desc">S&P up 234% from 2012<br>All-time highs</div>
+                        </div>
+                    </div>
+
+                    <div class="milestone market" style="left: 100%">
+                        <div class="milestone-marker markets"></div>
+                        <div class="milestone-label">
+                            <div class="milestone-year">2023</div>
+                            <div class="milestone-desc">S&P matches 2021 peak<br>MLI still below 2019</div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="inflation-period">
-                    <h3>2018-2023 (5 years)</h3>
-                    <div class="inflation-bars">
-                        <div class="inflation-bar">
-                            <div class="bar-label">Housing</div>
-                            <div class="bar-visual" style="width: 95%">
-                                <span class="bar-value" id="housing_2018">--</span>
-                            </div>
-                        </div>
-                        <div class="inflation-bar">
-                            <div class="bar-label">Goods</div>
-                            <div class="bar-visual" style="width: 100%">
-                                <span class="bar-value" id="goods_2018">--</span>
-                            </div>
-                        </div>
+                <div class="timeline-legend">
+                    <div class="legend-item">
+                        <div class="legend-marker markets"></div>
+                        <span>Market Milestones</span>
                     </div>
-                    <div class="inflation-gap">Gap: <span id="gap_2018">--</span> percentage points</div>
+                    <div class="legend-item">
+                        <div class="legend-marker household"></div>
+                        <span>Household Milestones</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="interpretation">
-                <h3>Observations</h3>
-                <p>Housing costs increased 13.9 percentage points more than goods prices in the 2012-2023 period, reflecting sustained supply constraints in the housing market. However, in the 2018-2023 period, goods inflation (23.6%) slightly exceeded housing inflation (22.4%), with a -1.2 percentage point gap. This reversal reflects the unique dynamics of the COVID-19 pandemic period, where supply chain disruptions drove goods prices higher while remote work reduced housing demand pressures in some markets. Housing comprises the largest share of household expenses and typically shows different inflation dynamics than goods categories, though the recent period represents an exceptional deviation from historical patterns.</p>
+            <div class="milestone-insights">
+                <div class="insight-card">
+                    <h3>2019: The Peak That Never Returned</h3>
+                    <p>2019 represented the best year for median households in the dataset, with 42 states able to save more than 5% of income and only 1 state in deficit. The S&P 500 was up 127% from 2012. This peak in household purchasing power has not been matched since, even as markets set new records in 2021 and 2023.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>Divergent Trajectories Post-2019</h3>
+                    <p>From 2019-2023, the S&P 500 gained an additional 48% (from 226% to 334% above 2012 baseline), while the MLI actually declined slightly from its 2019 peak. This period crystallizes the core finding: market performance increasingly decouples from median household economic conditions. By 2023, markets had fully recovered to 2021 peaks, but median purchasing power remained 0.1 percentage points below 2019 levels.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>The Deficit Reversal</h3>
+                    <p>The number of states in deficit fell from 20 in 2012 to just 1 by 2019 - a remarkable improvement. But this trend reflected post-recession recovery dynamics rather than sustainable gains. By 2023, 2 states had returned to deficit status, and the share of states with robust savings capacity (>5% surplus) had declined from its 2019 peak despite continued market growth.</p>
+                </div>
             </div>
         </section>
 
