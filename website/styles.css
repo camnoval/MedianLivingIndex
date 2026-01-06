@@ -89,7 +89,7 @@ body {
    HEADER - PROFESSIONAL EDITORIAL STYLE
    ============================================================================ */
 header {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
     color: white;
     padding: 2.5rem 0 2rem 0;
     box-shadow: var(--shadow-md);
@@ -151,40 +151,45 @@ header .tagline {
 
 .stats-breakdown {
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    max-width: 800px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 1000px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 @media (min-width: 768px) {
     .stats-breakdown {
-        gap: 1rem;
+        gap: 2.5rem;
+        flex-wrap: nowrap;
     }
 }
 
 .stat-group {
     display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-    padding: 0.4rem 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0;
     font-size: 0.9rem;
     line-height: 1.4;
+    text-align: center;
 }
 
 .stat-figure {
     font-family: 'IBM Plex Mono', 'Courier New', monospace;
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
-    min-width: 2.5rem;
-    text-align: right;
+    line-height: 1;
 }
 
 .stat-description {
     color: var(--text-secondary);
-    flex: 1;
     font-weight: 400;
+    font-size: 0.85rem;
 }
 
 .surplus-group .stat-figure {
@@ -251,21 +256,21 @@ section h3 {
 
 .formula-display {
     text-align: center;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     border-bottom: 1px solid var(--gray-200);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .formula-box {
     background: var(--gray-50);
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 1.75rem;
     border-radius: var(--radius-sm);
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
     border: 2px solid var(--gray-200);
     font-family: 'IBM Plex Sans', sans-serif;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .formula-label {
@@ -308,14 +313,14 @@ section h3 {
 .interpretation-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .interpretation-item {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.25rem;
     align-items: flex-start;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     border-bottom: 1px solid var(--gray-100);
 }
 
@@ -325,12 +330,12 @@ section h3 {
 
 .interp-value {
     font-family: 'IBM Plex Mono', 'Courier New', monospace;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary);
-    min-width: 4rem;
+    min-width: 3.5rem;
     text-align: center;
-    padding-top: 0.25rem;
+    padding-top: 0.15rem;
 }
 
 .interp-content {
@@ -339,16 +344,16 @@ section h3 {
 
 .interp-content strong {
     display: block;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .interp-content p {
-    font-size: 0.95rem;
-    line-height: 1.65;
+    font-size: 0.9rem;
+    line-height: 1.55;
     color: var(--text-secondary);
     margin: 0;
 }
