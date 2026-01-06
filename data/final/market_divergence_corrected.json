@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generated": "2026-01-05T18:08:52.981577",
-    "title": "Wall Street vs Main Street: The Real Story",
-    "description": "Proper baseline comparison showing true middle class trajectory",
+    "generated": "2026-01-06T12:27:01.716713",
+    "title": "Financial Markets & Purchasing Power Comparative Analysis",
+    "description": "Dual baseline comparison of market returns and household economics",
     "note": "2008 excluded as baseline - worst economic crisis, not representative"
   },
   "summary_2012_2023": {
@@ -347,14 +347,14 @@
     {
       "period": "2012-2023",
       "housing_inflation": 40.09573845139458,
-      "goods_inflation": 21.22235411010458,
-      "gap": 18.87338434129
+      "goods_inflation": 26.21310797702414,
+      "gap": 13.882630474370439
     },
     {
       "period": "2018-2023",
       "housing_inflation": 22.426436162588704,
-      "goods_inflation": 22.18746891012293,
-      "gap": 0.23896725246577155
+      "goods_inflation": 23.615611060425202,
+      "gap": -1.189174897836498
     }
   ],
   "state_changes_2018_2023": [
@@ -1360,17 +1360,5 @@
       "status": "Surplus",
       "monthly_surplus": 830.7608333333329
     }
-  ],
-  "headlines": {
-    "main_2012": "Since 2012: S&P +234%, Middle Class Purchasing Power +13.9%",
-    "main_2018": "Since 2018: S&P +90%, Middle Class Purchasing Power +3.5%",
-    "inflation": "Housing Costs Up 22% Since 2018, Goods Up 22%",
-    "states_worse": "4 States Became Less Affordable in Last 5 Years"
-  },
-  "media_hooks": [
-    "Why 'Economic Recovery' Feels Like Decline",
-    "4 States Where It Got Harder to Make Ends Meet",
-    "The Housing Inflation CPI Doesn't Show",
-    "Middle Class Captured Just 4% of Market Gains Since 2018"
   ]
 }
