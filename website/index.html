@@ -44,45 +44,6 @@
 
     <!-- Main Content -->
     <main class="container">
-        <!-- Introduction -->
-        <section class="intro">
-            <h2>How It Works</h2>
-            <div class="formula-display">
-                <div class="formula-box">
-                    <span class="formula-label">MLI =</span>
-                    <span class="formula-fraction">
-                        <span class="formula-numerator">Median Income</span>
-                        <span class="formula-denominator">Cost of Living</span>
-                    </span>
-                </div>
-                <p class="formula-explanation">Ratio measuring household purchasing power in each state</p>
-            </div>
-            
-            <div class="interpretation-list">
-                <div class="interpretation-item">
-                    <span class="interp-value">1.0</span>
-                    <div class="interp-content">
-                        <strong>Break Even</strong>
-                        <p>Income matches expenses. No room for savings.</p>
-                    </div>
-                </div>
-                <div class="interpretation-item">
-                    <span class="interp-value">&gt;1.0</span>
-                    <div class="interp-content">
-                        <strong>Surplus</strong>
-                        <p>Income exceeds costs. MLI of 1.35 = 35% surplus.</p>
-                    </div>
-                </div>
-                <div class="interpretation-item">
-                    <span class="interp-value">&lt;1.0</span>
-                    <div class="interp-content">
-                        <strong>Deficit</strong>
-                        <p>Expenses exceed income. Households rely on debt or multiple incomes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Interactive Map Section -->
         <section class="map-section">
             <h2>Interactive Map</h2>
@@ -119,6 +80,45 @@
                     <span>Deficit (Debt)</span>
                     <span>Break Even</span>
                     <span>Surplus (Savings)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="intro">
+            <h2>How It Works</h2>
+            <div class="formula-display">
+                <div class="formula-box">
+                    <span class="formula-label">MLI =</span>
+                    <span class="formula-fraction">
+                        <span class="formula-numerator">Median Income</span>
+                        <span class="formula-denominator">Cost of Living</span>
+                    </span>
+                </div>
+                <p class="formula-explanation">Ratio measuring household purchasing power in each state</p>
+            </div>
+            
+            <div class="interpretation-list">
+                <div class="interpretation-item">
+                    <span class="interp-value">1.0</span>
+                    <div class="interp-content">
+                        <strong>Break Even</strong>
+                        <p>Income matches expenses. No room for savings.</p>
+                    </div>
+                </div>
+                <div class="interpretation-item">
+                    <span class="interp-value">&gt;1.0</span>
+                    <div class="interp-content">
+                        <strong>Surplus</strong>
+                        <p>Income exceeds costs. MLI of 1.35 = 35% surplus.</p>
+                    </div>
+                </div>
+                <div class="interpretation-item">
+                    <span class="interp-value">&lt;1.0</span>
+                    <div class="interp-content">
+                        <strong>Deficit</strong>
+                        <p>Expenses exceed income. Households rely on debt or multiple incomes.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -281,48 +281,48 @@
                 
                 <details>
                     <summary>How is this different from typical cost of living rankings?</summary>
-                    <p>Most cost of living indices just tell you how expensive a place is. MLI goes further by asking: can people actually afford to live there? Massachusetts is expensive, but incomes are high enough to give it one of the best MLI scores. Mississippi is cheap, but incomes are low enough that the median household struggles. It's the ratio that matters.</p>
+                    <p>Most cost of living indices just tell you how expensive a place is. MLI goes further by asking: can people actually afford to live there? Massachusetts is expensive, but incomes are high enough to give it one of the best MLI scores. Mississippi is cheap, but incomes are low enough that the median household struggles. The ratio is what matters.</p>
                 </details>
                 
                 <details>
                     <summary>What do the numbers mean?</summary>
-                    <p><strong>MLI = 1.0:</strong> You're breaking even. Income covers expenses with nothing left over.<br>
-                    <strong>MLI > 1.0:</strong> You have breathing room. An MLI of 1.20 means 20% of income goes to savings or discretionary spending.<br>
-                    <strong>MLI < 1.0:</strong> You're spending more than you earn, probably through debt, multiple jobs, or drawing down savings.</p>
+                    <p><strong>MLI = 1.0:</strong> Breaking even. Income covers expenses with nothing left over.<br>
+                    <strong>MLI > 1.0:</strong> Breathing room. An MLI of 1.20 means 20% of income goes to savings or discretionary spending.<br>
+                    <strong>MLI < 1.0:</strong> Spending more than earned, probably through debt, multiple jobs, or drawing down savings.</p>
                 </details>
                 
                 <details>
                     <summary>Can wealthy states have bad MLI scores?</summary>
-                    <p>It's uncommon but it happens. Massachusetts has median income around $100k and costs around $79k, so MLI sits at 1.26. But California has shown that high income doesn't guarantee high MLI—when housing costs spike faster than wages, even six-figure incomes can leave households stretched thin.</p>
+                    <p>Uncommon but it happens. Massachusetts has median income around $100k and costs around $79k, so MLI sits at 1.26. But California has shown that high income does not guarantee high MLI. When housing costs spike faster than wages, even six-figure incomes can leave households stretched thin.</p>
                 </details>
                 
                 <details>
-                    <summary>What's going on when MLI is below 1.0?</summary>
-                    <p>Take Mississippi: median income is about $54k while estimated living costs are $58k. That doesn't mean everyone's drowning in debt. Some households have multiple earners, some spend less than the baseline estimate, and others do rely on credit cards or assistance. The MLI just shows that the math is tight for the typical household.</p>
+                    <summary>What is going on when MLI is below 1.0?</summary>
+                    <p>Take Mississippi: median income is about $54k while estimated living costs are $58k. That does not mean everyone is drowning in debt. Some households have multiple earners, some spend less than the baseline estimate, and others do rely on credit cards or assistance. The MLI just shows that the math is tight for the typical household.</p>
                 </details>
                 
                 <details>
                     <summary>How reliable are these cost estimates?</summary>
-                    <p>I use BLS Consumer Expenditure Survey data adjusted for state prices via BEA Regional Price Parities. It's solid government data, but your personal costs depend on family size, whether you rent or own, urban vs rural living, and lifestyle. The MLI reflects what a middle-of-the-road household faces—half spend more, half spend less.</p>
+                    <p>The methodology uses BLS Consumer Expenditure Survey data adjusted for state prices via BEA Regional Price Parities. Solid government data, but personal costs depend on family size, whether renting or owning, urban vs rural living, and lifestyle. The MLI reflects what a middle-of-the-road household faces (half spend more, half spend less).</p>
                 </details>
                 
                 <details>
                     <summary>Are taxes included?</summary>
-                    <p>Sort of. Income figures are pre-tax, and the costs include things like FICA and property taxes (baked into housing). But I don't account for full state income tax differences, which gives places like Texas and Florida a real-world edge that the index understates. It's a limitation worth noting.</p>
+                    <p>Sort of. Income figures are pre-tax, and the costs include things like FICA and property taxes (baked into housing). But the methodology does not account for full state income tax differences, which gives places like Texas and Florida a real-world edge that the index understates. A limitation worth noting.</p>
                 </details>
                 
                 <details>
-                    <summary>Why doesn't cheap automatically mean good MLI?</summary>
+                    <summary>Why does not cheap automatically mean good MLI?</summary>
                     <p>West Virginia has low costs ($59k) but low income too ($56k), putting MLI at 0.95. Utah costs more ($69k) but income is much higher ($93k), giving it an MLI of 1.35. When expensive states like Massachusetts or Maryland have even higher incomes, they end up with great MLI scores despite the price tags.</p>
                 </details>
                 
                 <details>
                     <summary>Has this gotten better or worse over time?</summary>
-                    <p>The national average improved from 1.08 in 2008 to 1.14 in 2023, which sounds good. But that average hides big regional swings—Utah's MLI shot up while other states lost ground. The Great Recession years (2008-2012) were particularly rough across most states.</p>
+                    <p>The national average improved from 1.08 in 2008 to 1.14 in 2023, which sounds good. But that average hides big regional swings. Utah MLI shot up while other states lost ground. The Great Recession years (2008-2012) were particularly rough across most states.</p>
                 </details>
                 
                 <details>
-                    <summary>What doesn't this measure?</summary>
+                    <summary>What does not this measure?</summary>
                     <p><strong>Missing pieces:</strong><br>
                     • Full tax burden differences between states<br>
                     • Quality of life stuff (weather, culture, amenities)<br>
@@ -331,17 +331,17 @@
                     • City vs. rural differences within states<br>
                     • Family support and community networks<br>
                     <br>
-                    <strong>Why it's still useful:</strong> MLI answers one specific question well: can median earners afford basic expenses? That's important, even if it's not the whole picture.</p>
+                    <strong>Why it is still useful:</strong> MLI answers one specific question well: can median earners afford basic expenses? Important, even if not the whole picture.</p>
                 </details>
                 
                 <details>
-                    <summary>Should I move based on MLI?</summary>
-                    <p>God no. Use it as one input. Job prospects in your field matter. So do family ties, weather preferences, politics, school quality, healthcare access, and whether you'd actually enjoy living there. High MLI won't help if you're miserable or unemployed. Think of this as useful context, not a decision-maker.</p>
+                    <summary>Should anyone move based on MLI?</summary>
+                    <p>Absolutely not. Use it as one input. Job prospects in the relevant field matter. So do family ties, weather preferences, politics, school quality, healthcare access, and whether living there would actually be enjoyable. High MLI will not help if miserable or unemployed. Think of this as useful context, not a decision-maker.</p>
                 </details>
                 
                 <details>
-                    <summary>Why are Florida and California's scores so similar when they seem so different?</summary>
-                    <p>They both end up around 0.97-1.10 through completely different math. Florida avoids income tax but housing got expensive (especially after 2020). California has both high taxes and high housing costs, but median income is way higher (~$95k vs ~$73k). The final ratios land in the same place, which is why you can't judge affordability by looking at costs or taxes alone.</p>
+                    <summary>Why are Florida and California scores so similar when they seem so different?</summary>
+                    <p>They both end up around 0.97-1.10 through completely different math. Florida avoids income tax but housing got expensive (especially after 2020). California has both high taxes and high housing costs, but median income is way higher (~$95k vs ~$73k). The final ratios land in the same place, which is why you cannot judge affordability by looking at costs or taxes alone.</p>
                 </details>
             </div>
         </section>
