@@ -736,26 +736,55 @@ class MLIApp {
     }
     
     createTrendInsight(stateData) {
-        const firstYear = this.availableYears[0];
-        const lastYear = this.availableYears[this.availableYears.length - 1];
+        // Use 5-year change for the insight
+        const currentYearIndex = this.availableYears.findIndex(y => y === this.currentYear);
+        const fiveYearIndex = currentYearIndex - 5;
         
-        const firstMLI = stateData.timeseries[firstYear].mli;
-        const lastMLI = stateData.timeseries[lastYear].mli;
-        const change = lastMLI - firstMLI;
-        const pctChange = ((change / firstMLI) * 100).toFixed(1);
-        
-        const insightEl = document.getElementById('trendInsight');
-        
-        if (change > 0) {
-            insightEl.innerHTML = `
-                <strong>Improving:</strong> MLI increased by ${Math.abs(pctChange)}% from ${firstYear} to ${lastYear}, 
-                from ${firstMLI.toFixed(3)} to ${lastMLI.toFixed(3)}. Purchasing power is improving.
-            `;
+        if (fiveYearIndex >= 0) {
+            const fiveYearsAgo = this.availableYears[fiveYearIndex];
+            const currentYear = this.currentYear;
+            
+            const pastMLI = stateData.timeseries[fiveYearsAgo].mli;
+            const currentMLI = stateData.timeseries[currentYear].mli;
+            const change = currentMLI - pastMLI;
+            const pctChange = ((change / pastMLI) * 100).toFixed(1);
+            
+            const insightEl = document.getElementById('trendInsight');
+            
+            if (change > 0) {
+                insightEl.innerHTML = `
+                    <strong>Improving:</strong> MLI increased by ${Math.abs(pctChange)}% from ${fiveYearsAgo} to ${currentYear}, 
+                    from ${pastMLI.toFixed(3)} to ${currentMLI.toFixed(3)}. Purchasing power is improving.
+                `;
+            } else {
+                insightEl.innerHTML = `
+                    <strong>Declining:</strong> MLI decreased by ${Math.abs(pctChange)}% from ${fiveYearsAgo} to ${currentYear}, 
+                    from ${pastMLI.toFixed(3)} to ${currentMLI.toFixed(3)}. Purchasing power is declining.
+                `;
+            }
         } else {
-            insightEl.innerHTML = `
-                <strong>Declining:</strong> MLI decreased by ${Math.abs(pctChange)}% from ${firstYear} to ${lastYear}, 
-                from ${firstMLI.toFixed(3)} to ${lastMLI.toFixed(3)}. Purchasing power is declining.
-            `;
+            // Fall back to full range if 5 years not available
+            const firstYear = this.availableYears[0];
+            const lastYear = this.availableYears[this.availableYears.length - 1];
+            
+            const firstMLI = stateData.timeseries[firstYear].mli;
+            const lastMLI = stateData.timeseries[lastYear].mli;
+            const change = lastMLI - firstMLI;
+            const pctChange = ((change / firstMLI) * 100).toFixed(1);
+            
+            const insightEl = document.getElementById('trendInsight');
+            
+            if (change > 0) {
+                insightEl.innerHTML = `
+                    <strong>Improving:</strong> MLI increased by ${Math.abs(pctChange)}% from ${firstYear} to ${lastYear}, 
+                    from ${firstMLI.toFixed(3)} to ${lastMLI.toFixed(3)}. Purchasing power is improving.
+                `;
+            } else {
+                insightEl.innerHTML = `
+                    <strong>Declining:</strong> MLI decreased by ${Math.abs(pctChange)}% from ${firstYear} to ${lastYear}, 
+                    from ${firstMLI.toFixed(3)} to ${lastMLI.toFixed(3)}. Purchasing power is declining.
+                `;
+            }
         }
     }
     
@@ -768,9 +797,11 @@ class MLIApp {
         
         container.innerHTML = sortedCategories.map(([category, data]) => {
             const pct = (data.cost / total * 100).toFixed(1);
+            // Capitalize category names properly
+            const displayName = this.capitalizeCategory(category);
             return `
                 <div class="cost-bar">
-                    <div class="cost-label">${category}</div>
+                    <div class="cost-label">${displayName}</div>
                     <div class="cost-bar-container">
                         <div class="cost-bar-fill" style="width: ${pct}%"></div>
                         <span class="cost-percentage">${pct}%</span>
@@ -781,6 +812,14 @@ class MLIApp {
         }).join('');
     }
     
+    capitalizeCategory(category) {
+        // Convert underscores to spaces and capitalize properly
+        return category
+            .split('_')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+    }
+    
     updateRankingsTable(filter = 'all') {
         const statesData = Object.entries(this.data.states).map(([name, data]) => {
             const yearData = data.timeseries[this.currentYear];
@@ -788,13 +827,25 @@ class MLIApp {
             const firstYearData = data.timeseries[firstYear];
             const change = yearData.mli - firstYearData.mli;
             
+            // Calculate 5-year change (2018-2023 or current year - 5)
+            const fiveYearIndex = this.availableYears.findIndex(y => y === this.currentYear) - 5;
+            let change5yr = 0;
+            if (fiveYearIndex >= 0) {
+                const fiveYearsAgo = this.availableYears[fiveYearIndex];
+                const fiveYearData = data.timeseries[fiveYearsAgo];
+                if (fiveYearData) {
+                    change5yr = yearData.mli - fiveYearData.mli;
+                }
+            }
+            
             return {
                 name,
                 mli: yearData.mli,
                 surplus: yearData.surplus,
                 income: yearData.income,
                 col: yearData.col,
-                change
+                change,
+                change5yr
             };
         });
         
@@ -812,6 +863,7 @@ class MLIApp {
             const rank = filter === 'bottom10' ? statesData.length - 9 + index : index + 1;
             const surplusClass = state.surplus >= 0 ? 'positive' : 'negative';
             const changeClass = state.change >= 0 ? 'change-positive' : 'change-negative';
+            const change5yrClass = state.change5yr >= 0 ? 'change-positive' : 'change-negative';
             
             return `
                 <tr onclick="app.selectStateFromTable('${state.name}')">
@@ -821,6 +873,7 @@ class MLIApp {
                     <td class="surplus-cell ${surplusClass}">${this.formatCurrency(state.surplus)}</td>
                     <td>${this.formatCurrency(state.income)}</td>
                     <td>${this.formatCurrency(state.col)}</td>
+                    <td class="${change5yrClass}">${state.change5yr >= 0 ? '+' : ''}${state.change5yr.toFixed(3)}</td>
                     <td class="${changeClass}">${state.change >= 0 ? '+' : ''}${state.change.toFixed(3)}</td>
                 </tr>
             `;
@@ -836,6 +889,10 @@ class MLIApp {
             switch (this.currentSort) {
                 case 'name':
                     return direction * a.name.localeCompare(b.name);
+                case 'rank':
+                    aVal = a.mli; // rank is based on MLI
+                    bVal = b.mli;
+                    break;
                 case 'mli':
                     aVal = a.mli;
                     bVal = b.mli;
@@ -851,6 +908,10 @@ class MLIApp {
                 case 'col':
                     aVal = a.col;
                     bVal = b.col;
+                    break;
+                case 'change5yr':
+                    aVal = a.change5yr;
+                    bVal = b.change5yr;
                     break;
                 case 'change':
                     aVal = a.change;
