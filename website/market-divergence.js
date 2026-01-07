@@ -141,8 +141,10 @@ function createComparisonChart(period, data) {
     // Calculate indexed GDP values (compound growth from baseline)
     const baseYear = parseInt(period);
     const gdp = years.map(year => {
+        if (year === baseYear) return 100; // Base year is always 100
+        
         let indexValue = 100;
-        for (let y = baseYear; y < year; y++) {
+        for (let y = baseYear + 1; y <= year; y++) {
             if (gdpGrowthRates[y]) {
                 indexValue *= (1 + gdpGrowthRates[y] / 100);
             }
@@ -215,7 +217,7 @@ function createComparisonChart(period, data) {
             plugins: {
                 title: {
                     display: true,
-                    text: `Indexed Growth from ${period} (Baseline = 100)`,
+                    text: `Growth from ${period} (Baseline = 100)`,
                     font: {
                         family: "'IBM Plex Sans', sans-serif",
                         size: 16,
@@ -263,7 +265,7 @@ function createComparisonChart(period, data) {
             scales: {
                 x: {
                     grid: {
-                        display: false
+                        color: '#f1f5f9'
                     },
                     ticks: {
                         font: {
@@ -274,6 +276,15 @@ function createComparisonChart(period, data) {
                 },
                 y: {
                     beginAtZero: false,
+                    title: {
+                        display: true,
+                        text: 'Index (% Growth from Baseline)',
+                        font: {
+                            family: "'IBM Plex Sans', sans-serif",
+                            size: 13,
+                            weight: '600'
+                        }
+                    },
                     grid: {
                         color: '#f1f5f9'
                     },
