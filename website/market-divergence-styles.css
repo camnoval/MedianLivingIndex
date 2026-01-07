@@ -1014,3 +1014,195 @@
     font-weight: 500;
     color: #475569;
 }
+/* Remove old timeline CSS and replace with this */
+
+/* Market Milestones Timeline */
+.milestones-section {
+    margin: 48px 0;
+}
+
+.timeline-container {
+    background: white;
+    padding: 80px 40px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    margin: 32px 0;
+}
+
+.timeline-track {
+    position: relative;
+    height: 200px;
+    margin: 60px 0;
+}
+
+/* The horizontal line */
+.timeline-track::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 3px;
+    background: #cbd5e1;
+    z-index: 1;
+}
+
+/* All milestones positioned absolutely */
+.milestone {
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+/* Market milestones ABOVE the line */
+.milestone.market {
+    top: 0;
+}
+
+/* Household milestones BELOW the line */
+.milestone.household {
+    top: 50%;
+    padding-top: 20px;
+}
+
+/* Special 2019 milestone ON the line */
+.milestone.both {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* The colored dots */
+.milestone-marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    margin: 0 auto 10px auto;
+    z-index: 2;
+    position: relative;
+}
+
+.milestone-marker.markets {
+    background-color: #2563eb;
+}
+
+.milestone-marker.household {
+    background-color: #059669;
+}
+
+.milestone-marker.both {
+    background: linear-gradient(135deg, #2563eb 0%, #059669 100%);
+    width: 20px;
+    height: 20px;
+    border-width: 4px;
+}
+
+/* Labels below dots for market, below dots for household */
+.milestone-label {
+    text-align: center;
+    width: 140px;
+    margin-left: -70px;
+}
+
+.milestone.market .milestone-label {
+    margin-top: 0;
+}
+
+.milestone.household .milestone-label {
+    margin-top: 10px;
+}
+
+.milestone.both .milestone-label {
+    margin-top: 30px;
+    width: 180px;
+    margin-left: -90px;
+}
+
+.milestone-year {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.milestone-desc {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #64748b;
+}
+
+.milestone-desc strong {
+    color: #059669;
+    font-weight: 700;
+}
+
+.milestone-desc br {
+    display: block;
+    content: "";
+    margin: 2px 0;
+}
+
+.timeline-legend {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.legend-marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.legend-marker.markets {
+    background-color: #2563eb;
+}
+
+.legend-marker.household {
+    background-color: #059669;
+}
+
+.legend-item span {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569;
+}
+
+@media (max-width: 768px) {
+    .timeline-container {
+        padding: 60px 20px;
+    }
+    
+    .timeline-track {
+        height: 250px;
+        margin: 80px 0;
+    }
+    
+    .milestone-label {
+        width: 120px;
+        margin-left: -60px;
+    }
+    
+    .milestone.both .milestone-label {
+        width: 160px;
+        margin-left: -80px;
+    }
+    
+    .milestone-desc {
+        font-size: 10px;
+    }
+}
