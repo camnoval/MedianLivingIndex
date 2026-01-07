@@ -1570,3 +1570,97 @@ select:focus-visible {
         #dc2626 100%
     );
 }
+
+/* Savings Timeline Section */
+.savings-section {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid var(--border-light);
+}
+
+.savings-section .section-intro {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.savings-section .chart-container {
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.savings-distribution {
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.savings-distribution h3 {
+    margin-bottom: 24px;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.dist-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dist-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.dist-label {
+    min-width: 200px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.dist-bar {
+    flex: 1;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+}
+
+.dist-bar.surplus {
+    background: linear-gradient(90deg, #059669, #10b981);
+}
+
+.dist-bar.neutral {
+    background: linear-gradient(90deg, #6b7280, #9ca3af);
+}
+
+.dist-bar.deficit {
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+}
+
+.dist-value {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .dist-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .dist-label {
+        min-width: auto;
+    }
+    
+    .dist-bar {
+        width: 100%;
+    }
+}

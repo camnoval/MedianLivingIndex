@@ -24,13 +24,6 @@ function initializePage(data) {
     // Create comparison charts
     createComparisonChart('2012', data);
     createComparisonChart('2018', data);
-    
-
-    // Create savings timeline
-    createSavingsTimeline(data);
-    
-    // Populate savings distribution
-    populateSavingsDistribution(data);
 }
 
 function populateSummaryBanner(data) {
@@ -117,18 +110,6 @@ function populateInflationAnalysis(data) {
         document.getElementById('goods_2018').textContent = `+${period2018.goods_inflation.toFixed(1)}%`;
         document.getElementById('gap_2018').textContent = (period2018.housing_inflation - period2018.goods_inflation).toFixed(1);
     }
-}
-
-function populateSavingsDistribution(data) {
-    const snapshot = data.current_snapshot_2023;
-    
-    const surplus = snapshot.filter(s => s.status === 'Surplus').length;
-    const neutral = snapshot.filter(s => s.status === 'Paycheck-to-Paycheck').length;
-    const deficit = snapshot.filter(s => s.status === 'Deficit').length;
-    
-    document.getElementById('states_surplus').textContent = surplus;
-    document.getElementById('states_neutral').textContent = neutral;
-    document.getElementById('states_deficit').textContent = deficit;
 }
 
 function createComparisonChart(period, data) {
@@ -419,134 +400,6 @@ function createScatterPlot(data) {
                 ctx.restore();
             }
         }]
-    });
-}
-
-function createSavingsTimeline(data) {
-    const ctx = document.getElementById('savingsTimeline').getContext('2d');
-    const timeline = data.savings_timeline;
-    
-    const years = timeline.map(d => d.year);
-    const canSave = timeline.map(d => d.states_can_save);
-    const paycheck = timeline.map(d => d.states_paycheck);
-    const deficit = timeline.map(d => d.states_deficit);
-    
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: years,
-            datasets: [
-                {
-                    label: 'Can Save (>5% surplus)',
-                    data: canSave,
-                    borderColor: '#059669',
-                    backgroundColor: 'rgba(5, 150, 105, 0.2)',
-                    borderWidth: 3,
-                    tension: 0.4,
-                    pointRadius: 4,
-                    fill: true
-                },
-                {
-                    label: 'Breaking Even (±5%)',
-                    data: paycheck,
-                    borderColor: '#6b7280',
-                    backgroundColor: 'rgba(107, 114, 128, 0.2)',
-                    borderWidth: 2,
-                    tension: 0.4,
-                    pointRadius: 3,
-                    fill: true
-                },
-                {
-                    label: 'In Deficit',
-                    data: deficit,
-                    borderColor: '#dc2626',
-                    backgroundColor: 'rgba(220, 38, 38, 0.2)',
-                    borderWidth: 3,
-                    tension: 0.4,
-                    pointRadius: 4,
-                    fill: true
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            aspectRatio: 2.5,
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'State Distribution by Savings Capacity (2008-2023)',
-                    font: {
-                        family: "'IBM Plex Sans', sans-serif",
-                        size: 16,
-                        weight: '600'
-                    },
-                    padding: { bottom: 20 }
-                },
-                legend: {
-                    position: 'bottom',
-                    labels: {
-                        font: {
-                            family: "'IBM Plex Sans', sans-serif",
-                            size: 12
-                        },
-                        padding: 15,
-                        usePointStyle: true
-                    }
-                },
-                tooltip: {
-                    mode: 'index',
-                    intersect: false,
-                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                    padding: 12,
-                    titleFont: {
-                        family: "'IBM Plex Sans', sans-serif",
-                        size: 13,
-                        weight: '600'
-                    },
-                    bodyFont: {
-                        family: "'IBM Plex Mono', monospace",
-                        size: 12
-                    }
-                }
-            },
-            scales: {
-                x: {
-                    grid: {
-                        display: false
-                    },
-                    ticks: {
-                        font: {
-                            family: "'IBM Plex Mono', monospace",
-                            size: 11
-                        }
-                    }
-                },
-                y: {
-                    beginAtZero: true,
-                    max: 51,
-                    title: {
-                        display: true,
-                        text: 'Number of States',
-                        font: {
-                            family: "'IBM Plex Sans', sans-serif",
-                            size: 13,
-                            weight: '600'
-                        }
-                    },
-                    grid: {
-                        color: '#f1f5f9'
-                    },
-                    ticks: {
-                        font: {
-                            family: "'IBM Plex Mono', monospace",
-                            size: 11
-                        },
-                        stepSize: 10
-                    }
-                }
-            }
-        }
     });
 }
 
