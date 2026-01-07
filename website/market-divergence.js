@@ -122,6 +122,34 @@ function createComparisonChart(period, data) {
     const col = comparison.map(d => d.col_indexed);
     const mli = comparison.map(d => d.mli_indexed);
     
+    // Real GDP annual growth rates from World Bank
+    const gdpGrowthRates = {
+        2012: 2.289,
+        2013: 2.118,
+        2014: 2.524,
+        2015: 2.946,
+        2016: 1.819,
+        2017: 2.458,
+        2018: 2.967,
+        2019: 2.584,
+        2020: -2.163,
+        2021: 6.055,
+        2022: 2.512,
+        2023: 2.888
+    };
+    
+    // Calculate indexed GDP values (compound growth from baseline)
+    const baseYear = parseInt(period);
+    const gdp = years.map(year => {
+        let indexValue = 100;
+        for (let y = baseYear; y < year; y++) {
+            if (gdpGrowthRates[y]) {
+                indexValue *= (1 + gdpGrowthRates[y] / 100);
+            }
+        }
+        return indexValue;
+    });
+    
     new Chart(ctx, {
         type: 'line',
         data: {
@@ -136,6 +164,17 @@ function createComparisonChart(period, data) {
                     tension: 0.4,
                     pointRadius: 4,
                     pointHoverRadius: 6
+                },
+                {
+                    label: 'GDP',
+                    data: gdp,
+                    borderColor: '#8b5cf6',
+                    backgroundColor: 'rgba(139, 92, 246, 0.1)',
+                    borderWidth: 2,
+                    borderDash: [5, 5],
+                    tension: 0.4,
+                    pointRadius: 3,
+                    pointHoverRadius: 5
                 },
                 {
                     label: 'Median Income',
