@@ -110,12 +110,12 @@
                 Measuring economic trends from 2008 can create misleading impressions due to the severe recession baseline. This analysis uses two alternative baselines: 2012 (representing post-crisis stabilization) and 2018 (representing pre-COVID economic conditions) to provide clearer perspective on recent economic trajectories.
             </p>
 
-            <div class="period-tabs">
-                <button class="period-tab active" data-period="2012">2012-2023: Recovery Era</button>
-                <button class="period-tab" data-period="2018">2018-2023: Inflation Era</button>
+            <div class="period-tabs dual-baseline-tabs">
+                <button class="period-tab active" data-period="2012" data-section="dual">2012-2023: Recovery Era</button>
+                <button class="period-tab" data-period="2018" data-section="dual">2018-2023: Inflation Era</button>
             </div>
 
-            <div class="period-content active" data-period="2012">
+            <div class="period-content active" data-period="2012" data-section="dual">
                 <div class="metrics-grid">
                     <div class="metric-card">
                         <div class="metric-label">S&P 500</div>
@@ -145,7 +145,7 @@
                 </div>
             </div>
 
-            <div class="period-content" data-period="2018">
+            <div class="period-content" data-period="2018" data-section="dual">
                 <div class="metrics-grid">
                     <div class="metric-card">
                         <div class="metric-label">S&P 500</div>
@@ -171,24 +171,24 @@
 
                 <div class="interpretation">
                     <h3>Interpretation</h3>
-                    <p>The 2018-2023 period shows contrasting trends between the two metrics. Cost of living increases outpaced income growth, with housing inflation serving as a primary driver of the differential. This period demonstrates the distinct dynamics affecting market returns versus household economics during inflationary conditions.</p>
+                    <p>The 2018-2023 period shows contrasting trends between the two metrics. While the S&P 500 grew 90% and GDP increased 16%, median household purchasing power rose only 3.5%. Income growth (+25%) modestly outpaced cost of living increases (+21%), but both lagged significantly behind market returns. This period demonstrates the distinct dynamics affecting market returns versus household economics during inflationary conditions.</p>
                 </div>
             </div>
         </section>
 
-                <!-- GDP vs Reality Check -->
+                <!-- Three Economic Indicators -->
         <section class="gdp-comparison">
-            <h2>GDP vs Reality Check</h2>
+            <h2>Three Economic Indicators Compared</h2>
             <p class="section-intro">
                 Comparing S&P 500 returns, GDP growth, and median household purchasing power reveals different rates of change across these three economic indicators during both measurement periods.
             </p>
 
-            <div class="period-tabs">
-                <button class="period-tab active" data-period="gdp2012">2012-2023: Recovery Era</button>
-                <button class="period-tab" data-period="gdp2018">2018-2023: Inflation Era</button>
+            <div class="period-tabs gdp-tabs">
+                <button class="period-tab active" data-period="gdp2012" data-section="gdp">2012-2023: Recovery Era</button>
+                <button class="period-tab" data-period="gdp2018" data-section="gdp">2018-2023: Inflation Era</button>
             </div>
 
-            <div class="period-content active" data-period="gdp2012">
+            <div class="period-content active" data-period="gdp2012" data-section="gdp">
                 <div class="comparison-bars">
                     <div class="comp-row">
                         <span class="comp-label">S&P 500</span>
@@ -222,7 +222,7 @@
                 </div>
             </div>
 
-            <div class="period-content" data-period="gdp2018">
+            <div class="period-content" data-period="gdp2018" data-section="gdp">
                 <div class="comparison-bars">
                     <div class="comp-row">
                         <span class="comp-label">S&P 500</span>

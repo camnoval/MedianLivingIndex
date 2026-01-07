@@ -454,21 +454,28 @@ function createScatterPlot(data) {
 }
 
 function setupInteractivity(data) {
-    // Period tab switching
+    // Period tab switching - handle each section independently
     const periodTabs = document.querySelectorAll('.period-tab');
-    const periodContents = document.querySelectorAll('.period-content');
     
     periodTabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const period = tab.getAttribute('data-period');
+            const section = tab.getAttribute('data-section');
             
-            // Update tabs
-            periodTabs.forEach(t => t.classList.remove('active'));
+            // Only update tabs and content within the same section
+            const sectionTabs = document.querySelectorAll(`.period-tab[data-section="${section}"]`);
+            const sectionContents = document.querySelectorAll(`.period-content[data-section="${section}"]`);
+            
+            // Update tabs within this section
+            sectionTabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
             
-            // Update content
-            periodContents.forEach(c => c.classList.remove('active'));
-            document.querySelector(`.period-content[data-period="${period}"]`).classList.add('active');
+            // Update content within this section
+            sectionContents.forEach(c => c.classList.remove('active'));
+            const targetContent = document.querySelector(`.period-content[data-period="${period}"][data-section="${section}"]`);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
         });
     });
     
