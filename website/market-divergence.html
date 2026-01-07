@@ -258,98 +258,105 @@
         </section>
 
                 <!-- Market Milestones Timeline -->
-        <section class="milestones-section">
-            <h2>Market Milestones vs Household Reality</h2>
-            <p class="section-intro">
-                Tracking key milestones in market performance and household purchasing power reveals different timing patterns. The S&P 500 reached multiple record highs throughout the period, while median household purchasing power peaked in 2019.
-            </p>
+<section class="milestones-section">
+    <h2>Market Milestones vs Household Reality</h2>
+    <p class="section-intro">
+        Tracking key milestones in market performance and household purchasing power reveals different timing patterns. The S&P 500 reached multiple record highs throughout the period, while median household purchasing power peaked in 2019.
+    </p>
 
-            <div class="timeline-container">
-                <div class="timeline-track">
-                    <div class="milestone market" style="left: 0%">
-                        <div class="milestone-marker markets"></div>
-                        <div class="milestone-label">
-                            <div class="milestone-year">2012</div>
-                            <div class="milestone-desc">Post-crisis baseline<br>S&P: 1,426</div>
-                        </div>
-                    </div>
-
-                    <div class="milestone household" style="left: 18.2%">
-                        <div class="milestone-marker household"></div>
-                        <div class="milestone-label">
-                            <div class="milestone-year">2014</div>
-                            <div class="milestone-desc">16 states in deficit<br>MLI recovery stalls</div>
-                        </div>
-                    </div>
-
-                    <div class="milestone market" style="left: 36.4%">
-                        <div class="milestone-marker markets"></div>
-                        <div class="milestone-label">
-                            <div class="milestone-year">2016</div>
-                            <div class="milestone-desc">S&P up 57%<br>Markets surge</div>
-                        </div>
-                    </div>
-
-                    <div class="milestone household" style="left: 54.5%">
-                        <div class="milestone-marker household"></div>
-                        <div class="milestone-label">
-                            <div class="milestone-year">2018</div>
-                            <div class="milestone-desc">Best year: 5 states in deficit<br>33 states can save</div>
-                        </div>
-                    </div>
-
-                    <div class="milestone both" style="left: 63.6%">
-                        <div class="milestone-marker both"></div>
-                        <div class="milestone-label">
-                            <div class="milestone-year">2019</div>
-                            <div class="milestone-desc"><strong>MLI PEAK</strong>: 42 states can save<br>1 state in deficit</div>
-                        </div>
-                    </div>
-
-                    <div class="milestone market" style="left: 81.8%">
-                        <div class="milestone-marker markets"></div>
-                        <div class="milestone-label">
-                            <div class="milestone-year">2021</div>
-                            <div class="milestone-desc">S&P up 234% from 2012<br>All-time highs</div>
-                        </div>
-                    </div>
-
-                    <div class="milestone market" style="left: 100%">
-                        <div class="milestone-marker markets"></div>
-                        <div class="milestone-label">
-                            <div class="milestone-year">2023</div>
-                            <div class="milestone-desc">S&P matches 2021 peak<br>MLI still below 2019</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-legend">
-                    <div class="legend-item">
-                        <div class="legend-marker markets"></div>
-                        <span>Market Milestones</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-marker household"></div>
-                        <span>Household Milestones</span>
-                    </div>
+    <div class="timeline-container">
+        <div class="timeline-track">
+            <!-- 2012: 0% -->
+            <div class="milestone market" style="left: 0%;">
+                <div class="milestone-marker markets"></div>
+                <div class="milestone-label">
+                    <div class="milestone-year">2012</div>
+                    <div class="milestone-desc">Post-crisis baseline<br>S&P: 1,426</div>
                 </div>
             </div>
 
-            <div class="milestone-insights">
-                <div class="insight-card">
-                    <h3>2019: Peak Household Purchasing Power</h3>
-                    <p>2019 represented the strongest year for median household purchasing power in the dataset, with 42 states showing surplus capacity (ability to save >5% of income) and only 1 state in deficit. The S&P 500 had increased 127% from the 2012 baseline. Median purchasing power has not returned to this 2019 level through 2023, even as equity markets reached new highs in 2021 and matched those levels again in 2023.</p>
-                </div>
-                <div class="insight-card">
-                    <h3>Post-2019 Trajectory Differences</h3>
-                    <p>Between 2019-2023, the S&P 500 increased an additional 48% (from 226% to 334% above 2012), while the MLI declined slightly from its 2019 peak. By 2023, equity markets had recovered to 2021 levels, but median purchasing power remained 0.1 percentage points below 2019 levels. This pattern illustrates the different dynamics affecting market indices versus household economic metrics.</p>
-                </div>
-                <div class="insight-card">
-                    <h3>State Deficit Patterns</h3>
-                    <p>The number of states in deficit position fell from 20 in 2012 to 1 by 2019, then increased to 2 by 2023. The share of states with surplus capacity (>5%) reached a peak in 2019 before declining slightly. These changes occurred during a period of continued equity market growth, reflecting the independent factors that influence household purchasing power and market performance.</p>
+            <!-- 2014: (2014-2012)/(2023-2012) = 2/11 = 18.18% -->
+            <div class="milestone household" style="left: 18.18%;">
+                <div class="milestone-marker household"></div>
+                <div class="milestone-label">
+                    <div class="milestone-year">2014</div>
+                    <div class="milestone-desc">16 states in deficit<br>MLI recovery stalls</div>
                 </div>
             </div>
-        </section>
+
+            <!-- 2016: (2016-2012)/(2023-2012) = 4/11 = 36.36% -->
+            <div class="milestone market" style="left: 36.36%;">
+                <div class="milestone-marker markets"></div>
+                <div class="milestone-label">
+                    <div class="milestone-year">2016</div>
+                    <div class="milestone-desc">S&P up 57%<br>Markets surge</div>
+                </div>
+            </div>
+
+            <!-- 2018: (2018-2012)/(2023-2012) = 6/11 = 54.55% -->
+            <div class="milestone household" style="left: 54.55%;">
+                <div class="milestone-marker household"></div>
+                <div class="milestone-label">
+                    <div class="milestone-year">2018</div>
+                    <div class="milestone-desc">5 states in deficit<br>33 states can save</div>
+                </div>
+            </div>
+
+            <!-- 2019: (2019-2012)/(2023-2012) = 7/11 = 63.64% -->
+            <div class="milestone both" style="left: 63.64%;">
+                <div class="milestone-marker both"></div>
+                <div class="milestone-label">
+                    <div class="milestone-year">2019</div>
+                    <div class="milestone-desc"><strong>MLI PEAK</strong>: 42 states can save<br>1 state in deficit</div>
+                </div>
+            </div>
+
+            <!-- 2021: (2021-2012)/(2023-2012) = 9/11 = 81.82% -->
+            <div class="milestone market" style="left: 81.82%;">
+                <div class="milestone-marker markets"></div>
+                <div class="milestone-label">
+                    <div class="milestone-year">2021</div>
+                    <div class="milestone-desc">S&P up 234% from 2012<br>All-time highs</div>
+                </div>
+            </div>
+
+            <!-- 2023: 100% -->
+            <div class="milestone market" style="left: 100%;">
+                <div class="milestone-marker markets"></div>
+                <div class="milestone-label">
+                    <div class="milestone-year">2023</div>
+                    <div class="milestone-desc">S&P matches 2021 peak<br>MLI still below 2019</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-legend">
+            <div class="legend-item">
+                <div class="legend-marker markets"></div>
+                <span>Market Milestones</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-marker household"></div>
+                <span>Household Milestones</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="milestone-insights">
+        <div class="insight-card">
+            <h3>2019: Peak Household Purchasing Power</h3>
+            <p>2019 represented the strongest year for median household purchasing power in the dataset, with 42 states showing surplus capacity (ability to save >5% of income) and only 1 state in deficit. The S&P 500 had increased 127% from the 2012 baseline. Median purchasing power has not returned to this 2019 level through 2023, even as equity markets reached new highs in 2021 and matched those levels again in 2023.</p>
+        </div>
+        <div class="insight-card">
+            <h3>Post-2019 Trajectory Differences</h3>
+            <p>Between 2019-2023, the S&P 500 increased an additional 48% (from 226% to 334% above 2012), while the MLI declined slightly from its 2019 peak. By 2023, equity markets had recovered to 2021 levels, but median purchasing power remained 0.1 percentage points below 2019 levels. This pattern illustrates the different dynamics affecting market indices versus household economic metrics.</p>
+        </div>
+        <div class="insight-card">
+            <h3>State Deficit Patterns</h3>
+            <p>The number of states in deficit position fell from 20 in 2012 to 1 by 2019, then increased to 2 by 2023. The share of states with surplus capacity (>5%) reached a peak in 2019 before declining slightly. These changes occurred during a period of continued equity market growth, reflecting the independent factors that influence household purchasing power and market performance.</p>
+        </div>
+    </div>
+</section>
 
         <!-- Methodology -->
         <section class="methodology">
