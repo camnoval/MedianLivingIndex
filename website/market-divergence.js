@@ -57,11 +57,7 @@ function populateKeyFindings(data) {
     const losers = stateChanges.filter(s => s.mli_change < 0);
     document.getElementById('finding_states_worse').textContent = losers.length;
     
-    const period2018 = inflation.find(p => p.period === '2018-2023');
-    if (period2018) {
-        document.getElementById('finding_housing_2018').textContent = `+${period2018.housing_inflation.toFixed(1)}%`;
-        document.getElementById('finding_goods_2018').textContent = `+${period2018.goods_inflation.toFixed(1)}%`;
-    }
+    // Finding card 4 is now static GDP data in HTML
 }
 
 function populateStateChanges(data) {
@@ -555,28 +551,21 @@ function createSavingsTimeline(data) {
 }
 
 function setupInteractivity(data) {
-    // Period tab switching for all sections
-    const allSections = document.querySelectorAll('.comparison-section, .gdp-comparison');
+    // Period tab switching
+    const periodTabs = document.querySelectorAll('.period-tab');
+    const periodContents = document.querySelectorAll('.period-content');
     
-    allSections.forEach(section => {
-        const tabs = section.querySelectorAll('.period-tab');
-        const contents = section.querySelectorAll('.period-content');
-        
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const period = tab.getAttribute('data-period');
-                
-                // Update tabs within this section
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                
-                // Update content within this section
-                contents.forEach(c => c.classList.remove('active'));
-                const targetContent = section.querySelector(`.period-content[data-period="${period}"]`);
-                if (targetContent) {
-                    targetContent.classList.add('active');
-                }
-            });
+    periodTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const period = tab.getAttribute('data-period');
+            
+            // Update tabs
+            periodTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            // Update content
+            periodContents.forEach(c => c.classList.remove('active'));
+            document.querySelector(`.period-content[data-period="${period}"]`).classList.add('active');
         });
     });
     
