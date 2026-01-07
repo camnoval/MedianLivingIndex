@@ -158,7 +158,7 @@ function createComparisonChart(period, data) {
                     pointHoverRadius: 5
                 },
                 {
-                    label: 'Real Purchasing Power (MLI)',
+                    label: 'Median Living Index (MLI)',
                     data: mli,
                     borderColor: '#f59e0b',
                     backgroundColor: 'rgba(245, 158, 11, 0.1)',

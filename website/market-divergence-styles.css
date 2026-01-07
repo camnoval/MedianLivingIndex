@@ -151,7 +151,7 @@
     font-family: 'IBM Plex Mono', monospace;
     font-size: 36px;
     font-weight: 700;
-    color: #dc2626;
+    color: #1e293b;
     margin-bottom: 8px;
 }
 
@@ -236,9 +236,6 @@
     text-align: center;
 }
 
-.metric-card.negative .metric-value {
-    color: #dc2626;
-}
 
 .metric-label {
     font-family: 'IBM Plex Sans', sans-serif;
@@ -254,7 +251,7 @@
     font-family: 'IBM Plex Mono', monospace;
     font-size: 28px;
     font-weight: 700;
-    color: #059669;
+    color: #1e293b;
 }
 
 /* Chart Container */
@@ -311,7 +308,7 @@
 }
 
 .cat-number.declined {
-    color: #dc2626;
+    color: #1e293b;
 }
 
 .cat-number.improved {
@@ -384,7 +381,7 @@
 }
 
 .state-rank-change.negative {
-    color: #dc2626;
+    color: #1e293b;
 }
 
 /* Scatter Plot */
@@ -474,7 +471,7 @@
 .inflation-gap span {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 700;
-    color: #dc2626;
+    color: #1e293b;
 }
 
 /* Methodology */
