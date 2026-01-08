@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function initializePage(data) {
-    // Populate summary stats
-    populateSummaryBanner(data);
-    
     // Populate key findings
     populateKeyFindings(data);
     
@@ -26,14 +23,7 @@ function initializePage(data) {
     createComparisonChart('2018', data);
 }
 
-function populateSummaryBanner(data) {
-    const summary2012 = data.summary_2012_2023;
-    const summary2018 = data.summary_2018_2023;
-    
-    document.getElementById('sp500_2012').textContent = `+${summary2012.sp500_total_gain.toFixed(1)}%`;
-    document.getElementById('mli_2012').textContent = formatChange(summary2012.mli_total_gain);
-    document.getElementById('mli_2018').textContent = formatChange(summary2018.mli_total_gain);
-}
+// populateSummaryBanner removed - banner section deleted from HTML
 
 function populateKeyFindings(data) {
     const summary2012 = data.summary_2012_2023;
