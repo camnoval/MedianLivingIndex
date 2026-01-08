@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Markets and Purchasing Power - Comparative Analysis</title>
+    <title>Financial Markets and Median Living Index - Comparative Analysis</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="market-divergence-styles.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7804559500348841"
      crossorigin="anonymous"></script>
-    <meta name="description" content="Comparative analysis of S&P 500 growth and median household purchasing power across two economic periods using dual baseline methodology.">
+    <meta name="description" content="Comparative analysis of S&P 500 growth and median household MLI (MLI) across two economic periods using dual baseline methodology.">
     <link rel="icon" type="image/x-icon" href="MLI.ico">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CH1QCNSYH"></script>
@@ -34,6 +34,9 @@
                 <a href="market-divergence.html" class="nav-tab active">
                     <span class="nav-text">Market Analysis</span>
                 </a>
+                <a href="about.html" class="nav-tab">
+                    <span class="nav-text">About</span>
+                </a>
             </div>
         </div>
     </nav>
@@ -41,33 +44,11 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <h1>Financial Markets & Purchasing Power</h1>
+            <h1>Financial Markets & Median Living Index</h1>
             <p class="subtitle">A Comparative Analysis of Market Returns and Household Economics</p>
         </div>
     </header>
 
-    <!-- Executive Summary Banner -->
-    <div class="stats-banner">
-        <div class="container">
-            <div class="summary-grid">
-                <div class="summary-card">
-                    <div class="summary-label">2012-2023</div>
-                    <div class="summary-stat" id="sp500_2012">--</div>
-                    <div class="summary-desc">S&P 500 Growth</div>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-label">2012-2023</div>
-                    <div class="summary-stat" id="mli_2012">--</div>
-                    <div class="summary-desc">Purchasing Power Growth</div>
-                </div>
-                <div class="summary-card highlight">
-                    <div class="summary-label">2018-2023</div>
-                    <div class="summary-stat" id="mli_2018">--</div>
-                    <div class="summary-desc">Recent Purchasing Power Change</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Main Content -->
     <main class="container">
@@ -76,7 +57,7 @@
         <section class="abstract-section">
             <h2>Abstract</h2>
             <p class="abstract-text">
-                This analysis compares growth trajectories of the S&P 500 index and median household purchasing power (measured via the Median Living Index) across two distinct periods: 2012-2023 (post-crisis recovery) and 2018-2023 (recent inflation period). Using dual baselines to avoid measurement artifacts from the 2008 crisis trough, we document the relative magnitudes of change in financial markets versus household economics. The analysis incorporates GDP growth to provide context for aggregate economic performance alongside market returns and median household outcomes.
+                This analysis compares growth trajectories of the S&P 500 index and the Median Living Index (MLI) across two distinct periods: 2012-2023 (post-crisis recovery) and 2018-2023 (recent inflation period). Using dual baselines to avoid measurement artifacts from the 2008 crisis trough, we document the relative magnitudes of change in financial markets versus household economics. The analysis incorporates GDP growth to provide context for aggregate economic performance alongside market returns and median household outcomes.
             </p>
         </section>
 
@@ -88,25 +69,25 @@
                 <div class="finding-card">
                     <div class="finding-number" id="finding_sp500_2012">--</div>
                     <div class="finding-label">S&P 500 growth since 2012</div>
-                    <div class="finding-detail">Purchasing power: <span id="finding_mli_2012">--</span></div>
+                    <div class="finding-detail">MLI: <span id="finding_mli_2012">--</span></div>
                 </div>
                 
                 <div class="finding-card">
                     <div class="finding-number" id="finding_sp500_2018">--</div>
                     <div class="finding-label">S&P 500 growth since 2018</div>
-                    <div class="finding-detail">Purchasing power: <span id="finding_mli_2018">--</span></div>
+                    <div class="finding-detail">MLI: <span id="finding_mli_2018">--</span></div>
                 </div>
                 
                 <div class="finding-card">
                     <div class="finding-number" id="finding_states_worse">--</div>
-                    <div class="finding-label">States with declining purchasing power</div>
+                    <div class="finding-label">States with declining MLI</div>
                     <div class="finding-detail">Between 2018-2023</div>
                 </div>
                 
                 <div class="finding-card">
-                    <div class="finding-number">+33.8%</div>
-                    <div class="finding-label">GDP growth (2012-2023)</div>
-                    <div class="finding-detail">vs +13.9% purchasing power</div>
+                    <div class="finding-number" id="finding_gdp_growth">--</div>
+                    <div class="finding-label" id="finding_gdp_period">GDP growth</div>
+                    <div class="finding-detail" id="finding_gdp_detail">vs MLI</div>
                 </div>
             </div>
         </section>
@@ -149,7 +130,7 @@
 
                 <div class="interpretation">
                     <h3>Interpretation</h3>
-                    <p>During the 11-year recovery period, financial markets experienced exceptional growth while median household purchasing power improved modestly. This represents different rates of change in the two metrics.</p>
+                    <p>During the 11-year recovery period, financial markets experienced exceptional growth while median household MLI improved modestly. This represents different rates of change in the two metrics.</p>
                 </div>
             </div>
 
@@ -179,7 +160,7 @@
 
                 <div class="interpretation">
                     <h3>Interpretation</h3>
-                    <p>The 2018-2023 period shows contrasting trends between the two metrics. While the S&P 500 grew 90% and GDP increased 16%, median household purchasing power rose only 3.5%. Income growth (+25%) modestly outpaced cost of living increases (+21%), but both lagged significantly behind market returns. This period demonstrates the distinct dynamics affecting market returns versus household economics during inflationary conditions.</p>
+                    <p>The 2018-2023 period shows contrasting trends between the two metrics. While the S&P 500 grew 90% and GDP increased 16%, median household MLI rose only 3.5%. Income growth (+25%) modestly outpaced cost of living increases (+21%), but both lagged significantly behind market returns. This period demonstrates the distinct dynamics affecting market returns versus household economics during inflationary conditions.</p>
                 </div>
             </div>
         </section>
@@ -188,7 +169,7 @@
         <section class="gdp-comparison">
             <h2>Three Economic Indicators Compared</h2>
             <p class="section-intro">
-                Comparing S&P 500 returns, GDP growth, and median household purchasing power reveals different rates of change across these three economic indicators during both measurement periods.
+                Comparing S&P 500 returns, GDP growth, and median household MLI reveals different rates of change across these three economic indicators during both measurement periods.
             </p>
 
             <div class="period-tabs gdp-tabs">
@@ -226,7 +207,7 @@
 
                 <div class="interpretation">
                     <h3>Different Growth Rates</h3>
-                    <p>During the 11-year period from 2012-2023, the S&P 500 increased 234%, real GDP grew 34%, and median purchasing power rose 14%. The S&P 500 experienced growth approximately 17× that of median purchasing power and 7× that of GDP. This reflects different dynamics: equity markets capture corporate earnings and investor sentiment, GDP measures aggregate economic output, while the Median Living Index tracks the relationship between typical household income and living costs.</p>
+                    <p>During the 11-year period from 2012-2023, the S&P 500 increased 234%, real GDP grew 34%, and median MLI rose 14%. The S&P 500 experienced growth approximately 17× that of median MLI and 7× that of GDP. This reflects different dynamics: equity markets capture corporate earnings and investor sentiment, GDP measures aggregate economic output, while the Median Living Index tracks the relationship between typical household income and living costs.</p>
                 </div>
             </div>
 
@@ -260,7 +241,7 @@
 
                 <div class="interpretation">
                     <h3>Recent Period Patterns</h3>
-                    <p>Between 2018-2023, the S&P 500 increased 90%, GDP grew 16%, and median purchasing power rose 3.5%. The gap between market returns and both GDP and median purchasing power widened relative to the longer period. During this timeframe, cost of living increases (21%) nearly matched income growth (25%), resulting in the modest improvement in purchasing power despite nominal income gains.</p>
+                    <p>Between 2018-2023, the S&P 500 increased 90%, GDP grew 16%, and median MLI rose 3.5%. The gap between market returns and both GDP and median MLI widened relative to the longer period. During this timeframe, cost of living increases (21%) nearly matched income growth (25%), resulting in the modest improvement in MLI despite nominal income gains.</p>
                 </div>
             </div>
         </section>
@@ -281,7 +262,7 @@
                 <p>Traditional analyses using 2008 as baseline suffer from base-year effects, as 2008 represented the nadir of the Great Recession with S&P 500 at 903.25 and unemployment at 7.3%. Measuring from this trough creates an upward bias in all subsequent metrics. This analysis employs two alternative baselines: 2012 (post-crisis normalization, S&P 500: 1426.19, unemployment: 8.1%) and 2018 (pre-COVID stability, S&P 500: 2506.85, unemployment: 3.9%). The dual baseline approach reveals both long-term trends and recent period dynamics without base-year distortion.</p>
                 
                 <h3>Classification Thresholds</h3>
-                <p>States are classified by purchasing power status using the following MLI thresholds: Surplus (MLI > 1.05), indicating >5% of income available for savings or discretionary spending; Break-even (0.95 ≤ MLI ≤ 1.05), indicating income roughly matches typical expenses; Deficit (MLI < 0.95), indicating typical expenses exceed median income by >5%, requiring debt, multiple income streams, or below-average consumption.</p>
+                <p>States are classified by MLI status using the following MLI thresholds: Surplus (MLI > 1.05), indicating >5% of income available for savings or discretionary spending; Break-even (0.95 ≤ MLI ≤ 1.05), indicating income roughly matches typical expenses; Deficit (MLI < 0.95), indicating typical expenses exceed median income by >5%, requiring debt, multiple income streams, or below-average consumption.</p>
            
                 <p><strong>Important Note on Housing Costs:</strong> Housing costs are calculated using BEA Regional Price Parities and BLS Consumer Expenditure Survey weights, which include both renters (facing market rates) and existing homeowners (with fixed mortgage costs). This approach may understate the housing cost burden experienced by renters, recent movers, or new home buyers, who face current market prices. Alternative measures using market rent data (e.g., Zillow ZORI) show higher increases of 30-35% over the 2018-2023 period compared to the 22% reflected in this analysis.</p>
 

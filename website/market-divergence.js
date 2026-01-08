@@ -50,7 +50,39 @@ function populateKeyFindings(data) {
     const losers = stateChanges.filter(s => s.mli_change < 0);
     document.getElementById('finding_states_worse').textContent = losers.length;
     
-    // Finding card 4 is now static GDP data in HTML
+    // Calculate GDP growth for both periods dynamically
+    const gdpGrowthRates = {
+        2012: 2.289, 2013: 2.118, 2014: 2.524, 2015: 2.946,
+        2016: 1.819, 2017: 2.458, 2018: 2.967, 2019: 2.584,
+        2020: -2.163, 2021: 6.055, 2022: 2.512, 2023: 2.888
+    };
+    
+    // Calculate compound GDP growth 2012-2023
+    let gdp2012 = 100;
+    for (let year = 2013; year <= 2023; year++) {
+        gdp2012 *= (1 + gdpGrowthRates[year] / 100);
+    }
+    const gdpGrowth2012 = ((gdp2012 - 100)).toFixed(1);
+    
+    // Calculate compound GDP growth 2018-2023
+    let gdp2018 = 100;
+    for (let year = 2019; year <= 2023; year++) {
+        gdp2018 *= (1 + gdpGrowthRates[year] / 100);
+    }
+    const gdpGrowth2018 = ((gdp2018 - 100)).toFixed(1);
+    
+    // Update the fourth card dynamically
+    document.getElementById('finding_gdp_growth').textContent = `+${gdpGrowth2012}%`;
+    document.getElementById('finding_gdp_period').textContent = `GDP growth (2012-2023)`;
+    document.getElementById('finding_gdp_detail').textContent = `vs +${summary2012.mli_total_gain.toFixed(1)}% MLI`;
+    
+    // Store both values for potential period switching
+    window.gdpData = {
+        gdp2012: gdpGrowth2012,
+        gdp2018: gdpGrowth2018,
+        mli2012: summary2012.mli_total_gain.toFixed(1),
+        mli2018: summary2018.mli_total_gain.toFixed(1)
+    };
 }
 
 function populateStateChanges(data) {

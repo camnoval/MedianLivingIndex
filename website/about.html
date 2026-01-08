@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Median Living Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7804559500348841"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="Learn about the Median Living Index methodology, data sources, and creator.">
+    <link rel="icon" type="image/x-icon" href="MLI.ico">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CH1QCNSYH"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3CH1QCNSYH');
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="page-nav">
+        <div class="container">
+            <div class="nav-tabs">
+                <a href="index.html" class="nav-tab">
+                    <span class="nav-text">MLI Map</span>
+                </a>
+                <a href="market-divergence.html" class="nav-tab">
+                    <span class="nav-text">Market Analysis</span>
+                </a>
+                <a href="about.html" class="nav-tab active">
+                    <span class="nav-text">About</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>About the Median Living Index</h1>
+            <p class="subtitle">Understanding the methodology and motivation behind MLI</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- What is MLI -->
+        <section class="methodology">
+            <h2>What is MLI?</h2>
+            <div class="method-prose">
+                <p>The Median Living Index (MLI) measures whether typical households can actually afford to live where they do. Unlike standard cost of living indices that simply compare prices, MLI contextualizes those costs against what people actually earn.</p>
+                
+                <p>The premise is straightforward: expensive places can still offer good quality of life if incomes keep pace with costs. Conversely, affordable places can leave households struggling if wages are too low. MLI captures this relationship in a single ratio.</p>
+            </div>
+
+            <h2>Detailed Methodology</h2>
+            <div class="method-prose">
+                <h3>Data Sources</h3>
+                <p><strong>Income:</strong> Median household income data comes from the US Census Bureau's American Community Survey (ACS), which provides annual state-level estimates based on survey responses from millions of households.</p>
+                
+                <p><strong>Cost of Living:</strong> Baseline national spending patterns are derived from the Bureau of Labor Statistics Consumer Expenditure Survey, which tracks household expenditures across 14 major categories (housing, food, transportation, healthcare, utilities, clothing, entertainment, personal care, education, insurance, tobacco, alcohol, reading, and miscellaneous).</p>
+                
+                <p><strong>Regional Price Adjustments:</strong> State-specific costs are calculated by adjusting national spending baselines using Bureau of Economic Analysis Regional Price Parities (RPPs). These parities account for genuine price differences across states, not just variation in consumption patterns.</p>
+
+                <h3>Calculation Process</h3>
+                <p>For each state and year:</p>
+                <ol>
+                    <li>National average spending is established for each expense category</li>
+                    <li>State-specific RPPs adjust these baselines to reflect local prices</li>
+                    <li>All categories are summed to estimate annual cost of living</li>
+                    <li>MLI is calculated as: Median Income ÷ Cost of Living</li>
+                </ol>
+
+                <p>The resulting ratio indicates whether the median household earns more (MLI > 1.0), less (MLI < 1.0), or approximately equal to (MLI ≈ 1.0) what it costs to live there.</p>
+
+                <h3>Interpretation Framework</h3>
+                <p><strong>MLI > 1.05:</strong> Surplus states where the median household has meaningful room for savings or discretionary spending.</p>
+                <p><strong>MLI 0.95-1.05:</strong> Break-even states where income roughly matches expenses with limited financial flexibility.</p>
+                <p><strong>MLI < 0.95:</strong> Deficit states where median households likely rely on debt, multiple earners, or below-average spending to make ends meet.</p>
+
+                <h3>Known Limitations</h3>
+                <p>MLI does not account for full state income tax differences (though property taxes are captured in housing costs). It uses median household figures, which means high earners and low earners are not separately analyzed. Further, it uses the RPP breakdown based on Quintile 3 spending patterns, the true 'average', which changes weights the further you move from the median. Urban-rural cost variation within states is not captured, which is a big variation in terms of cost of living. House is also likely underrepresented in cost, with the data suggesting a rate of 20-25% while Zillow's renter friendly approach suggests an inflation of at least 30-35%. This would require treating renters as separate than homeowners, which was not done in this analysis due to other factors going into home costs such as insurance, furnishing, insurance, etc. The index measures affordability for typical households but cannot assess quality of life, healthcare outcomes, education systems, or cultural amenities.</p>
+                
+                <p>Despite these limitations, MLI provides a useful snapshot of economic pressure at the household level—something traditional metrics often miss.</p>
+            </div>
+        </section>
+
+        <!-- Why This Matters -->
+        <section class="methodology">
+            <h2>Why This Matters</h2>
+            <div class="method-prose">
+                <p>Standard economic reporting tends to treat income growth and cost increases as separate phenomena. Rising wages get celebrated even as housing costs soar. MLI synthesizes these trends into one clear metric: can people actually afford to live where they work?</p>
+                
+                <p>This question has implications for:</p>
+                <ul>
+                    <li><strong>Policymakers:</strong> Understanding which regions need targeted economic interventions</li>
+                    <li><strong>Employers:</strong> Setting competitive wages that reflect true local affordability</li>
+                    <li><strong>Workers:</strong> Evaluating relocation decisions based on real purchasing power, not just salary figures</li>
+                    <li><strong>Researchers:</strong> Tracking economic inequality and household financial stress across regions</li>
+                </ul>
+
+                <p>The national MLI average has improved from 1.08 (2008) to 1.14 (2023), suggesting modest economic progress for median households. But that aggregate figure masks significant regional divergence; some states have pulled ahead while others have lost ground.</p>
+            </div>
+        </section>
+
+        <!-- About the Creator -->
+        <section class="methodology">
+            <h2>About the Creator</h2>
+            <div class="method-prose">
+                <p>This project was developed by Cameron Noval, combining backgrounds in bioengineering and pharmacy with data science to analyze household economic trends. All methodology and code are open source and available on <a href="https://github.com/camnoval/medianlivingindex" target="_blank">GitHub</a>.</p>
+            </div>
+        </section>
+
+        <!-- Data Updates & Contact -->
+        <section class="methodology">
+            <h2>Data Updates & Contact</h2>
+            <div class="method-prose">
+                <p><strong>Data Currency:</strong> MLI uses the most recent publicly available data from Census Bureau ACS, BEA Regional Price Parities, the World Bank, and BLS Consumer Expenditure Survey. The dataset currently covers 2008-2023 with plans to update annually as new data is released. Notably, 2020 is omitted due to a lack of census data during this period due to the pandemic.</p>
+                
+                <p><strong>Feedback & Questions:</strong> This project benefits from community input. If you spot data errors, have methodological suggestions, or want to discuss MLI findings, please reach out via <a href="https://github.com/camnoval/medianlivingindex/issues" target="_blank">GitHub Issues</a> or email at <a href="mailto:cameronanoval@gmail.com">cameronanoval@gmail.com</a>.</p>
+                
+                <p><strong>Research Collaborations:</strong> Researchers interested in using MLI data for academic work or policy analysis are welcome to reach out. The full dataset and calculation methodology are documented in the project repository.</p>
+            </div>
+        </section>
+
+        <!-- License & Citation -->
+        <section class="methodology">
+            <h2>License & Citation</h2>
+            <div class="method-prose">
+                <p>The MLI methodology, code, and visualizations are released under an open license to encourage research and public discourse. When referencing this work, please cite:</p>
+                
+                <div class="formula-box" style="margin: var(--space-xl) 0; padding: var(--space-lg); background: var(--gray-50); border-left: 4px solid var(--secondary);">
+                    <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.9rem; line-height: 1.8;">
+                        Noval, C. (2025). <em>Median Living Index: Measuring Real Purchasing Power Across the United States</em>. Retrieved from https://medianlivingindex.netlify.app
+                    </p>
+                </div>
+                
+                <p>Data sources should also be credited:</p>
+                <ul>
+                    <li>US Census Bureau American Community Survey (Income Data)</li>
+                    <li>Bureau of Economic Analysis Regional Price Parities (Cost Adjustments)</li>
+                    <li>Bureau of Labor Statistics Consumer Expenditure Survey (Spending Baselines)</li>
+                    <li>World Bank (GPD Growth Rates)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Median Living Index | Data: Census Bureau, BEA, BLS</p>
+            <p>Created by Cameron Noval | <a href="https://github.com/camnoval/medianlivingindex" target="_blank">View on GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
