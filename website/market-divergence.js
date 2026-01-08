@@ -1,5 +1,12 @@
 // Market Divergence Analysis - Main JavaScript
 
+// GDP Growth Rates (World Bank data)
+const GDP_GROWTH_RATES = {
+    2012: 2.289, 2013: 2.118, 2014: 2.524, 2015: 2.946,
+    2016: 1.819, 2017: 2.458, 2018: 2.967, 2019: 2.584,
+    2020: -2.163, 2021: 6.055, 2022: 2.512, 2023: 2.888
+};
+
 // Load data on page load
 document.addEventListener('DOMContentLoaded', async () => {
     try {
@@ -92,22 +99,6 @@ function createComparisonChart(period, data) {
     const col = comparison.map(d => d.col_indexed);
     const mli = comparison.map(d => d.mli_indexed);
     
-    // Real GDP annual growth rates from World Bank
-    const gdpGrowthRates = {
-        2012: 2.289,
-        2013: 2.118,
-        2014: 2.524,
-        2015: 2.946,
-        2016: 1.819,
-        2017: 2.458,
-        2018: 2.967,
-        2019: 2.584,
-        2020: -2.163,
-        2021: 6.055,
-        2022: 2.512,
-        2023: 2.888
-    };
-    
     // Calculate indexed GDP values (compound growth from baseline)
     const baseYear = parseInt(period);
     const gdp = years.map(year => {
@@ -115,8 +106,8 @@ function createComparisonChart(period, data) {
         
         let indexValue = 100;
         for (let y = baseYear + 1; y <= year; y++) {
-            if (gdpGrowthRates[y]) {
-                indexValue *= (1 + gdpGrowthRates[y] / 100);
+            if (GDP_GROWTH_RATES[y]) {
+                indexValue *= (1 + GDP_GROWTH_RATES[y] / 100);
             }
         }
         return indexValue;
@@ -277,9 +268,20 @@ function createComparisonChart(period, data) {
         }
     });
     
+    // Calculate GDP growth for this period
+    let gdpValue = 100;
+    const startYear = parseInt(period);
+    for (let year = startYear + 1; year <= 2023; year++) {
+        if (GDP_GROWTH_RATES[year]) {
+            gdpValue *= (1 + GDP_GROWTH_RATES[year] / 100);
+        }
+    }
+    const gdpGrowth = ((gdpValue - 100)).toFixed(1);
+    
     // Update metrics display
     const summary = period === '2012' ? data.summary_2012_2023 : data.summary_2018_2023;
     document.getElementById(`sp500_gain_${period}`).textContent = formatChange(summary.sp500_total_gain);
+    document.getElementById(`gdp_gain_${period}`).textContent = `+${gdpGrowth}%`;
     document.getElementById(`income_gain_${period}`).textContent = formatChange(summary.income_total_gain);
     document.getElementById(`col_gain_${period}`).textContent = formatChange(summary.col_total_gain);
     document.getElementById(`mli_gain_${period}`).textContent = formatChange(summary.mli_total_gain);
