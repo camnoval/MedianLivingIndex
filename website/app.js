@@ -972,10 +972,10 @@ class MLIApp {
         
         statesData.sort((a, b) => b.mli - a.mli);
         const best = statesData.slice(0, 5);
-        const worst = statesData.slice(-5).reverse();
+        const worst = statesData.slice(-4).reverse();
         
         const improved = [...statesData].sort((a, b) => b.change - a.change).slice(0, 5);
-        const declined = [...statesData].sort((a, b) => a.change - b.change).slice(0, 5);
+        const declined = [...statesData].sort((a, b) => a.change - b.change).slice(0, 4);
         
         document.getElementById('bestStates').innerHTML = '<ul>' + 
             best.map(s => `<li><strong>${s.name}:</strong> ${s.mli.toFixed(3)}</li>`).join('') + 
